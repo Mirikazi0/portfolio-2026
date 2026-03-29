@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaz Grant — Portfolio</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g transform='rotate(-12 50 50)'><rect x='10' y='10' width='80' height='80' rx='24' fill='%234F46E5'/><text x='50' y='72' font-family='sans-serif' font-size='60' font-weight='900' fill='white' text-anchor='middle'>C</text></g></svg>">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAFAFA;
+            --dark-bg: #111111;
+            --text-main: #000000;
+            --text-light: #FFFFFF;
+            --accent-blue: #4F46E5;
+            --accent-orange: #FF6B6B;
+            --accent-yellow: #FbbF24;
+            --font-main: 'Clash Display', sans-serif;
+            --border-dark: 2px solid #000000;
+            --border-light: 2px solid rgba(255, 255, 255, 0.15);
+            --shadow-solid: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+            --shadow-hover: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+            --shadow-dark-solid: 4px 4px 0px 0px rgba(255, 255, 255, 1);
+            --shadow-dark-hover: 6px 6px 0px 0px rgba(255, 255, 255, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: #333333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            position: sticky;
+            top: 1.5rem;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: var(--border-dark);
+            border-radius: 9999px;
+            box-shadow: var(--shadow-solid);
+            transition: all 0.3s ease;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .logo-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background-color: var(--accent-blue);
+            color: #fff;
+            border-radius: 8px;
+            transform: rotate(-10deg);
+            font-size: 1.25rem;
+            font-weight: 800;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-icon span {
+            transform: translateY(1px);
+            /* optical alignment */
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links a {
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        .pill-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 9999px;
+            border: var(--border-dark);
+            background-color: var(--text-main);
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+        }
+
+        .pill-button:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+        }
+
+        .pill-button.primary {
+            background-color: var(--accent-blue);
+        }
+
+        /* --- Sections Core --- */
+        section {
+            padding: 8rem 0;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: var(--border-dark);
+            padding-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* --- Alternating Sections --- */
+        .dark-section {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            border-top: var(--border-dark);
+            border-bottom: var(--border-dark);
+        }
+
+        .dark-section .section-title {
+            color: var(--text-light);
+        }
+
+        .dark-section .section-header {
+            border-bottom: var(--border-light);
+        }
+
+        .dark-section p {
+            color: #bbbbbb;
+        }
+
+        /* --- Hero Section (White / Grid) --- */
+        .hero {
+            padding: 5rem 0 3rem;
+            text-align: center;
+            position: relative;
+            background-color: var(--bg-color);
+            background-size: 60px 60px;
+            background-image:
+                linear-gradient(to right, rgba(220, 210, 200, 0.4) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(220, 210, 200, 0.4) 1px, transparent 1px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-profile {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+            background-color: var(--accent-yellow);
+        }
+
+        .hero-profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-intro {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .hero-heading {
+            font-size: 3.2rem;
+            font-weight: 600;
+            line-height: 1.15;
+            letter-spacing: -1px;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            text-transform: none;
+            color: #111;
+        }
+
+        .heading-line {
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-pill.blue-pill {
+            position: relative;
+            display: inline-block;
+            background-color: var(--accent-blue);
+            padding: 0.5rem 1.5rem;
+            border-radius: 16px;
+            border: none;
+            transform: rotate(-3deg);
+            color: #fff;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+
+        .floating-cursor {
+            position: absolute;
+            bottom: -20px;
+            left: -25px;
+            transform: rotate(-5deg);
+            filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+            z-index: 5;
+        }
+
+        .hero-copy {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: #555;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .text-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            transition: opacity 0.2s;
+        }
+
+        .text-button:hover {
+            opacity: 0.7;
+        }
+
+        .circle-arrow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            font-size: 1rem;
+        }
+
+        .scroll-indicator {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1rem;
+            animation: bounce 2s infinite ease-in-out;
+            color: #888;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .scroll-indicator:hover {
+            color: var(--accent-blue);
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
+        /* --- Case Studies Layout (Black) --- */
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .case-study-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .case-study-image {
+            width: 100%;
+            aspect-ratio: 16/10;
+            border: var(--border-light);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-dark-solid);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .case-study-image:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 1);
+        }
+
+        .case-study-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .case-study-info h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .case-study-info p {
+            font-size: 1.15rem;
+            color: #bbb;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .case-study-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(4px);
+            padding: 0.25rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #ddd;
+        }
+
+        /* --- Tech Stack Carousel (White) --- */
+        .marquee-section {
+            padding: 4rem 0;
+            background-color: var(--bg-color);
+            overflow: hidden;
+            display: flex;
+        }
+
+        .marquee-wrapper {
+            display: flex;
+            white-space: nowrap;
+            width: fit-content;
+            animation: scroll-left 25s linear infinite;
+        }
+
+        /* Duplicate the layout so it seamless loops */
+        .marquee-content {
+            display: flex;
+            gap: 4rem;
+            padding-right: 4rem;
+        }
+
+        .marquee-item {
+            font-size: 2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-transform: uppercase;
+            border: var(--border-dark);
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            background: #fff;
+            box-shadow: var(--shadow-solid);
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* --- Experience Snapshot (Black) --- */
+        .experience-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .experience-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1a1a1a;
+            padding: 2.5rem;
+            border: var(--border-light);
+            border-radius: 20px;
+            box-shadow: var(--shadow-dark-solid);
+            transition: transform 0.2s ease, box-shadow 0.2s;
+            color: #fff;
+        }
+
+        .experience-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 1);
+        }
+
+        .exp-role {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 0.25rem;
+        }
+
+        .exp-company {
+            color: var(--accent-yellow);
+            font-weight: 600;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .exp-date {
+            font-weight: 500;
+            color: #ccc;
+            background: #222;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* --- About Me (White) --- */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background-color: var(--accent-orange);
+            border: var(--border-dark);
+            border-radius: 24px;
+            box-shadow: var(--shadow-solid);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image::after {
+            content: "Creative Dump \A & Visual Work \A goes here";
+            white-space: pre;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 600;
+            font-size: 2rem;
+            text-align: center;
+            color: #000;
+            text-transform: uppercase;
+        }
+
+        /* --- Contact & Footer (Black) --- */
+        .contact-cta {
+            font-size: 6rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pill-outline-light {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 3rem;
+            font-weight: 600;
+            font-size: 1.25rem;
+            border-radius: 9999px;
+            border: 2px solid #fff;
+            color: #fff;
+            background: transparent;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+        }
+
+        .pill-outline-light:hover {
+            background: #fff;
+            color: #000;
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 1);
+        }
+
+        footer {
+            background: var(--dark-bg);
+            color: #888;
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        @media(max-width: 900px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-heading {
+                font-size: 1.7rem;
+                line-height: 1.25;
+                letter-spacing: 0;
+            }
+
+            .case-study-grid,
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .experience-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+
+            .contact-cta {
+                font-size: 4rem;
+            }
+        }
+
+        /* --- Scroll Animations --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <div class="logo-icon"><span>C</span></div>
+            Chaz Grant
+        </div>
+        <div class="nav-links">
+            <a href="#projects">Projects</a>
+            <a href="#visual">Creative Dump</a>
+        </div>
+        <div>
+            <a href="https://drive.google.com/file/d/1-rbj3iSVxhlpEyw5b7miXcYozpz4ezxp/view?usp=sharing" target="_blank"
+                rel="noopener noreferrer" class="pill-button primary">View Resume</a>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section (White w/ Grid) -->
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-profile">
+                <img src="./04_Assets/Images/profile.jpeg" alt="Chaz Grant">
+            </div>
+            <h2 class="hero-intro">Hello there 👋, I'm Chaz.</h2>
+            <h1 class="hero-heading">
+                <div class="heading-line">
+                    <span class="highlight-pill blue-pill" id="pill-box" style="visibility: hidden;">
+                        <svg class="floating-cursor" id="cursor-svg" style="opacity: 0; transition: opacity 0.3s;"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 3.5L19.5 10.5L12.5 13.5L9.5 20.5L5.5 3.5Z" fill="#111" stroke="#fff"
+                                stroke-width="2" stroke-linejoin="round" />
+                        </svg>
+                        <span id="type-1">Product designer</span>
+                    </span>
+                    <span id="type-2"> helping teams ship faster with</span>
+                </div>
+                <div id="type-3" style="display: inline-block;">AI-powered workflows.</div>
+            </h1>
+            <p class="hero-copy">I design and build digital products and visual interfaces — <br>all from my little spot
+                on the internet.</p>
+
+            <div class="hero-cta-group">
+                <a href="#contact" class="pill-button"
+                    style="padding: 1rem 2.5rem; font-size: 1.1rem; border: none; background: #111;">Get in touch</a>
+                <a href="#projects" class="text-button">Browse all work <span class="circle-arrow">↗</span></a>
+            </div>
+
+            <a href="#projects" class="scroll-indicator" aria-label="Scroll down to projects">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5v14M19 12l-7 7-7-7" />
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- 3. Selected Work (Black) -->
+    <section id="projects" class="dark-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Case Studies</h2>
+            </div>
+            <div class="case-study-grid">
+                <div class="case-study-card">
+                    <div class="case-study-image" style="background-color: var(--accent-yellow);">
+                        <img src="./04_Assets/Images/InterviewQuery.avif" alt="Interview Query Preview">
+                    </div>
+                    <div class="case-study-info">
+                        <h3>Interview Query</h3>
+                        <p>Redesigned onboarding and pricing flows, driving a +19% conversion lift and +12% increase in
+                            Lifetime Value over three months.</p>
+                        <div class="case-study-tags">
+                            <span class="tag">Product Design</span>
+                            <span class="tag">Ed Tech</span>
+                            <span class="tag">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-study-card">
+                    <div class="case-study-image" style="background-color: var(--accent-blue);">
+                        <img src="./04_Assets/Images/Symph.avif" alt="Symph Preview">
+                    </div>
+                    <div class="case-study-info">
+                        <h3>Symph</h3>
+                        <p>Redesigned landing page for a teacher platform to clarify value, support B2B conversations,
+                            and expand global reach.</p>
+                        <div class="case-study-tags">
+                            <span class="tag">Product Design</span>
+                            <span class="tag">Ed Tech</span>
+                            <span class="tag">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Tech Stack Carousel (White) -->
+    <section id="tools" class="marquee-section">
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/adobephotoshop" height="48" alt="Photoshop"></div>
+                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/adobeillustrator" height="48" alt="Illustrator"></div>
+                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/figma" height="48" alt="Figma"></div>
+                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/slack" height="48" alt="Slack"></div>
+                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/notion" height="48" alt="Notion"></div>
+                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/chatgpt" height="48" alt="ChatGPT"></div>
+                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/anthropic" height="48" alt="Claude"></div>
+            </div>
+            <div class="marquee-content">
+                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/adobephotoshop" height="48" alt="Photoshop"></div>
+                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/adobeillustrator" height="48" alt="Illustrator"></div>
+                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/figma" height="48" alt="Figma"></div>
+                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/slack" height="48" alt="Slack"></div>
+                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/notion" height="48" alt="Notion"></div>
+                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/chatgpt" height="48" alt="ChatGPT"></div>
+                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/anthropic" height="48" alt="Claude"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Experience Snapshot (Black) -->
+    <section id="experience" class="dark-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+            </div>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div>
+                        <div class="exp-company">Interview Query</div>
+                        <div class="exp-role">Product Designer</div>
+                    </div>
+                    <div class="exp-date">Sep 2024 – March 2026</div>
+                </div>
+                <div class="experience-card">
+                    <div>
+                        <div class="exp-company">Symph</div>
+                        <div class="exp-role">UI/UX Design Intern</div>
+                    </div>
+                    <div class="exp-date">Feb 2024 – Aug 2024</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. About Me / Visual Work (White) -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Visual Work</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>A curated collection of branding, graphic design, and visual explorations. Highly focused on
+                        creative range beyond standard product design workflows.</p>
+                    <p>When I'm not designing products, you can find me here, dropping experiments, explorations, and
+                        unfinished ideas that reflect my creative process and curiosity.</p>
+                </div>
+                <div class="about-image">
+                    <!-- Placeholder card for creative dump visuals -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Contact Section (Black) -->
+    <section id="contact" class="dark-section" style="border-bottom: none;">
+        <div class="container">
+            <div class="section-header" style="justify-content: center; text-align: center; border-bottom: none;">
+                <h2 class="section-title">Get in Touch</h2>
+            </div>
+
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.25rem;">If you’d like to
+                learn more about any project or my availability, feel free to reach out.</p>
+
+            <div style="text-align: center;">
+                <div class="contact-cta">Let's build<br>something great.</div>
+            </div>
+
+            <div class="contact-links">
+                <a href="#" class="pill-outline-light">LinkedIn</a>
+                <a href="#" class="pill-outline-light">Email Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Footer (Black) -->
+    <footer>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>© Chaz Grant, 2026</div>
+            <div style="display: flex; gap: 2rem;">
+                <a href="#" style="color: #fff; transition: color 0.2s;">LinkedIn</a>
+                <a href="#" style="color: #fff; transition: color 0.2s;">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Typing Effect Logic
+            const type1 = document.getElementById('type-1');
+            const type2 = document.getElementById('type-2');
+            const type3 = document.getElementById('type-3');
+            const pillBox = document.getElementById('pill-box');
+            const cursorSvg = document.getElementById('cursor-svg');
+
+            if (type1 && type2 && type3) {
+                function prepareTypewriter(element) {
+                    const text = element.textContent;
+                    element.innerHTML = '';
+                    const spans = [];
+                    for (let i = 0; i < text.length; i++) {
+                        const span = document.createElement('span');
+                        span.textContent = text[i];
+                        span.style.opacity = '0';
+                        // Use transition for an extra silky typing effect if requested, or just standard pop-in
+                        element.appendChild(span);
+                        spans.push(span);
+                    }
+                    return spans;
+                }
+
+                const spans1 = prepareTypewriter(type1);
+                const spans2 = prepareTypewriter(type2);
+                const spans3 = prepareTypewriter(type3);
+
+                let speed = 40; // typing speed in ms
+
+                function typeSpans(spans, nextCallback) {
+                    let i = 0;
+                    function revealChar() {
+                        if (i < spans.length) {
+                            spans[i].style.opacity = '1';
+                            i++;
+                            setTimeout(revealChar, speed);
+                        } else {
+                            if (nextCallback) nextCallback();
+                        }
+                    }
+                    revealChar();
+                }
+
+                // Start typing sequence shortly after page loads
+                setTimeout(() => {
+                    pillBox.style.visibility = "visible";
+                    typeSpans(spans1, () => {
+                        cursorSvg.style.opacity = "1";
+                        typeSpans(spans2, () => {
+                            typeSpans(spans3, null);
+                        });
+                    });
+                }, 500);
+            }
+
+            // Select elements to animate
+            const revealElements = document.querySelectorAll('.hero-intro, .hero-copy, .hero-cta-group, .scroll-indicator, .section-header, .case-study-card, .experience-card, .about-text, .about-image, .contact-cta, .contact-links');
+
+            // Add initial class and stagger delays
+            revealElements.forEach((el, index) => {
+                el.classList.add('reveal');
+                // Stagger bento items and experience cards slightly
+                if (el.classList.contains('case-study-card') || el.classList.contains('experience-card')) {
+                    el.style.transitionDelay = `${(index % 2) * 0.15}s`;
+                }
+            });
+
+            // Set up intersection observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: Unobserve if you only want the animation to play once
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px" // Triggers slightly before the element fully enters
+            });
+
+            // Start observing
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>
