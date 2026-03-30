@@ -357,6 +357,9 @@
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
         }
 
         .case-study-image {
@@ -459,89 +462,59 @@
         }
 
         /* --- Experience Timeline (White) --- */
-        .timeline-section {
-            background-color: #FFFFFF;
-        }
-
-        .timeline-container {
-            max-width: 900px;
-            margin: 0 auto;
+        /* --- Experience Section (White) --- */
+        .experience-list {
             display: flex;
             flex-direction: column;
-            gap: 3rem;
-            padding-top: 1rem;
         }
 
-        .timeline-item {
+        .experience-row {
             display: grid;
-            grid-template-columns: 240px 60px 1fr;
-            align-items: stretch;
-        }
-
-        .timeline-date {
-            color: #777777;
-            font-size: 1.05rem;
-            text-align: right;
-            padding-top: 0.3rem;
-            font-weight: 500;
-        }
-
-        .timeline-divider {
-            display: flex;
-            flex-direction: column;
+            grid-template-columns: 1fr 2fr 1fr;
             align-items: center;
-            position: relative;
+            padding: 2.5rem 0;
+            border-top: 1px solid #e5e5e5;
+            gap: 2rem;
+            transition: background 0.2s ease;
         }
 
-        .timeline-marker {
-            width: 32px;
-            height: 32px;
-            background-color: #FFFFFF;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 10;
-        }
-
-        .timeline-marker svg {
-            width: 20px;
-            height: 20px;
-            fill: var(--accent-blue);
-        }
-
-        .timeline-line {
-            width: 2px;
-            background-color: #E5E7EB;
-            position: absolute;
-            top: 32px;
-            bottom: -3rem;
-            /* Match timeline-container gap */
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1;
-        }
-
-        .timeline-item:last-child .timeline-line {
-            display: none;
-        }
-
-        .timeline-content {
+        .experience-row:hover {
+            background: #f9f9f9;
             padding-left: 1rem;
-            padding-bottom: 1rem;
+            padding-right: 1rem;
+            margin-left: -1rem;
+            margin-right: -1rem;
         }
 
-        .timeline-role {
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: #111111;
-            margin-bottom: 0.25rem;
-            line-height: 1.2;
+        .exp-date {
+            font-size: 0.95rem;
+            color: #999;
+            font-weight: 500;
+            letter-spacing: 0.3px;
         }
 
-        .timeline-company {
-            font-size: 1.15rem;
-            color: #777777;
-            font-weight: 400;
+        .exp-role {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #111;
+            letter-spacing: -0.5px;
+        }
+
+        .exp-company {
+            font-size: 1rem;
+            color: #777;
+            font-weight: 500;
+            text-align: right;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .experience-row {
+                grid-template-columns: 1fr;
+                gap: 0.4rem;
+            }
+            .exp-company { text-align: left; }
         }
 
         /* --- About Side Scrolling Layout --- */
@@ -655,7 +628,40 @@
             text-transform: uppercase;
         }
 
-        /* --- Contact & Footer (Black) --- */
+        /* --- Email Copy Toast --- */
+        .copy-toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: #fff;
+            color: #111;
+            padding: 0.85rem 1.75rem;
+            border-radius: 9999px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: 2px solid #000;
+            box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            white-space: nowrap;
+        }
+
+        .copy-toast.visible {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Email button styled same as pill-outline-light */
+        button.pill-outline-light {
+            font-family: var(--font-main);
+            cursor: pointer;
+        }
         .contact-cta {
             font-size: 6rem;
             font-weight: 700;
@@ -810,12 +816,10 @@
                         </svg>
                         <span id="type-1">Product designer</span>
                     </span>
-                    <span id="type-2"> helping teams ship faster with</span>
+                    <span id="type-2"> who helps teams move faster</span>
                 </div>
-                <div id="type-3" style="display: inline-block;">AI-powered workflows.</div>
+                <div id="type-3" style="display: inline-block;">with better decisions.</div>
             </h1>
-            <p class="hero-copy">I design and build digital products and visual interfaces — <br>all from my little spot
-                on the internet.</p>
 
             <div class="hero-cta-group">
                 <a href="#contact" class="pill-button"
@@ -838,7 +842,7 @@
                 <h2 class="section-title">Case Studies</h2>
             </div>
             <div class="case-study-grid">
-                <div class="case-study-card">
+                <a href="./case-study-interviewquery.html" class="case-study-card">
                     <div class="case-study-image" style="background-color: var(--accent-yellow);">
                         <img src="./04_Assets/Images/InterviewQuery.avif" alt="Interview Query Preview">
                     </div>
@@ -852,9 +856,9 @@
                             <span class="tag">UI/UX</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="case-study-card">
+                <a href="./case-study-symph.html" class="case-study-card">
                     <div class="case-study-image" style="background-color: var(--accent-blue);">
                         <img src="./04_Assets/Images/Symph.avif" alt="Symph Preview">
                     </div>
@@ -868,7 +872,7 @@
                             <span class="tag">UI/UX</span>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -962,62 +966,31 @@
     </section>
 
     <!-- 6. Experience Timeline (White) -->
-    <section id="experience" class="timeline-section" style="padding-top: 4rem;">
+    <section id="experience" style="background: #fff;">
         <div class="container">
             <div class="section-header reveal">
                 <h2 class="section-title">Experience</h2>
             </div>
-            <div class="timeline-container">
-                <div class="timeline-item reveal">
-                    <div class="timeline-date">September 2024 – March 2026</div>
-                    <div class="timeline-divider">
-                        <div class="timeline-marker">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                            </svg>
-                        </div>
-                        <div class="timeline-line"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-role">Product Designer</h3>
-                        <p class="timeline-company">Interview Query</p>
-                    </div>
+            <div class="experience-list">
+
+                <div class="experience-row reveal">
+                    <div class="exp-date">Sep 2024 – Mar 2026</div>
+                    <div class="exp-role">Product Designer</div>
+                    <div class="exp-company">Interview Query</div>
                 </div>
 
-                <div class="timeline-item reveal">
-                    <div class="timeline-date">February 2024 – August 2024</div>
-                    <div class="timeline-divider">
-                        <div class="timeline-marker">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                            </svg>
-                        </div>
-                        <div class="timeline-line"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-role">UI/UX Design Intern</h3>
-                        <p class="timeline-company">Symph</p>
-                    </div>
+                <div class="experience-row reveal">
+                    <div class="exp-date">Feb 2024 – Aug 2024</div>
+                    <div class="exp-role">UI/UX Design Intern</div>
+                    <div class="exp-company">Symph</div>
                 </div>
 
-                <div class="timeline-item reveal">
-                    <div class="timeline-date">August 2022 – December 2022</div>
-                    <div class="timeline-divider">
-                        <div class="timeline-marker">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                            </svg>
-                        </div>
-                        <div class="timeline-line"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-role">Lead Graphic Designer</h3>
-                        <p class="timeline-company">CESAFI</p>
-                    </div>
+                <div class="experience-row reveal">
+                    <div class="exp-date">Aug 2022 – Dec 2022</div>
+                    <div class="exp-role">Lead Graphic Designer</div>
+                    <div class="exp-company">CESAFI</div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -1029,11 +1002,10 @@
 
 
             <div style="text-align: center;">
-                <div class="contact-cta">Let's build<br>something great.</div>
+                <div class="contact-cta">Let's work<br>together.</div>
             </div>
 
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.25rem;">If you’d like to
-                learn more about any project or my availability, feel free to reach out.</p>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.25rem;">Open to full-time roles and freelance projects. If you think there's a fit, I'd love to hear from you.</p>
 
             <div class="contact-links">
                 <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
@@ -1041,10 +1013,10 @@
                     <img src="./04_Assets/Icons/LinkedIn.svg" width="24" height="24" alt="LinkedIn">
                     LinkedIn
                 </a>
-                <a href="mailto:chazgrantborromeo@gmail.com" class="pill-outline-light">
+                <button onclick="copyEmail()" class="pill-outline-light">
                     <img src="./04_Assets/Icons/gmail.svg" width="24" height="24" alt="Email">
                     Email Me
-                </a>
+                </button>
             </div>
         </div>
     </section>
@@ -1056,7 +1028,7 @@
             <div style="display: flex; gap: 2rem;">
                 <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
                     style="color: #fff; transition: color 0.2s;">LinkedIn</a>
-                <a href="mailto:chazgrantborromeo@gmail.com" style="color: #fff; transition: color 0.2s;">Email</a>
+                <button onclick="copyEmail()" style="background: none; border: none; color: #fff; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer; transition: color 0.2s;">Email</button>
             </div>
         </div>
     </footer>
@@ -1119,7 +1091,7 @@
             }
 
             // Select elements to animate
-            const revealElements = document.querySelectorAll('.hero-intro, .hero-copy, .hero-cta-group, .scroll-indicator, .intro-block, .section-header, .case-study-card, .timeline-item, .about-text, .about-image, .contact-cta, .contact-links');
+            const revealElements = document.querySelectorAll('.hero-intro, .hero-copy, .hero-cta-group, .scroll-indicator, .intro-block, .section-header, .case-study-card, .experience-row, .about-text, .about-image, .contact-cta, .contact-links');
 
             // Add initial class and stagger delays
             revealElements.forEach((el, index) => {
@@ -1169,6 +1141,22 @@
                 window.dispatchEvent(new Event('scroll'));
             }
         });
+    </script>
+
+    <!-- Email copy toast -->
+    <div class="copy-toast" id="copy-toast">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        Email copied to clipboard!
+    </div>
+
+    <script>
+        function copyEmail() {
+            navigator.clipboard.writeText('chazgrantborromeo@gmail.com').then(() => {
+                const toast = document.getElementById('copy-toast');
+                toast.classList.add('visible');
+                setTimeout(() => toast.classList.remove('visible'), 2500);
+            });
+        }
     </script>
 </body>
 

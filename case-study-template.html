@@ -70,18 +70,16 @@
             top: 1.5rem;
             z-index: 100;
             display: flex;
-            justify-content: space-between;
             align-items: center;
             width: fit-content;
             margin: 0 auto;
-            padding: 0.75rem 2.5rem;
+            padding: 0.75rem 2rem;
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(12px);
             border: var(--border-dark);
             border-radius: 9999px;
             box-shadow: var(--shadow-solid);
             transition: all 0.3s ease;
-            gap: 2rem;
         }
 
         .back-link {
@@ -139,13 +137,13 @@
         }
 
         .project-subtitle {
-            font-size: 1.5rem;
-            color: #555;
-            max-width: 800px;
+            font-size: 1.4rem;
+            color: #111;
+            max-width: 750px;
             margin: 0 auto 4rem;
-        }
-
-        .project-meta-grid {
+            line-height: 1.6;
+            font-weight: 500;
+        }.project-meta-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
@@ -238,6 +236,8 @@
             border-top: var(--border-dark);
             border-bottom: var(--border-dark);
         }
+
+        .dark-section p { color: #fff; }
         
         section {
             padding: 8rem 0;
@@ -304,20 +304,15 @@
 
 <body>
 
-    <!-- 1. Navigation Shell -->
+    <!-- Navigation -->
     <nav>
-        <a href="index.html" class="back-link">
+        <a href="javascript:history.back()" class="back-link">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="19" y1="12" x2="5" y2="12"></line>
                 <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
             Back
         </a>
-        <div class="nav-logo">
-            <div class="logo-icon">C</div>
-            Chaz.
-        </div>
-        <div class="nav-right-placeholder"></div>
     </nav>
 
     <!-- 2. Case Study Hero -->
