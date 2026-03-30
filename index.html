@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chaz Grant — Portfolio</title>
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g transform='rotate(-12 50 50)'><rect x='10' y='10' width='80' height='80' rx='24' fill='%234F46E5'/><text x='50' y='72' font-family='sans-serif' font-size='60' font-weight='900' fill='white' text-anchor='middle'>C</text></g></svg>">
-    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap"
+    <link rel="icon" type="image/jpeg" href="./04_Assets/Images/profile.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
     <style>
         :root {
@@ -18,7 +19,7 @@
             --accent-blue: #4F46E5;
             --accent-orange: #FF6B6B;
             --accent-yellow: #FbbF24;
-            --font-main: 'Clash Display', sans-serif;
+            --font-main: 'Figtree', sans-serif;
             --border-dark: 2px solid #000000;
             --border-light: 2px solid rgba(255, 255, 255, 0.15);
             --shadow-solid: 4px 4px 0px 0px rgba(0, 0, 0, 1);
@@ -65,15 +66,13 @@
         nav {
             position: sticky;
             top: 1.5rem;
-            left: 0;
-            right: 0;
             z-index: 100;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            max-width: 1200px;
+            width: fit-content;
             margin: 0 auto;
-            padding: 0.75rem 1.5rem;
+            padding: 0.75rem 2.5rem;
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(12px);
             border: var(--border-dark);
@@ -273,8 +272,7 @@
         .floating-cursor {
             position: absolute;
             bottom: -20px;
-            left: -25px;
-            transform: rotate(-5deg);
+            right: -25px;
             filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
             z-index: 5;
         }
@@ -426,7 +424,7 @@
             display: flex;
             white-space: nowrap;
             width: fit-content;
-            animation: scroll-left 25s linear infinite;
+            animation: scroll-left 40s linear infinite;
         }
 
         /* Duplicate the layout so it seamless loops */
@@ -460,55 +458,90 @@
             }
         }
 
-        /* --- Experience Snapshot (Black) --- */
-        .experience-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+        /* --- Experience Timeline (White) --- */
+        .timeline-section {
+            background-color: #FFFFFF;
+        }
+
+        .timeline-container {
             max-width: 900px;
             margin: 0 auto;
-        }
-
-        .experience-card {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #1a1a1a;
-            padding: 2.5rem;
-            border: var(--border-light);
-            border-radius: 20px;
-            box-shadow: var(--shadow-dark-solid);
-            transition: transform 0.2s ease, box-shadow 0.2s;
-            color: #fff;
+            flex-direction: column;
+            gap: 3rem;
+            padding-top: 1rem;
         }
 
-        .experience-card:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 1);
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 240px 60px 1fr;
+            align-items: stretch;
         }
 
-        .exp-role {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-top: 0.25rem;
-        }
-
-        .exp-company {
-            color: var(--accent-yellow);
-            font-weight: 600;
-            font-size: 1.25rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .exp-date {
+        .timeline-date {
+            color: #777777;
+            font-size: 1.05rem;
+            text-align: right;
+            padding-top: 0.3rem;
             font-weight: 500;
-            color: #ccc;
-            background: #222;
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            font-size: 0.9rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .timeline-divider {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .timeline-marker {
+            width: 32px;
+            height: 32px;
+            background-color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .timeline-marker svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--accent-blue);
+        }
+
+        .timeline-line {
+            width: 2px;
+            background-color: #E5E7EB;
+            position: absolute;
+            top: 32px;
+            bottom: -3rem;
+            /* Match timeline-container gap */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .timeline-item:last-child .timeline-line {
+            display: none;
+        }
+
+        .timeline-content {
+            padding-left: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .timeline-role {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #111111;
+            margin-bottom: 0.25rem;
+            line-height: 1.2;
+        }
+
+        .timeline-company {
+            font-size: 1.15rem;
+            color: #777777;
+            font-weight: 400;
         }
 
         /* --- About Me (White) --- */
@@ -602,7 +635,12 @@
 
         @media(max-width: 900px) {
             .nav-links {
-                display: none;
+                gap: 1rem;
+                font-size: 0.95rem;
+            }
+
+            nav {
+                padding: 0.75rem 1.5rem;
             }
 
             .hero-heading {
@@ -621,10 +659,34 @@
                 align-items: flex-start;
             }
 
-            .experience-card {
-                flex-direction: column;
+            .timeline-item {
+                grid-template-columns: 50px 1fr;
+            }
+
+            .timeline-date {
+                grid-column: 2;
+                grid-row: 1;
+                text-align: left;
+                padding-bottom: 0.5rem;
+                padding-top: 0;
+            }
+
+            .timeline-divider {
+                grid-column: 1;
+                grid-row: 1 / 3;
                 align-items: flex-start;
-                gap: 1.5rem;
+            }
+
+            .timeline-line {
+                left: 16px;
+                transform: none;
+            }
+
+            .timeline-content {
+                grid-column: 2;
+                grid-row: 2;
+                padding-left: 0;
+                padding-bottom: 2rem;
             }
 
             .contact-cta {
@@ -650,17 +712,11 @@
 <body>
 
     <nav>
-        <div class="nav-logo">
-            <div class="logo-icon"><span>C</span></div>
-            Chaz Grant
-        </div>
         <div class="nav-links">
-            <a href="#projects">Projects</a>
-            <a href="#visual">Creative Dump</a>
-        </div>
-        <div>
+            <a href="#">Home</a>
+            <a href="#projects">Case Studies</a>
             <a href="https://drive.google.com/file/d/1-rbj3iSVxhlpEyw5b7miXcYozpz4ezxp/view?usp=sharing" target="_blank"
-                rel="noopener noreferrer" class="pill-button primary">View Resume</a>
+                rel="noopener noreferrer">Resume</a>
         </div>
     </nav>
 
@@ -675,7 +731,7 @@
                 <div class="heading-line">
                     <span class="highlight-pill blue-pill" id="pill-box" style="visibility: hidden;">
                         <svg class="floating-cursor" id="cursor-svg" style="opacity: 0; transition: opacity 0.3s;"
-                            width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.5 3.5L19.5 10.5L12.5 13.5L9.5 20.5L5.5 3.5Z" fill="#111" stroke="#fff"
                                 stroke-width="2" stroke-linejoin="round" />
                         </svg>
@@ -691,7 +747,6 @@
             <div class="hero-cta-group">
                 <a href="#contact" class="pill-button"
                     style="padding: 1rem 2.5rem; font-size: 1.1rem; border: none; background: #111;">Get in touch</a>
-                <a href="#projects" class="text-button">Browse all work <span class="circle-arrow">↗</span></a>
             </div>
 
             <a href="#projects" class="scroll-indicator" aria-label="Scroll down to projects">
@@ -749,46 +804,101 @@
     <section id="tools" class="marquee-section">
         <div class="marquee-wrapper">
             <div class="marquee-content">
-                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/adobephotoshop" height="48" alt="Photoshop"></div>
-                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/adobeillustrator" height="48" alt="Illustrator"></div>
-                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/figma" height="48" alt="Figma"></div>
-                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/slack" height="48" alt="Slack"></div>
-                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/notion" height="48" alt="Notion"></div>
-                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/chatgpt" height="48" alt="ChatGPT"></div>
-                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/anthropic" height="48" alt="Claude"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Canva.png" height="48" alt="Canva"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/ChatGPT.png" height="48" alt="ChatGPT"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Claude.png" height="48" alt="Claude"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/ClickUp.png" height="48" alt="ClickUp"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Figma.png" height="48" alt="Figma"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Gemini.png" height="48" alt="Gemini"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Illustrator.png" height="48" alt="Illustrator"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Notion.png" height="48" alt="Notion"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Photoshop.png" height="48" alt="Photoshop"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Slack.png" height="48" alt="Slack"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Vercel.png" height="48" alt="Vercel"></div>
             </div>
             <div class="marquee-content">
-                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/adobephotoshop" height="48" alt="Photoshop"></div>
-                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/adobeillustrator" height="48" alt="Illustrator"></div>
-                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/figma" height="48" alt="Figma"></div>
-                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/slack" height="48" alt="Slack"></div>
-                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/notion" height="48" alt="Notion"></div>
-                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/chatgpt" height="48" alt="ChatGPT"></div>
-                <div class="marquee-item reveal"><img src="https://cdn.simpleicons.org/anthropic" height="48" alt="Claude"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Canva.png" height="48" alt="Canva"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/ChatGPT.png" height="48" alt="ChatGPT"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Claude.png" height="48" alt="Claude"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/ClickUp.png" height="48" alt="ClickUp"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Figma.png" height="48" alt="Figma"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Gemini.png" height="48" alt="Gemini"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Illustrator.png" height="48" alt="Illustrator"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Notion.png" height="48" alt="Notion"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Photoshop.png" height="48" alt="Photoshop"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Slack.png" height="48" alt="Slack"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Vercel.png" height="48" alt="Vercel"></div>
             </div>
         </div>
     </section>
 
-    <!-- 5. Experience Snapshot (Black) -->
-    <section id="experience" class="dark-section">
+    <!-- 5. Pre-Experience Intro & Timeline (White) -->
+    <section id="experience" class="timeline-section">
         <div class="container">
-            <div class="section-header">
+            <!-- Short Intro -->
+            <div class="intro-block reveal" style="max-width: 800px; margin-bottom: 5rem;">
+                <h3 style="font-size: 2.2rem; font-weight: 600; margin-bottom: 1rem; color: #111;">Hi there! 👋</h3>
+                <p style="font-size: 1.35rem; color: #444; line-height: 1.6; font-weight: 400;">
+                    I’m Chaz Borromeo, a product designer with 2+ years of experience crafting intuitive,
+                    high-conversion interfaces for B2B platforms and EdTech products. I specialize in translating
+                    complex workflows into clean, modern designs that help teams ship faster and build better user
+                    experiences.
+                </p>
+            </div>
+
+            <div class="section-header reveal">
                 <h2 class="section-title">Experience</h2>
             </div>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <div>
-                        <div class="exp-company">Interview Query</div>
-                        <div class="exp-role">Product Designer</div>
+            <div class="timeline-container">
+                <div class="timeline-item reveal">
+                    <div class="timeline-date">September 2024 – March 2026</div>
+                    <div class="timeline-divider">
+                        <div class="timeline-marker">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                            </svg>
+                        </div>
+                        <div class="timeline-line"></div>
                     </div>
-                    <div class="exp-date">Sep 2024 – March 2026</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-role">Product Designer</h3>
+                        <p class="timeline-company">Interview Query</p>
+                    </div>
                 </div>
-                <div class="experience-card">
-                    <div>
-                        <div class="exp-company">Symph</div>
-                        <div class="exp-role">UI/UX Design Intern</div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-date">February 2024 – August 2024</div>
+                    <div class="timeline-divider">
+                        <div class="timeline-marker">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                            </svg>
+                        </div>
+                        <div class="timeline-line"></div>
                     </div>
-                    <div class="exp-date">Feb 2024 – Aug 2024</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-role">UI/UX Design Intern</h3>
+                        <p class="timeline-company">Symph</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-date">August 2022 – December 2022</div>
+                    <div class="timeline-divider">
+                        <div class="timeline-marker">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                            </svg>
+                        </div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-role">Lead Graphic Designer</h3>
+                        <p class="timeline-company">CESAFI</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -817,16 +927,14 @@
     <!-- 7. Contact Section (Black) -->
     <section id="contact" class="dark-section" style="border-bottom: none;">
         <div class="container">
-            <div class="section-header" style="justify-content: center; text-align: center; border-bottom: none;">
-                <h2 class="section-title">Get in Touch</h2>
-            </div>
 
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.25rem;">If you’d like to
-                learn more about any project or my availability, feel free to reach out.</p>
 
             <div style="text-align: center;">
                 <div class="contact-cta">Let's build<br>something great.</div>
             </div>
+
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.25rem;">If you’d like to
+                learn more about any project or my availability, feel free to reach out.</p>
 
             <div class="contact-links">
                 <a href="#" class="pill-outline-light">LinkedIn</a>
@@ -904,13 +1012,13 @@
             }
 
             // Select elements to animate
-            const revealElements = document.querySelectorAll('.hero-intro, .hero-copy, .hero-cta-group, .scroll-indicator, .section-header, .case-study-card, .experience-card, .about-text, .about-image, .contact-cta, .contact-links');
+            const revealElements = document.querySelectorAll('.hero-intro, .hero-copy, .hero-cta-group, .scroll-indicator, .intro-block, .section-header, .case-study-card, .timeline-item, .about-text, .about-image, .contact-cta, .contact-links');
 
             // Add initial class and stagger delays
             revealElements.forEach((el, index) => {
                 el.classList.add('reveal');
                 // Stagger bento items and experience cards slightly
-                if (el.classList.contains('case-study-card') || el.classList.contains('experience-card')) {
+                if (el.classList.contains('case-study-card') || el.classList.contains('timeline-item')) {
                     el.style.transitionDelay = `${(index % 2) * 0.15}s`;
                 }
             });
