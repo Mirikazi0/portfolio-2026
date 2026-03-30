@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaz Grant — Portfolio</title>
+    <title>Chaz Borromeo</title>
     <link rel="icon" type="image/jpeg" href="./04_Assets/Images/profile.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -544,6 +544,78 @@
             font-weight: 400;
         }
 
+        /* --- About Side Scrolling Layout --- */
+        .about-grid-layout {
+            display: grid;
+            grid-template-columns: minmax(120px, 1fr) minmax(300px, 2.5fr) minmax(120px, 1fr);
+            gap: 3rem;
+            align-items: start;
+            position: relative;
+        }
+
+        .sticky-text-wrapper {
+            position: sticky;
+            top: 15vh; /* Keep text vertically centered in viewport, slightly higher */
+            padding: 4rem 1rem;
+            z-index: 10;
+        }
+
+        .scroll-highlight-text {
+            background: linear-gradient(to bottom, #111 var(--scroll-p, 0%), #ccc var(--scroll-p, 0%));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .scroll-image-col {
+            display: flex;
+            flex-direction: column;
+            gap: 25vh; /* Vertical gap to ensure they scroll past naturally */
+            padding-bottom: 25vh;
+            padding-top: 10vh;
+        }
+
+        .scroll-image-col.right-col {
+            margin-top: 20vh; /* Stagger the right column */
+        }
+
+        .polaroid-placeholder {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background-color: #222;
+            border: 8px solid #fff;
+            border-bottom: 30px solid #fff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: transform 0.3s ease;
+        }
+        
+        .polaroid-placeholder:hover {
+            transform: scale(1.05) rotate(0) !important;
+            z-index: 20;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        }
+
+        @media(max-width: 900px) {
+            .about-grid-layout {
+                grid-template-columns: 1fr;
+            }
+            .scroll-image-col {
+                display: none; /* Hide side scrolling pictures on small screens */
+            }
+            .sticky-text-wrapper {
+                position: static;
+                padding: 0;
+            }
+        }
+
         /* --- About Me (White) --- */
         .about-content {
             display: grid;
@@ -603,6 +675,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            gap: 0.75rem;
             padding: 1rem 3rem;
             font-weight: 600;
             font-size: 1.25rem;
@@ -810,7 +883,8 @@
                 <div class="marquee-item"><img src="./04_Assets/Icons/ClickUp.png" height="48" alt="ClickUp"></div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Figma.png" height="48" alt="Figma"></div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Gemini.png" height="48" alt="Gemini"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Illustrator.png" height="48" alt="Illustrator"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Illustrator.png" height="48" alt="Illustrator">
+                </div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Notion.png" height="48" alt="Notion"></div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Photoshop.png" height="48" alt="Photoshop"></div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Slack.png" height="48" alt="Slack"></div>
@@ -823,7 +897,8 @@
                 <div class="marquee-item"><img src="./04_Assets/Icons/ClickUp.png" height="48" alt="ClickUp"></div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Figma.png" height="48" alt="Figma"></div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Gemini.png" height="48" alt="Gemini"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Illustrator.png" height="48" alt="Illustrator"></div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Illustrator.png" height="48" alt="Illustrator">
+                </div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Notion.png" height="48" alt="Notion"></div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Photoshop.png" height="48" alt="Photoshop"></div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Slack.png" height="48" alt="Slack"></div>
@@ -832,20 +907,63 @@
         </div>
     </section>
 
-    <!-- 5. Pre-Experience Intro & Timeline (White) -->
-    <section id="experience" class="timeline-section">
-        <div class="container">
-            <!-- Short Intro -->
-            <div class="intro-block reveal" style="max-width: 800px; margin-bottom: 5rem;">
-                <h3 style="font-size: 2.2rem; font-weight: 600; margin-bottom: 1rem; color: #111;">Hi there! 👋</h3>
-                <p style="font-size: 1.35rem; color: #444; line-height: 1.6; font-weight: 400;">
-                    I’m Chaz Borromeo, a product designer with 2+ years of experience crafting intuitive,
-                    high-conversion interfaces for B2B platforms and EdTech products. I specialize in translating
-                    complex workflows into clean, modern designs that help teams ship faster and build better user
-                    experiences.
-                </p>
+    <!-- 5. About (White fill with side scroll images) -->
+    <section id="about" style="background-color: #fff; padding: 0; position: relative; z-index: 5;">
+        <div class="container about-grid-layout">
+            
+            <!-- Left Side Images -->
+            <div class="scroll-image-col left-col">
+                <div class="polaroid-placeholder" style="transform: rotate(-6deg); padding: 0;">
+                    <img src="./04_Assets/Images/Image%201.jpg" alt="Gallery Image 1" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="polaroid-placeholder" style="transform: rotate(4deg); padding: 0;">
+                    <img src="./04_Assets/Images/Image%202.jpg" alt="Gallery Image 2" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="polaroid-placeholder" style="transform: rotate(-3deg); padding: 0;">
+                    <img src="./04_Assets/Images/Image%203.jpg" alt="Gallery Image 3" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
             </div>
 
+            <!-- Sticky Center Text -->
+            <div class="sticky-text-wrapper">
+                <div class="scroll-highlight-text">
+                    <p style="font-size: 1.4rem; line-height: 1.6; margin-bottom: 2rem; font-weight: 500;">
+                        Hi, I’m Chaz — a product designer with 2+ years of experience working on B2B and EdTech products,
+                        with a background in Multimedia Arts.
+                    </p>
+                    <p style="font-size: 1.4rem; line-height: 1.6; margin-bottom: 2rem; font-weight: 500;">
+                        Over the past few years, I’ve been focused on simplifying complex workflows into clear, usable
+                        experiences. Recently, I’ve been exploring how AI can be integrated into products to help teams move
+                        faster and make better decisions. I enjoy working across the full process — from understanding the
+                        problem to shipping solutions that actually get used.
+                    </p>
+                    <p style="font-size: 1.4rem; line-height: 1.6; font-weight: 500;">
+                        Outside of work, I experiment with AI tools and build small projects to test ideas quickly. I’m also
+                        involved in the local design community, where I help create spaces for designers to learn, share,
+                        and grow.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side Images -->
+            <div class="scroll-image-col right-col">
+                <div class="polaroid-placeholder" style="transform: rotate(5deg); padding: 0;">
+                    <img src="./04_Assets/Images/Image%204.jpg" alt="Gallery Image 4" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="polaroid-placeholder" style="transform: rotate(-5deg); padding: 0;">
+                    <img src="./04_Assets/Images/Image%205.jpg" alt="Gallery Image 5" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="polaroid-placeholder" style="transform: rotate(2deg); padding: 0;">
+                    <img src="./04_Assets/Images/Image%206.jpg" alt="Gallery Image 6" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. Experience Timeline (White) -->
+    <section id="experience" class="timeline-section" style="padding-top: 4rem;">
+        <div class="container">
             <div class="section-header reveal">
                 <h2 class="section-title">Experience</h2>
             </div>
@@ -904,25 +1022,6 @@
         </div>
     </section>
 
-    <!-- 6. About Me / Visual Work (White) -->
-    <section id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Visual Work</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>A curated collection of branding, graphic design, and visual explorations. Highly focused on
-                        creative range beyond standard product design workflows.</p>
-                    <p>When I'm not designing products, you can find me here, dropping experiments, explorations, and
-                        unfinished ideas that reflect my creative process and curiosity.</p>
-                </div>
-                <div class="about-image">
-                    <!-- Placeholder card for creative dump visuals -->
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- 7. Contact Section (Black) -->
     <section id="contact" class="dark-section" style="border-bottom: none;">
@@ -937,8 +1036,15 @@
                 learn more about any project or my availability, feel free to reach out.</p>
 
             <div class="contact-links">
-                <a href="#" class="pill-outline-light">LinkedIn</a>
-                <a href="#" class="pill-outline-light">Email Me</a>
+                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
+                    class="pill-outline-light">
+                    <img src="./04_Assets/Icons/LinkedIn.svg" width="24" height="24" alt="LinkedIn">
+                    LinkedIn
+                </a>
+                <a href="mailto:chazgrantborromeo@gmail.com" class="pill-outline-light">
+                    <img src="./04_Assets/Icons/gmail.svg" width="24" height="24" alt="Email">
+                    Email Me
+                </a>
             </div>
         </div>
     </section>
@@ -948,8 +1054,9 @@
         <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
             <div>© Chaz Grant, 2026</div>
             <div style="display: flex; gap: 2rem;">
-                <a href="#" style="color: #fff; transition: color 0.2s;">LinkedIn</a>
-                <a href="#" style="color: #fff; transition: color 0.2s;">Email</a>
+                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
+                    style="color: #fff; transition: color 0.2s;">LinkedIn</a>
+                <a href="mailto:chazgrantborromeo@gmail.com" style="color: #fff; transition: color 0.2s;">Email</a>
             </div>
         </div>
     </footer>
@@ -1039,6 +1146,28 @@
 
             // Start observing
             revealElements.forEach(el => observer.observe(el));
+
+            // Purple highlight logic on scroll
+            const aboutSection = document.getElementById('about');
+            const highlightTexts = document.querySelectorAll('.scroll-highlight-text');
+
+            if (aboutSection && highlightTexts.length > 0) {
+                window.addEventListener('scroll', () => {
+                    const rect = aboutSection.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+                    const startPoint = windowHeight * 0.75;
+                    let scrolled = startPoint - rect.top;
+                    let totalScroll = rect.height - (windowHeight * 0.5); 
+                    
+                    let progress = scrolled / totalScroll;
+                    progress = Math.max(0, Math.min(1, progress));
+                    
+                    highlightTexts.forEach(txt => {
+                        txt.style.setProperty('--scroll-p', `${progress * 100}%`);
+                    });
+                });
+                window.dispatchEvent(new Event('scroll'));
+            }
         });
     </script>
 </body>
