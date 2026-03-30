@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interview Query — Case Study | Chaz Borromeo</title>
-    <meta name="description" content="How I redesigned Interview Query's onboarding and pricing flows, driving a +19% conversion lift and +12% increase in Lifetime Value.">
+    <meta name="description"
+        content="How I redesigned Interview Query's onboarding and pricing flows, driving a +19% conversion lift and +12% increase in Lifetime Value.">
     <link rel="icon" type="image/jpeg" href="./04_Assets/Images/profile.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg-color: #FAFAFA;
@@ -26,8 +28,15 @@
             --shadow-dark-solid: 4px 4px 0px 0px rgba(255, 255, 255, 1);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: var(--font-main);
@@ -37,8 +46,15 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        a { text-decoration: none; color: inherit; }
-        p { font-size: 1.125rem; color: #333333; }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: #333333;
+        }
 
         .container {
             max-width: 1200px;
@@ -73,7 +89,9 @@
             transition: transform 0.2s ease;
         }
 
-        .back-link:hover { transform: translateX(-4px); }
+        .back-link:hover {
+            transform: translateX(-4px);
+        }
 
         .nav-logo {
             display: flex;
@@ -98,7 +116,9 @@
             border: 2px solid #000;
         }
 
-        .nav-right-placeholder { width: 80px; }
+        .nav-right-placeholder {
+            width: 80px;
+        }
 
         /* --- Project Hero --- */
         .project-hero {
@@ -185,7 +205,9 @@
             margin: 0 auto 8rem;
         }
 
-        .story-section { margin-bottom: 5rem; }
+        .story-section {
+            margin-bottom: 5rem;
+        }
 
         .story-section h2 {
             font-size: 2.25rem;
@@ -230,6 +252,89 @@
             object-fit: cover;
         }
 
+        /* Labeled before/after image wrapper */
+        .labeled-image {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .labeled-image img {
+            width: 100%;
+            border: var(--border-dark);
+            border-radius: 0 0 12px 12px;
+            box-shadow: var(--shadow-solid);
+            display: block;
+            object-fit: cover;
+        }
+
+        .image-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border: var(--border-dark);
+            border-bottom: none;
+            border-radius: 12px 12px 0 0;
+            width: fit-content;
+        }
+
+        .image-label.before {
+            background: #f4f4f4;
+            color: #555;
+        }
+
+        .image-label.after {
+            background: #111;
+            color: #fff;
+        }
+
+        /* Image placeholder for missing assets */
+        .img-placeholder {
+            width: 100%;
+            background: #f4f4f4;
+            border: var(--border-dark);
+            border-radius: 12px;
+            box-shadow: var(--shadow-solid);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            color: #999;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            aspect-ratio: 16/9;
+        }
+
+        /* Takeaway / learning callout */
+        .takeaway-block {
+            margin: 3rem 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .takeaway-item {
+            padding: 1.5rem 2rem;
+            border: var(--border-dark);
+            border-radius: 12px;
+            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.8);
+            background: #fafafa;
+        }
+
+        .takeaway-item p {
+            font-size: 1.1rem;
+            line-height: 1.75;
+            color: #333;
+            margin: 0;
+        }
+
         /* Stat callout block */
         .stat-grid {
             display: grid;
@@ -248,7 +353,9 @@
             border-right: var(--border-dark);
         }
 
-        .stat-block:last-child { border-right: none; }
+        .stat-block:last-child {
+            border-right: none;
+        }
 
         .stat-number {
             font-size: 3.5rem;
@@ -287,7 +394,7 @@
             font-size: 1rem;
             font-weight: 600;
             border: 2px solid #000;
-            box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
             opacity: 0;
             transition: opacity 0.3s ease, transform 0.3s ease;
             pointer-events: none;
@@ -297,12 +404,24 @@
             gap: 0.6rem;
             white-space: nowrap;
         }
-        .copy-toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
-        button.pill-outline-light { font-family: var(--font-main); cursor: pointer; }
 
-        .dark-section p { color: #fff; }
+        .copy-toast.visible {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
 
-        section { padding: 8rem 0; }
+        button.pill-outline-light {
+            font-family: var(--font-main);
+            cursor: pointer;
+        }
+
+        .dark-section p {
+            color: #fff;
+        }
+
+        section {
+            padding: 8rem 0;
+        }
 
         .contact-cta {
             font-size: clamp(3rem, 6vw, 6rem);
@@ -347,15 +466,38 @@
             will-change: opacity, transform;
         }
 
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         @media (max-width: 768px) {
-            .contact-cta { font-size: 3rem; }
-            .project-title { font-size: 2.75rem; letter-spacing: -1px; }
-            .side-by-side { grid-template-columns: 1fr; }
-            .stat-grid { grid-template-columns: 1fr; }
-            .stat-block { border-right: none; border-bottom: var(--border-dark); }
-            .hero-image-container { height: 40vh; min-height: 280px; }
+            .contact-cta {
+                font-size: 3rem;
+            }
+
+            .project-title {
+                font-size: 2.75rem;
+                letter-spacing: -1px;
+            }
+
+            .side-by-side {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-block {
+                border-right: none;
+                border-bottom: var(--border-dark);
+            }
+
+            .hero-image-container {
+                height: 40vh;
+                min-height: 280px;
+            }
         }
     </style>
 </head>
@@ -365,7 +507,8 @@
     <!-- Navigation -->
     <nav>
         <a href="javascript:history.back()" class="back-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <line x1="19" y1="12" x2="5" y2="12"></line>
                 <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
@@ -378,7 +521,8 @@
         <section class="project-hero">
             <div class="project-eyebrow reveal">Ed Tech · Product Design · UI/UX</div>
             <h1 class="project-title reveal">Interview Query</h1>
-            <p class="project-subtitle reveal">Redesigning onboarding and pricing flows to drive +19% conversion and +12% Lifetime Value — in three months.</p>
+            <p class="project-subtitle reveal">Helping data professionals understand Interview Query's value earlier —
+                and feel confident before committing to a paid plan.</p>
 
             <div class="project-meta-grid reveal">
                 <div class="meta-item">
@@ -387,7 +531,7 @@
                 </div>
                 <div class="meta-item">
                     <h4>Timeline</h4>
-                    <p>3 Months</p>
+                    <p>6 Months</p>
                 </div>
                 <div class="meta-item">
                     <h4>Platform</h4>
@@ -407,53 +551,104 @@
         <!-- Storytelling -->
         <article class="storytelling-body">
 
+            <!-- Overview -->
             <div class="story-section reveal">
-                <h2>The Challenge</h2>
-                <p>Interview Query is a data science interview prep platform. Despite strong organic traffic, the product was struggling to convert free users into paying subscribers. The onboarding flow was fragmented, and the pricing page lacked clear hierarchy — leaving users unsure of what plan was right for them.</p>
-                <p>My goal was to identify where users were dropping off, simplify the decision-making process at key friction points, and redesign both the onboarding and pricing experiences from the ground up.</p>
+                <p>Interview Query helps data professionals prepare for technical interviews through practice questions,
+                    courses, and peer learning.</p>
+                <p>My role focused on improving conversion through clearer onboarding and pricing. The goal was to help
+                    users understand the product’s value earlier and feel confident before committing to a paid plan.
+                </p>
+                <p>This work centered on redesigning the pricing page and the sign-up flow to reduce friction and
+                    increase revenue per user.</p>
             </div>
 
+            <!-- The Problem -->
             <div class="story-section reveal">
-                <h2>Process & Discovery</h2>
-                <p>I started with a full audit of the existing onboarding funnel and mapped every screen against analytics data to pinpoint exactly where users abandoned. I conducted sessions with 6 users across two segments — active free users and recently churned subscribers.</p>
+                <h2>The Problem</h2>
+                <p>Users were interested in Interview Query’s value, but the pricing page failed to clearly communicate
+                    it.</p>
+                <p>Key features were buried, long-term plans were not surfaced, and messaging didn’t align with user
+                    goals like “Ace your interview.” This created confusion, drop-off, and underperformance in
+                    revenue-related metrics.</p>
 
+                <!-- Image: Old pricing page -->
+                <img src="./04_Assets/Images/[Interview Query] Old Pricing.png" alt="Old Interview Query pricing page"
+                    class="story-image">
+            </div>
+
+            <!-- Pricing Page Redesign -->
+            <div class="story-section reveal">
+                <h2>Pricing Page Redesign</h2>
+                <p>The pricing page was redesigned to reintroduce long-term plans (yearly and lifetime), surface core
+                    features above the fold, and align messaging with user intent — specifically around interview
+                    success.</p>
+                <p>These changes improved clarity and reduced friction at a critical decision point.</p>
+
+                <!-- Image: New pricing page design -->
+                <img src="./04_Assets/Images/[Interview Query] New Pricing.png"
+                    alt="Redesigned Interview Query pricing page" class="story-image">
+            </div>
+
+            <!-- Sign-up Flow Redesign -->
+            <div class="story-section reveal">
+                <h2>Sign-up Flow Redesign</h2>
+                <p>The sign-up flow was redesigned into a guided, personalized experience. Users select their role,
+                    target companies, and seniority before seeing pricing, which builds a tailored plan upfront.</p>
+                <p>By making value tangible earlier in the flow, the experience increased user confidence and readiness
+                    to commit.</p>
+
+                <!-- Images: Sign-up flow before and after -->
                 <div class="side-by-side">
-                    <img src="./04_Assets/Images/Image 1.jpg" alt="User journey mapping session">
-                    <img src="./04_Assets/Images/Image 2.jpg" alt="Audit wireframe sketches">
+                    <div class="labeled-image">
+                        <span class="image-label before">Before</span>
+                        <img src="./04_Assets/Images/[Sign Up] Before.png" alt="Sign-up flow before redesign">
+                    </div>
+                    <div class="labeled-image">
+                        <span class="image-label after">After</span>
+                        <img src="./04_Assets/Images/[Sign Up] After.png" alt="Sign-up flow after redesign">
+                    </div>
                 </div>
-
-                <p>Key insight: users consistently reported that they didn't understand what they were getting before hitting a paywall. The pricing page had 4 plans with overlapping features and no clear "recommended" option, creating decision paralysis.</p>
             </div>
 
-            <div class="story-section reveal">
-                <h2>The Solution</h2>
-                <p>I redesigned the onboarding to front-load value immediately — showing users real content within the first two interactive steps before ever prompting an account creation. I also simplified pricing from four tiers down to three, with a clearly recommended plan surfaced visually.</p>
-
-                <img src="./04_Assets/Images/Image 4.jpg" alt="Final redesigned pricing page" class="story-image">
-
-                <p>Every decision in the interface was anchored to a single principle: <em>delay the ask, demonstrate the value first.</em> Tooltips, progress indicators, and social proof elements were woven naturally into the flow to build trust at each step.</p>
-            </div>
-
+            <!-- The Impact -->
             <div class="story-section reveal">
                 <h2>The Impact</h2>
-                <p>After shipping the redesigned flows, we tracked results over a 90-day window against the previous cohort. The results exceeded initial targets across all three core metrics.</p>
+                <p>The redesigns improved page-level conversion and shifted purchasing behavior toward higher-value
+                    plans.</p>
 
-                <div class="stat-grid reveal">
+                <div class="stat-grid reveal" style="grid-template-columns: 1fr 1fr;">
                     <div class="stat-block">
                         <div class="stat-number">+19%</div>
-                        <div class="stat-label">Conversion Rate Lift</div>
+                        <div class="stat-label">Overall Conversion</div>
                     </div>
                     <div class="stat-block">
                         <div class="stat-number">+12%</div>
-                        <div class="stat-label">Lifetime Value Increase</div>
-                    </div>
-                    <div class="stat-block">
-                        <div class="stat-number">−34%</div>
-                        <div class="stat-label">Onboarding Drop-off</div>
+                        <div class="stat-label">Revenue per User</div>
                     </div>
                 </div>
 
-                <p>Beyond the metrics, this project reinforced how critical it is to separate the "discovery" phase from the "conversion" phase in SaaS products. Giving users room to explore before asking for commitment makes all the difference.</p>
+                <div style="margin-top: 1.5rem; padding: 1.25rem 1.75rem; border: var(--border-dark); border-radius: 12px; background: #f9f9f9; display: flex; align-items: center; gap: 1rem;">
+                    <span style="font-size: 1.5rem;">↑</span>
+                    <span style="font-size: 1rem; font-weight: 600; color: #333;">Purchasing behavior shifted toward higher-value plans — yearly and lifetime tiers saw increased uptake.</span>
+                </div>
+
+                <p style="margin-top: 2rem;">These results validated that clear value framing and early personalization
+                    directly influence buying decisions.</p>
+            </div>
+
+            <!-- Takeaways -->
+            <div class="story-section reveal">
+                <h2>Takeaways</h2>
+                <div class="takeaway-block">
+                    <div class="takeaway-item">
+                        <p>💡 <strong>Pricing is part of the product experience.</strong> How you frame value, when you
+                            ask for commitment, and how you build confidence all shape user behavior.</p>
+                    </div>
+                    <div class="takeaway-item">
+                        <p>🎯 <strong>Personalization increases willingness to commit</strong> — especially when users
+                            can see the product working for them before they pay.</p>
+                    </div>
+                </div>
             </div>
 
         </article>
@@ -469,7 +664,8 @@
                 If you'd like to learn more about this project or my availability, feel free to reach out.
             </p>
             <div class="contact-links reveal">
-                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer" class="pill-outline-light">
+                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
+                    class="pill-outline-light">
                     <img src="./04_Assets/Icons/LinkedIn.svg" width="24" height="24" alt="LinkedIn">
                     LinkedIn
                 </a>
@@ -486,8 +682,10 @@
         <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
             <div>© Chaz Grant, 2026</div>
             <div style="display: flex; gap: 2rem;">
-                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer" style="color: #fff; transition: color 0.2s;">LinkedIn</a>
-                <button onclick="copyEmail()" style="background: none; border: none; color: #fff; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer; transition: color 0.2s;">Email</button>
+                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
+                    style="color: #fff; transition: color 0.2s;">LinkedIn</a>
+                <button onclick="copyEmail()"
+                    style="background: none; border: none; color: #fff; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer; transition: color 0.2s;">Email</button>
             </div>
         </div>
     </footer>
@@ -508,7 +706,10 @@
     </script>
 
     <div class="copy-toast" id="copy-toast">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
         Email copied to clipboard!
     </div>
 
@@ -522,4 +723,5 @@
         }
     </script>
 </body>
+
 </html>

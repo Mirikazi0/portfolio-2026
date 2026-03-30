@@ -514,7 +514,10 @@
                 grid-template-columns: 1fr;
                 gap: 0.4rem;
             }
-            .exp-company { text-align: left; }
+
+            .exp-company {
+                text-align: left;
+            }
         }
 
         /* --- About Side Scrolling Layout --- */
@@ -528,7 +531,8 @@
 
         .sticky-text-wrapper {
             position: sticky;
-            top: 15vh; /* Keep text vertically centered in viewport, slightly higher */
+            top: 15vh;
+            /* Keep text vertically centered in viewport, slightly higher */
             padding: 4rem 1rem;
             z-index: 10;
         }
@@ -543,13 +547,15 @@
         .scroll-image-col {
             display: flex;
             flex-direction: column;
-            gap: 25vh; /* Vertical gap to ensure they scroll past naturally */
+            gap: 25vh;
+            /* Vertical gap to ensure they scroll past naturally */
             padding-bottom: 25vh;
             padding-top: 10vh;
         }
 
         .scroll-image-col.right-col {
-            margin-top: 20vh; /* Stagger the right column */
+            margin-top: 20vh;
+            /* Stagger the right column */
         }
 
         .polaroid-placeholder {
@@ -558,7 +564,7 @@
             background-color: #222;
             border: 8px solid #fff;
             border-bottom: 30px solid #fff;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
             border-radius: 2px;
             display: flex;
             align-items: center;
@@ -569,20 +575,23 @@
             font-weight: 500;
             transition: transform 0.3s ease;
         }
-        
+
         .polaroid-placeholder:hover {
             transform: scale(1.05) rotate(0) !important;
             z-index: 20;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
         }
 
         @media(max-width: 900px) {
             .about-grid-layout {
                 grid-template-columns: 1fr;
             }
+
             .scroll-image-col {
-                display: none; /* Hide side scrolling pictures on small screens */
+                display: none;
+                /* Hide side scrolling pictures on small screens */
             }
+
             .sticky-text-wrapper {
                 position: static;
                 padding: 0;
@@ -641,7 +650,7 @@
             font-size: 1rem;
             font-weight: 600;
             border: 2px solid #000;
-            box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
             opacity: 0;
             transition: opacity 0.3s ease, transform 0.3s ease;
             pointer-events: none;
@@ -662,6 +671,7 @@
             font-family: var(--font-main);
             cursor: pointer;
         }
+
         .contact-cta {
             font-size: 6rem;
             font-weight: 700;
@@ -864,8 +874,8 @@
                     </div>
                     <div class="case-study-info">
                         <h3>Symph</h3>
-                        <p>Redesigned landing page for a teacher platform to clarify value, support B2B conversations,
-                            and expand global reach.</p>
+                        <p>Designing a landing experience from the ground up — to help teachers understand the product
+                            immediately and support B2B conversations.</p>
                         <div class="case-study-tags">
                             <span class="tag">Product Design</span>
                             <span class="tag">Ed Tech</span>
@@ -914,17 +924,20 @@
     <!-- 5. About (White fill with side scroll images) -->
     <section id="about" style="background-color: #fff; padding: 0; position: relative; z-index: 5;">
         <div class="container about-grid-layout">
-            
+
             <!-- Left Side Images -->
             <div class="scroll-image-col left-col">
                 <div class="polaroid-placeholder" style="transform: rotate(-6deg); padding: 0;">
-                    <img src="./04_Assets/Images/Image%201.jpg" alt="Gallery Image 1" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="./04_Assets/Images/Image%201.jpg" alt="Gallery Image 1"
+                        style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div class="polaroid-placeholder" style="transform: rotate(4deg); padding: 0;">
-                    <img src="./04_Assets/Images/Image%202.jpg" alt="Gallery Image 2" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="./04_Assets/Images/Image%202.jpg" alt="Gallery Image 2"
+                        style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div class="polaroid-placeholder" style="transform: rotate(-3deg); padding: 0;">
-                    <img src="./04_Assets/Images/Image%203.jpg" alt="Gallery Image 3" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="./04_Assets/Images/Image%203.jpg" alt="Gallery Image 3"
+                        style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
             </div>
 
@@ -932,18 +945,23 @@
             <div class="sticky-text-wrapper">
                 <div class="scroll-highlight-text">
                     <p style="font-size: 1.4rem; line-height: 1.6; margin-bottom: 2rem; font-weight: 500;">
-                        Hi, I’m Chaz — a product designer with 2+ years of experience working on B2B and EdTech products,
+                        Hi, I’m Chaz — a product designer with 2+ years of experience working on B2B and EdTech
+                        products,
                         with a background in Multimedia Arts.
                     </p>
                     <p style="font-size: 1.4rem; line-height: 1.6; margin-bottom: 2rem; font-weight: 500;">
                         Over the past few years, I’ve been focused on simplifying complex workflows into clear, usable
-                        experiences. Recently, I’ve been exploring how AI can be integrated into products to help teams move
-                        faster and make better decisions. I enjoy working across the full process — from understanding the
+                        experiences. Recently, I’ve been exploring how AI can be integrated into products to help teams
+                        move
+                        faster and make better decisions. I enjoy working across the full process — from understanding
+                        the
                         problem to shipping solutions that actually get used.
                     </p>
                     <p style="font-size: 1.4rem; line-height: 1.6; font-weight: 500;">
-                        Outside of work, I experiment with AI tools and build small projects to test ideas quickly. I’m also
-                        involved in the local design community, where I help create spaces for designers to learn, share,
+                        Outside of work, I experiment with AI tools and build small projects to test ideas quickly. I’m
+                        also
+                        involved in the local design community, where I help create spaces for designers to learn,
+                        share,
                         and grow.
                     </p>
                 </div>
@@ -952,13 +970,16 @@
             <!-- Right Side Images -->
             <div class="scroll-image-col right-col">
                 <div class="polaroid-placeholder" style="transform: rotate(5deg); padding: 0;">
-                    <img src="./04_Assets/Images/Image%204.jpg" alt="Gallery Image 4" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="./04_Assets/Images/Image%204.jpg" alt="Gallery Image 4"
+                        style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div class="polaroid-placeholder" style="transform: rotate(-5deg); padding: 0;">
-                    <img src="./04_Assets/Images/Image%205.jpg" alt="Gallery Image 5" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="./04_Assets/Images/Image%205.jpg" alt="Gallery Image 5"
+                        style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div class="polaroid-placeholder" style="transform: rotate(2deg); padding: 0;">
-                    <img src="./04_Assets/Images/Image%206.jpg" alt="Gallery Image 6" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="./04_Assets/Images/Image%206.jpg" alt="Gallery Image 6"
+                        style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
             </div>
 
@@ -1005,7 +1026,8 @@
                 <div class="contact-cta">Let's work<br>together.</div>
             </div>
 
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.25rem;">Open to full-time roles and freelance projects. If you think there's a fit, I'd love to hear from you.</p>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.25rem;">Open to full-time
+                roles and freelance projects. If you think there's a fit, I'd love to hear from you.</p>
 
             <div class="contact-links">
                 <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
@@ -1028,7 +1050,8 @@
             <div style="display: flex; gap: 2rem;">
                 <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
                     style="color: #fff; transition: color 0.2s;">LinkedIn</a>
-                <button onclick="copyEmail()" style="background: none; border: none; color: #fff; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer; transition: color 0.2s;">Email</button>
+                <button onclick="copyEmail()"
+                    style="background: none; border: none; color: #fff; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer; transition: color 0.2s;">Email</button>
             </div>
         </div>
     </footer>
@@ -1129,11 +1152,11 @@
                     const windowHeight = window.innerHeight;
                     const startPoint = windowHeight * 0.75;
                     let scrolled = startPoint - rect.top;
-                    let totalScroll = rect.height - (windowHeight * 0.5); 
-                    
+                    let totalScroll = rect.height - (windowHeight * 0.5);
+
                     let progress = scrolled / totalScroll;
                     progress = Math.max(0, Math.min(1, progress));
-                    
+
                     highlightTexts.forEach(txt => {
                         txt.style.setProperty('--scroll-p', `${progress * 100}%`);
                     });
@@ -1145,7 +1168,10 @@
 
     <!-- Email copy toast -->
     <div class="copy-toast" id="copy-toast">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
         Email copied to clipboard!
     </div>
 

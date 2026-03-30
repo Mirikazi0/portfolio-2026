@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Symph — Case Study | Chaz Borromeo</title>
-    <meta name="description" content="How I redesigned Symph's landing page to clarify value, support B2B conversations, and expand global reach.">
+    <title>Lesson Planner PH — Case Study | Chaz Borromeo</title>
+    <meta name="description" content="How I redesigned Lesson Planner PH's landing page to clarify value, support B2B conversations, and position the product for global reach.">
     <link rel="icon" type="image/jpeg" href="./04_Assets/Images/profile.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -230,18 +230,53 @@
             object-fit: cover;
         }
 
-        /* Blockquote insight callout */
-        .insight-callout {
-            border-left: 4px solid var(--accent-blue);
-            padding: 1.5rem 2rem;
-            background: #f0f1ff;
-            border-radius: 0 12px 12px 0;
+        /* Image placeholder */
+        .img-placeholder {
+            width: 100%;
+            background: #f4f4f4;
+            border: var(--border-dark);
+            border-radius: 12px;
+            box-shadow: var(--shadow-solid);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: #999;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            aspect-ratio: 16/9;
             margin: 3rem 0;
         }
 
-        .insight-callout p {
-            font-size: 1.2rem;
-            font-style: italic;
+        .img-placeholder strong {
+            font-size: 1rem;
+            color: #555;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        /* Takeaway callout */
+        .takeaway-block {
+            margin: 3rem 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .takeaway-item {
+            padding: 1.5rem 2rem;
+            border: var(--border-dark);
+            border-radius: 12px;
+            box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.8);
+            background: #fafafa;
+        }
+
+        .takeaway-item p {
+            font-size: 1.1rem;
+            line-height: 1.75;
             color: #333;
             margin: 0;
         }
@@ -394,8 +429,8 @@
     <main class="container">
         <section class="project-hero">
             <div class="project-eyebrow reveal">Ed Tech · Product Design · B2B</div>
-            <h1 class="project-title reveal">Symph</h1>
-            <p class="project-subtitle reveal">Redesigning a teacher platform's landing page to tell a clearer story, open B2B sales conversations, and prepare for global expansion.</p>
+            <h1 class="project-title reveal">Lesson Planner PH</h1>
+            <p class="project-subtitle reveal">Designing a landing experience from the ground up — to help teachers understand the product immediately and support B2B conversations.</p>
 
             <div class="project-meta-grid reveal">
                 <div class="meta-item">
@@ -417,77 +452,83 @@
             </div>
 
             <div class="hero-image-container reveal">
-                <img src="./04_Assets/Images/Symph.avif" alt="Symph Landing Page Hero">
+                <img src="./04_Assets/Images/Symph.avif" alt="Lesson Planner PH Hero">
             </div>
         </section>
 
         <!-- Storytelling -->
         <article class="storytelling-body">
 
+            <!-- Overview -->
             <div class="story-section reveal">
-                <h2>The Challenge</h2>
-                <p>Symph is a platform designed to help teachers create and manage lesson content more effectively. Despite having a genuinely powerful product, the existing landing page failed to clearly communicate who it was for, how it worked, or why schools should adopt it at an institutional level.</p>
-                <p>The team was preparing for B2B outreach to school administrators and needed a page that could do two things simultaneously: speak directly to individual teachers and initiate trust with decision-making buyers.</p>
+                <p>Lesson Planner PH helps teachers build structured lesson plans faster. I was brought in to design the landing experience from scratch — no existing design, no reference to build from.</p>
+                <p>The goal: make the product immediately understandable to teachers, and credible enough to support institutional B2B conversations.</p>
             </div>
 
+            <!-- The Problem -->
             <div class="story-section reveal">
-                <h2>Process & Discovery</h2>
-                <p>I began by auditing the existing page against a competitor set — looking at how EdTech B2B products like Canva for Education and Nearpod framed their value propositions. I then ran a lightweight content audit to identify every value claim the product made and whether there was evidence to back it up.</p>
-
-                <div class="side-by-side">
-                    <img src="./04_Assets/Images/Image 3.jpg" alt="Competitor landscape analysis">
-                    <img src="./04_Assets/Images/Image 5.jpg" alt="Content audit and wireframing">
-                </div>
-
-                <div class="insight-callout">
-                    <p>"The old page talked about features. Teachers care about outcomes — saving time on lesson prep, keeping students engaged. We needed to flip the frame."</p>
-                </div>
-
-                <p>Interviews with three active users confirmed the pattern: teachers were unclear on what Symph actually did in the first 5 seconds of landing on the page. The above-the-fold message was too abstract and product-focused.</p>
+                <h2>The Problem</h2>
+                <p>Teachers spend too much time formatting lesson plans — time that should go toward teaching. No existing tool solved this cleanly for the Philippine curriculum.</p>
+                <p>The landing page had to speak to two very different audiences at once:</p>
+                <ul style="margin: 1rem 0 0 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li style="font-size: 1.2rem; line-height: 1.6; color: #333;"><strong>Teachers</strong> — who need to feel the tool saves them real time</li>
+                    <li style="font-size: 1.2rem; line-height: 1.6; color: #333;"><strong>Institutions</strong> — who need to trust it before they can recommend or adopt it</li>
+                </ul>
             </div>
 
+            <!-- Defining the Experience -->
             <div class="story-section reveal">
-                <h2>The Solution</h2>
-                <p>I restructured the entire narrative hierarchy — leading with a teacher-first outcome statement, followed by a demonstration of the product in context, and closing with a clear B2B value proposition aimed at administrators.</p>
+                <h2>Defining the Experience</h2>
+                <p>I started with structure, not visuals. The page needed to earn trust in a specific sequence — problem → solution → proof → contact.</p>
+                <p>Lo-fi and mid-fidelity wireframes validated the content hierarchy before any visual direction was decided.</p>
 
-                <img src="./04_Assets/Images/Image 6.jpg" alt="Final Symph landing page redesign" class="story-image">
-
-                <p>The new information architecture prioritized three persuasion layers: <strong>emotional resonance</strong> (I see myself using this), <strong>social proof</strong> (others like me trust it), and <strong>institutional clarity</strong> (this is safe for my school to adopt). Each section earned the next.</p>
+                <img src="./04_Assets/Images/Lesson Planner - wireframe.png" alt="Lesson Planner PH lo-fi and mid-fidelity wireframes" class="story-image">
             </div>
 
+            <!-- The Design -->
+            <div class="story-section reveal">
+                <h2>The Design</h2>
+                <p>The high-fidelity design led with a clear outcome statement, then built the case section by section — use cases, feature value, and a B2B entry point.</p>
+
+                <img src="./04_Assets/Images/final high-fidelity screen of the full landing page.png" alt="Lesson Planner PH high-fidelity landing page" class="story-image">
+
+                <img src="./04_Assets/Images/secondary HiFi screen (features section, CTA block, or mobile view).png" alt="Lesson Planner PH high-fidelity section detail" class="story-image">
+            </div>
+
+            <!-- The Impact -->
             <div class="story-section reveal">
                 <h2>The Impact</h2>
-                <p>The redesigned page significantly improved key engagement metrics and became the foundation for Symph's first B2B sales deck, directly enabling partnership conversations with school districts in the Philippines and Southeast Asia.</p>
+                <p>The design gave the product its first credible presence — and became the foundation for early B2B and institutional conversations.</p>
+                <p>Framing outcomes over features made the page work for both audiences without compromising either.</p>
+            </div>
 
-                <div class="stat-grid reveal">
-                    <div class="stat-block">
-                        <div class="stat-number">2.5×</div>
-                        <div class="stat-label">Time on Page Increase</div>
+            <!-- Takeaway -->
+            <div class="story-section reveal">
+                <h2>Takeaway</h2>
+                <div class="takeaway-block">
+                    <div class="takeaway-item">
+                        <p>💡 <strong>Design the narrative before the visuals.</strong> Structure and hierarchy carry the most weight at the start.</p>
                     </div>
-                    <div class="stat-block">
-                        <div class="stat-number">+38%</div>
-                        <div class="stat-label">Demo Request Click-through</div>
-                    </div>
-                    <div class="stat-block">
-                        <div class="stat-number">3</div>
-                        <div class="stat-label">B2B Deals Initiated</div>
+                    <div class="takeaway-item">
+                        <p>🎯 <strong>Landing pages serve multiple audiences.</strong> In EdTech, individual appeal and institutional credibility have to coexist.</p>
                     </div>
                 </div>
-
-                <p>This project taught me that landing page design isn't just visual — it's editorial. The challenge is almost always about sequencing the right message to the right audience at the right moment in their decision-making journey.</p>
             </div>
 
         </article>
     </main>
 
+
+
     <!-- Final CTA -->
     <section id="contact" class="dark-section" style="border-bottom: none;">
         <div class="container">
             <div style="text-align: center;">
-                <div class="contact-cta reveal">Let's build<br>something great.</div>
+                <div class="contact-cta reveal">Let's work<br>together.</div>
             </div>
+
             <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.25rem;" class="reveal">
-                If you'd like to learn more about this project or my availability, feel free to reach out.
+                Open to full-time roles and freelance projects. If you think there's a fit, I'd love to hear from you.
             </p>
             <div class="contact-links reveal">
                 <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer" class="pill-outline-light">
