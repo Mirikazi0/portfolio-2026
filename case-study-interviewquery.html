@@ -486,7 +486,11 @@
             }
 
             .stat-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr !important;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
             }
 
             .stat-block {
@@ -497,6 +501,15 @@
             .hero-image-container {
                 height: 40vh;
                 min-height: 280px;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .contact-links .pill-outline-light {
+                width: 100%;
             }
         }
     </style>

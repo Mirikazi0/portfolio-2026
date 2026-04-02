@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oops. Not Yet. | Chaz Borromeo</title>
+    <link rel="icon" type="image/jpeg" href="./04_Assets/Images/profile.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --font-main: 'Figtree', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: var(--font-main);
+            background-color: #FAFAFA;
+            color: #111;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            gap: 1.5rem;
+        }
+
+        .emoji {
+            font-size: 5rem;
+            animation: wobble 2.5s ease-in-out infinite;
+        }
+
+        @keyframes wobble {
+
+            0%,
+            100% {
+                transform: rotate(-4deg);
+            }
+
+            50% {
+                transform: rotate(4deg);
+            }
+        }
+
+        .headline {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        .sub {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 420px;
+            line-height: 1.6;
+        }
+
+        .sub em {
+            font-style: italic;
+            color: #999;
+        }
+
+        .divider {
+            width: 48px;
+            height: 3px;
+            background: #111;
+            border-radius: 2px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 9999px;
+            border: 2px solid #000;
+            background: #111;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 1);
+            font-family: var(--font-main);
+        }
+
+        .btn-primary:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 1);
+        }
+
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 9999px;
+            border: 2px solid #ccc;
+            background: transparent;
+            color: #555;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: var(--font-main);
+        }
+
+        .btn-ghost:hover {
+            border-color: #111;
+            color: #111;
+        }
+
+        .footer-note {
+            position: fixed;
+            bottom: 1.5rem;
+            font-size: 0.8rem;
+            color: #ccc;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 480px) {
+            .headline {
+                font-size: 2rem;
+            }
+
+            .emoji {
+                font-size: 4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="emoji">🚧</div>
+
+        <h1 class="headline">Still cooking.<br>Check back soon.</h1>
+
+        <div class="divider"></div>
+
+        <p class="sub">
+            This case study isn't ready yet — I'm still writing it up, finding the right words, and pretending I know
+            what I'm doing.
+        </p>
+
+        <div class="actions">
+            <a href="./archived-works.html" class="btn-primary">
+                ← Back to Visual Work
+            </a>
+            <a href="./index.html" class="btn-ghost">
+                Go Home
+            </a>
+        </div>
+    </div>
+
+    <p class="footer-note">© Chaz Grant, 2026 &nbsp;·&nbsp; This message brought to you by procrastination</p>
+</body>
+
+</html>
