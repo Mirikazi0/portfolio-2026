@@ -513,9 +513,15 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="./04_Assets/cursor.css">
+    <link rel="stylesheet" href="./04_Assets/cta.css">
 </head>
 
 <body>
+    <!-- Custom Cursor -->
+    <div id="custom-cursor">
+        <span>VIEW</span>
+    </div>
 
     <!-- Navigation -->
     <nav>
@@ -630,9 +636,11 @@
                     </div>
                 </div>
 
-                <div style="margin-top: 1.5rem; padding: 1.25rem 1.75rem; border: var(--border-dark); border-radius: 12px; background: #f9f9f9; display: flex; align-items: center; gap: 1rem;">
+                <div
+                    style="margin-top: 1.5rem; padding: 1.25rem 1.75rem; border: var(--border-dark); border-radius: 12px; background: #f9f9f9; display: flex; align-items: center; gap: 1rem;">
                     <span style="font-size: 1.5rem;">↑</span>
-                    <span style="font-size: 1rem; font-weight: 600; color: #333;">Purchasing behavior shifted toward higher-value plans — yearly and lifetime tiers saw increased uptake.</span>
+                    <span style="font-size: 1rem; font-weight: 600; color: #333;">Purchasing behavior shifted toward
+                        higher-value plans — yearly and lifetime tiers saw increased uptake.</span>
                 </div>
 
                 <p style="margin-top: 2rem;">These results validated that clear value framing and early personalization
@@ -657,16 +665,19 @@
         </article>
     </main>
 
-    <!-- Final CTA -->
+    <!-- 7. Contact Section (Black) -->
     <section id="contact" class="dark-section" style="border-bottom: none;">
         <div class="container">
+
+
             <div style="text-align: center;">
-                <div class="contact-cta reveal">Let's build<br>something great.</div>
+                <div class="contact-cta">Let's work<br>together.</div>
             </div>
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.25rem;" class="reveal">
-                If you'd like to learn more about this project or my availability, feel free to reach out.
-            </p>
-            <div class="contact-links reveal">
+
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.25rem;">Open to full-time
+                roles and freelance projects. If you think there's a fit, I'd love to hear from you.</p>
+
+            <div class="contact-links">
                 <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
                     class="pill-outline-light">
                     <img src="./04_Assets/Icons/LinkedIn.svg" width="24" height="24" alt="LinkedIn">
@@ -680,13 +691,13 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="dark-section" style="border-top: none; padding-bottom: 4rem;">
+    <!-- 8. Footer (Black) -->
+    <footer>
         <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
             <div>© Chaz Grant, 2026</div>
             <div style="display: flex; gap: 2rem;">
                 <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
-                    style="color: #fff; transition: color 0.2s;">LinkedIn</a>
+                    style="color: #000000; transition: color 0.2s;">LinkedIn</a>
                 <button onclick="copyEmail()"
                     style="background: none; border: none; color: #fff; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer; transition: color 0.2s;">Email</button>
             </div>
@@ -725,6 +736,7 @@
             });
         }
     </script>
+    <script src="./04_Assets/cursor.js"></script>
 </body>
 
 </html>

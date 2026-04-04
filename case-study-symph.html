@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson Planner PH — Case Study | Chaz Borromeo</title>
-    <meta name="description" content="How I redesigned Lesson Planner PH's landing page to clarify value, support B2B conversations, and position the product for global reach.">
+    <meta name="description"
+        content="How I redesigned Lesson Planner PH's landing page to clarify value, support B2B conversations, and position the product for global reach.">
     <link rel="icon" type="image/jpeg" href="./04_Assets/Images/profile.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg-color: #FAFAFA;
@@ -26,8 +28,15 @@
             --shadow-dark-solid: 4px 4px 0px 0px rgba(255, 255, 255, 1);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: var(--font-main);
@@ -37,8 +46,15 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        a { text-decoration: none; color: inherit; }
-        p { font-size: 1.125rem; color: #333333; }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: #333333;
+        }
 
         .container {
             max-width: 1200px;
@@ -73,7 +89,9 @@
             transition: transform 0.2s ease;
         }
 
-        .back-link:hover { transform: translateX(-4px); }
+        .back-link:hover {
+            transform: translateX(-4px);
+        }
 
         .nav-logo {
             display: flex;
@@ -98,7 +116,9 @@
             border: 2px solid #000;
         }
 
-        .nav-right-placeholder { width: 80px; }
+        .nav-right-placeholder {
+            width: 80px;
+        }
 
         /* --- Project Hero --- */
         .project-hero {
@@ -185,7 +205,9 @@
             margin: 0 auto 8rem;
         }
 
-        .story-section { margin-bottom: 5rem; }
+        .story-section {
+            margin-bottom: 5rem;
+        }
 
         .story-section h2 {
             font-size: 2.25rem;
@@ -270,7 +292,7 @@
             padding: 1.5rem 2rem;
             border: var(--border-dark);
             border-radius: 12px;
-            box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.8);
+            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.8);
             background: #fafafa;
         }
 
@@ -299,7 +321,9 @@
             border-right: var(--border-dark);
         }
 
-        .stat-block:last-child { border-right: none; }
+        .stat-block:last-child {
+            border-right: none;
+        }
 
         .stat-number {
             font-size: 3.5rem;
@@ -339,7 +363,7 @@
             font-size: 1rem;
             font-weight: 600;
             border: 2px solid #000;
-            box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
             opacity: 0;
             transition: opacity 0.3s ease, transform 0.3s ease;
             pointer-events: none;
@@ -349,12 +373,24 @@
             gap: 0.6rem;
             white-space: nowrap;
         }
-        .copy-toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
-        button.pill-outline-light { font-family: var(--font-main); cursor: pointer; }
 
-        .dark-section p { color: #fff; }
+        .copy-toast.visible {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
 
-        section { padding: 8rem 0; }
+        button.pill-outline-light {
+            font-family: var(--font-main);
+            cursor: pointer;
+        }
+
+        .dark-section p {
+            color: #fff;
+        }
+
+        section {
+            padding: 8rem 0;
+        }
 
         .contact-cta {
             font-size: clamp(3rem, 6vw, 6rem);
@@ -399,28 +435,68 @@
             will-change: opacity, transform;
         }
 
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         @media (max-width: 768px) {
-            .contact-cta { font-size: 3rem; }
-            .project-title { font-size: 2.75rem; letter-spacing: -1px; }
-            .side-by-side { grid-template-columns: 1fr; }
-            .stat-grid { grid-template-columns: 1fr !important; }
-            .stat-number { font-size: 2.5rem; }
-            .stat-block { border-right: none; border-bottom: var(--border-dark); }
-            .hero-image-container { height: 40vh; min-height: 280px; }
-            .contact-links { flex-direction: column; gap: 1rem; }
-            .contact-links .pill-outline-light { width: 100%; }
+            .contact-cta {
+                font-size: 3rem;
+            }
+
+            .project-title {
+                font-size: 2.75rem;
+                letter-spacing: -1px;
+            }
+
+            .side-by-side {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .stat-block {
+                border-right: none;
+                border-bottom: var(--border-dark);
+            }
+
+            .hero-image-container {
+                height: 40vh;
+                min-height: 280px;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .contact-links .pill-outline-light {
+                width: 100%;
+            }
         }
     </style>
+    <link rel="stylesheet" href="./04_Assets/cursor.css">
+    <link rel="stylesheet" href="./04_Assets/cta.css">
 </head>
 
 <body>
+    <!-- Custom Cursor -->
+    <div id="custom-cursor">
+        <span>VIEW</span>
+    </div>
 
     <!-- Navigation -->
     <nav>
         <a href="javascript:history.back()" class="back-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <line x1="19" y1="12" x2="5" y2="12"></line>
                 <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
@@ -433,7 +509,8 @@
         <section class="project-hero">
             <div class="project-eyebrow reveal">Ed Tech · Product Design · B2B</div>
             <h1 class="project-title reveal">Lesson Planner PH</h1>
-            <p class="project-subtitle reveal">Designing a landing experience from the ground up — to help teachers understand the product immediately and support B2B conversations.</p>
+            <p class="project-subtitle reveal">Designing a landing experience from the ground up — to help teachers
+                understand the product immediately and support B2B conversations.</p>
 
             <div class="project-meta-grid reveal">
                 <div class="meta-item">
@@ -464,44 +541,56 @@
 
             <!-- Overview -->
             <div class="story-section reveal">
-                <p>Lesson Planner PH helps teachers build structured lesson plans faster. I was brought in to design the landing experience from scratch — no existing design, no reference to build from.</p>
-                <p>The goal: make the product immediately understandable to teachers, and credible enough to support institutional B2B conversations.</p>
+                <p>Lesson Planner PH helps teachers build structured lesson plans faster. I was brought in to design the
+                    landing experience from scratch — no existing design, no reference to build from.</p>
+                <p>The goal: make the product immediately understandable to teachers, and credible enough to support
+                    institutional B2B conversations.</p>
             </div>
 
             <!-- The Problem -->
             <div class="story-section reveal">
                 <h2>Too much time on admin</h2>
-                <p>Teachers spend too much time formatting lesson plans — time that should go toward teaching. No existing tool solved this cleanly for the Philippine curriculum.</p>
+                <p>Teachers spend too much time formatting lesson plans — time that should go toward teaching. No
+                    existing tool solved this cleanly for the Philippine curriculum.</p>
                 <p>The landing page had to speak to two very different audiences at once:</p>
                 <ul style="margin: 1rem 0 0 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                    <li style="font-size: 1.2rem; line-height: 1.6; color: #333;"><strong>Teachers</strong> — who need to feel the tool saves them real time</li>
-                    <li style="font-size: 1.2rem; line-height: 1.6; color: #333;"><strong>Institutions</strong> — who need to trust it before they can recommend or adopt it</li>
+                    <li style="font-size: 1.2rem; line-height: 1.6; color: #333;"><strong>Teachers</strong> — who need
+                        to feel the tool saves them real time</li>
+                    <li style="font-size: 1.2rem; line-height: 1.6; color: #333;"><strong>Institutions</strong> — who
+                        need to trust it before they can recommend or adopt it</li>
                 </ul>
             </div>
 
             <!-- Defining the Experience -->
             <div class="story-section reveal">
                 <h2>Structure before screens</h2>
-                <p>I started with structure, not visuals. The page needed to earn trust in a specific sequence — problem → solution → proof → contact.</p>
-                <p>Lo-fi and mid-fidelity wireframes validated the content hierarchy before any visual direction was decided.</p>
+                <p>I started with structure, not visuals. The page needed to earn trust in a specific sequence — problem
+                    → solution → proof → contact.</p>
+                <p>Lo-fi and mid-fidelity wireframes validated the content hierarchy before any visual direction was
+                    decided.</p>
 
-                <img src="./04_Assets/Images/Lesson Planner - wireframe.png" alt="Lesson Planner PH lo-fi and mid-fidelity wireframes" class="story-image">
+                <img src="./04_Assets/Images/Lesson Planner - wireframe.png"
+                    alt="Lesson Planner PH lo-fi and mid-fidelity wireframes" class="story-image">
             </div>
 
             <!-- The Design -->
             <div class="story-section reveal">
                 <h2>Teacher-first, institution-ready</h2>
-                <p>The high-fidelity design led with a clear outcome statement, then built the case section by section — use cases, feature value, and a B2B entry point.</p>
+                <p>The high-fidelity design led with a clear outcome statement, then built the case section by section —
+                    use cases, feature value, and a B2B entry point.</p>
 
-                <img src="./04_Assets/Images/final high-fidelity screen of the full landing page.png" alt="Lesson Planner PH high-fidelity landing page" class="story-image">
+                <img src="./04_Assets/Images/final high-fidelity screen of the full landing page.png"
+                    alt="Lesson Planner PH high-fidelity landing page" class="story-image">
 
-                <img src="./04_Assets/Images/secondary HiFi screen (features section, CTA block, or mobile view).png" alt="Lesson Planner PH high-fidelity section detail" class="story-image">
+                <img src="./04_Assets/Images/secondary HiFi screen (features section, CTA block, or mobile view).png"
+                    alt="Lesson Planner PH high-fidelity section detail" class="story-image">
             </div>
 
             <!-- The Impact -->
             <div class="story-section reveal">
                 <h2>A credible first impression</h2>
-                <p>The design gave the product its first credible presence — and became the foundation for early B2B and institutional conversations.</p>
+                <p>The design gave the product its first credible presence — and became the foundation for early B2B and
+                    institutional conversations.</p>
                 <p>Framing outcomes over features made the page work for both audiences without compromising either.</p>
             </div>
 
@@ -510,10 +599,12 @@
                 <h2>What I learned</h2>
                 <div class="takeaway-block">
                     <div class="takeaway-item">
-                        <p>💡 <strong>Design the narrative before the visuals.</strong> Structure and hierarchy carry the most weight at the start.</p>
+                        <p>💡 <strong>Design the narrative before the visuals.</strong> Structure and hierarchy carry
+                            the most weight at the start.</p>
                     </div>
                     <div class="takeaway-item">
-                        <p>🎯 <strong>Landing pages serve multiple audiences.</strong> In EdTech, individual appeal and institutional credibility have to coexist.</p>
+                        <p>🎯 <strong>Landing pages serve multiple audiences.</strong> In EdTech, individual appeal and
+                            institutional credibility have to coexist.</p>
                     </div>
                 </div>
             </div>
@@ -523,18 +614,21 @@
 
 
 
-    <!-- Final CTA -->
+    <!-- 7. Contact Section (Black) -->
     <section id="contact" class="dark-section" style="border-bottom: none;">
         <div class="container">
+
+
             <div style="text-align: center;">
-                <div class="contact-cta reveal">Let's work<br>together.</div>
+                <div class="contact-cta">Let's work<br>together.</div>
             </div>
 
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.25rem;" class="reveal">
-                Open to full-time roles and freelance projects. If you think there's a fit, I'd love to hear from you.
-            </p>
-            <div class="contact-links reveal">
-                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer" class="pill-outline-light">
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.25rem;">Open to full-time
+                roles and freelance projects. If you think there's a fit, I'd love to hear from you.</p>
+
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
+                    class="pill-outline-light">
                     <img src="./04_Assets/Icons/LinkedIn.svg" width="24" height="24" alt="LinkedIn">
                     LinkedIn
                 </a>
@@ -546,13 +640,15 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="dark-section" style="border-top: none; padding-bottom: 4rem;">
+    <!-- 8. Footer (Black) -->
+    <footer>
         <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
             <div>© Chaz Grant, 2026</div>
             <div style="display: flex; gap: 2rem;">
-                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer" style="color: #fff; transition: color 0.2s;">LinkedIn</a>
-                <button onclick="copyEmail()" style="background: none; border: none; color: #fff; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer; transition: color 0.2s;">Email</button>
+                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
+                    style="color: #fff; transition: color 0.2s;">LinkedIn</a>
+                <button onclick="copyEmail()"
+                    style="background: none; border: none; color: #fff; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer; transition: color 0.2s;">Email</button>
             </div>
         </div>
     </footer>
@@ -573,7 +669,10 @@
     </script>
 
     <div class="copy-toast" id="copy-toast">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
         Email copied to clipboard!
     </div>
 
@@ -586,5 +685,7 @@
             });
         }
     </script>
+    <script src="./04_Assets/cursor.js"></script>
 </body>
+
 </html>

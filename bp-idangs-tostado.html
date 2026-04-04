@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idang's Tostado Packaging | Chaz Borromeo</title>
+    <!-- Favicon (using profile pic as placeholder) -->
+    <link rel="icon" type="image/jpeg" href="./04_Assets/Images/profile.jpeg">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAFAFA;
+            --dark-bg: #111111;
+            --text-main: #000000;
+            --text-light: #FFFFFF;
+            --accent-blue: #4F46E5;
+            --accent-orange: #FF6B6B;
+            --accent-yellow: #FbbF24;
+            --font-main: 'Figtree', sans-serif;
+            --border-dark: 2px solid #000000;
+            --border-light: 2px solid rgba(255, 255, 255, 0.15);
+            --shadow-solid: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+            --shadow-hover: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+            --shadow-dark-solid: 4px 4px 0px 0px rgba(255, 255, 255, 1);
+            --shadow-dark-hover: 6px 6px 0px 0px rgba(255, 255, 255, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: #333333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            position: sticky;
+            top: 1.5rem;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            margin: 0 auto;
+            padding: 0.75rem 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: var(--border-dark);
+            border-radius: 9999px;
+            box-shadow: var(--shadow-solid);
+            transition: all 0.3s ease;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.2s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-4px);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .logo-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background-color: var(--accent-blue);
+            color: #fff;
+            border-radius: 8px;
+            font-weight: 800;
+            border: 2px solid #000;
+        }
+
+        .nav-right-placeholder {
+            width: 80px;
+            /* Balances the back-link width for exact centering */
+        }
+
+        /* --- Project Hero --- */
+        .project-hero {
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+
+        .project-title {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            letter-spacing: -2px;
+        }
+
+        .project-subtitle {
+            font-size: 1.4rem;
+            color: #111;
+            max-width: 750px;
+            margin: 0 auto 4rem;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .project-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto 4rem;
+            text-align: left;
+            border-top: 2px solid #ddd;
+            padding-top: 2rem;
+        }
+
+        .meta-item h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #777;
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-item p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #111;
+        }
+
+        .hero-image-container {
+            width: 100%;
+            height: 60vh;
+            min-height: 500px;
+            border: var(--border-dark);
+            box-shadow: var(--shadow-solid);
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #eee;
+            margin: 0 auto 6rem;
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- Storytelling Body --- */
+        .storytelling-body {
+            max-width: 850px;
+            margin: 0 auto 8rem;
+            font-size: 1.25rem;
+        }
+
+        .story-section {
+            margin-bottom: 5rem;
+        }
+
+        .story-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            border-bottom: 3px solid #000;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .story-section p {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .story-image {
+            width: 100%;
+            border: var(--border-dark);
+            border-radius: 12px;
+            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.1);
+            margin: 3rem 0;
+            background-color: #f4f4f4;
+        }
+
+        .side-by-side {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        /* --- Global Modifiers --- */
+        .dark-section {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            border-top: var(--border-dark);
+            border-bottom: var(--border-dark);
+        }
+
+        .dark-section p {
+            color: #fff;
+        }
+
+        section {
+            padding: 8rem 0;
+        }
+
+        /* Contact & Buttons reused from index */
+        .contact-cta {
+            font-size: 6rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pill-outline-light {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            background: transparent;
+            border: var(--border-light);
+            color: var(--text-light);
+            transition: all 0.2s ease;
+        }
+
+        .pill-outline-light:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Reveal Animation Styles */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .contact-cta {
+                font-size: 4rem;
+            }
+
+            .project-title {
+                font-size: 3rem;
+            }
+
+            .side-by-side {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image-container {
+                height: 40vh;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .contact-links .pill-outline-light {
+                width: 100%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./04_Assets/cursor.css">
+    <link rel="stylesheet" href="./04_Assets/cta.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div id="custom-cursor">
+        <span>VIEW</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="./beyond-product.html" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back
+        </a>
+    </nav>
+
+    <!-- 2. Case Study Hero -->
+    <main class="container">
+        <section class="project-hero">
+            <h1 class="project-title reveal">Idang's Tostado Packaging</h1>
+            <p class="project-subtitle reveal">Reimagining the packaging for a classic, bringing heritage into a modern
+                shelf presence.</p>
+
+            <div class="project-meta-grid reveal">
+                <div class="meta-item">
+                    <h4>Role</h4>
+                    <p>Brand Identity, Package Design</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Timeline</h4>
+                    <p>4-6 Weeks (2025/2026)</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Platform</h4>
+                    <p>Print & Packaging</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Tools</h4>
+                    <p>Illustrator, Photoshop</p>
+                </div>
+            </div>
+
+            <div class="hero-image-container reveal">
+                <!-- Replace src with your actual hero image -->
+                <img src="./04_Assets/Images/Idangs Tostados.png" alt="Idang's Tostado Packaging Hero Image">
+            </div>
+        </section>
+
+        <!-- 3. Storytelling Body -->
+        <article class="storytelling-body">
+
+            <div class="story-section reveal">
+                <h2>The Challenge</h2>
+                <p>Start by outlining the core problem. What was frustrating users? What business metrics were failing?
+                    Set the stage so the reader understands why this project needed to happen.</p>
+                <p>Use multiple paragraphs if needed, keeping them concise and focused on the "Why".</p>
+            </div>
+
+            <div class="story-section reveal">
+                <h2>Visual Concept & Design</h2>
+                <p>Discuss your research, user interviews, or initial wireframing. How did you break down the problem?
+                    Did you uncover any surprising insights that drove your design decisions?</p>
+
+                <!-- Example of a side-by-side grid inside the storytelling -->
+                <div class="side-by-side">
+                    <div>
+                        <img src="./04_Assets/Images/Image 1.jpg" alt="Wireframe 1" class="story-image"
+                            style="margin: 0;">
+                    </div>
+                    <div>
+                        <img src="./04_Assets/Images/Image 2.jpg" alt="Wireframe 2" class="story-image"
+                            style="margin: 0;">
+                    </div>
+                </div>
+                <p>Keep the narrative moving. Show how you iterated from low fidelity to high fidelity, and how user
+                    feedback shaped the UI.</p>
+            </div>
+
+            <div class="story-section reveal">
+                <h2>Final Execution</h2>
+                <p>Showcase the final designs. Break down the key features of your solution. Why did you choose this
+                    layout? How does it solve the problem stated in 'The Challenge'?</p>
+
+                <!-- Example of a large in-line structural image -->
+                <img src="./04_Assets/Images/Image 4.jpg" alt="Final Solution Screen" class="story-image">
+
+                <p>Explain the interactions, the visual design language, and the edge cases you considered.</p>
+            </div>
+
+            <div class="story-section reveal">
+                <h2>The Impact</h2>
+                <p>Conclude with concrete results. If it launched, feature metrics like "+15% Conversion Rate" or
+                    "Reduced onboarding friction". If it's a concept, discuss user testing feedback or lessons learned.
+                </p>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- 7. Contact Section (Black) -->
+    <section id="contact" class="dark-section" style="border-bottom: none;">
+        <div class="container">
+
+
+            <div style="text-align: center;">
+                <div class="contact-cta">Let's work<br>together.</div>
+            </div>
+
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.25rem;">Open to full-time
+                roles and freelance projects. If you think there's a fit, I'd love to hear from you.</p>
+
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
+                    class="pill-outline-light">
+                    <img src="./04_Assets/Icons/LinkedIn.svg" width="24" height="24" alt="LinkedIn">
+                    LinkedIn
+                </a>
+                <button onclick="copyEmail()" class="pill-outline-light">
+                    <img src="./04_Assets/Icons/gmail.svg" width="24" height="24" alt="Email">
+                    Email Me
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Footer (Black) -->
+    <footer>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>© Chaz Grant, 2026</div>
+            <div style="display: flex; gap: 2rem;">
+                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
+                    style="color: #fff; transition: color 0.2s;">LinkedIn</a>
+                <button onclick="copyEmail()"
+                    style="background: none; border: none; color: #fff; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer; transition: color 0.2s;">Email</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Reveal Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const revealElements = document.querySelectorAll('.reveal');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: Unobserve if you only want it to play once
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
+    <script src="./04_Assets/cursor.js"></script>
+</body>
+
+</html>
