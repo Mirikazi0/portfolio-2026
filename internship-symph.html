@@ -7,7 +7,7 @@
     <title>Symph — OJT Case Study | Chaz Borromeo</title>
     <meta name="robots" content="noindex, nofollow">
     <meta name="description"
-        content="OJT case study: UI/UX Design Intern at Symph — designing the Lesson Planner PH landing experience.">
+        content="OJT case study: UI/UX Designer, Marketing Creative & Event Photographer at Symph — Cebu's software development studio.">
     <link rel="icon" type="image/jpeg" href="./04_Assets/Images/profile.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
             --dark-bg: #111111;
             --text-main: #000000;
             --text-light: #FFFFFF;
-            --accent-blue: #4F46E5;
+            --symph-blue: #4F46E5;
             --font-main: 'Figtree', sans-serif;
             --border-dark: 2px solid #000000;
             --border-light: 2px solid rgba(255, 255, 255, 0.15);
@@ -69,12 +69,11 @@
             font-size: 1rem;
             transition: transform 0.2s ease;
         }
-
         .back-link:hover { transform: translateX(-4px); }
 
         /* ─── Hero ─── */
         .project-hero {
-            padding: 8rem 0 4rem;
+            padding: 7rem 0 4rem;
             text-align: center;
         }
 
@@ -85,34 +84,61 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             color: #fff;
-            background: var(--accent-blue);
-            padding: 0.3rem 1rem;
+            background: var(--symph-blue);
+            padding: 0.3rem 1.1rem;
             border-radius: 9999px;
             margin-bottom: 1.5rem;
         }
 
         .project-title {
-            font-size: clamp(3rem, 7vw, 5.5rem);
+            font-size: clamp(3.5rem, 8vw, 6.5rem);
             font-weight: 800;
-            line-height: 1.05;
+            line-height: 1;
             margin-bottom: 1.25rem;
-            letter-spacing: -3px;
+            letter-spacing: -4px;
         }
 
         .project-subtitle {
             font-size: 1.35rem;
             color: #444;
             max-width: 700px;
-            margin: 0 auto 4rem;
+            margin: 0 auto 3.5rem;
             line-height: 1.65;
             font-weight: 500;
         }
 
+        /* Role pill row */
+        .role-pills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.6rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .role-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding: 0.45rem 1rem;
+            border-radius: 9999px;
+            border: var(--border-dark);
+            background: #fff;
+            box-shadow: 2px 2px 0 0 rgba(0,0,0,1);
+        }
+
+        .role-pill.design  { background: #EEF2FF; border-color: #3730A3; color: #3730A3; }
+        .role-pill.marketing { background: #ECFDF5; border-color: #065F46; color: #065F46; }
+        .role-pill.photography { background: #FFF7ED; border-color: #92400E; color: #92400E; }
+
         .project-meta-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 2rem;
-            max-width: 960px;
+            max-width: 900px;
             margin: 0 auto 5rem;
             text-align: left;
             border-top: 2px solid #ddd;
@@ -120,7 +146,7 @@
         }
 
         .meta-item h4 {
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             color: #999;
@@ -128,46 +154,63 @@
         }
 
         .meta-item p {
-            font-size: 1.05rem;
+            font-size: 1rem;
             font-weight: 700;
             color: #111;
         }
 
-        /* Hero Image */
-        .hero-image-container {
+        /* ─── Hero Banner ─── */
+        .hero-banner {
             width: 100%;
-            height: 60vh;
-            min-height: 420px;
+            height: 55vh;
+            min-height: 380px;
             border: var(--border-dark);
             box-shadow: var(--shadow-solid);
             border-radius: 20px;
             overflow: hidden;
-            background-color: var(--accent-blue);
+            background-color: var(--symph-blue);
             margin: 0 auto 7rem;
         }
 
-        .hero-image-container img {
+        .hero-banner img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        /* ─── Storytelling ─── */
+        /* ─── Story body ─── */
         .storytelling-body {
             max-width: 820px;
-            margin: 0 auto 8rem;
+            margin: 0 auto;
         }
 
-        .story-section { margin-bottom: 5rem; }
+        .story-section { margin-bottom: 6rem; }
+
+        /* Section label chip */
+        .section-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.3rem 0.9rem;
+            border-radius: 9999px;
+            margin-bottom: 1.25rem;
+            border: 1.5px solid currentColor;
+        }
+
+        .chip-design     { color: #3730A3; background: #EEF2FF; border-color: #3730A3; }
+        .chip-marketing  { color: #065F46; background: #ECFDF5; border-color: #065F46; }
+        .chip-photo      { color: #92400E; background: #FFF7ED; border-color: #92400E; }
 
         .story-section h2 {
             font-size: 2.25rem;
             font-weight: 800;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
             letter-spacing: -1px;
-            border-bottom: 3px solid #000;
-            display: inline-block;
-            padding-bottom: 0.5rem;
+            line-height: 1.1;
         }
 
         .story-section p {
@@ -177,7 +220,122 @@
             color: #333;
         }
 
-        /* Placeholder image slot */
+        /* ─── Product Cards Grid ─── */
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+
+        .product-card {
+            border: var(--border-dark);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-solid);
+            background: #fff;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+        }
+
+        .product-card-image {
+            width: 100%;
+            aspect-ratio: 16/10;
+            background: #f0f0f0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: var(--border-dark);
+        }
+
+        .product-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Placeholder styling for product cards without images */
+        .product-card-image.placeholder {
+            flex-direction: column;
+            gap: 0.5rem;
+            color: #bbb;
+        }
+
+        .product-card-image.placeholder svg { opacity: 0.25; }
+
+        .product-card-image.placeholder .label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .product-card-body {
+            padding: 1.25rem 1.5rem;
+        }
+
+        .product-card-body h3 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            margin-bottom: 0.35rem;
+            letter-spacing: -0.5px;
+        }
+
+        .product-card-body p {
+            font-size: 0.92rem;
+            color: #666;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        @media (max-width: 640px) {
+            .product-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ─── Story Image ─── */
+        .story-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: var(--border-dark);
+            border-radius: 16px;
+            box-shadow: var(--shadow-solid);
+            margin: 3rem 0;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        /* Photo grids */
+        .photo-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+
+        .photo-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+
+        .photo-grid-2 .story-image,
+        .photo-grid-3 .story-image {
+            margin: 0;
+            aspect-ratio: 4/3;
+        }
+
+        .story-image.wide {
+            aspect-ratio: 16/9;
+        }
+
+        /* Image placeholder */
         .img-placeholder {
             width: 100%;
             background: #f4f4f4;
@@ -188,41 +346,179 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 0.5rem;
-            font-size: 0.78rem;
+            gap: 0.6rem;
+            font-size: 0.75rem;
             color: #bbb;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            aspect-ratio: 16/9;
-            margin: 2.5rem 0;
+            margin: 2rem 0;
         }
 
-        .img-placeholder svg { opacity: 0.3; }
+        .img-placeholder.tall { aspect-ratio: 16/9; }
+        .img-placeholder.square { aspect-ratio: 4/3; }
+        .img-placeholder svg { opacity: 0.25; }
+        .img-placeholder .label { font-size: 0.72rem; color: #ccc; }
 
-        /* Actual story images */
-        .story-image {
+        .photo-grid-2 .img-placeholder,
+        .photo-grid-3 .img-placeholder {
+            margin: 0;
+            aspect-ratio: 4/3;
+        }
+
+        @media (max-width: 640px) {
+            .photo-grid-2,
+            .photo-grid-3 { grid-template-columns: 1fr; }
+        }
+
+        /* ─── Carousel ─── */
+        .carousel-month-block {
+            margin-bottom: 4rem;
+        }
+
+        .tech-event-block {
+            margin-bottom: 3.5rem;
+        }
+
+        .month-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 1rem;
+            padding: 0.35rem 1rem;
+            background: #f0f0f0;
+            border: 1.5px solid #ccc;
+            border-radius: 9999px;
+        }
+
+        .carousel-container {
+            position: relative;
             width: 100%;
             border: var(--border-dark);
-            border-radius: 12px;
+            border-radius: 16px;
             box-shadow: var(--shadow-solid);
-            margin: 2.5rem 0;
-            display: block;
+            overflow: hidden;
+            background: #f8f8f8;
         }
 
-        /* Takeaway block */
+        .carousel-track {
+            display: flex;
+            transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            aspect-ratio: 16/10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #eee;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Placeholder slide */
+        .carousel-slide.placeholder {
+            flex-direction: column;
+            gap: 0.5rem;
+            color: #bbb;
+        }
+
+        .carousel-slide.placeholder svg { opacity: 0.2; }
+
+        .carousel-slide.placeholder .label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid #000;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 2px 2px 0 0 rgba(0,0,0,1);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.15s ease;
+        }
+
+        .carousel-btn:hover {
+            background: #fff;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .carousel-btn:active {
+            transform: translateY(-50%) scale(0.95);
+            box-shadow: 1px 1px 0 0 rgba(0,0,0,1);
+        }
+
+        .carousel-btn.prev { left: 12px; }
+        .carousel-btn.next { right: 12px; }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 0;
+            background: #f8f8f8;
+            border-top: 1.5px solid #e5e5e5;
+        }
+
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ddd;
+            border: 1.5px solid #bbb;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .carousel-dot.active {
+            background: #000;
+            border-color: #000;
+            transform: scale(1.15);
+        }
+
+        /* ─── Section divider ─── */
+        .section-divider {
+            border: none;
+            border-top: var(--border-dark);
+            margin: 5rem 0;
+        }
+
+        /* ─── Takeaway block ─── */
         .takeaway-block {
             display: flex;
             flex-direction: column;
-            gap: 1.25rem;
-            margin-top: 2rem;
+            gap: 1.1rem;
+            margin-top: 1.75rem;
         }
 
         .takeaway-item {
-            padding: 1.5rem 1.75rem;
+            padding: 1.4rem 1.75rem;
             border: var(--border-dark);
             border-radius: 12px;
-            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.8);
+            box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.8);
             background: #fff;
         }
 
@@ -281,6 +577,11 @@
             transform: translateY(-2px);
         }
 
+        @media (max-width: 600px) {
+            .contact-links { flex-direction: column; gap: 1rem; }
+            .contact-links .pill-outline-light { width: 100%; }
+        }
+
         /* ─── Footer ─── */
         footer {
             background: var(--dark-bg);
@@ -317,29 +618,23 @@
             white-space: nowrap;
         }
 
-        .copy-toast.visible {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-        }
+        .copy-toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
 
         /* ─── Reveal ─── */
         .reveal {
             opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(36px);
+            transition: all 0.75s cubic-bezier(0.16, 1, 0.3, 1);
             will-change: opacity, transform;
         }
 
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .reveal.active { opacity: 1; transform: translateY(0); }
 
         @media (max-width: 768px) {
-            .project-title { letter-spacing: -1px; }
-            .contact-links { flex-direction: column; gap: 1rem; }
-            .contact-links .pill-outline-light { width: 100%; }
-            .hero-image-container { height: 40vh; min-height: 260px; }
+            .project-title { letter-spacing: -2px; }
+            .hero-banner { height: 40vh; min-height: 240px; }
+            .product-grid { grid-template-columns: 1fr; }
+            .photo-grid-2, .photo-grid-3 { grid-template-columns: 1fr; }
         }
     </style>
     <link rel="stylesheet" href="./04_Assets/cursor.css">
@@ -361,130 +656,239 @@
         </a>
     </nav>
 
-    <!-- Hero -->
+    <!-- ═══ HERO ═══ -->
     <main class="container">
         <section class="project-hero">
             <div class="project-eyebrow reveal">OJT · UI/UX Design · Feb–Aug 2024</div>
-            <h1 class="project-title reveal">Symph</h1>
+            <h1 class="project-title reveal">SYMPH</h1>
             <p class="project-subtitle reveal">
-                Designing Lesson Planner PH's landing experience from the ground up — building the product's first
-                credible presence to serve both teachers and institutional B2B stakeholders.
+                UI/UX Designer across multiple products, marketing creative team member, and event
+                photographer — embedded inside Cebu's leading software development studio for 6 months.
             </p>
 
+            <!-- Role pills -->
+            <div class="role-pills reveal">
+                <span class="role-pill design">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    UI/UX Designer
+                </span>
+                <span class="role-pill marketing">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    Marketing Creative
+                </span>
+                <span class="role-pill photography">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    Event Photographer
+                </span>
+            </div>
+
             <div class="project-meta-grid reveal">
-                <div class="meta-item">
-                    <h4>Role</h4>
-                    <p>UI/UX Design Intern</p>
-                </div>
                 <div class="meta-item">
                     <h4>Company</h4>
                     <p>Symph</p>
                 </div>
                 <div class="meta-item">
+                    <h4>Location</h4>
+                    <p>Cebu City, Philippines</p>
+                </div>
+                <div class="meta-item">
                     <h4>Timeline</h4>
-                    <p>6 Months (2024)</p>
+                    <p>Feb – Aug 2024</p>
                 </div>
                 <div class="meta-item">
                     <h4>Tools</h4>
-                    <p>Figma, FigJam, Notion</p>
+                    <p>Figma, FigJam, Notion, Canva</p>
                 </div>
             </div>
 
-            <div class="hero-image-container reveal">
-                <img src="./04_Assets/Images/Symph.avif" alt="Symph — Lesson Planner PH">
+            <div class="hero-banner reveal">
+                <img src="./04_Assets/Images/Symph.avif" alt="Symph OJT Cover">
             </div>
         </section>
 
-        <!-- Story -->
+        <!-- ═══ STORYTELLING ═══ -->
         <article class="storytelling-body">
 
+            <!-- Intro -->
             <div class="story-section reveal">
                 <h2>The Company</h2>
                 <p>
-                    Symph is a software development studio based in Cebu. During my internship, I was embedded within
-                    their design team and assigned as the primary designer for Lesson Planner PH — an EdTech product
-                    helping Filipino teachers build structured lesson plans faster.
+                    Symph is a software development studio based in Cebu City, building products and platforms
+                    for clients across industries. During my 6-month internship, I was embedded within the
+                    design team — but my responsibilities extended far beyond product screens.
                 </p>
                 <p>
-                    I was tasked with designing the product's entire landing experience from scratch — no prior
-                    design work to reference, no established visual language to follow.
+                    Aside from being a UI/UX Designer working across multiple Symph products, I was also part
+                    of the marketing creative team and served as the photographer for Symph's community events.
                 </p>
             </div>
 
+            <hr class="section-divider">
+
+
+            <!-- ── PRODUCT DESIGN ────────────────────────── -->
             <div class="story-section reveal">
-                <h2>The Problem</h2>
+                <div class="section-chip chip-design">🎨 Product Design</div>
+                <h2>Selected Products</h2>
                 <p>
-                    The product existed but had no landing page — meaning it had no way to communicate its value to
-                    teachers or build credibility with institutions considering adoption.
-                </p>
-                <p>
-                    The challenge: the landing page needed to speak to two audiences with very different needs at the
-                    same time — individual teachers who needed to feel it saves real time, and institutions that
-                    needed to trust it before recommending it.
-                </p>
-            </div>
-
-            <div class="story-section reveal">
-                <h2>What I did</h2>
-                <p>
-                    I started with structure, not visuals. Before touching Figma, I mapped the content hierarchy —
-                    problem → solution → proof → contact — to ensure the page earned trust in the right sequence.
+                    As a UI/UX Design Intern, I worked across multiple Symph products — designing landing pages,
+                    product interfaces, and visual systems from scratch. Here are the key products I contributed to:
                 </p>
 
-                <img src="./04_Assets/Images/Lesson Planner - wireframe.png"
-                    alt="Lesson Planner PH wireframes" class="story-image">
+                <div class="product-grid">
+                    <!-- Lesson Planner PH -->
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <img src="./04_Assets/Images/Lesson Planner PH - Mockup.png" alt="Lesson Planner PH mockup">
+                        </div>
+                        <div class="product-card-body">
+                            <h3>Lesson Planner PH</h3>
+                            <p>Landing page + product page for an EdTech tool helping Filipino teachers build structured lesson plans faster.</p>
+                        </div>
+                    </div>
 
-                <p>
-                    After validating the structure through lo-fi and mid-fidelity wireframes, I moved into
-                    high-fidelity design — building a visual language that felt credible and approachable for both
-                    teacher and institutional audiences.
-                </p>
+                    <!-- Symph Engineering -->
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <img src="./04_Assets/Images/Symph Engineering - Mockup.png" alt="Symph Engineering mockup">
+                        </div>
+                        <div class="product-card-body">
+                            <h3>Symph Engineering</h3>
+                            <p>Landing page for Symph's engineering arm — showcasing their technical capabilities and team culture.</p>
+                        </div>
+                    </div>
 
-                <div class="img-placeholder">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-                        <polyline points="21 15 16 10 5 21"/>
-                    </svg>
-                    Add additional work samples here
+                    <!-- AppGen -->
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <img src="./04_Assets/Images/AppGen - Mockup.png" alt="AppGen mockup">
+                        </div>
+                        <div class="product-card-body">
+                            <h3>AppGen</h3>
+                            <p>Landing page for an app generation platform — communicating complex features through clear visual hierarchy.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slumber Stories -->
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <img src="./04_Assets/Images/Slumber Stories - Mockup.png" alt="Slumber Stories mockup">
+                        </div>
+                        <div class="product-card-body">
+                            <h3>Slumber Stories</h3>
+                            <p>Landing page for a bedtime story app — designing a warm, inviting experience for parents and families.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
+            <hr class="section-divider">
+
+
+            <!-- ── MARKETING CREATIVE & PHOTOGRAPHY ────────────────────────── -->
             <div class="story-section reveal">
-                <h2>Final Output</h2>
+                <div class="section-chip chip-marketing">📣 Marketing & Photography</div>
+                <h2>Marketing Creative & Event Photography</h2>
                 <p>
-                    The high-fidelity landing page led with a clear outcome statement for teachers, then built the
-                    case section by section — use cases, feature value, social proof, and a dedicated B2B contact
-                    entry point for institutions.
+                    Beyond product design, I was part of Symph's marketing creative team — designing social media
+                    content, event pubmats, and Facebook graphics. I also served as the event photographer, capturing
+                    moments from Symph's community events throughout my internship.
                 </p>
 
-                <img src="./04_Assets/Images/final high-fidelity screen of the full landing page.png"
-                    alt="Lesson Planner PH final landing page" class="story-image">
-
-                <img src="./04_Assets/Images/secondary HiFi screen (features section, CTA block, or mobile view).png"
-                    alt="Lesson Planner PH features section" class="story-image">
+                <!-- Group photos with Symphers -->
+                <div class="photo-grid-3">
+                    <img src="./04_Assets/Images/Group photo with Symphers 1.png" alt="Group photo with Symphers 1" class="story-image">
+                    <img src="./04_Assets/Images/Group photo with Symphers 2.png" alt="Group photo with Symphers 2" class="story-image">
+                    <img src="./04_Assets/Images/Group photo with Symphers 3.png" alt="Group photo with Symphers 3" class="story-image">
+                </div>
             </div>
 
+
+            <!-- ── TECH LISTENS ────────────────────────── -->
             <div class="story-section reveal">
-                <h2>Impact & Takeaways</h2>
+                <div class="section-chip chip-photo">🎤 Tech Listens by Symph</div>
+                <h2>Tech Listens Events</h2>
                 <p>
-                    The design gave Lesson Planner PH its first credible public presence and became the foundation
-                    for early B2B and institutional conversations. Framing outcomes over features allowed the page
-                    to serve both audiences without compromising either.
+                    Tech Listens is a monthly event organized by Symph, dedicated to exploring technology and how
+                    it helps industries. During my internship, I designed the pubmats and photographed each event —
+                    capturing the speakers, audience, and behind-the-scenes moments.
+                </p>
+
+                <!-- March 2024 — pubmat only, no photography -->
+                <div class="tech-event-block reveal">
+                    <div class="month-label">📅 March 2024</div>
+                    <img src="./04_Assets/Images/Pubmat — March 2026.png" alt="Pubmat — March 2024" class="story-image wide">
+                </div>
+
+                <!-- April 2024 -->
+                <div class="tech-event-block reveal">
+                    <div class="month-label">📅 April 2024</div>
+                    <div class="photo-grid-2">
+                        <img src="./04_Assets/Images/Pubmat — April 2024.png" alt="Pubmat — April 2024" class="story-image">
+                        <img src="./04_Assets/Images/Photograph — April 2024.png" alt="Event photography — April 2024" class="story-image">
+                    </div>
+                </div>
+
+                <!-- May 2024 -->
+                <div class="tech-event-block reveal">
+                    <div class="month-label">📅 May 2024</div>
+                    <div class="photo-grid-2">
+                        <img src="./04_Assets/Images/Pubmat — May 2024.png" alt="Pubmat — May 2024" class="story-image">
+                        <img src="./04_Assets/Images/Photograph — May 2024.png" alt="Event photography — May 2024" class="story-image">
+                    </div>
+                </div>
+
+                <!-- June 2024 -->
+                <div class="tech-event-block reveal">
+                    <div class="month-label">📅 June 2024</div>
+                    <div class="photo-grid-2">
+                        <img src="./04_Assets/Images/Pubmat — June 2024.png" alt="Pubmat — June 2024" class="story-image">
+                        <img src="./04_Assets/Images/Photograph — June 2024.png" alt="Event photography — June 2024" class="story-image">
+                    </div>
+                </div>
+
+                <!-- July 2024 -->
+                <div class="tech-event-block reveal">
+                    <div class="month-label">📅 July 2024</div>
+                    <div class="photo-grid-2">
+                        <img src="./04_Assets/Images/Pubmat — July 2024.png" alt="Pubmat — July 2024" class="story-image">
+                        <img src="./04_Assets/Images/Photograph — July 2025.png" alt="Event photography — July 2024" class="story-image">
+                    </div>
+                </div>
+
+                <!-- December 2024 -->
+                <div class="tech-event-block reveal">
+                    <div class="month-label">📅 December 2024</div>
+                    <div class="photo-grid-2">
+                        <img src="./04_Assets/Images/Pubmat — December 2024.png" alt="Pubmat — December 2024" class="story-image">
+                        <img src="./04_Assets/Images/Photograph — December 2024.png" alt="Event photography — December 2024" class="story-image">
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+
+            <!-- ── TAKEAWAYS ────────────────────────── -->
+            <div class="story-section reveal">
+                <h2>What I Learned</h2>
+                <p>
+                    Symph gave me a front-row seat to how a real engineering-driven studio operates — and pushed me
+                    to grow across design, marketing, and documentation simultaneously.
                 </p>
 
                 <div class="takeaway-block">
                     <div class="takeaway-item">
-                        <p>💡 <strong>Structure before screens.</strong> Mapping the content narrative first made the
-                            visual design process significantly faster and more intentional.</p>
+                        <p>🎨 <strong>Designing across product contexts builds adaptability.</strong> Each product had a different audience, tone, and constraint set — switching between them sharpened my ability to design with context, not just templates.</p>
                     </div>
                     <div class="takeaway-item">
-                        <p>🎯 <strong>Landing pages serve multiple stakeholders.</strong> In EdTech, individual
-                            teacher appeal and institutional credibility have to coexist — and that tension shapes
-                            every design decision.</p>
+                        <p>📣 <strong>Marketing creative is a design discipline.</strong> Designing pubmats and social content for Symph's brand taught me that persuasion, timing, and platform context are just as important as visual polish.</p>
                     </div>
                     <div class="takeaway-item">
-                        <p>🔄 <strong>Working from zero builds range.</strong> Designing with no prior reference
-                            forced me to develop strong first-principles thinking around hierarchy and visual trust.</p>
+                        <p>📷 <strong>Photography is documentation and storytelling.</strong> Capturing Tech Listens events wasn't just about taking photos — it was about preserving the energy, the speakers, and the community Symph was building.</p>
+                    </div>
+                    <div class="takeaway-item">
+                        <p>🤝 <strong>Studio culture accelerates growth.</strong> Being embedded in a team of engineers, designers, and product people — all moving fast — taught me how to communicate design decisions, give and receive feedback, and ship work with confidence.</p>
                     </div>
                 </div>
             </div>
@@ -496,7 +900,7 @@
     <section class="dark-section" id="contact">
         <div class="container">
             <div class="contact-cta">Let's work<br>together.</div>
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.2rem; color: #bbb;">
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.2rem; color: #bbb; line-height: 1.6;">
                 Open to full-time roles and freelance projects. If you think there's a fit, I'd love to hear from you.
             </p>
             <div class="contact-links">
@@ -534,11 +938,67 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            // ─── Reveal animations ───
             const revealEls = document.querySelectorAll('.reveal');
             const obs = new IntersectionObserver((entries) => {
-                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+                entries.forEach(e => {
+                    if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); }
+                });
             }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
             revealEls.forEach(el => obs.observe(el));
+
+            // ─── Carousel logic ───
+            document.querySelectorAll('[data-carousel]').forEach(carousel => {
+                const track = carousel.querySelector('.carousel-track');
+                const slides = track.querySelectorAll('.carousel-slide');
+                const prevBtn = carousel.querySelector('.carousel-btn.prev');
+                const nextBtn = carousel.querySelector('.carousel-btn.next');
+                const dotsContainer = carousel.querySelector('.carousel-dots');
+                let currentIndex = 0;
+
+                // Create dots
+                slides.forEach((_, i) => {
+                    const dot = document.createElement('div');
+                    dot.classList.add('carousel-dot');
+                    if (i === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => goTo(i));
+                    dotsContainer.appendChild(dot);
+                });
+
+                function goTo(index) {
+                    if (index < 0) index = slides.length - 1;
+                    if (index >= slides.length) index = 0;
+                    currentIndex = index;
+                    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                    // Update dots
+                    dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
+                        d.classList.toggle('active', i === currentIndex);
+                    });
+                }
+
+                prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+                nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+                // Touch / swipe support
+                let startX = 0;
+                let isDragging = false;
+
+                track.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                    isDragging = true;
+                }, { passive: true });
+
+                track.addEventListener('touchend', (e) => {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    const diff = startX - e.changedTouches[0].clientX;
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) goTo(currentIndex + 1);
+                        else goTo(currentIndex - 1);
+                    }
+                }, { passive: true });
+            });
         });
 
         function copyEmail() {
