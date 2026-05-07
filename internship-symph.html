@@ -27,8 +27,15 @@
             --shadow-solid: 4px 4px 0px 0px rgba(0, 0, 0, 1);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: var(--font-main);
@@ -38,10 +45,21 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        a { text-decoration: none; color: inherit; }
-        p { font-size: 1.125rem; color: #333; }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        p {
+            font-size: 1.125rem;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
         /* ─── Nav ─── */
         nav {
@@ -69,7 +87,10 @@
             font-size: 1rem;
             transition: transform 0.2s ease;
         }
-        .back-link:hover { transform: translateX(-4px); }
+
+        .back-link:hover {
+            transform: translateX(-4px);
+        }
 
         /* ─── Hero ─── */
         .project-hero {
@@ -127,12 +148,26 @@
             border-radius: 9999px;
             border: var(--border-dark);
             background: #fff;
-            box-shadow: 2px 2px 0 0 rgba(0,0,0,1);
+            box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 1);
         }
 
-        .role-pill.design  { background: #EEF2FF; border-color: #3730A3; color: #3730A3; }
-        .role-pill.marketing { background: #ECFDF5; border-color: #065F46; color: #065F46; }
-        .role-pill.photography { background: #FFF7ED; border-color: #92400E; color: #92400E; }
+        .role-pill.design {
+            background: #EEF2FF;
+            border-color: #3730A3;
+            color: #3730A3;
+        }
+
+        .role-pill.marketing {
+            background: #ECFDF5;
+            border-color: #065F46;
+            color: #065F46;
+        }
+
+        .role-pill.photography {
+            background: #FFF7ED;
+            border-color: #92400E;
+            color: #92400E;
+        }
 
         .project-meta-grid {
             display: grid;
@@ -184,7 +219,9 @@
             margin: 0 auto;
         }
 
-        .story-section { margin-bottom: 6rem; }
+        .story-section {
+            margin-bottom: 6rem;
+        }
 
         /* Section label chip */
         .section-chip {
@@ -201,9 +238,23 @@
             border: 1.5px solid currentColor;
         }
 
-        .chip-design     { color: #3730A3; background: #EEF2FF; border-color: #3730A3; }
-        .chip-marketing  { color: #065F46; background: #ECFDF5; border-color: #065F46; }
-        .chip-photo      { color: #92400E; background: #FFF7ED; border-color: #92400E; }
+        .chip-design {
+            color: #3730A3;
+            background: #EEF2FF;
+            border-color: #3730A3;
+        }
+
+        .chip-marketing {
+            color: #065F46;
+            background: #ECFDF5;
+            border-color: #065F46;
+        }
+
+        .chip-photo {
+            color: #92400E;
+            background: #FFF7ED;
+            border-color: #92400E;
+        }
 
         .story-section h2 {
             font-size: 2.25rem;
@@ -239,7 +290,7 @@
 
         .product-card:hover {
             transform: translateY(-4px);
-            box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+            box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
         }
 
         .product-card-image {
@@ -266,7 +317,9 @@
             color: #bbb;
         }
 
-        .product-card-image.placeholder svg { opacity: 0.25; }
+        .product-card-image.placeholder svg {
+            opacity: 0.25;
+        }
 
         .product-card-image.placeholder .label {
             font-size: 0.7rem;
@@ -294,7 +347,9 @@
         }
 
         @media (max-width: 640px) {
-            .product-grid { grid-template-columns: 1fr; }
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* ─── Story Image ─── */
@@ -355,10 +410,22 @@
             margin: 2rem 0;
         }
 
-        .img-placeholder.tall { aspect-ratio: 16/9; }
-        .img-placeholder.square { aspect-ratio: 4/3; }
-        .img-placeholder svg { opacity: 0.25; }
-        .img-placeholder .label { font-size: 0.72rem; color: #ccc; }
+        .img-placeholder.tall {
+            aspect-ratio: 16/9;
+        }
+
+        .img-placeholder.square {
+            aspect-ratio: 4/3;
+        }
+
+        .img-placeholder svg {
+            opacity: 0.25;
+        }
+
+        .img-placeholder .label {
+            font-size: 0.72rem;
+            color: #ccc;
+        }
 
         .photo-grid-2 .img-placeholder,
         .photo-grid-3 .img-placeholder {
@@ -367,8 +434,11 @@
         }
 
         @media (max-width: 640px) {
+
             .photo-grid-2,
-            .photo-grid-3 { grid-template-columns: 1fr; }
+            .photo-grid-3 {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* ─── Carousel ─── */
@@ -434,7 +504,9 @@
             color: #bbb;
         }
 
-        .carousel-slide.placeholder svg { opacity: 0.2; }
+        .carousel-slide.placeholder svg {
+            opacity: 0.2;
+        }
 
         .carousel-slide.placeholder .label {
             font-size: 0.72rem;
@@ -452,7 +524,7 @@
             border-radius: 50%;
             border: 2px solid #000;
             background: rgba(255, 255, 255, 0.95);
-            box-shadow: 2px 2px 0 0 rgba(0,0,0,1);
+            box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 1);
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -468,11 +540,16 @@
 
         .carousel-btn:active {
             transform: translateY(-50%) scale(0.95);
-            box-shadow: 1px 1px 0 0 rgba(0,0,0,1);
+            box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 1);
         }
 
-        .carousel-btn.prev { left: 12px; }
-        .carousel-btn.next { right: 12px; }
+        .carousel-btn.prev {
+            left: 12px;
+        }
+
+        .carousel-btn.next {
+            right: 12px;
+        }
 
         .carousel-dots {
             display: flex;
@@ -518,7 +595,7 @@
             padding: 1.4rem 1.75rem;
             border: var(--border-dark);
             border-radius: 12px;
-            box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.8);
+            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.8);
             background: #fff;
         }
 
@@ -573,13 +650,19 @@
         }
 
         .pill-outline-light:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             transform: translateY(-2px);
         }
 
         @media (max-width: 600px) {
-            .contact-links { flex-direction: column; gap: 1rem; }
-            .contact-links .pill-outline-light { width: 100%; }
+            .contact-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .contact-links .pill-outline-light {
+                width: 100%;
+            }
         }
 
         /* ─── Footer ─── */
@@ -587,7 +670,7 @@
             background: var(--dark-bg);
             color: #888;
             padding: 3rem 0;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -607,7 +690,7 @@
             font-size: 1rem;
             font-weight: 600;
             border: 2px solid #000;
-            box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
             opacity: 0;
             transition: opacity 0.3s ease, transform 0.3s ease;
             pointer-events: none;
@@ -618,7 +701,10 @@
             white-space: nowrap;
         }
 
-        .copy-toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+        .copy-toast.visible {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
 
         /* ─── Reveal ─── */
         .reveal {
@@ -628,13 +714,29 @@
             will-change: opacity, transform;
         }
 
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         @media (max-width: 768px) {
-            .project-title { letter-spacing: -2px; }
-            .hero-banner { height: 40vh; min-height: 240px; }
-            .product-grid { grid-template-columns: 1fr; }
-            .photo-grid-2, .photo-grid-3 { grid-template-columns: 1fr; }
+            .project-title {
+                letter-spacing: -2px;
+            }
+
+            .hero-banner {
+                height: 40vh;
+                min-height: 240px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-grid-2,
+            .photo-grid-3 {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
     <link rel="stylesheet" href="./04_Assets/cursor.css">
@@ -669,15 +771,25 @@
             <!-- Role pills -->
             <div class="role-pills reveal">
                 <span class="role-pill design">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
                     UI/UX Designer
                 </span>
                 <span class="role-pill marketing">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                    </svg>
                     Marketing Creative
                 </span>
                 <span class="role-pill photography">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                        <circle cx="12" cy="13" r="4" />
+                    </svg>
                     Event Photographer
                 </span>
             </div>
@@ -697,7 +809,7 @@
                 </div>
                 <div class="meta-item">
                     <h4>Tools</h4>
-                    <p>Figma, FigJam, Notion, Canva</p>
+                    <p>Figma, Webflow, Framer, Notion</p>
                 </div>
             </div>
 
@@ -743,7 +855,8 @@
                         </div>
                         <div class="product-card-body">
                             <h3>Lesson Planner PH</h3>
-                            <p>Landing page + product page for an EdTech tool helping Filipino teachers build structured lesson plans faster.</p>
+                            <p>Landing page + product page for an EdTech tool helping Filipino teachers build structured
+                                lesson plans faster.</p>
                         </div>
                     </div>
 
@@ -754,7 +867,8 @@
                         </div>
                         <div class="product-card-body">
                             <h3>Symph Engineering</h3>
-                            <p>Landing page for Symph's engineering arm — showcasing their technical capabilities and team culture.</p>
+                            <p>Landing page for Symph's engineering arm — showcasing their technical capabilities and
+                                team culture.</p>
                         </div>
                     </div>
 
@@ -765,7 +879,8 @@
                         </div>
                         <div class="product-card-body">
                             <h3>AppGen</h3>
-                            <p>Landing page for an app generation platform — communicating complex features through clear visual hierarchy.</p>
+                            <p>Landing page for an app generation platform — communicating complex features through
+                                clear visual hierarchy.</p>
                         </div>
                     </div>
 
@@ -776,7 +891,8 @@
                         </div>
                         <div class="product-card-body">
                             <h3>Slumber Stories</h3>
-                            <p>Landing page for a bedtime story app — designing a warm, inviting experience for parents and families.</p>
+                            <p>Landing page for a bedtime story app — designing a warm, inviting experience for parents
+                                and families.</p>
                         </div>
                     </div>
                 </div>
@@ -797,9 +913,12 @@
 
                 <!-- Group photos with Symphers -->
                 <div class="photo-grid-3">
-                    <img src="./04_Assets/Images/Group photo with Symphers 1.png" alt="Group photo with Symphers 1" class="story-image">
-                    <img src="./04_Assets/Images/Group photo with Symphers 2.png" alt="Group photo with Symphers 2" class="story-image">
-                    <img src="./04_Assets/Images/Group photo with Symphers 3.png" alt="Group photo with Symphers 3" class="story-image">
+                    <img src="./04_Assets/Images/Group photo with Symphers 1.png" alt="Group photo with Symphers 1"
+                        class="story-image">
+                    <img src="./04_Assets/Images/Group photo with Symphers 2.png" alt="Group photo with Symphers 2"
+                        class="story-image">
+                    <img src="./04_Assets/Images/Group photo with Symphers 3.png" alt="Group photo with Symphers 3"
+                        class="story-image">
                 </div>
             </div>
 
@@ -817,15 +936,18 @@
                 <!-- March 2024 — pubmat only, no photography -->
                 <div class="tech-event-block reveal">
                     <div class="month-label">📅 March 2024</div>
-                    <img src="./04_Assets/Images/Pubmat — March 2026.png" alt="Pubmat — March 2024" class="story-image wide">
+                    <img src="./04_Assets/Images/Pubmat — March 2026.png" alt="Pubmat — March 2024"
+                        class="story-image wide">
                 </div>
 
                 <!-- April 2024 -->
                 <div class="tech-event-block reveal">
                     <div class="month-label">📅 April 2024</div>
                     <div class="photo-grid-2">
-                        <img src="./04_Assets/Images/Pubmat — April 2024.png" alt="Pubmat — April 2024" class="story-image">
-                        <img src="./04_Assets/Images/Photograph — April 2024.png" alt="Event photography — April 2024" class="story-image">
+                        <img src="./04_Assets/Images/Pubmat — April 2024.png" alt="Pubmat — April 2024"
+                            class="story-image">
+                        <img src="./04_Assets/Images/Photograph — April 2024.png" alt="Event photography — April 2024"
+                            class="story-image">
                     </div>
                 </div>
 
@@ -834,7 +956,8 @@
                     <div class="month-label">📅 May 2024</div>
                     <div class="photo-grid-2">
                         <img src="./04_Assets/Images/Pubmat — May 2024.png" alt="Pubmat — May 2024" class="story-image">
-                        <img src="./04_Assets/Images/Photograph — May 2024.png" alt="Event photography — May 2024" class="story-image">
+                        <img src="./04_Assets/Images/Photograph — May 2024.png" alt="Event photography — May 2024"
+                            class="story-image">
                     </div>
                 </div>
 
@@ -842,8 +965,10 @@
                 <div class="tech-event-block reveal">
                     <div class="month-label">📅 June 2024</div>
                     <div class="photo-grid-2">
-                        <img src="./04_Assets/Images/Pubmat — June 2024.png" alt="Pubmat — June 2024" class="story-image">
-                        <img src="./04_Assets/Images/Photograph — June 2024.png" alt="Event photography — June 2024" class="story-image">
+                        <img src="./04_Assets/Images/Pubmat — June 2024.png" alt="Pubmat — June 2024"
+                            class="story-image">
+                        <img src="./04_Assets/Images/Photograph — June 2024.png" alt="Event photography — June 2024"
+                            class="story-image">
                     </div>
                 </div>
 
@@ -851,8 +976,10 @@
                 <div class="tech-event-block reveal">
                     <div class="month-label">📅 July 2024</div>
                     <div class="photo-grid-2">
-                        <img src="./04_Assets/Images/Pubmat — July 2024.png" alt="Pubmat — July 2024" class="story-image">
-                        <img src="./04_Assets/Images/Photograph — July 2025.png" alt="Event photography — July 2024" class="story-image">
+                        <img src="./04_Assets/Images/Pubmat — July 2024.png" alt="Pubmat — July 2024"
+                            class="story-image">
+                        <img src="./04_Assets/Images/Photograph — July 2025.png" alt="Event photography — July 2024"
+                            class="story-image">
                     </div>
                 </div>
 
@@ -860,8 +987,10 @@
                 <div class="tech-event-block reveal">
                     <div class="month-label">📅 December 2024</div>
                     <div class="photo-grid-2">
-                        <img src="./04_Assets/Images/Pubmat — December 2024.png" alt="Pubmat — December 2024" class="story-image">
-                        <img src="./04_Assets/Images/Photograph — December 2024.png" alt="Event photography — December 2024" class="story-image">
+                        <img src="./04_Assets/Images/Pubmat — December 2024.png" alt="Pubmat — December 2024"
+                            class="story-image">
+                        <img src="./04_Assets/Images/Photograph — December 2024.png"
+                            alt="Event photography — December 2024" class="story-image">
                     </div>
                 </div>
             </div>
@@ -879,16 +1008,24 @@
 
                 <div class="takeaway-block">
                     <div class="takeaway-item">
-                        <p>🎨 <strong>Designing across product contexts builds adaptability.</strong> Each product had a different audience, tone, and constraint set — switching between them sharpened my ability to design with context, not just templates.</p>
+                        <p>🎨 <strong>Designing across product contexts builds adaptability.</strong> Each product had a
+                            different audience, tone, and constraint set — switching between them sharpened my ability
+                            to design with context, not just templates.</p>
                     </div>
                     <div class="takeaway-item">
-                        <p>📣 <strong>Marketing creative is a design discipline.</strong> Designing pubmats and social content for Symph's brand taught me that persuasion, timing, and platform context are just as important as visual polish.</p>
+                        <p>📣 <strong>Marketing creative is a design discipline.</strong> Designing pubmats and social
+                            content for Symph's brand taught me that persuasion, timing, and platform context are just
+                            as important as visual polish.</p>
                     </div>
                     <div class="takeaway-item">
-                        <p>📷 <strong>Photography is documentation and storytelling.</strong> Capturing Tech Listens events wasn't just about taking photos — it was about preserving the energy, the speakers, and the community Symph was building.</p>
+                        <p>📷 <strong>Photography is documentation and storytelling.</strong> Capturing Tech Listens
+                            events wasn't just about taking photos — it was about preserving the energy, the speakers,
+                            and the community Symph was building.</p>
                     </div>
                     <div class="takeaway-item">
-                        <p>🤝 <strong>Studio culture accelerates growth.</strong> Being embedded in a team of engineers, designers, and product people — all moving fast — taught me how to communicate design decisions, give and receive feedback, and ship work with confidence.</p>
+                        <p>🤝 <strong>Studio culture accelerates growth.</strong> Being embedded in a team of engineers,
+                            designers, and product people — all moving fast — taught me how to communicate design
+                            decisions, give and receive feedback, and ship work with confidence.</p>
                     </div>
                 </div>
             </div>
@@ -900,7 +1037,8 @@
     <section class="dark-section" id="contact">
         <div class="container">
             <div class="contact-cta">Let's work<br>together.</div>
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.2rem; color: #bbb; line-height: 1.6;">
+            <p
+                style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.2rem; color: #bbb; line-height: 1.6;">
                 Open to full-time roles and freelance projects. If you think there's a fit, I'd love to hear from you.
             </p>
             <div class="contact-links">
