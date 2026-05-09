@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chewi Kiwi Cereal Packaging | Chaz Borromeo</title>
-    <!-- Favicon (using profile pic as placeholder) -->
+    <title>Chewi Kiwi | Chaz Borromeo</title>
+    <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="./04_Assets/Images/profile.jpeg">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,15 +19,13 @@
             --text-main: #000000;
             --text-light: #FFFFFF;
             --accent-blue: #4F46E5;
+            --accent-green: #4ADE80;
             --accent-orange: #FF6B6B;
-            --accent-yellow: #FbbF24;
             --font-main: 'Figtree', sans-serif;
             --border-dark: 2px solid #000000;
             --border-light: 2px solid rgba(255, 255, 255, 0.15);
             --shadow-solid: 4px 4px 0px 0px rgba(0, 0, 0, 1);
             --shadow-hover: 6px 6px 0px 0px rgba(0, 0, 0, 1);
-            --shadow-dark-solid: 4px 4px 0px 0px rgba(255, 255, 255, 1);
-            --shadow-dark-hover: 6px 6px 0px 0px rgba(255, 255, 255, 1);
         }
 
         * {
@@ -95,34 +93,6 @@
             transform: translateX(-4px);
         }
 
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 700;
-            font-size: 1.25rem;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-
-        .logo-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            background-color: var(--accent-blue);
-            color: #fff;
-            border-radius: 8px;
-            font-weight: 800;
-            border: 2px solid #000;
-        }
-
-        .nav-right-placeholder {
-            width: 80px;
-            /* Balances the back-link width for exact centering */
-        }
-
         /* --- Project Hero --- */
         .project-hero {
             padding: 8rem 0 4rem;
@@ -179,8 +149,11 @@
             box-shadow: var(--shadow-solid);
             border-radius: 20px;
             overflow: hidden;
-            background-color: #eee;
+            background-color: var(--accent-green);
             margin: 0 auto 6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hero-image-container img {
@@ -220,16 +193,51 @@
             width: 100%;
             border: var(--border-dark);
             border-radius: 12px;
-            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
             margin: 3rem 0;
             background-color: #f4f4f4;
+            overflow: hidden;
         }
 
-        .side-by-side {
+        .story-image img {
+            width: 100%;
+            max-height: 85vh;
+            display: block;
+            object-fit: contain;
+        }
+
+        .story-image video {
+            width: 100%;
+            max-height: 85vh;
+            display: block;
+            object-fit: contain;
+        }
+
+        .qualities-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 3rem 0;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0 4rem;
+        }
+
+        .quality-card {
+            padding: 1.5rem;
+            border: var(--border-dark);
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: var(--shadow-solid);
+        }
+
+        .quality-card strong {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-blue);
+        }
+
+        .quality-card p {
+            font-size: 1rem;
+            margin-bottom: 0;
         }
 
         /* --- Global Modifiers --- */
@@ -238,17 +246,14 @@
             color: var(--text-light);
             border-top: var(--border-dark);
             border-bottom: var(--border-dark);
+            padding: 8rem 0;
         }
 
         .dark-section p {
             color: #fff;
         }
 
-        section {
-            padding: 8rem 0;
-        }
-
-        /* Contact & Buttons reused from index */
+        /* Contact & Buttons */
         .contact-cta {
             font-size: 6rem;
             font-weight: 700;
@@ -274,18 +279,20 @@
             font-weight: 600;
             font-size: 1.125rem;
             background: transparent;
-            border: var(--border-light);
+            border: 2px solid #fff;
             color: var(--text-light);
             transition: all 0.2s ease;
+            cursor: pointer;
         }
 
         .pill-outline-light:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
+            background: #fff;
+            color: #000;
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 1);
         }
 
-        /* Reveal Animation Styles */
+        /* Reveal Animation */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
@@ -307,7 +314,7 @@
                 font-size: 3rem;
             }
 
-            .side-by-side {
+            .qualities-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -337,46 +344,44 @@
 
     <!-- Navigation -->
     <nav>
-        <a href="/beyond-product" class="back-link">
+        <a href="./beyond-product.html" class="back-link">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <line x1="19" y1="12" x2="5" y2="12"></line>
                 <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
-            Back
+            Back to Visual Work
         </a>
     </nav>
 
     <!-- 2. Case Study Hero -->
     <main class="container">
         <section class="project-hero">
-            <h1 class="project-title reveal">Chewi Kiwi Cereal Packaging</h1>
-            <p class="project-subtitle reveal">A fun and bold packaging system designed to punch up the breakfast aisle.
-            </p>
+            <h1 class="project-title reveal">Chewi Kiwi</h1>
+            <p class="project-subtitle reveal">A playful dried fruit concept inspired by cereal-style branding and
+                energetic snack visuals.</p>
 
             <div class="project-meta-grid reveal">
                 <div class="meta-item">
                     <h4>Role</h4>
-                    <p>Brand Identity, Package Design</p>
+                    <p>Packaging & Visual Identity</p>
                 </div>
                 <div class="meta-item">
-                    <h4>Timeline</h4>
-                    <p>4-6 Weeks (2025/2026)</p>
+                    <h4>Collaborator</h4>
+                    <p>Luanne Leigh Eseo</p>
                 </div>
                 <div class="meta-item">
-                    <h4>Platform</h4>
-                    <p>Print & Packaging</p>
+                    <h4>Category</h4>
+                    <p>Personal Concept</p>
                 </div>
                 <div class="meta-item">
                     <h4>Tools</h4>
-                    <p>Illustrator, Photoshop, Adobe Dimension</p>
+                    <p>Illustrator, Photoshop, Blender</p>
                 </div>
             </div>
 
             <div class="hero-image-container reveal">
-                <!-- Replace src with your actual hero image -->
-                <img src="./04_Assets/Images/Chewi Kiwi Cereal Packaging.png"
-                    alt="Chewi Kiwi Cereal Packaging Hero Image">
+                <img src="./04_Assets/Images/Chewi%20Kiwi%20Cereal%20Packaging.png" alt="Chewi Kiwi Cereal Packaging">
             </div>
         </section>
 
@@ -384,47 +389,69 @@
         <article class="storytelling-body">
 
             <div class="story-section reveal">
-                <h2>The Challenge</h2>
-                <p>Start by outlining the core problem. What was frustrating users? What business metrics were failing?
-                    Set the stage so the reader understands why this project needed to happen.</p>
-                <p>Use multiple paragraphs if needed, keeping them concise and focused on the "Why".</p>
-            </div>
-
-            <div class="story-section reveal">
-                <h2>Visual Concept & Design</h2>
-                <p>Discuss your research, user interviews, or initial wireframing. How did you break down the problem?
-                    Did you uncover any surprising insights that drove your design decisions?</p>
-
-                <!-- Example of a side-by-side grid inside the storytelling -->
-                <div class="side-by-side">
-                    <div>
-                        <img src="./04_Assets/Images/Image 1.jpg" alt="Wireframe 1" class="story-image"
-                            style="margin: 0;">
-                    </div>
-                    <div>
-                        <img src="./04_Assets/Images/Image 2.jpg" alt="Wireframe 2" class="story-image"
-                            style="margin: 0;">
-                    </div>
+                <h2>The Direction</h2>
+                <p>The goal was to design a unique non-traditional box structure and build a full visual system around it
+                    — from the dieline, to packaging, to the marketing poster, to the final physical output.</p>
+                
+                <div class="story-image">
+                    <img src="./04_Assets/Images/ChewiKiwi%20-%20The%20Direction.png" alt="Chewi Kiwi Brand Direction">
                 </div>
-                <p>Keep the narrative moving. Show how you iterated from low fidelity to high fidelity, and how user
-                    feedback shaped the UI.</p>
+            </div>
+
+            <div id="packaging-exploration" class="story-section reveal">
+                <h2>Packaging Structure Exploration</h2>
+                <p><strong>This was the hardest part.</strong> Instead of using a traditional box, we pushed for a
+                    <strong>diagonal, non-rectangular structure</strong>.</p>
+                <p>The process included printing multiple mini-prototypes, testing alignment and folding, and adjusting
+                    the dieline until it was structurally sound and graphics wrapped cleanly.</p>
+
+                <div class="story-image">
+                    <img src="./04_Assets/Images/ChewiKiwi%20-%20Packaging%20Structure%20Exploration.png" alt="Packaging Structure Exploration">
+                </div>
+            </div>
+
+            <div id="packaging-design" class="story-section reveal">
+                <h2>Packaging Design</h2>
+                <p>Once the structure was stable, I built the visual layout around a playful front composition,
+                    semi-realistic fruit elements, energetic splash accents, a new mascot pose, and typography that
+                    matched the brand’s personality.</p>
+
+                <div class="story-image">
+                    <img src="./04_Assets/Images/ChewiKiwi%20-%20dieline.png" alt="Chewi Kiwi Packaging Design Dieline">
+                </div>
             </div>
 
             <div class="story-section reveal">
-                <h2>Final Execution</h2>
-                <p>Showcase the final designs. Break down the key features of your solution. Why did you choose this
-                    layout? How does it solve the problem stated in 'The Challenge'?</p>
+                <h2>Marketing Poster</h2>
+                <p>To extend the brand, I created an A3 poster featuring falling kiwi slices, dynamic energy, a mix of
+                    realism and graphic elements, and a strong diagonal hierarchy.</p>
 
-                <!-- Example of a large in-line structural image -->
-                <img src="./04_Assets/Images/Image 4.jpg" alt="Final Solution Screen" class="story-image">
-
-                <p>Explain the interactions, the visual design language, and the edge cases you considered.</p>
+                <div class="story-image">
+                    <img src="./04_Assets/Images/ChewiKiwi%20-%20Marketing%20Poster.png" alt="Chewi Kiwi Marketing Poster">
+                </div>
             </div>
 
             <div class="story-section reveal">
-                <h2>The Impact</h2>
-                <p>Conclude with concrete results. If it launched, feature metrics like "+15% Conversion Rate" or
-                    "Reduced onboarding friction". If it's a concept, discuss user testing feedback or lessons learned.
+                <h2>Final Output</h2>
+                <p>The final physical output brought the entire vision together, combining the experimental structure
+                    with the vibrant visual system.</p>
+
+                <div class="story-image">
+                    <img src="./04_Assets/Images/ChewiKiwi%20-%20mockupp.png" alt="Final Physical Output">
+                </div>
+
+                <div class="story-image" style="background: #000; border: none;">
+                    <video controls>
+                        <source src="./04_Assets/Images/Introducing%20ChewiKiwi.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="story-section reveal" style="margin-top: 8rem; padding: 2rem; border-top: 1px solid #ddd;">
+                <p style="font-size: 0.9rem; color: #888;">
+                    <strong>Note:</strong> This is a personal concept project created for exploration and skill
+                    development. Not affiliated with or designed for Kellogg’s.
                 </p>
             </div>
 
@@ -434,16 +461,13 @@
     <!-- 7. Contact Section (Black) -->
     <section id="contact" class="dark-section" style="border-bottom: none;">
         <div class="container">
-
-
             <div style="text-align: center;">
-                <div class="contact-cta">Let's work<br>together.</div>
+                <div class="contact-cta reveal">Let's work<br>together.</div>
             </div>
-
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.25rem;">Open to full-time
+            <p class="reveal" style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.25rem;">Open to full-time
                 roles and freelance projects. If you think there's a fit, I'd love to hear from you.</p>
 
-            <div class="contact-links">
+            <div class="contact-links reveal">
                 <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
                     class="pill-outline-light">
                     <img src="./04_Assets/Icons/LinkedIn.svg" width="24" height="24" alt="LinkedIn">
@@ -458,7 +482,7 @@
     </section>
 
     <!-- 8. Footer (Black) -->
-    <footer>
+    <footer style="background: var(--dark-bg); color: #888; padding: 3rem 0; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1);">
         <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
             <div>© Chaz Grant, 2026</div>
             <div style="display: flex; gap: 2rem;">
@@ -474,12 +498,10 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const revealElements = document.querySelectorAll('.reveal');
-
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
-                        // Optional: Unobserve if you only want it to play once
                         observer.unobserve(entry.target);
                     }
                 });
@@ -487,9 +509,14 @@
                 threshold: 0.1,
                 rootMargin: "0px 0px -50px 0px"
             });
-
             revealElements.forEach(el => observer.observe(el));
         });
+
+        function copyEmail() {
+            navigator.clipboard.writeText('chazgrantborromeo@gmail.com').then(() => {
+                alert('Email copied to clipboard!');
+            });
+        }
     </script>
     <script src="./04_Assets/cursor.js"></script>
 </body>
