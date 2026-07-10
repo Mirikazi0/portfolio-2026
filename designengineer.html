@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaz Borromeo — Design Engineer</title>
+    <meta name="description" content="Chaz Borromeo is a Design Engineer who speaks both Figma and code. He builds design systems, interactive prototypes, and production-ready components that blur the line between design and engineering.">
+    <link rel="icon" type="image/jpeg" href="./04_Assets/Images/profile.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #0F0F0F;
+            --surface: #1A1A1A;
+            --surface-2: #222;
+            --text-main: #FFFFFF;
+            --text-muted: #888;
+            --text-subtle: #555;
+            --accent-green: #22C55E;
+            --accent-cyan: #06B6D4;
+            --accent-orange: #F97316;
+            --accent-yellow: #FBBF24;
+            --border: 1px solid #2a2a2a;
+            --border-accent: 1px solid rgba(34,197,94,0.3);
+            --shadow-solid: 4px 4px 0px 0px rgba(34,197,94,0.4);
+            --shadow-hover: 6px 6px 0px 0px rgba(34,197,94,0.5);
+            --font-main: 'Figtree', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-main); background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        section { padding: 8rem 0; }
+
+        /* NAV */
+        nav {
+            position: sticky; top: 1.5rem; z-index: 100;
+            display: flex; justify-content: center; align-items: center;
+            width: fit-content; margin: 0 auto;
+            padding: 0.75rem 2.5rem;
+            background: rgba(15,15,15,0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid #333;
+            border-radius: 9999px;
+            box-shadow: 0 0 0 1px rgba(34,197,94,0.15), 0 8px 32px rgba(0,0,0,0.5);
+            gap: 2rem;
+        }
+        .nav-links { display: flex; gap: 2rem; font-weight: 500; font-size: 1rem; color: #aaa; }
+        .nav-links a { transition: color 0.2s; }
+        .nav-links a:hover { color: var(--accent-green); }
+        .audience-pill { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.35rem 1rem; background: rgba(34,197,94,0.15); color: var(--accent-green); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.5px; text-transform: uppercase; border-radius: 9999px; border: 1px solid rgba(34,197,94,0.35); }
+        .audience-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-green); animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+        /* BUTTONS */
+        .pill-button { display: inline-flex; align-items: center; justify-content: center; padding: 0.85rem 2rem; font-weight: 700; font-size: 1rem; border-radius: 9999px; border: 1px solid var(--accent-green); background: var(--accent-green); color: #000; cursor: pointer; transition: all 0.2s ease; box-shadow: 3px 3px 0px rgba(34,197,94,0.5); font-family: var(--font-main); }
+        .pill-button:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-hover); }
+        .pill-button.outline { background: transparent; color: var(--accent-green); }
+        .pill-button.outline:hover { background: rgba(34,197,94,0.08); }
+        .pill-outline-dark { display: inline-flex; align-items: center; justify-content: center; gap: 0.75rem; padding: 1rem 3rem; font-weight: 700; font-size: 1.1rem; border-radius: 9999px; border: 1px solid #444; color: #fff; background: transparent; transition: all 0.2s ease; text-transform: uppercase; cursor: pointer; font-family: var(--font-main); }
+        .pill-outline-dark:hover { border-color: var(--accent-green); color: var(--accent-green); transform: translate(-2px,-2px); box-shadow: 4px 4px 0 rgba(34,197,94,0.3); }
+
+        /* HERO */
+        .hero { padding: 5rem 0 4rem; text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 50% at 50% -5%, rgba(34,197,94,0.1) 0%, transparent 65%), radial-gradient(ellipse 40% 30% at 80% 80%, rgba(6,182,212,0.06) 0%, transparent 60%); pointer-events: none; }
+        .hero-grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(34,197,94,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(34,197,94,0.04) 1px, transparent 1px); background-size: 48px 48px; pointer-events: none; }
+        .hero-profile { width: 80px; height: 80px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.5rem; border: 2px solid rgba(34,197,94,0.4); box-shadow: 0 0 20px rgba(34,197,94,0.2); position: relative; }
+        .hero-profile img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-green); margin-bottom: 1.25rem; font-family: var(--font-mono); }
+        .hero-heading { font-size: 3.8rem; font-weight: 800; line-height: 1.05; letter-spacing: -2px; max-width: 900px; margin: 0 auto 1.75rem; color: #fff; }
+        .hero-heading .green { color: var(--accent-green); }
+        .hero-heading .cyan { color: var(--accent-cyan); }
+        .hero-copy { font-size: 1.15rem; max-width: 580px; margin: 0 auto 2.5rem; color: #999; line-height: 1.65; }
+        .hero-cta-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 4rem; }
+        .hero-code { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--surface); border: var(--border); border-radius: 9999px; padding: 0.5rem 1.25rem; font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent-green); margin-bottom: 2rem; }
+        .hero-code::before { content: '$ '; color: var(--text-subtle); }
+        .hero-metrics { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; padding-top: 2.5rem; border-top: var(--border); }
+        .metric { text-align: center; }
+        .metric-value { font-size: 2.5rem; font-weight: 800; color: var(--accent-green); letter-spacing: -1px; line-height: 1; font-family: var(--font-mono); }
+        .metric-label { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.3rem; }
+
+        /* CODE SNIPPET SECTION */
+        .code-section { background: var(--surface); border-top: var(--border); border-bottom: var(--border); }
+        .code-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .code-block { background: #0d0d0d; border: var(--border); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-solid); }
+        .code-header { display: flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.25rem; background: #161616; border-bottom: var(--border); }
+        .code-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .code-filename { font-family: var(--font-mono); font-size: 0.78rem; color: #666; margin-left: 0.5rem; }
+        pre { padding: 1.75rem; font-family: var(--font-mono); font-size: 0.82rem; line-height: 1.7; overflow-x: auto; }
+        .t-comment { color: #555; }
+        .t-keyword { color: #c084fc; }
+        .t-string { color: #86efac; }
+        .t-func { color: #67e8f9; }
+        .t-var { color: #fde68a; }
+        .t-num { color: var(--accent-orange); }
+        .code-text h3 { font-size: 2rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2; }
+        .code-text p { color: #888; font-size: 1.05rem; line-height: 1.65; margin-bottom: 1.5rem; }
+
+        /* SECTION COMMONS */
+        .section-header { margin-bottom: 3rem; display: flex; justify-content: space-between; align-items: flex-end; border-bottom: var(--border); padding-bottom: 1rem; }
+        .section-title { font-size: 2.5rem; font-weight: 800; letter-spacing: -1px; }
+        .section-eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-green); margin-bottom: 0.75rem; font-family: var(--font-mono); }
+
+        /* CAPABILITIES BENTO */
+        .cap-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.25rem; }
+        .cap-card { background: var(--surface); border: var(--border); border-radius: 20px; overflow: hidden; transition: all 0.2s ease; }
+        .cap-card:hover { border-color: rgba(34,197,94,0.3); box-shadow: var(--shadow-solid); transform: translate(-2px,-2px); }
+        .cap-1 { grid-column: span 5; }
+        .cap-2 { grid-column: span 7; }
+        .cap-3 { grid-column: span 7; }
+        .cap-4 { grid-column: span 5; }
+        .cap-inner { padding: 2rem; height: 100%; }
+        .cap-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-green); margin-bottom: 0.75rem; font-family: var(--font-mono); }
+        .cap-title { font-size: 1.3rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .cap-desc { font-size: 0.92rem; color: #777; line-height: 1.6; }
+
+        /* Stack pill cluster */
+        .stack-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; }
+        .stack-pill { padding: 0.3rem 0.85rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 700; font-family: var(--font-mono); border: 1px solid #333; background: #111; color: #ccc; transition: all 0.2s; }
+        .stack-pill:hover { border-color: var(--accent-green); color: var(--accent-green); }
+        .stack-pill.green { border-color: rgba(34,197,94,0.4); color: var(--accent-green); background: rgba(34,197,94,0.07); }
+        .stack-pill.cyan { border-color: rgba(6,182,212,0.4); color: var(--accent-cyan); background: rgba(6,182,212,0.07); }
+        .stack-pill.orange { border-color: rgba(249,115,22,0.4); color: var(--accent-orange); background: rgba(249,115,22,0.07); }
+        .stack-pill.yellow { border-color: rgba(251,191,36,0.4); color: var(--accent-yellow); background: rgba(251,191,36,0.07); }
+
+        /* Component preview */
+        .component-preview { background: #111; border: var(--border); border-radius: 12px; padding: 1.5rem; margin-top: 1.25rem; }
+        .comp-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.25rem; border-radius: 9999px; font-size: 0.85rem; font-weight: 700; background: var(--accent-green); color: #000; border: none; cursor: pointer; transition: all 0.2s; font-family: var(--font-main); }
+        .comp-btn:hover { transform: translate(-1px,-1px); box-shadow: 3px 3px 0 rgba(34,197,94,0.4); }
+        .comp-badge { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.25rem 0.7rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; background: rgba(34,197,94,0.15); color: var(--accent-green); border: 1px solid rgba(34,197,94,0.3); }
+        .comp-card { background: #161616; border: var(--border); border-radius: 12px; padding: 1rem 1.25rem; margin-top: 0.75rem; display: flex; align-items: center; gap: 1rem; }
+        .comp-avatar { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan)); flex-shrink: 0; }
+
+        /* CASE STUDIES (on dark) */
+        .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+        .project-card { background: var(--surface); border: var(--border); border-radius: 20px; overflow: hidden; transition: all 0.2s ease; }
+        .project-card:hover { border-color: rgba(34,197,94,0.3); box-shadow: var(--shadow-solid); transform: translate(-2px,-2px); }
+        .project-thumb { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #111; }
+        .project-thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .project-info { padding: 1.75rem; }
+        .project-info h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .project-info p { font-size: 0.95rem; color: #777; line-height: 1.55; margin-bottom: 1.25rem; }
+        .project-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+        .project-tag { padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; border: 1px solid #333; color: #777; }
+
+        /* MARQUEE */
+        .marquee-section { padding: 3rem 0; background: var(--surface); overflow: hidden; display: flex; border-top: var(--border); border-bottom: var(--border); }
+        .marquee-wrapper { display: flex; white-space: nowrap; width: fit-content; animation: scroll-left 36s linear infinite; }
+        .marquee-content { display: flex; gap: 2.5rem; padding-right: 2.5rem; align-items: center; }
+        .marquee-item { font-size: 0.9rem; font-weight: 700; display: flex; align-items: center; gap: 0.75rem; text-transform: uppercase; letter-spacing: 1px; border: 1px solid #333; padding: 0.75rem 1.5rem; border-radius: 9999px; background: #111; color: #aaa; font-family: var(--font-mono); }
+        @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        /* EXPERIENCE */
+        .experience-list { display: flex; flex-direction: column; }
+        .experience-row { display: grid; grid-template-columns: 1fr 2fr 1fr; align-items: center; padding: 2.5rem 0; border-top: var(--border); gap: 2rem; transition: background 0.2s; }
+        .experience-row:hover { background: var(--surface); padding-left: 1rem; padding-right: 1rem; margin-left: -1rem; margin-right: -1rem; border-radius: 12px; }
+        .exp-date { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; font-family: var(--font-mono); }
+        .exp-role { font-size: 1.4rem; font-weight: 800; }
+        .exp-company { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; text-align: right; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* CONTACT */
+        .contact-section { background: var(--surface); border-top: var(--border); }
+        .contact-cta { font-size: 5rem; font-weight: 800; line-height: 1; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: -2px; }
+        .contact-cta .green { color: var(--accent-green); }
+        .contact-links { display: flex; justify-content: center; gap: 2rem; margin-top: 3rem; flex-wrap: wrap; }
+
+        /* FOOTER */
+        footer { background: #080808; color: #444; padding: 2.5rem 0; text-align: center; border-top: var(--border); font-size: 0.85rem; font-family: var(--font-mono); }
+
+        /* TOAST */
+        .copy-toast { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--surface); color: #fff; padding: 0.85rem 1.75rem; border-radius: 9999px; font-size: 1rem; font-weight: 600; border: 1px solid var(--accent-green); box-shadow: var(--shadow-solid); opacity: 0; transition: opacity 0.3s, transform 0.3s; pointer-events: none; z-index: 9999; display: flex; align-items: center; gap: 0.6rem; white-space: nowrap; }
+        .copy-toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+        /* REVEAL */
+        .reveal { opacity: 0; transform: translateY(28px); transition: all 0.6s cubic-bezier(0.16,1,0.3,1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* RESPONSIVE */
+        @media(max-width: 900px) {
+            nav { padding: 0.65rem 1.25rem; gap: 1rem; }
+            .nav-links { gap: 1rem; font-size: 0.9rem; }
+            .hero-heading { font-size: 2.5rem; letter-spacing: -1px; }
+            .code-grid { grid-template-columns: 1fr; }
+            .cap-grid { grid-template-columns: 1fr; }
+            .cap-1, .cap-2, .cap-3, .cap-4 { grid-column: span 1; }
+            .project-grid { grid-template-columns: 1fr; }
+            .experience-row { grid-template-columns: 1fr; gap: 0.4rem; }
+            .exp-company { text-align: left; }
+            .contact-cta { font-size: 3rem; }
+            .contact-links { flex-direction: column; }
+            .hero-metrics { gap: 2rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="#projects">Work</a>
+            <a href="https://drive.google.com/file/d/1-rbj3iSVxhlpEyw5b7miXcYozpz4ezxp/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
+        </div>
+        <span class="audience-pill">
+            <span class="audience-dot"></span>
+            Design Engineer
+        </span>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-grid-bg"></div>
+        <div class="container" style="position: relative;">
+            <div class="hero-profile"><img src="./04_Assets/Images/profile.jpeg" alt="Chaz Grant"></div>
+            <div class="hero-eyebrow">// Design Engineer · Based in the Philippines</div>
+            <h1 class="hero-heading">
+                Where <span class="green">design</span><br>meets the <span class="cyan">DOM.</span>
+            </h1>
+            <p class="hero-copy">I'm Chaz — I speak both Figma and code. I build component libraries, interactive prototypes, and design systems that live at the intersection of craft and engineering.</p>
+            <div class="hero-code">design-to-code --output=production-ready</div>
+            <div class="hero-cta-group">
+                <a href="#contact" class="pill-button">Let's build your design system</a>
+                <a href="#projects" class="pill-button outline">See my work</a>
+            </div>
+            <div class="hero-metrics reveal">
+                <div class="metric">
+                    <div class="metric-value">HTML</div>
+                    <div class="metric-label">Semantic structure</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">CSS</div>
+                    <div class="metric-label">Pixel-perfect layouts</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">Figma</div>
+                    <div class="metric-label">System design</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">JS</div>
+                    <div class="metric-label">Interactions</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CODE + DESIGN SECTION -->
+    <section class="code-section">
+        <div class="container">
+            <div class="code-grid">
+                <div class="code-text reveal">
+                    <p class="section-eyebrow">The dual skill</p>
+                    <h3>I don't just hand off.<br>I build it.</h3>
+                    <p>Most designers stop at Figma. I go further — writing clean HTML, CSS, and JavaScript so the designs I make are the designs that ship. No translation loss, no broken spacing.</p>
+                    <div class="stack-pills">
+                        <span class="stack-pill green">HTML5</span>
+                        <span class="stack-pill green">CSS / Vanilla</span>
+                        <span class="stack-pill cyan">JavaScript</span>
+                        <span class="stack-pill cyan">Figma</span>
+                        <span class="stack-pill orange">Design Tokens</span>
+                        <span class="stack-pill yellow">Animations</span>
+                    </div>
+                </div>
+                <div class="code-block reveal" style="transition-delay: 0.1s;">
+                    <div class="code-header">
+                        <div class="code-dot" style="background: #ff5f57;"></div>
+                        <div class="code-dot" style="background: #febc2e;"></div>
+                        <div class="code-dot" style="background: #28c840;"></div>
+                        <span class="code-filename">design-system/tokens.css</span>
+                    </div>
+                    <pre><span class="t-comment">/* Design Tokens — Single Source of Truth */</span>
+<span class="t-keyword">:root</span> {
+  <span class="t-comment">/* Colors */</span>
+  <span class="t-var">--color-brand</span>: <span class="t-string">#22C55E</span>;
+  <span class="t-var">--color-bg</span>: <span class="t-string">#0F0F0F</span>;
+  <span class="t-var">--color-surface</span>: <span class="t-string">#1A1A1A</span>;
+
+  <span class="t-comment">/* Typography */</span>
+  <span class="t-var">--font-display</span>: <span class="t-string">'Figtree'</span>, sans-serif;
+  <span class="t-var">--font-mono</span>: <span class="t-string">'JetBrains Mono'</span>, mono;
+
+  <span class="t-comment">/* Spacing scale */</span>
+  <span class="t-var">--space-sm</span>: <span class="t-num">0.5rem</span>;
+  <span class="t-var">--space-md</span>: <span class="t-num">1rem</span>;
+  <span class="t-var">--space-lg</span>: <span class="t-num">2rem</span>;
+
+  <span class="t-comment">/* Radius */</span>
+  <span class="t-var">--radius-pill</span>: <span class="t-num">9999px</span>;
+  <span class="t-var">--radius-card</span>: <span class="t-num">16px</span>;
+}</pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAPABILITIES BENTO -->
+    <section id="capabilities" style="background: var(--bg-color);">
+        <div class="container">
+            <div class="section-header reveal">
+                <div>
+                    <p class="section-eyebrow">What I build</p>
+                    <h2 class="section-title">Capabilities</h2>
+                </div>
+            </div>
+            <div class="cap-grid">
+                <!-- Design Systems -->
+                <div class="cap-card cap-1 reveal">
+                    <div class="cap-inner">
+                        <p class="cap-label">Design Systems</p>
+                        <h3 class="cap-title">Figma libraries → living code.</h3>
+                        <p class="cap-desc">Building scalable component systems that work in both Figma and the browser — with matching tokens, variants, and docs.</p>
+                        <div class="stack-pills">
+                            <span class="stack-pill green">Figma Components</span>
+                            <span class="stack-pill green">Design Tokens</span>
+                            <span class="stack-pill cyan">CSS Custom Props</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Interactive Components -->
+                <div class="cap-card cap-2 reveal" style="transition-delay: 0.1s;">
+                    <div class="cap-inner">
+                        <p class="cap-label">Live Component Library</p>
+                        <h3 class="cap-title">Real components, not screenshots.</h3>
+                        <div class="component-preview">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+                                <button class="comp-btn">Primary Action</button>
+                                <span class="comp-badge">
+                                    <span style="width:6px;height:6px;border-radius:50%;background:var(--accent-green);"></span>
+                                    Live
+                                </span>
+                            </div>
+                            <div class="comp-card">
+                                <div class="comp-avatar"></div>
+                                <div>
+                                    <div style="font-size: 0.85rem; font-weight: 700;">Chaz Grant</div>
+                                    <div style="font-size: 0.78rem; color: #666;">Design Engineer</div>
+                                </div>
+                                <div style="margin-left: auto;"><span class="comp-badge">Open to work</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Animations -->
+                <div class="cap-card cap-3 reveal" style="transition-delay: 0.15s;">
+                    <div class="cap-inner">
+                        <p class="cap-label">Micro-animations</p>
+                        <h3 class="cap-title">Motion that communicates.</h3>
+                        <p class="cap-desc" style="margin-bottom: 1.25rem;">CSS transitions, keyframe animations, and scroll-driven effects — built to guide attention, not distract from it.</p>
+                        <div style="display: flex; gap: 0.75rem; align-items: center;">
+                            <div style="width: 48px; height: 48px; border-radius: 12px; background: var(--accent-green); animation: spin 3s linear infinite;"></div>
+                            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--accent-cyan); animation: bounce-anim 1.5s ease-in-out infinite;"></div>
+                            <div style="width: 48px; height: 4px; flex: 1; background: #333; border-radius: 9999px; overflow: hidden;"><div style="height: 100%; width: 60%; background: var(--accent-green); border-radius: 9999px; animation: progress 2s ease-in-out infinite alternate;"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Handoff -->
+                <div class="cap-card cap-4 reveal" style="transition-delay: 0.2s;">
+                    <div class="cap-inner">
+                        <p class="cap-label">Dev Handoff</p>
+                        <h3 class="cap-title">Zero-friction delivery.</h3>
+                        <p class="cap-desc">Annotated Figma specs, component storybooks, and documented APIs — so engineers can implement without guessing.</p>
+                        <div class="stack-pills" style="margin-top: 1.25rem;">
+                            <span class="stack-pill orange">Figma Dev Mode</span>
+                            <span class="stack-pill yellow">Storybook</span>
+                            <span class="stack-pill green">CSS Variables</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section id="projects" style="background: var(--surface); border-top: var(--border); border-bottom: var(--border);">
+        <div class="container">
+            <div class="section-header reveal">
+                <div>
+                    <p class="section-eyebrow">Selected Work</p>
+                    <h2 class="section-title">Case Studies</h2>
+                </div>
+            </div>
+            <div class="project-grid">
+                <a href="./interviewquery.html" class="project-card reveal">
+                    <div class="project-thumb"><img src="./04_Assets/Images/Interview Query new thumbnail.png" alt="Interview Query"></div>
+                    <div class="project-info">
+                        <h3>Interview Query</h3>
+                        <p>Redesigned the onboarding and pricing experience — from Figma system design to production HTML/CSS implementation.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Design System</span>
+                            <span class="project-tag">Figma</span>
+                            <span class="project-tag">HTML/CSS</span>
+                            <span class="project-tag">Ed Tech</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./internship-symph.html" class="project-card reveal" style="transition-delay: 0.1s;">
+                    <div class="project-thumb"><img src="./04_Assets/Images/Lesson Planner PH - new thumbnail.png" alt="Lesson Planner PH"></div>
+                    <div class="project-info">
+                        <h3>Lesson Planner PH</h3>
+                        <p>Built a landing page from Figma to browser — responsive, accessible, and shipped with clean semantic HTML and CSS animations.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Landing Page</span>
+                            <span class="project-tag">Responsive</span>
+                            <span class="project-tag">CSS Animations</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- STACK MARQUEE -->
+    <div class="marquee-section">
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+                <div class="marquee-item"><img src="./04_Assets/Icons/Figma.png" height="22" alt="Figma"> Figma</div>
+                <div class="marquee-item"><span style="color: #e34c26;">&#60;/&#62;</span> HTML5</div>
+                <div class="marquee-item"><span style="color: #264de4;">{}</span> CSS3</div>
+                <div class="marquee-item"><span style="color: #f7df1e;">JS</span> JavaScript</div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Vercel.png" height="22" alt="Vercel"> Vercel</div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Claude.png" height="22" alt="Claude"> Claude</div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/ChatGPT.png" height="22" alt="ChatGPT"> ChatGPT</div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Gemini.png" height="22" alt="Gemini"> Gemini</div>
+                <div class="marquee-item">⚡ Animations</div>
+            </div>
+            <div class="marquee-content">
+                <div class="marquee-item"><img src="./04_Assets/Icons/Figma.png" height="22" alt="Figma"> Figma</div>
+                <div class="marquee-item"><span style="color: #e34c26;">&#60;/&#62;</span> HTML5</div>
+                <div class="marquee-item"><span style="color: #264de4;">{}</span> CSS3</div>
+                <div class="marquee-item"><span style="color: #f7df1e;">JS</span> JavaScript</div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Vercel.png" height="22" alt="Vercel"> Vercel</div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Claude.png" height="22" alt="Claude"> Claude</div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/ChatGPT.png" height="22" alt="ChatGPT"> ChatGPT</div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Gemini.png" height="22" alt="Gemini"> Gemini</div>
+                <div class="marquee-item">⚡ Animations</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" style="background: var(--bg-color);">
+        <div class="container">
+            <div class="section-header reveal">
+                <div>
+                    <p class="section-eyebrow">Background</p>
+                    <h2 class="section-title">Experience</h2>
+                </div>
+            </div>
+            <div class="experience-list">
+                <div class="experience-row reveal">
+                    <div class="exp-date">Sep 2024 – Mar 2026</div>
+                    <div class="exp-role">Product Designer</div>
+                    <div class="exp-company">Interview Query</div>
+                </div>
+                <div class="experience-row reveal">
+                    <div class="exp-date">Feb 2024 – Aug 2024</div>
+                    <div class="exp-role">UI/UX Design Intern</div>
+                    <div class="exp-company">Lesson Planner PH</div>
+                </div>
+                <div class="experience-row reveal">
+                    <div class="exp-date">Aug 2022 – Dec 2022</div>
+                    <div class="exp-role">Lead Graphic Designer</div>
+                    <div class="exp-company">CESAFI</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+        <div class="container" style="text-align: center;">
+            <p class="section-eyebrow" style="margin-bottom: 1rem;">Let's collaborate</p>
+            <div class="contact-cta">Let's build your<br><span class="green">design system.</span></div>
+            <p style="max-width: 560px; margin: 0 auto 3rem; font-size: 1.15rem; color: #777;">Open to design engineering roles, contract work, and design system collaborations. If you need someone who bridges both worlds — let's talk.</p>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer" class="pill-outline-dark">
+                    <img src="./04_Assets/Icons/LinkedIn.svg" width="22" height="22" alt="LinkedIn">
+                    LinkedIn
+                </a>
+                <button onclick="copyEmail()" class="pill-outline-dark">
+                    <img src="./04_Assets/Icons/gmail.svg" width="22" height="22" alt="Email">
+                    Email Me
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>// © Chaz Grant, 2026</div>
+            <div style="display: flex; gap: 2rem;">
+                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer" style="color: #555; transition: color 0.2s;" onmouseover="this.style.color='#22c55e'" onmouseout="this.style.color='#555'">LinkedIn</a>
+                <button onclick="copyEmail()" style="background: none; border: none; color: #555; font-size: inherit; font-family: var(--font-mono); font-weight: 600; cursor: pointer; transition: color 0.2s;" onmouseover="this.style.color='#22c55e'" onmouseout="this.style.color='#555'">Email</button>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copy-toast" id="copy-toast">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Email copied!
+    </div>
+
+    <style>
+        @keyframes spin { from { border-radius: 12px; transform: rotate(0deg); } to { border-radius: 50%; transform: rotate(360deg); } }
+        @keyframes bounce-anim { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+        @keyframes progress { 0% { width: 20%; } 100% { width: 95%; } }
+    </style>
+
+    <script>
+        function copyEmail() {
+            navigator.clipboard.writeText('chazgrantborromeo@gmail.com').then(() => {
+                const toast = document.getElementById('copy-toast');
+                toast.classList.add('visible');
+                setTimeout(() => toast.classList.remove('visible'), 2500);
+            });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealEls = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) { entry.target.classList.add('active'); observer.unobserve(entry.target); }
+                });
+            }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
+            revealEls.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

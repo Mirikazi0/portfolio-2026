@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaz Borromeo — Product Designer</title>
+    <meta name="description" content="Chaz Borromeo is a Product Designer who bridges business strategy with user needs. From 0→1 product builds to iterative feature design, he ships work that drives measurable outcomes.">
+    <link rel="icon" type="image/jpeg" href="./04_Assets/Images/profile.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #FAFAFA;
+            --dark-bg: #0A0A0A;
+            --text-main: #000000;
+            --text-light: #FFFFFF;
+            --accent-purple: #7C3AED;
+            --accent-orange: #F97316;
+            --accent-blue: #4F46E5;
+            --accent-yellow: #FBBF24;
+            --font-main: 'Figtree', sans-serif;
+            --border-dark: 2px solid #000;
+            --border-light: 2px solid rgba(255,255,255,0.15);
+            --shadow-solid: 4px 4px 0px 0px rgba(0,0,0,1);
+            --shadow-hover: 6px 6px 0px 0px rgba(0,0,0,1);
+            --shadow-dark-solid: 4px 4px 0px 0px rgba(255,255,255,1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-main); background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { text-decoration: none; color: inherit; }
+        p { font-size: 1.125rem; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        section { padding: 8rem 0; }
+
+        /* NAV */
+        nav { position: sticky; top: 1.5rem; z-index: 100; display: flex; justify-content: center; align-items: center; width: fit-content; margin: 0 auto; padding: 0.75rem 2.5rem; background: rgba(255,255,255,0.9); backdrop-filter: blur(12px); border: var(--border-dark); border-radius: 9999px; box-shadow: var(--shadow-solid); gap: 2rem; }
+        .nav-links { display: flex; gap: 2rem; font-weight: 500; font-size: 1rem; }
+        .nav-links a:hover { color: var(--accent-purple); }
+        .audience-pill { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.35rem 1rem; background: var(--accent-purple); color: #fff; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.5px; text-transform: uppercase; border-radius: 9999px; }
+
+        /* BUTTONS */
+        .pill-button { display: inline-flex; align-items: center; justify-content: center; padding: 0.85rem 2rem; font-weight: 700; font-size: 1rem; border-radius: 9999px; border: var(--border-dark); background: var(--text-main); color: var(--text-light); cursor: pointer; transition: all 0.2s ease; box-shadow: 3px 3px 0px rgba(0,0,0,1); font-family: var(--font-main); }
+        .pill-button:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-hover); }
+        .pill-button.accent { background: var(--accent-purple); }
+        .pill-button.outline { background: transparent; color: var(--text-main); }
+        .pill-outline-light { display: inline-flex; align-items: center; justify-content: center; gap: 0.75rem; padding: 1rem 3rem; font-weight: 700; font-size: 1.1rem; border-radius: 9999px; border: 2px solid #fff; color: #fff; background: transparent; transition: all 0.2s ease; text-transform: uppercase; cursor: pointer; font-family: var(--font-main); }
+        .pill-outline-light:hover { background: #fff; color: #000; transform: translate(-2px,-2px); box-shadow: 4px 4px 0 rgba(255,255,255,1); }
+
+        /* HERO */
+        .hero { padding: 5rem 0 4rem; text-align: center; position: relative; overflow: hidden; background-color: var(--bg-color); }
+        .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% -10%, rgba(124,58,237,0.12) 0%, transparent 70%); pointer-events: none; }
+        .hero-profile { width: 80px; height: 80px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.5rem; border: 2px solid rgba(0,0,0,0.1); box-shadow: var(--shadow-solid); }
+        .hero-profile img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 1.25rem; }
+        .hero-heading { font-size: 3.6rem; font-weight: 800; line-height: 1.08; letter-spacing: -2px; max-width: 900px; margin: 0 auto 1.75rem; color: #0a0a0a; }
+        .hero-heading .highlight-orange { background: var(--accent-orange); color: #fff; padding: 0.1em 0.45em; border-radius: 10px; display: inline-block; transform: rotate(-1deg); }
+        .hero-heading .highlight-purple { background: var(--accent-purple); color: #fff; padding: 0.1em 0.45em; border-radius: 10px; display: inline-block; transform: rotate(1deg); }
+        .hero-copy { font-size: 1.2rem; max-width: 600px; margin: 0 auto 2.5rem; color: #555; line-height: 1.65; }
+        .hero-cta-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 4rem; }
+        .hero-metrics { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; padding-top: 2.5rem; border-top: 1px solid #e5e5e5; }
+        .metric { text-align: center; }
+        .metric-value { font-size: 2.5rem; font-weight: 800; color: var(--accent-purple); letter-spacing: -1px; line-height: 1; }
+        .metric-label { font-size: 0.82rem; font-weight: 600; color: #777; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.3rem; }
+
+        /* SECTIONS */
+        .section-header { margin-bottom: 3rem; display: flex; justify-content: space-between; align-items: flex-end; border-bottom: var(--border-dark); padding-bottom: 1rem; }
+        .dark-section .section-header { border-bottom: var(--border-light); }
+        .section-title { font-size: 2.75rem; font-weight: 800; letter-spacing: -1px; }
+        .section-eyebrow { font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #999; margin-bottom: 0.75rem; }
+        .dark-section { background-color: var(--dark-bg); color: var(--text-light); border-top: var(--border-dark); border-bottom: var(--border-dark); }
+        .dark-section .section-title { color: #fff; }
+
+        /* PRODUCT VALUE PROPS */
+        .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .value-card { border: var(--border-dark); border-radius: 20px; padding: 2.25rem 2rem; background: #fff; box-shadow: var(--shadow-solid); transition: transform 0.2s, box-shadow 0.2s; }
+        .value-card:hover { transform: translate(-3px,-3px); box-shadow: var(--shadow-hover); }
+        .value-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
+        .value-card h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 0.6rem; }
+        .value-card p { font-size: 0.95rem; color: #666; line-height: 1.55; }
+
+        /* CASE STUDIES */
+        .case-study-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; }
+        .case-study-card { display: flex; flex-direction: column; gap: 1.5rem; text-decoration: none; color: inherit; cursor: pointer; }
+        .case-study-image { width: 100%; aspect-ratio: 16/10; border: var(--border-light); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-dark-solid); transition: transform 0.2s, box-shadow 0.2s; }
+        .case-study-image:hover { transform: translate(-3px,-3px); box-shadow: 6px 6px 0 rgba(255,255,255,1); }
+        .case-study-image img { width: 100%; height: 100%; object-fit: cover; }
+        .case-study-info h3 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.5rem; color: #fff; }
+        .case-study-info p { font-size: 1.05rem; color: #aaa; margin-bottom: 1rem; line-height: 1.6; }
+        .tag { background: rgba(255,255,255,0.07); padding: 0.25rem 0.85rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.12); color: #ddd; }
+        .case-study-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .impact-pill { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.3rem 0.9rem; background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.35); border-radius: 9999px; font-size: 0.82rem; font-weight: 700; color: #c4b5fd; }
+
+        /* MARQUEE */
+        .marquee-section { padding: 3.5rem 0; background: var(--bg-color); overflow: hidden; display: flex; border-top: var(--border-dark); border-bottom: var(--border-dark); }
+        .marquee-wrapper { display: flex; white-space: nowrap; width: fit-content; animation: scroll-left 38s linear infinite; }
+        .marquee-content { display: flex; gap: 3rem; padding-right: 3rem; align-items: center; }
+        .marquee-item { font-size: 1rem; font-weight: 700; display: flex; align-items: center; gap: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; border: var(--border-dark); padding: 0.85rem 1.75rem; border-radius: 9999px; background: #fff; box-shadow: var(--shadow-solid); color: #222; }
+        @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        /* BENTO — PRODUCT THINKING */
+        .product-bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.25rem; }
+        .pb-card { border: var(--border-dark); border-radius: 20px; background: #fff; box-shadow: var(--shadow-solid); overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
+        .pb-card:hover { transform: translate(-3px,-3px); box-shadow: var(--shadow-hover); }
+        .pb-1 { grid-column: span 8; }
+        .pb-2 { grid-column: span 4; }
+        .pb-3 { grid-column: span 4; }
+        .pb-4 { grid-column: span 8; }
+        .pb-inner { padding: 2rem; height: 100%; display: flex; flex-direction: column; }
+        .bento-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-purple); margin-bottom: 0.75rem; }
+        .bento-title { font-size: 1.35rem; font-weight: 800; line-height: 1.2; margin-bottom: 0.5rem; }
+
+        /* Roadmap visual */
+        .roadmap { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+        .roadmap-row { display: flex; align-items: center; gap: 1rem; }
+        .roadmap-label { font-size: 0.8rem; font-weight: 700; width: 90px; color: #555; text-transform: uppercase; letter-spacing: 0.5px; flex-shrink: 0; }
+        .roadmap-bar-track { flex: 1; height: 12px; background: #f0f0f0; border-radius: 9999px; overflow: hidden; }
+        .roadmap-bar-fill { height: 100%; border-radius: 9999px; }
+        .roadmap-status { font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 9999px; white-space: nowrap; }
+
+        /* Stakeholder diagram */
+        .stakeholder-ring { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; margin-top: 1.5rem; }
+        .stakeholder-center { width: 70px; height: 70px; border-radius: 50%; background: var(--accent-purple); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem; color: #fff; text-align: center; border: 3px solid #000; box-shadow: 3px 3px 0 #000; }
+        .stakeholder-row { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
+        .stakeholder-node { padding: 0.3rem 0.85rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; border: 2px solid #000; background: #fafafa; box-shadow: 2px 2px 0 #000; }
+
+        /* Outcome card */
+        .outcome-list { margin-top: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem; }
+        .outcome-item { display: flex; align-items: flex-start; gap: 0.75rem; padding: 1rem 1.25rem; border: 1.5px solid #e5e5e5; border-radius: 12px; background: #fafafa; }
+        .outcome-num { font-size: 1.6rem; font-weight: 800; color: var(--accent-purple); line-height: 1; white-space: nowrap; }
+        .outcome-text { font-size: 0.9rem; color: #555; line-height: 1.4; font-weight: 500; }
+
+        /* EXPERIENCE */
+        .experience-list { display: flex; flex-direction: column; }
+        .experience-row { display: grid; grid-template-columns: 1fr 2fr 1fr; align-items: center; padding: 2.5rem 0; border-top: 1px solid #e5e5e5; gap: 2rem; transition: background 0.2s; }
+        .experience-row:hover { background: #f5f5f5; padding-left: 1rem; padding-right: 1rem; margin-left: -1rem; margin-right: -1rem; }
+        .exp-date { font-size: 0.9rem; color: #999; font-weight: 500; }
+        .exp-role { font-size: 1.5rem; font-weight: 800; color: #111; letter-spacing: -0.5px; }
+        .exp-company { font-size: 0.9rem; color: #777; font-weight: 600; text-align: right; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* CONTACT */
+        .contact-cta { font-size: 5.5rem; font-weight: 800; line-height: 1; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: -2px; }
+        .contact-links { display: flex; justify-content: center; gap: 2rem; margin-top: 3rem; flex-wrap: wrap; }
+
+        /* FOOTER */
+        footer { background: var(--dark-bg); color: #666; padding: 2.5rem 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.08); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; }
+        .copy-toast { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(20px); background: #fff; color: #111; padding: 0.85rem 1.75rem; border-radius: 9999px; font-size: 1rem; font-weight: 600; border: 2px solid #000; box-shadow: var(--shadow-solid); opacity: 0; transition: opacity 0.3s, transform 0.3s; pointer-events: none; z-index: 9999; display: flex; align-items: center; gap: 0.6rem; white-space: nowrap; }
+        .copy-toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+        /* REVEAL */
+        .reveal { opacity: 0; transform: translateY(32px); transition: all 0.7s cubic-bezier(0.16,1,0.3,1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* RESPONSIVE */
+        @media(max-width: 900px) {
+            nav { padding: 0.65rem 1.25rem; gap: 1.25rem; }
+            .nav-links { gap: 1rem; font-size: 0.9rem; }
+            .hero-heading { font-size: 2.4rem; letter-spacing: -0.5px; }
+            .value-grid { grid-template-columns: 1fr; }
+            .case-study-grid { grid-template-columns: 1fr; }
+            .product-bento { grid-template-columns: 1fr; }
+            .pb-1, .pb-2, .pb-3, .pb-4 { grid-column: span 1; }
+            .experience-row { grid-template-columns: 1fr; gap: 0.4rem; }
+            .exp-company { text-align: left; }
+            .contact-cta { font-size: 3rem; }
+            .contact-links { flex-direction: column; }
+            .hero-metrics { gap: 2rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="#projects">Case Studies</a>
+            <a href="https://drive.google.com/file/d/1-rbj3iSVxhlpEyw5b7miXcYozpz4ezxp/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
+        </div>
+        <span class="audience-pill">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+            Product Designer
+        </span>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-profile"><img src="./04_Assets/Images/profile.jpeg" alt="Chaz Grant"></div>
+            <div class="hero-eyebrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                Product Designer · Based in the Philippines
+            </div>
+            <h1 class="hero-heading">
+                Bridging <span class="highlight-orange">business goals</span><br>with <span class="highlight-purple">user needs.</span>
+            </h1>
+            <p class="hero-copy">I'm Chaz — a product designer who thinks in systems. I partner with PMs and engineers to scope, ship, and iterate on features that move the needle for real users and real metrics.</p>
+            <div class="hero-cta-group">
+                <a href="#contact" class="pill-button accent">Let's build your product</a>
+                <a href="#projects" class="pill-button outline">See case studies</a>
+            </div>
+            <div class="hero-metrics reveal">
+                <div class="metric">
+                    <div class="metric-value">+19%</div>
+                    <div class="metric-label">Conversion lifted</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">2+</div>
+                    <div class="metric-label">Years in product</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">0→1</div>
+                    <div class="metric-label">Full product builds</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">50k+</div>
+                    <div class="metric-label">Users impacted</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- VALUE PROPS -->
+    <section id="approach" style="background: #fff; padding-top: 6rem; padding-bottom: 6rem;">
+        <div class="container">
+            <div class="section-header reveal">
+                <div>
+                    <p class="section-eyebrow" style="color: var(--accent-purple);">What I bring</p>
+                    <h2 class="section-title">Product thinking, end to end.</h2>
+                </div>
+            </div>
+            <div class="value-grid">
+                <div class="value-card reveal">
+                    <div class="value-icon" style="background: #ede9fe;">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Cross-functional Collaboration</h3>
+                    <p>I work closely with PMs, engineers, and stakeholders — translating business requirements into design decisions everyone can execute on.</p>
+                </div>
+                <div class="value-card reveal" style="transition-delay: 0.1s;">
+                    <div class="value-icon" style="background: #fff7ed;">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                    </div>
+                    <h3>Outcome-driven Design</h3>
+                    <p>Every design decision is tied to a measurable goal. I care about conversion, retention, and task completion — not just aesthetics.</p>
+                </div>
+                <div class="value-card reveal" style="transition-delay: 0.2s;">
+                    <div class="value-icon" style="background: #eff6ff;">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <h3>Fast, Iterative Shipping</h3>
+                    <p>I run tight design cycles — from brief to prototype fast, gather signal, and iterate. Comfortable with ambiguity and moving before things are perfect.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES (DARK) -->
+    <section id="projects" class="dark-section" style="background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 28px 28px;">
+        <div class="container">
+            <div class="section-header reveal">
+                <div>
+                    <p class="section-eyebrow" style="color: #a78bfa;">Selected Work</p>
+                    <h2 class="section-title">Case Studies</h2>
+                </div>
+            </div>
+            <div class="case-study-grid">
+                <a href="./interviewquery.html" class="case-study-card reveal">
+                    <div class="case-study-image" style="background-color: #1e1b4b;">
+                        <img src="./04_Assets/Images/Interview Query new thumbnail.png" alt="Interview Query Case Study">
+                    </div>
+                    <div class="case-study-info">
+                        <h3>Interview Query</h3>
+                        <p>Drove product strategy for onboarding and pricing redesign, shipping iteratively to achieve measurable conversion and revenue impact.</p>
+                        <div class="case-study-tags" style="margin-bottom: 0.75rem;">
+                            <span class="impact-pill">↑ +19% Conversion</span>
+                            <span class="impact-pill">↑ +12% LTV</span>
+                        </div>
+                        <div class="case-study-tags">
+                            <span class="tag">Product Strategy</span>
+                            <span class="tag">Conversion Optimization</span>
+                            <span class="tag">Ed Tech</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./internship-symph.html" class="case-study-card reveal" style="transition-delay: 0.15s;">
+                    <div class="case-study-image" style="background-color: #2d1b69;">
+                        <img src="./04_Assets/Images/Lesson Planner PH - new thumbnail.png" alt="Lesson Planner PH Case Study">
+                    </div>
+                    <div class="case-study-info">
+                        <h3>Lesson Planner PH</h3>
+                        <p>0→1 landing page and product design for an Ed Tech startup — balancing teacher needs with a B2B sales funnel for school administrators.</p>
+                        <div class="case-study-tags">
+                            <span class="tag">0→1 Product Design</span>
+                            <span class="tag">B2B</span>
+                            <span class="tag">Ed Tech</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT THINKING BENTO -->
+    <section id="thinking" style="background: #f9f9f9; border-bottom: var(--border-dark);">
+        <div class="container">
+            <div class="section-header reveal">
+                <div>
+                    <p class="section-eyebrow" style="color: var(--accent-purple);">Product Thinking</p>
+                    <h2 class="section-title">How I think about product.</h2>
+                </div>
+            </div>
+            <div class="product-bento">
+                <!-- Roadmap card -->
+                <div class="pb-card pb-1 reveal">
+                    <div class="pb-inner">
+                        <p class="bento-label">Roadmap Thinking</p>
+                        <h3 class="bento-title">Scoping features by impact vs. effort.</h3>
+                        <div class="roadmap">
+                            <div class="roadmap-row">
+                                <span class="roadmap-label">Onboarding</span>
+                                <div class="roadmap-bar-track"><div class="roadmap-bar-fill" style="width: 90%; background: var(--accent-purple);"></div></div>
+                                <span class="roadmap-status" style="background: #ede9fe; color: #5b21b6;">Shipped ✓</span>
+                            </div>
+                            <div class="roadmap-row">
+                                <span class="roadmap-label">Pricing</span>
+                                <div class="roadmap-bar-track"><div class="roadmap-bar-fill" style="width: 80%; background: #4f46e5;"></div></div>
+                                <span class="roadmap-status" style="background: #ede9fe; color: #5b21b6;">Shipped ✓</span>
+                            </div>
+                            <div class="roadmap-row">
+                                <span class="roadmap-label">Dashboard</span>
+                                <div class="roadmap-bar-track"><div class="roadmap-bar-fill" style="width: 60%; background: #f97316;"></div></div>
+                                <span class="roadmap-status" style="background: #fff7ed; color: #c2410c;">In Review</span>
+                            </div>
+                            <div class="roadmap-row">
+                                <span class="roadmap-label">Analytics</span>
+                                <div class="roadmap-bar-track"><div class="roadmap-bar-fill" style="width: 30%; background: #e5e7eb;"></div></div>
+                                <span class="roadmap-status" style="background: #f3f4f6; color: #6b7280;">Planned</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Stakeholder card -->
+                <div class="pb-card pb-2 reveal" style="transition-delay: 0.1s;">
+                    <div class="pb-inner">
+                        <p class="bento-label">Collaboration</p>
+                        <h3 class="bento-title">Working across the org.</h3>
+                        <div class="stakeholder-ring">
+                            <div class="stakeholder-center">Designer<br>(Me)</div>
+                            <div class="stakeholder-row">
+                                <span class="stakeholder-node">Product Manager</span>
+                                <span class="stakeholder-node">Engineers</span>
+                            </div>
+                            <div class="stakeholder-row">
+                                <span class="stakeholder-node">Marketing</span>
+                                <span class="stakeholder-node">CS</span>
+                                <span class="stakeholder-node">Users</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Outcome card -->
+                <div class="pb-card pb-3 reveal" style="transition-delay: 0.15s;">
+                    <div class="pb-inner">
+                        <p class="bento-label">Shipped Outcomes</p>
+                        <h3 class="bento-title">Work that moves the needle.</h3>
+                        <div class="outcome-list">
+                            <div class="outcome-item">
+                                <div class="outcome-num">+19%</div>
+                                <div class="outcome-text">Conversion rate lift after onboarding overhaul</div>
+                            </div>
+                            <div class="outcome-item">
+                                <div class="outcome-num">+12%</div>
+                                <div class="outcome-text">LTV increase from pricing page redesign</div>
+                            </div>
+                            <div class="outcome-item">
+                                <div class="outcome-num">50k+</div>
+                                <div class="outcome-text">Users across shipped product experiences</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Design process -->
+                <div class="pb-card pb-4 reveal" style="transition-delay: 0.2s;">
+                    <div class="pb-inner">
+                        <p class="bento-label">Process</p>
+                        <h3 class="bento-title">From fuzzy problem to shipped feature.</h3>
+                        <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 140px; padding: 1.25rem; border: 1.5px solid #e5e5e5; border-radius: 14px; background: #fafafa;">
+                                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔎</div>
+                                <div style="font-size: 0.85rem; font-weight: 800; margin-bottom: 0.25rem;">Discover</div>
+                                <div style="font-size: 0.8rem; color: #777;">Stakeholder alignment, user research, problem framing</div>
+                            </div>
+                            <div style="flex: 1; min-width: 140px; padding: 1.25rem; border: 1.5px solid #ddd6fe; border-radius: 14px; background: #faf5ff;">
+                                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🗺️</div>
+                                <div style="font-size: 0.85rem; font-weight: 800; margin-bottom: 0.25rem;">Define</div>
+                                <div style="font-size: 0.8rem; color: #777;">Scoping, HMW, success metrics, briefs</div>
+                            </div>
+                            <div style="flex: 1; min-width: 140px; padding: 1.25rem; border: 1.5px solid #fed7aa; border-radius: 14px; background: #fff7ed;">
+                                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">✏️</div>
+                                <div style="font-size: 0.85rem; font-weight: 800; margin-bottom: 0.25rem;">Design</div>
+                                <div style="font-size: 0.8rem; color: #777;">Wireframes, prototypes, design review</div>
+                            </div>
+                            <div style="flex: 1; min-width: 140px; padding: 1.25rem; border: 1.5px solid #bbf7d0; border-radius: 14px; background: #f0fdf4;">
+                                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🚀</div>
+                                <div style="font-size: 0.85rem; font-weight: 800; margin-bottom: 0.25rem;">Ship</div>
+                                <div style="font-size: 0.8rem; color: #777;">Handoff, QA, measure, iterate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-section">
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+                <div class="marquee-item"><img src="./04_Assets/Icons/Figma.png" height="28" alt="Figma"> Figma</div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Notion.png" height="28" alt="Notion"> Notion</div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/ClickUp.png" height="28" alt="ClickUp"> ClickUp</div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/ChatGPT.png" height="28" alt="ChatGPT"> ChatGPT</div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Slack.png" height="28" alt="Slack"> Slack</div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Gemini.png" height="28" alt="Gemini"> Gemini</div>
+                <div class="marquee-item">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="#7c3aed"><path d="M3 3h18v18H3z" opacity=".2"/><path d="M8 10h8M8 14h5"/></svg>
+                    Jira
+                </div>
+                <div class="marquee-item">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="#f97316"><circle cx="12" cy="12" r="10"/></svg>
+                    Miro
+                </div>
+            </div>
+            <div class="marquee-content">
+                <div class="marquee-item"><img src="./04_Assets/Icons/Figma.png" height="28" alt="Figma"> Figma</div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Notion.png" height="28" alt="Notion"> Notion</div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/ClickUp.png" height="28" alt="ClickUp"> ClickUp</div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/ChatGPT.png" height="28" alt="ChatGPT"> ChatGPT</div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Slack.png" height="28" alt="Slack"> Slack</div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Gemini.png" height="28" alt="Gemini"> Gemini</div>
+                <div class="marquee-item"><svg width="28" height="28" viewBox="0 0 24 24" fill="#7c3aed"><path d="M3 3h18v18H3z" opacity=".2"/></svg> Jira</div>
+                <div class="marquee-item"><svg width="28" height="28" viewBox="0 0 24 24" fill="#f97316"><circle cx="12" cy="12" r="10"/></svg> Miro</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" style="background: #fff;">
+        <div class="container">
+            <div class="section-header reveal">
+                <div>
+                    <p class="section-eyebrow" style="color: var(--accent-purple);">Background</p>
+                    <h2 class="section-title">Experience</h2>
+                </div>
+            </div>
+            <div class="experience-list">
+                <div class="experience-row reveal">
+                    <div class="exp-date">Sep 2024 – Mar 2026</div>
+                    <div class="exp-role">Product Designer</div>
+                    <div class="exp-company">Interview Query</div>
+                </div>
+                <div class="experience-row reveal">
+                    <div class="exp-date">Feb 2024 – Aug 2024</div>
+                    <div class="exp-role">UI/UX Design Intern</div>
+                    <div class="exp-company">Lesson Planner PH</div>
+                </div>
+                <div class="experience-row reveal">
+                    <div class="exp-date">Aug 2022 – Dec 2022</div>
+                    <div class="exp-role">Lead Graphic Designer</div>
+                    <div class="exp-company">CESAFI</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="dark-section" style="border-bottom: none;">
+        <div class="container">
+            <div style="text-align: center;">
+                <div class="contact-cta">Let's build<br>your product.</div>
+            </div>
+            <p style="text-align: center; max-width: 560px; margin: 0 auto 3rem; font-size: 1.2rem; color: #aaa;">Open to full-time product design roles and early-stage startup collaboration. Let's talk.</p>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer" class="pill-outline-light">
+                    <img src="./04_Assets/Icons/LinkedIn.svg" width="22" height="22" alt="LinkedIn">
+                    LinkedIn
+                </a>
+                <button onclick="copyEmail()" class="pill-outline-light">
+                    <img src="./04_Assets/Icons/gmail.svg" width="22" height="22" alt="Email">
+                    Email Me
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>© Chaz Grant, 2026</div>
+            <div style="display: flex; gap: 2rem;">
+                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer" style="color: #fff;">LinkedIn</a>
+                <button onclick="copyEmail()" style="background: none; border: none; color: #fff; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer;">Email</button>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copy-toast" id="copy-toast">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Email copied to clipboard!
+    </div>
+
+    <script>
+        function copyEmail() {
+            navigator.clipboard.writeText('chazgrantborromeo@gmail.com').then(() => {
+                const toast = document.getElementById('copy-toast');
+                toast.classList.add('visible');
+                setTimeout(() => toast.classList.remove('visible'), 2500);
+            });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealEls = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) { entry.target.classList.add('active'); observer.unobserve(entry.target); }
+                });
+            }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+            revealEls.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
