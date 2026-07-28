@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make It Happen Studio | Chaz Borromeo</title>
+    <meta name="description"
+        content="Brand identity and design system case study for Make It Happen Studio by Chaz Borromeo.">
+    <link rel="icon" type="image/jpeg" href="./04_Assets/Images/profile.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAFAFA;
+            --dark-bg: #111111;
+            --text-main: #000000;
+            --text-light: #FFFFFF;
+            --accent-blue: #4F46E5;
+            --mih-teal: #309E9D;
+            --mih-pink: #F39BA3;
+            --mih-yellow: #FDC841;
+            --font-main: 'Figtree', sans-serif;
+            --border-dark: 2px solid #000000;
+            --shadow-solid: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        p { font-size: 1.125rem; color: #333333; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+        /* --- Navigation --- */
+        nav {
+            position: sticky;
+            top: 1.5rem;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            margin: 0 auto;
+            padding: 0.75rem 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: var(--border-dark);
+            border-radius: 9999px;
+            box-shadow: var(--shadow-solid);
+            transition: all 0.3s ease;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.2s ease;
+        }
+
+        .back-link:hover { transform: translateX(-4px); }
+
+        /* --- Case Study Header --- */
+        .case-study-header {
+            padding: 6rem 0 3rem;
+            text-align: center;
+        }
+
+        .case-study-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .case-study-subtitle {
+            font-size: 1.25rem;
+            color: #555;
+            max-width: 780px;
+            margin: 0 auto 3rem;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            max-width: 950px;
+            margin: 0 auto 4rem;
+            text-align: left;
+            border-top: 2px solid #ddd;
+            padding-top: 2rem;
+        }
+
+        .meta-item h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #777;
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+        }
+
+        .meta-item p {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #111;
+        }
+
+        /* --- Hero Visual --- */
+        .hero-banner {
+            width: 100%;
+            height: 520px;
+            border: var(--border-dark);
+            border-radius: 20px;
+            box-shadow: var(--shadow-solid);
+            overflow: hidden;
+            margin-bottom: 6rem;
+            background: #eee;
+        }
+
+        .hero-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- Content Layout --- */
+        .content-body {
+            max-width: 850px;
+            margin: 0 auto 8rem;
+        }
+
+        .section-block {
+            margin-bottom: 5rem;
+        }
+
+        .section-block h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            border-bottom: 3px solid #111;
+            display: inline-block;
+            padding-bottom: 0.4rem;
+        }
+
+        .section-block p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        /* --- Color Swatches --- */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            margin: 2.5rem 0;
+        }
+
+        .color-card {
+            border: var(--border-dark);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 3px 3px 0px 0px rgba(0,0,0,1);
+            background: #fff;
+        }
+
+        .swatch {
+            height: 110px;
+            width: 100%;
+        }
+
+        .swatch-info {
+            padding: 0.85rem;
+        }
+
+        .swatch-name {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #111;
+            margin-bottom: 0.2rem;
+        }
+
+        .swatch-hex {
+            font-size: 0.8rem;
+            font-family: monospace;
+            color: #666;
+            font-weight: 600;
+        }
+
+        /* --- Deliverables Grid --- */
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .deliverable-card {
+            border: var(--border-dark);
+            border-radius: 12px;
+            padding: 1.5rem;
+            background: #fff;
+            box-shadow: 3px 3px 0px 0px rgba(0,0,0,1);
+        }
+
+        .deliverable-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            color: #111;
+        }
+
+        .deliverable-card p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        /* --- Contact CTA Section --- */
+        .contact-cta-section {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            padding: 5rem 0;
+            text-align: center;
+            border-top: var(--border-dark);
+        }
+
+        .contact-cta-section h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .contact-cta-section p {
+            color: #aaa;
+            font-size: 1.15rem;
+            max-width: 500px;
+            margin: 0 auto 2rem;
+        }
+
+        .pill-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.85rem 2.25rem;
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 9999px;
+            border: 2px solid #fff;
+            background: #fff;
+            color: #111;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 4px 4px 0px 0px rgba(255,255,255,0.3);
+        }
+
+        .pill-button:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px 0px rgba(255,255,255,0.5);
+        }
+
+        footer {
+            background: var(--dark-bg);
+            color: #888;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .case-study-title { font-size: 2.25rem; }
+            .color-grid { grid-template-columns: 1fr; }
+            .deliverables-grid { grid-template-columns: 1fr; }
+            .hero-banner { height: 340px; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="./graphicdesigner.html#graphic-design" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Case Studies
+        </a>
+    </nav>
+
+    <!-- Header -->
+    <header class="case-study-header">
+        <div class="container">
+            <h1 class="case-study-title">Make It Happen Studio</h1>
+            <p class="case-study-subtitle">A bold, craft-led brand identity system for a creative execution studio helping early-stage founders turn ideas into real, tangible products.</p>
+
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <h4>Role</h4>
+                    <p>Lead Brand Identity Designer</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Timeline</h4>
+                    <p>June 2026 – July 2026</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Deliverables</h4>
+                    <p>Brand Identity, Type System, Social Templates, CIM</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Documentation</h4>
+                    <p><a href="./04_Assets/PDF/Brand%20Guidelines%20-%20MakeItHappen.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue); text-decoration: underline; font-weight: 600;">Brand Guidelines PDF</a></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Hero Visual Banner -->
+        <div class="hero-banner">
+            <img src="./04_Assets/Images/Make%20It%20Happen%20Studio%20thumbnail.png" alt="Make It Happen Studio Brand Identity Showcase">
+        </div>
+
+        <!-- Main Narrative Content -->
+        <main class="content-body">
+            <!-- 1. Background & Challenge -->
+            <section class="section-block">
+                <h2>1. Studio Vision & Mission</h2>
+                <p><strong>Make It Happen Studio</strong> is a craft-led creative execution practice founded to help early-stage founders bridge the gap between idea and tangible product. Rather than delivering endless strategy decks or unbuilt clickable mockups, the studio's core promise is action: building and shipping working MVPs that founders can grow from.</p>
+                <p><strong>Brand Values:</strong> <em>Plainspoken. Crafted. Confident.</em><br>The visual identity needed to communicate three key feelings in order:
+                <br>1. <strong>Trust & Taste:</strong> <em>"This person knows what she's doing."</em>
+                <br>2. <strong>Approachable & Transparent:</strong> <em>"I can actually afford and access this."</em> (No corporate agency fluff).
+                <br>3. <strong>Execution-Focused Energy:</strong> <em>"This is going to be fun."</em> (Warmth and action-first momentum).</p>
+            </section>
+
+            <!-- 2. Brand Identity & Logotype System -->
+            <section class="section-block">
+                <h2>2. Logotype System & Brand Patterns</h2>
+                <p>Because "Make It Happen Studio" is a four-word title, a flexible multi-tier logotype system was designed:</p>
+                <p>• <strong>Full Combination Mark:</strong> Used for major touchpoints, website headers, and client proposal covers.
+                <br>• <strong>Icon & Monogram Mark:</strong> Scalable icon designed for strict spaces like favicons, social avatars, and stamps.
+                <br>• <strong>Ascending Brand Pattern:</strong> An echoing geometric pattern created by repeating the icon mark in an ascending sequence, symbolizing continuous growth, forward momentum, and progress.</p>
+            </section>
+
+            <!-- 3. Color Palette & Typography -->
+            <section class="section-block">
+                <h2>3. Multi-Color Palette & Typography</h2>
+                <p>Unlike rigid two-color corporate brands, Make It Happen Studio employs a vibrant multi-color system led by a primary teal and energetic accent tones:</p>
+
+                <!-- Color Swatches -->
+                <div class="color-grid">
+                    <div class="color-card">
+                        <div class="swatch" style="background-color: #309E9D;"></div>
+                        <div class="swatch-info">
+                            <div class="swatch-name">Classic Blue-Green (Teal)</div>
+                            <div class="swatch-hex">#309E9D</div>
+                        </div>
+                    </div>
+                    <div class="color-card">
+                        <div class="swatch" style="background-color: #F39BA3;"></div>
+                        <div class="swatch-info">
+                            <div class="swatch-name">American Pink</div>
+                            <div class="swatch-hex">#F39BA3</div>
+                        </div>
+                    </div>
+                    <div class="color-card">
+                        <div class="swatch" style="background-color: #FDC841;"></div>
+                        <div class="swatch-info">
+                            <div class="swatch-name">Gold Punk</div>
+                            <div class="swatch-hex">#FDC841</div>
+                        </div>
+                    </div>
+                </div>
+
+                <p><strong>Typography System:</strong> The brand pairs <strong>Momo Trust Sans</strong> as its primary clean workhorse typeface for body and titles, alongside <strong>Blocky</strong> as a bold display accent font used sparingly for high-impact headlines.</p>
+            </section>
+
+            <!-- 4. Applications & Deliverables -->
+            <section class="section-block">
+                <h2>4. Applications & Deliverables</h2>
+                <p>The identity system was applied across all key client touchpoints and promotional channels:</p>
+
+                <div class="deliverables-grid">
+                    <div class="deliverable-card">
+                        <h4>Social Media Suite</h4>
+                        <p>Instagram publication grids, X/Threads headers, and story templates.</p>
+                    </div>
+                    <div class="deliverable-card">
+                        <h4>Client Handoff Templates</h4>
+                        <p>Transparent proposal decks, invoices, and codebase handoff documentation.</p>
+                    </div>
+                    <div class="deliverable-card">
+                        <h4>Digital Touchpoints</h4>
+                        <p>Favicon suite, browser assets, and makeithappenstudio.io website styling.</p>
+                    </div>
+                    <div class="deliverable-card">
+                        <h4>Studio Apparel Merch</h4>
+                        <p>T-shirt merchandise and sticker badges for founder giveaways.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Interactive Brand Guidelines PDF Viewer -->
+            <section class="section-block">
+                <h2>5. Brand Guidelines Document</h2>
+                <p>Explore the complete official <strong>Make It Happen Studio Brand Guidelines</strong> document directly below:</p>
+                <div style="width: 100%; height: 750px; border: var(--border-dark); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-solid); margin-top: 1.5rem; background: #fff;">
+                    <iframe src="./04_Assets/PDF/Brand%20Guidelines%20-%20MakeItHappen.pdf" width="100%" height="100%" style="border: none;" title="Make It Happen Studio Brand Guidelines PDF">
+                        <p>Your browser does not support PDF embeds. <a href="./04_Assets/PDF/Brand%20Guidelines%20-%20MakeItHappen.pdf" target="_blank">Click here to view the PDF.</a></p>
+                    </iframe>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta-section">
+        <div class="container">
+            <h2>Ready to Make It Happen?</h2>
+            <p>I build distinct brand identities and design systems that help ambitious founders turn ideas into reality.</p>
+            <a href="./graphicdesigner.html#contact" class="pill-button">Get in touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            © Chaz Grant, 2026 · Graphic Designer & Visual Storyteller
+        </div>
+    </footer>
+</body>
+
+</html>

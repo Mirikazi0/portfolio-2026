@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaz Borromeo — Design Engineer</title>
+    <title>Chaz Borromeo</title>
+    <meta name="description"
+        content="Chaz Borromeo is a Graphic Designer specialising in brand identity, marketing visuals, ad creatives, and packaging design.">
     <link rel="icon" type="image/jpeg" href="./04_Assets/Images/profile.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,37 +84,6 @@
             transition: all 0.3s ease;
         }
 
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 700;
-            font-size: 1.25rem;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-
-        .logo-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            background-color: var(--accent-blue);
-            color: #fff;
-            border-radius: 8px;
-            transform: rotate(-10deg);
-            font-size: 1.25rem;
-            font-weight: 800;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2);
-        }
-
-        .logo-icon span {
-            transform: translateY(1px);
-            /* optical alignment */
-        }
-
         .nav-links {
             display: flex;
             gap: 2rem;
@@ -150,11 +121,6 @@
             box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
         }
 
-        .pill-button.primary {
-            background-color: var(--accent-blue);
-        }
-
-        /* --- Sections Core --- */
         section {
             padding: 8rem 0;
         }
@@ -175,7 +141,6 @@
             text-transform: uppercase;
         }
 
-        /* --- Alternating Sections --- */
         .dark-section {
             background-color: var(--dark-bg);
             color: var(--text-light);
@@ -195,9 +160,11 @@
             color: #bbbbbb;
         }
 
-        /* --- Hero Section (White / Grid) --- */
+        /* --- Hero --- */
         .hero {
-            padding: 5rem 0 3rem;
+            padding: 5rem 0 1.5rem;
+            min-height: 85vh;
+            justify-content: center;
             text-align: center;
             position: relative;
             background-color: var(--bg-color);
@@ -248,7 +215,6 @@
             letter-spacing: -1px;
             max-width: 800px;
             margin: 0 auto 2rem;
-            text-transform: none;
             color: #111;
         }
 
@@ -347,7 +313,7 @@
             }
         }
 
-        /* --- Case Studies Layout (Black) --- */
+        /* --- Case Studies --- */
         .case-study-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -416,7 +382,7 @@
             color: #ddd;
         }
 
-        /* --- Tech Stack Carousel (White) --- */
+        /* --- Marquee --- */
         .marquee-section {
             padding: 4rem 0;
             background-color: var(--bg-color);
@@ -431,7 +397,6 @@
             animation: scroll-left 40s linear infinite;
         }
 
-        /* Duplicate the layout so it seamless loops */
         .marquee-content {
             display: flex;
             gap: 4rem;
@@ -462,8 +427,7 @@
             }
         }
 
-        /* --- Experience Timeline (White) --- */
-        /* --- Experience Section (White) --- */
+        /* --- Experience --- */
         .experience-list {
             display: flex;
             flex-direction: column;
@@ -473,37 +437,43 @@
             display: grid;
             grid-template-columns: 1fr 2fr 1fr;
             align-items: center;
-            padding: 2.5rem 0;
-            border-top: 1px solid #e5e5e5;
-            gap: 2rem;
+            padding: 1.15rem 0;
+            border-top: 1px solid #ebebeb;
+            gap: 1.5rem;
             transition: background 0.2s ease;
         }
 
         .experience-row:hover {
             background: #f9f9f9;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            margin-left: -1rem;
-            margin-right: -1rem;
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+            margin-left: -0.75rem;
+            margin-right: -0.75rem;
+            border-radius: 6px;
         }
 
         .exp-date {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             color: #999;
             font-weight: 500;
             letter-spacing: 0.3px;
         }
 
         .exp-role {
-            font-size: 1.5rem;
+            font-size: 1.05rem;
             font-weight: 700;
             color: #111;
-            letter-spacing: -0.5px;
+            letter-spacing: -0.3px;
         }
 
         .exp-company {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #777;
+            font-weight: 600;
+            text-align: right;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
             font-weight: 500;
             text-align: right;
             text-transform: uppercase;
@@ -521,7 +491,7 @@
             }
         }
 
-        /* --- About Side Scrolling Layout --- */
+        /* --- About Scroll Layout --- */
         .about-grid-layout {
             display: grid;
             grid-template-columns: minmax(120px, 1fr) minmax(300px, 2.5fr) minmax(120px, 1fr);
@@ -533,7 +503,6 @@
         .sticky-text-wrapper {
             position: sticky;
             top: 15vh;
-            /* Keep text vertically centered in viewport, slightly higher */
             padding: 4rem 1rem;
             z-index: 10;
         }
@@ -549,14 +518,12 @@
             display: flex;
             flex-direction: column;
             gap: 25vh;
-            /* Vertical gap to ensure they scroll past naturally */
             padding-bottom: 25vh;
             padding-top: 10vh;
         }
 
         .scroll-image-col.right-col {
             margin-top: 20vh;
-            /* Stagger the right column */
         }
 
         .polaroid-placeholder {
@@ -590,7 +557,6 @@
 
             .scroll-image-col {
                 display: none;
-                /* Hide side scrolling pictures on small screens */
             }
 
             .sticky-text-wrapper {
@@ -599,46 +565,7 @@
             }
         }
 
-        /* --- About Me (White) --- */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text p {
-            font-size: 1.4rem;
-            margin-bottom: 2rem;
-            font-weight: 400;
-        }
-
-        .about-image {
-            width: 100%;
-            height: 400px;
-            background-color: var(--accent-orange);
-            border: var(--border-dark);
-            border-radius: 24px;
-            box-shadow: var(--shadow-solid);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-image::after {
-            content: "Creative Dump \A & Visual Work \A goes here";
-            white-space: pre;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-weight: 600;
-            font-size: 2rem;
-            text-align: center;
-            color: #000;
-            text-transform: uppercase;
-        }
-
-        /* --- Email Copy Toast --- */
+        /* --- Copy Toast --- */
         .copy-toast {
             position: fixed;
             bottom: 2rem;
@@ -667,35 +594,35 @@
             transform: translateX(-50%) translateY(0);
         }
 
-        /* Email button styled same as pill-outline-light */
         button.pill-outline-light {
             font-family: var(--font-main);
             cursor: pointer;
         }
 
         .contact-cta {
-            font-size: 6rem;
+            font-size: 3.5rem;
             font-weight: 700;
-            line-height: 1;
-            margin-bottom: 3rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
             text-transform: uppercase;
+            letter-spacing: -1px;
         }
 
         .contact-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
 
         .pill-outline-light {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 0.75rem;
-            padding: 1rem 3rem;
+            gap: 0.6rem;
+            padding: 0.75rem 2rem;
             font-weight: 600;
-            font-size: 1.25rem;
+            font-size: 1rem;
             border-radius: 9999px;
             border: 2px solid #fff;
             color: #fff;
@@ -714,7 +641,7 @@
         footer {
             background: var(--dark-bg);
             color: #888;
-            padding: 3rem 0;
+            padding: 2rem 0;
             text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-weight: 500;
@@ -739,44 +666,13 @@
                 letter-spacing: 0;
             }
 
-            .case-study-grid,
-            .about-content {
+            .case-study-grid {
                 grid-template-columns: 1fr;
             }
 
             .section-header {
                 flex-direction: column;
                 align-items: flex-start;
-            }
-
-            .timeline-item {
-                grid-template-columns: 50px 1fr;
-            }
-
-            .timeline-date {
-                grid-column: 2;
-                grid-row: 1;
-                text-align: left;
-                padding-bottom: 0.5rem;
-                padding-top: 0;
-            }
-
-            .timeline-divider {
-                grid-column: 1;
-                grid-row: 1 / 3;
-                align-items: flex-start;
-            }
-
-            .timeline-line {
-                left: 16px;
-                transform: none;
-            }
-
-            .timeline-content {
-                grid-column: 2;
-                grid-row: 2;
-                padding-left: 0;
-                padding-bottom: 2rem;
             }
 
             .contact-cta {
@@ -806,83 +702,7 @@
             transform: translateY(0);
         }
 
-        /* --- Visual Work Sub-section (within About) --- */
-        .visual-work-block {
-            padding: 2rem 0 3rem;
-            background-color: #fff;
-        }
-
-        .visual-work-eyebrow {
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #999;
-            margin-bottom: 1.5rem;
-            padding: 0 2rem;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .carousel-viewport {
-            width: 100%;
-            overflow: hidden;
-            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-            mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-        }
-
-        .archived-carousel {
-            display: flex;
-            width: fit-content;
-            animation: scroll-carousel 40s linear infinite;
-            padding: 2.5rem 0;
-        }
-
-        .archived-carousel:hover {
-            animation-play-state: paused;
-        }
-
-        .carousel-track {
-            display: flex;
-            gap: 1.5rem;
-            padding-right: 1.5rem;
-            align-items: center;
-        }
-
-        .carousel-card {
-            width: 280px;
-            height: 180px;
-            border-radius: 10px;
-            overflow: hidden;
-            flex-shrink: 0;
-            transition: transform 0.3s ease;
-            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .carousel-card:hover {
-            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
-        }
-
-        @keyframes scroll-carousel {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        .visual-work-cta {
-            text-align: center;
-            margin-top: 2.5rem;
-        }
-
-        /* --- Creative Work Section (White) --- */
+        /* --- Graphic Design / Creative Work --- */
         .creative-work-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -901,16 +721,16 @@
         .creative-work-image {
             width: 100%;
             aspect-ratio: 16/10;
-            border: var(--border-dark);
+            border: var(--border-light);
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: var(--shadow-solid);
+            box-shadow: var(--shadow-dark-solid);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .creative-work-image:hover {
             transform: translate(-3px, -3px);
-            box-shadow: var(--shadow-hover);
+            box-shadow: var(--shadow-dark-hover);
         }
 
         .creative-work-image img {
@@ -922,7 +742,7 @@
         .creative-work-info h3 {
             font-size: 1.35rem;
             font-weight: 600;
-            color: #111;
+            color: #fff;
         }
 
         .creative-work-tags {
@@ -936,9 +756,9 @@
             border-radius: 9999px;
             font-size: 0.8rem;
             font-weight: 600;
-            border: 1.5px solid #e0e0e0;
-            background: #fafafa;
-            color: #555;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.06);
+            color: #ccc;
         }
 
         @media (max-width: 900px) {
@@ -957,18 +777,16 @@
         <span>VIEW</span>
     </div>
 
-
-
     <nav>
         <div class="nav-links">
-            <a href="./index.html">Home</a>
-            <a href="./index.html#projects">Case Studies</a>
+            <a href="./graphicdesigner.html">Home</a>
+            <a href="./graphicdesigner.html#graphic-design">Case Studies</a>
             <a href="https://drive.google.com/file/d/1T5-hBCzGKqQ70C0tcvyazo2PlDc1LmkY/view?usp=sharing" target="_blank"
                 rel="noopener noreferrer">Resume</a>
         </div>
     </nav>
 
-    <!-- 2. Hero Section (White w/ Grid) -->
+    <!-- Hero (White w/ Grid) -->
     <header class="hero">
         <div class="container hero-content">
             <div class="hero-profile">
@@ -983,21 +801,21 @@
                             <path d="M5.5 3.5L19.5 10.5L12.5 13.5L9.5 20.5L5.5 3.5Z" fill="#111" stroke="#fff"
                                 stroke-width="2" stroke-linejoin="round" />
                         </svg>
-                        <span id="type-1">Design Engineer</span>
+                        <span id="type-1">Graphic Designer</span>
                     </span>
-                    <span id="type-2"> bridging code</span>
+                    <span id="type-2"> crafting visuals</span>
                 </div>
-                <div id="type-3" style="display: inline-block;">and Product Design</div>
+                <div id="type-3" style="display: inline-block;">that move people.</div>
             </h1>
 
-            <p class="hero-copy">Building intuitive digital experiences and pushing design beyond the product.</p>
+            <p class="hero-copy">Designing visuals that build brands and drive real results.</p>
 
             <div class="hero-cta-group">
-                <a href="./index.html#contact" class="pill-button"
+                <a href="./graphicdesigner.html#contact" class="pill-button"
                     style="padding: 1rem 2.5rem; font-size: 1.1rem; border: none; background: #111;">Get in touch</a>
             </div>
 
-            <a href="./index.html#projects" class="scroll-indicator" aria-label="Scroll down to projects">
+            <a href="./graphicdesigner.html#projects" class="scroll-indicator" aria-label="Scroll down to projects">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <path d="M12 5v14M19 12l-7 7-7-7" />
@@ -1006,56 +824,12 @@
         </div>
     </header>
 
-    <!-- 3. Selected Work (Black) -->
-    <section id="projects" class="dark-section"
-        style="background-image: radial-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2px); background-size: 30px 30px;">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Case Studies</h2>
-            </div>
-            <div class="case-study-grid">
-                <a href="./interviewquery.html" class="case-study-card">
-                    <div class="case-study-image" style="background-color: #2D3748;">
-                        <img src="./04_Assets/Images/Interview Query new thumbnail.png" alt="Interview Query Preview">
-                    </div>
-                    <div class="case-study-info">
-                        <h3>Interview Query</h3>
-                        <p>Redesigned onboarding and pricing flows, driving a <strong>+19% conversion lift</strong> and
-                            <strong>+12% increase in Lifetime Value</strong> over three months.
-                        </p>
-                        <div class="case-study-tags">
-                            <span class="tag">UX Strategy</span>
-                            <span class="tag">Conversion Optimization</span>
-                            <span class="tag">Ed Tech</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="./symph.html" class="case-study-card">
-                    <div class="case-study-image" style="background-color: var(--accent-blue);">
-                        <img src="./04_Assets/Images/Lesson Planner PH - new thumbnail.png"
-                            alt="Lesson Planner PH Preview">
-                    </div>
-                    <div class="case-study-info">
-                        <h3>Lesson Planner PH</h3>
-                        <p>Designing a landing experience from the ground up — to help teachers understand the product
-                            immediately and support B2B conversations.</p>
-                        <div class="case-study-tags">
-                            <span class="tag">B2B Product Design</span>
-                            <span class="tag">UX Audit</span>
-                            <span class="tag">Ed Tech</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Design Beyond Product (White) -->
-    <section id="beyond-product" style="background-color: #fff;">
+    <!-- Graphic Design Work (White) -->
+    <section id="graphic-design" class="dark-section"
+        style="background-image: radial-gradient(rgba(255, 255, 255, 0.07) 2px, transparent 2px); background-size: 28px 28px;">
         <div class="container">
             <div class="section-header reveal">
-                <h2 class="section-title">Design Beyond Product</h2>
+                <h2 class="section-title">SELECTED PROJECTS</h2>
                 <a href="./beyond-product.html" class="text-button" style="white-space: nowrap;">
                     View all work
                     <span class="circle-arrow">→</span>
@@ -1064,7 +838,7 @@
             <div class="creative-work-grid">
                 <a href="./krispy-kombi.html" class="creative-work-card reveal">
                     <div class="creative-work-image">
-                        <img src="./04_Assets/Images/Krispy Kombi.png" alt="Krispy Kombi Brand Identity & Packaging">
+                        <img src="./04_Assets/Images/Krispy Kombi.png" alt="Krispy Kombi Brand Identity and Packaging">
                     </div>
                     <div class="creative-work-info">
                         <h3>Krispy Kombi</h3>
@@ -1099,11 +873,50 @@
                         </div>
                     </div>
                 </a>
+                <a href="./hiq.html" class="creative-work-card reveal">
+                    <div class="creative-work-image">
+                        <img src="./04_Assets/Images/hi-q-thumbnail.png" alt="HI-Q Retrofitting Brand Identity">
+                    </div>
+                    <div class="creative-work-info">
+                        <h3>HI-Q Retrofitting Prime Specialist</h3>
+                        <div class="creative-work-tags">
+                            <span class="creative-work-tag">Brand Identity</span>
+                            <span class="creative-work-tag">Corporate Collateral</span>
+                            <span class="creative-work-tag">Logo Design</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./buyax-kitchen.html" class="creative-work-card reveal">
+                    <div class="creative-work-image">
+                        <img src="./04_Assets/Images/Buyax%20Thumbnail.png" alt="Buyax Kitchen Rebranding & Packaging">
+                    </div>
+                    <div class="creative-work-info">
+                        <h3>Buyax Kitchen</h3>
+                        <div class="creative-work-tags">
+                            <span class="creative-work-tag">Brand Identity</span>
+                            <span class="creative-work-tag">Packaging</span>
+                            <span class="creative-work-tag">Logo Redesign</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./make-it-happen-studio.html" class="creative-work-card reveal">
+                    <div class="creative-work-image">
+                        <img src="./04_Assets/Images/Make%20It%20Happen%20Studio%20thumbnail.png" alt="Make It Happen Studio Brand Identity">
+                    </div>
+                    <div class="creative-work-info">
+                        <h3>Make It Happen Studio</h3>
+                        <div class="creative-work-tags">
+                            <span class="creative-work-tag">Brand Identity</span>
+                            <span class="creative-work-tag">Social Media Design</span>
+                            <span class="creative-work-tag">Logo Design</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- 4. Tech Stack Carousel (White) -->
+    <!-- Tools Carousel (White) -->
     <section id="tools" class="marquee-section">
         <div class="marquee-wrapper">
             <div class="marquee-content">
@@ -1113,12 +926,10 @@
                 <div class="marquee-item"><img src="./04_Assets/Icons/ClickUp.png" height="48" alt="ClickUp"></div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Figma.png" height="48" alt="Figma"></div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Gemini.png" height="48" alt="Gemini"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Illustrator.png" height="48" alt="Illustrator">
-                </div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Illustrator.png" height="48" alt="Illustrator"></div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Notion.png" height="48" alt="Notion"></div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Photoshop.png" height="48" alt="Photoshop"></div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Slack.png" height="48" alt="Slack"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Vercel.png" height="48" alt="Vercel"></div>
             </div>
             <div class="marquee-content">
                 <div class="marquee-item"><img src="./04_Assets/Icons/Canva.png" height="48" alt="Canva"></div>
@@ -1127,17 +938,15 @@
                 <div class="marquee-item"><img src="./04_Assets/Icons/ClickUp.png" height="48" alt="ClickUp"></div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Figma.png" height="48" alt="Figma"></div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Gemini.png" height="48" alt="Gemini"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Illustrator.png" height="48" alt="Illustrator">
-                </div>
+                <div class="marquee-item"><img src="./04_Assets/Icons/Illustrator.png" height="48" alt="Illustrator"></div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Notion.png" height="48" alt="Notion"></div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Photoshop.png" height="48" alt="Photoshop"></div>
                 <div class="marquee-item"><img src="./04_Assets/Icons/Slack.png" height="48" alt="Slack"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Vercel.png" height="48" alt="Vercel"></div>
             </div>
         </div>
     </section>
 
-    <!-- 5. About + Visual Work (White) -->
+    <!-- About (White) -->
     <section id="about" style="background-color: #fff; padding: 0; position: relative; z-index: 5;">
         <div class="container about-grid-layout">
 
@@ -1161,17 +970,17 @@
             <div class="sticky-text-wrapper">
                 <div class="scroll-highlight-text">
                     <p style="font-size: 1.4rem; line-height: 1.6; margin-bottom: 2rem; font-weight: 500;">
-                        Hi, I'm Chaz — a <strong>Design Engineer</strong> with a foundation in product design,
-                        front-end development, and visual identity. I build intuitive digital experiences
-                        while still exploring design beyond the product through branding and creative direction.
+                        Hi, I'm Chaz — a <strong>Graphic Designer</strong> with a background in brand identity,
+                        visual storytelling, and marketing design. I create assets that strengthen brand presence
+                        and drive real engagement across every touchpoint.
                     </p>
                     <p style="font-size: 1.4rem; line-height: 1.6; margin-bottom: 2rem; font-weight: 500;">
-                        It's not about replacing the craft; it's about writing better code, designing smarter,
-                        and expanding what's possible as a hybrid builder.
+                        I've worked across ad creatives, packaging, social media graphics, and web visuals —
+                        translating briefs into compelling, on-brand work that connects with people.
                     </p>
                     <p style="font-size: 1.4rem; line-height: 1.6; font-weight: 500;">
-                        My product background gives me an edge: I understand user flows, conversion,
-                        and how design decisions impact real business outcomes. But at my core,
+                        My product design background gives me an edge: I understand user behaviour, conversion,
+                        and how visual decisions impact business outcomes. But at my core,
                         I'm a visual thinker who cares deeply about craft and execution.
                     </p>
                 </div>
@@ -1194,53 +1003,108 @@
             </div>
 
         </div>
+    </section>
 
-
-    </section><!-- End About + Visual Work -->
-
-    <!-- 6. Experience Timeline (White) -->
-    <section id="experience" style="background: #fff; padding-top: 2rem;">
+    <!-- Product Work (Compact) -->
+    <section id="projects" style="background: #fff; padding: 4rem 0;">
         <div class="container">
-            <div class="section-header reveal">
-                <h2 class="section-title">Experience</h2>
+            <div class="section-header reveal" style="border-bottom: 1px solid #e5e5e5; margin-bottom: 0;">
+                <h2 style="font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; color: #aaa; text-transform: uppercase; margin: 0;">Also — Product Work</h2>
+            </div>
+            <div>
+                <a href="./interviewquery.html" class="reveal" style="display: grid; grid-template-columns: 80px 1fr 24px; align-items: center; gap: 1.5rem; padding: 1.5rem 0.5rem; border-bottom: 1px solid #f0f0f0; text-decoration: none; color: inherit; transition: background 0.15s; border-radius: 6px;">
+                    <div style="width: 80px; height: 56px; border-radius: 8px; overflow: hidden; background: #2D3748; flex-shrink: 0;">
+                        <img src="./04_Assets/Images/Interview Query new thumbnail.png" alt="Interview Query" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div>
+                        <div style="font-size: 1.05rem; font-weight: 700; color: #111; margin-bottom: 0.4rem; letter-spacing: -0.3px;">Interview Query</div>
+                        <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+                            <span style="font-size: 0.72rem; font-weight: 600; padding: 0.1rem 0.55rem; border-radius: 9999px; border: 1.5px solid #e8e8e8; color: #777;">UX Strategy</span>
+                            <span style="font-size: 0.72rem; font-weight: 600; padding: 0.1rem 0.55rem; border-radius: 9999px; border: 1.5px solid #e8e8e8; color: #777;">Conversion Optimization</span>
+                            <span style="font-size: 0.72rem; font-weight: 600; padding: 0.1rem 0.55rem; border-radius: 9999px; border: 1.5px solid #e8e8e8; color: #777;">Ed Tech</span>
+                        </div>
+                    </div>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="./symph.html" class="reveal" style="display: grid; grid-template-columns: 80px 1fr 24px; align-items: center; gap: 1.5rem; padding: 1.5rem 0.5rem; border-bottom: 1px solid #f0f0f0; text-decoration: none; color: inherit; transition: background 0.15s; border-radius: 6px;">
+                    <div style="width: 80px; height: 56px; border-radius: 8px; overflow: hidden; background: #4F46E5; flex-shrink: 0;">
+                        <img src="./04_Assets/Images/Lesson Planner PH - new thumbnail.png" alt="Lesson Planner PH" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div>
+                        <div style="font-size: 1.05rem; font-weight: 700; color: #111; margin-bottom: 0.4rem; letter-spacing: -0.3px;">Lesson Planner PH</div>
+                        <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+                            <span style="font-size: 0.72rem; font-weight: 600; padding: 0.1rem 0.55rem; border-radius: 9999px; border: 1.5px solid #e8e8e8; color: #777;">B2B Product Design</span>
+                            <span style="font-size: 0.72rem; font-weight: 600; padding: 0.1rem 0.55rem; border-radius: 9999px; border: 1.5px solid #e8e8e8; color: #777;">UX Audit</span>
+                            <span style="font-size: 0.72rem; font-weight: 600; padding: 0.1rem 0.55rem; border-radius: 9999px; border: 1.5px solid #e8e8e8; color: #777;">Ed Tech</span>
+                        </div>
+                    </div>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience (White) -->
+    <section id="experience" style="background: #fff; padding: 3rem 0;">
+        <div class="container">
+            <div class="section-header reveal" style="border-bottom: 1px solid #e5e5e5; margin-bottom: 0.5rem;">
+                <h2 style="font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; color: #aaa; text-transform: uppercase; margin: 0;">Experience</h2>
             </div>
             <div class="experience-list">
-
                 <div class="experience-row reveal">
                     <div class="exp-date">Mar 2026 – Present</div>
                     <div class="exp-role">Multimedia UI/UX Designer (Contract)</div>
                     <div class="exp-company">22 Tango</div>
                 </div>
-
                 <div class="experience-row reveal">
                     <div class="exp-date">Sep 2024 – Mar 2026</div>
                     <div class="exp-role">Product Designer (Full-Time)</div>
                     <div class="exp-company">Interview Query</div>
                 </div>
-
                 <div class="experience-row reveal">
                     <div class="exp-date">Feb 2024 – Aug 2024</div>
                     <div class="exp-role">UI/UX Designer (Internship)</div>
                     <div class="exp-company">Symph</div>
                 </div>
+            </div>
 
+            <!-- Leadership & Community Subsection -->
+            <div style="margin-top: 2rem;">
+                <div style="font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: #bbb; text-transform: uppercase; margin-bottom: 0.5rem;">Leadership & Community</div>
+                <div class="experience-list">
+                    <div class="experience-row reveal">
+                        <div class="exp-date">Jun 2024 – Present</div>
+                        <div class="exp-role">Community Co-Founder</div>
+                        <div class="exp-company">The Frame</div>
+                    </div>
+                    <div class="experience-row reveal">
+                        <div class="exp-date">Jul 2023 – Jul 2024</div>
+                        <div class="exp-role">Creatives and Branding Lead</div>
+                        <div class="exp-company">GDG on Campus: CIT-U</div>
+                    </div>
+                    <div class="experience-row reveal">
+                        <div class="exp-date">Aug 2022 – Aug 2023</div>
+                        <div class="exp-role">Creative Director</div>
+                        <div class="exp-company">The Technologian</div>
+                    </div>
+                    <div class="experience-row reveal">
+                        <div class="exp-date">Oct 2021 – Aug 2022</div>
+                        <div class="exp-role">Layout and Design Editor</div>
+                        <div class="exp-company">The Technologian</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-
-    <!-- 7. Contact Section (Black) -->
-    <section id="contact" class="dark-section" style="border-bottom: none;">
+    <!-- Contact (Black) -->
+    <section id="contact" class="dark-section" style="border-bottom: none; padding: 4rem 0 3rem;">
         <div class="container">
-
-
             <div style="text-align: center;">
                 <div class="contact-cta">Let's work<br>together.</div>
             </div>
-
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.25rem;">Open to full-time
+            <p style="text-align: center; max-width: 540px; margin: 0 auto 1.5rem; font-size: 1.05rem;">Open to full-time
                 roles and freelance projects. If you think there's a fit, I'd love to hear from you.</p>
-
             <div class="contact-links">
                 <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
                     class="pill-outline-light">
@@ -1255,7 +1119,7 @@
         </div>
     </section>
 
-    <!-- 8. Footer (Black) -->
+    <!-- Footer (Black) -->
     <footer>
         <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
             <div>© Chaz Grant, 2026</div>
@@ -1270,7 +1134,6 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Typing Effect Logic
             const type1 = document.getElementById('type-1');
             const type2 = document.getElementById('type-2');
             const type3 = document.getElementById('type-3');
@@ -1286,7 +1149,6 @@
                         const span = document.createElement('span');
                         span.textContent = text[i];
                         span.style.opacity = '0';
-                        // Use transition for an extra silky typing effect if requested, or just standard pop-in
                         element.appendChild(span);
                         spans.push(span);
                     }
@@ -1296,8 +1158,7 @@
                 const spans1 = prepareTypewriter(type1);
                 const spans2 = prepareTypewriter(type2);
                 const spans3 = prepareTypewriter(type3);
-
-                let speed = 40; // typing speed in ms
+                let speed = 40;
 
                 function typeSpans(spans, nextCallback) {
                     let i = 0;
@@ -1313,7 +1174,6 @@
                     revealChar();
                 }
 
-                // Start typing sequence shortly after page loads
                 setTimeout(() => {
                     pillBox.style.visibility = "visible";
                     typeSpans(spans1, () => {
@@ -1325,36 +1185,26 @@
                 }, 500);
             }
 
-            // Select elements to animate
-            const revealElements = document.querySelectorAll('.hero-intro, .hero-copy, .hero-cta-group, .scroll-indicator, .intro-block, .section-header, .case-study-card, .experience-row, .about-text, .about-image, .contact-cta, .contact-links, #beyond-product .container, #beyond-product .reveal');
+            const revealElements = document.querySelectorAll('.hero-intro, .hero-copy, .hero-cta-group, .scroll-indicator, .section-header, .case-study-card, .experience-row, .contact-cta, .contact-links, .reveal');
 
-            // Add initial class and stagger delays
             revealElements.forEach((el, index) => {
                 el.classList.add('reveal');
-                // Stagger bento items and experience cards slightly
-                if (el.classList.contains('case-study-card') || el.classList.contains('timeline-item')) {
+                if (el.classList.contains('case-study-card')) {
                     el.style.transitionDelay = `${(index % 2) * 0.15}s`;
                 }
             });
 
-            // Set up intersection observer
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
-                        // Optional: Unobserve if you only want the animation to play once
                         observer.unobserve(entry.target);
                     }
                 });
-            }, {
-                threshold: 0.1,
-                rootMargin: "0px 0px -50px 0px" // Triggers slightly before the element fully enters
-            });
+            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
 
-            // Start observing
             revealElements.forEach(el => observer.observe(el));
 
-            // Purple highlight logic on scroll
             const aboutSection = document.getElementById('about');
             const highlightTexts = document.querySelectorAll('.scroll-highlight-text');
 
@@ -1365,10 +1215,8 @@
                     const startPoint = windowHeight * 0.75;
                     let scrolled = startPoint - rect.top;
                     let totalScroll = rect.height - (windowHeight * 0.5);
-
                     let progress = scrolled / totalScroll;
                     progress = Math.max(0, Math.min(1, progress));
-
                     highlightTexts.forEach(txt => {
                         txt.style.setProperty('--scroll-p', `${progress * 100}%`);
                     });
@@ -1378,7 +1226,6 @@
         });
     </script>
 
-    <!-- Email copy toast -->
     <div class="copy-toast" id="copy-toast">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
             stroke-linecap="round" stroke-linejoin="round">
@@ -1387,7 +1234,6 @@
         Email copied to clipboard!
     </div>
 
-    <!-- Custom Cursor Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             if (window.matchMedia('(pointer: fine)').matches) {
@@ -1397,25 +1243,11 @@
                     cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
                 });
 
-                const caseStudies = document.querySelectorAll('.case-study-card');
-                caseStudies.forEach(card => {
-                    card.addEventListener('mouseenter', () => {
-                        cursor.classList.add('view-mode');
-                    });
-                    card.addEventListener('mouseleave', () => {
-                        cursor.classList.remove('view-mode');
-                    });
+                const cards = document.querySelectorAll('.case-study-card, .creative-work-card');
+                cards.forEach(card => {
+                    card.addEventListener('mouseenter', () => cursor.classList.add('view-mode'));
+                    card.addEventListener('mouseleave', () => cursor.classList.remove('view-mode'));
                 });
-
-                const visualWorkLink = document.querySelector('.visual-work-link');
-                if (visualWorkLink) {
-                    visualWorkLink.addEventListener('mouseenter', () => {
-                        cursor.classList.add('view-mode');
-                    });
-                    visualWorkLink.addEventListener('mouseleave', () => {
-                        cursor.classList.remove('view-mode');
-                    });
-                }
             }
         });
     </script>
