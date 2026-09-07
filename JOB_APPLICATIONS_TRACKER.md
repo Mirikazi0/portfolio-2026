@@ -3,7 +3,8 @@
 | Company | Position | Location / Model | Salary / Comp | Status | Date Contacted | Contact Person |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Setsail** | Visual Designer (Figma) | Remote (PH / Vancouver, CA) | TBD / Negotiable | 🟡 Portfolio & Resume Ready | Sept 7, 2026 | Lizclay Barot (LinkedIn) |
-| **Tempo Labs** | Product Designer - Agent+ | Remote (Cebu City, PH) | USD $24,000 / year | 🟡 Application In Progress | Sept 7, 2026 | LinkedIn Application Form |
+| **Tempo Labs** | Product Designer - Agent+ | Remote (Cebu City, PH) | USD $24,000 / year | 🟡 Application Submitted | Sept 7, 2026 | LinkedIn Application Form |
+| **HireDigital** | Senior Creative Designer / Design Strategist | Remote (PH) | PHP 120k – 140k / mo | 🟢 Submitted | Sept 7, 2026 | LinkedIn Apply |
 
 ---
 
@@ -22,6 +23,14 @@
 * **Role:** Product Designer - Agent+
 * **Company Type:** AI Visual IDE & Product Design Tools
 * **Date Applied:** Sept 7, 2026
-* **Status:** 🟡 Application In Progress
-* **Next Action:** Complete remaining application form questions / submit.
+* **Status:** 🟢 Submitted
+* **Next Action:** Await recruiter follow-up / interview response.
 * **Detailed File:** [`01_Brief/Job_Tracker/Tempo_Labs_Product_Designer.md`](01_Brief/Job_Tracker/Tempo_Labs_Product_Designer.md)
+
+### 3. **HireDigital**
+* **Role:** Senior Creative Designer / Design Strategist
+* **Company Type:** Global Digital & Talent Agency Network
+* **Date Applied:** Sept 7, 2026
+* **Status:** 🟢 Submitted
+* **Next Action:** Await application status / recruiter screening.
+* **Detailed File:** [`01_Brief/Job_Tracker/HireDigital_Senior_Creative_Designer.md`](01_Brief/Job_Tracker/HireDigital_Senior_Creative_Designer.md)
