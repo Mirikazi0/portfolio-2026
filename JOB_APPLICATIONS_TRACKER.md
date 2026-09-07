@@ -3,8 +3,9 @@
 | Company | Position | Location / Model | Salary / Comp | Status | Date Contacted | Contact Person |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Setsail** | Visual Designer (Figma) | Remote (PH / Vancouver, CA) | TBD / Negotiable | 🟡 Portfolio & Resume Ready | Sept 7, 2026 | Lizclay Barot (LinkedIn) |
-| **Tempo Labs** | Product Designer - Agent+ | Remote (Cebu City, PH) | USD $24,000 / year | 🟡 Application Submitted | Sept 7, 2026 | LinkedIn Application Form |
+| **Tempo Labs** | Product Designer - Agent+ | Remote (Cebu City, PH) | USD $24,000 / year | 🟢 Submitted | Sept 7, 2026 | LinkedIn Application Form |
 | **HireDigital** | Senior Creative Designer / Design Strategist | Remote (PH) | PHP 120k – 140k / mo | 🟢 Submitted | Sept 7, 2026 | LinkedIn Apply |
+| **House of Nannies** | Senior UI/UX Product Designer | Remote (US EST / PH) | PHP 125,000 / mo | 🟢 Submitted | Sept 7, 2026 | Onlinejobs.ph |
 
 ---
 
@@ -35,12 +36,20 @@
 * **Next Action:** Await application status / recruiter screening.
 * **Detailed File:** [`01_Brief/Job_Tracker/HireDigital_Senior_Creative_Designer.md`](01_Brief/Job_Tracker/HireDigital_Senior_Creative_Designer.md)
 
+### 4. **House of Nannies**
+* **Role:** Senior UI/UX Product Designer (SaaS + Mobile)
+* **Company Type:** Boutique Domestic Staffing & Platform Agency (New York)
+* **Date Applied:** Sept 7, 2026
+* **Status:** 🟢 Submitted
+* **Next Action:** Await paid trial task assignment.
+* **Detailed File:** [`01_Brief/Job_Tracker/House_of_Nannies_Product_Designer.md`](01_Brief/Job_Tracker/House_of_Nannies_Product_Designer.md)
+
 ---
 
 ## 🌐 Job Search Platforms & Channels
 
 ### 🇵🇭 Philippines & Remote Focus
-- [ ] Onlinejob.ph
+- [x] Onlinejob.ph (Applied: House of Nannies)
 - [ ] Jobstreet Philippines
 - [ ] Indeed Philippines
 - [ ] VirtualStaff.ph
