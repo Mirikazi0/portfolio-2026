@@ -34,3 +34,34 @@
 * **Status:** 🟢 Submitted
 * **Next Action:** Await application status / recruiter screening.
 * **Detailed File:** [`01_Brief/Job_Tracker/HireDigital_Senior_Creative_Designer.md`](01_Brief/Job_Tracker/HireDigital_Senior_Creative_Designer.md)
+
+---
+
+## 🌐 Job Search Platforms & Channels
+
+### 🇵🇭 Philippines & Remote Focus
+- [ ] Onlinejob.ph
+- [ ] Jobstreet Philippines
+- [ ] Indeed Philippines
+- [ ] VirtualStaff.ph
+- [ ] Remote Staff
+- [ ] Bossjob Philippines
+
+### 🌍 Global Tech & Remote Boards
+- [ ] LinkedIn Jobs
+- [ ] Wellfound (formerly AngelList)
+- [ ] We Work Remotely
+- [ ] Remotive
+- [ ] Remote.co
+- [ ] FlexJobs
+- [ ] Caliber
+
+### 💼 Freelance & Project Networks
+- [ ] Upwork
+- [ ] Contra
+- [ ] Hubstaff Talent
+- [ ] Fiverr
+- [ ] Freelancer.com
+- [ ] PeoplePerHour
+- [ ] Guru
+
