@@ -18,11 +18,11 @@ button.pill-outline-light {
 
 .contact-cta {
     font-family: var(--font-serif, 'Newsreader', Georgia, serif);
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(2.5rem, 5.5vw, 4.5rem);
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.15;
     margin-bottom: 2rem;
-    text-transform: uppercase;
+    text-transform: none;
     color: #FFFFFF;
 }
 
