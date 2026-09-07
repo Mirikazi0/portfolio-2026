@@ -1,42 +1,36 @@
-/* --- Unified Contact CTA & Footer --- */
-.dark-section {
-    background-color: var(--dark-bg);
-    color: var(--text-light);
-    border-top: var(--border-dark);
-    border-bottom: var(--border-dark);
-    padding: 8rem 0;
+/* --- Unified Contact CTA & Footer (Interview Query Style) --- */
+#contact,
+.contact-section {
+    background-color: #0A0E1A !important;
+    color: #FFFFFF !important;
+    padding: 6rem 0;
 }
 
-.dark-section .section-title {
-    color: var(--text-light);
-}
-
-.dark-section .section-header {
-    border-bottom: var(--border-light);
-}
-
-.dark-section p {
-    color: #bbbbbb;
+#contact p,
+.contact-section p {
+    color: #E2E8F0 !important;
 }
 
 button.pill-outline-light {
-    font-family: var(--font-main);
+    font-family: var(--font-main, 'Figtree', sans-serif);
     cursor: pointer;
 }
 
 .contact-cta {
-    font-size: 6rem;
+    font-family: var(--font-serif, 'Newsreader', Georgia, serif);
+    font-size: clamp(3rem, 6vw, 5rem);
     font-weight: 700;
     line-height: 1;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     text-transform: uppercase;
+    color: #FFFFFF;
 }
 
 .contact-links {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .pill-outline-light {
@@ -44,39 +38,35 @@ button.pill-outline-light {
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-    padding: 1rem 3rem;
-    font-weight: 600;
-    font-size: 1.25rem;
+    padding: 0.85rem 2rem;
     border-radius: 9999px;
-    border: 2px solid #fff;
-    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
     background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    color: #FFFFFF !important;
     transition: all 0.2s ease;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 .pill-outline-light:hover {
-    background: #fff;
-    color: #000;
-    transform: translate(-2px, -2px);
-    box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: none;
+    color: #FFFFFF !important;
 }
 
 footer {
-    background: var(--dark-bg);
-    color: #888;
-    padding: 3rem 0;
-    text-align: center;
+    background-color: #0A0E1A !important;
+    color: #888888 !important;
+    padding: 2rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     font-size: 0.9rem;
 }
 
 @media (max-width: 600px) {
     .contact-cta {
-        font-size: 4rem;
+        font-size: 3rem;
     }
     .contact-links {
         flex-direction: column;

@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22 Tango Creative School | Case Study | Chaz Borromeo</title>
+    <meta name="description"
+        content="How I built a complete digital identity system and production-ready web platform for 22 Tango Creative School, from brand strategy to shipped CMS in 5 weeks.">
+    <link rel="icon" type="image/jpeg" href="./04_Assets/Images/profile.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F7F5F0;
+            --dark-bg: #111111;
+            --footer-bg: #0A0E1A;
+            --text-main: #111111;
+            --text-muted: #555555;
+            --text-light: #FFFFFF;
+            --accent-blue: #2563EB;
+            --accent-peach: #FF9F76;
+            --accent-yellow: #FFE500;
+            --accent-mint: #8FF1CD;
+            --font-serif: 'Newsreader', Georgia, serif;
+            --font-sans: 'Figtree', sans-serif;
+            --font-script: 'Caveat', cursive;
+            --border-dark: 1.5px solid #111111;
+            --border-subtle: 1px solid rgba(0, 0, 0, 0.08);
+            --shadow-solid: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-color);
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+            background-size: 140px 100%;
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        p {
+            font-size: 1.05rem;
+            color: #333333;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            position: sticky;
+            top: 1.5rem;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            margin: 0 auto;
+            padding: 0.6rem 1.75rem;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(247, 245, 240, 0.8) 100%);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: var(--border-dark);
+            border-radius: 9999px;
+            box-shadow: var(--shadow-solid);
+            transition: all 0.3s ease;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: transform 0.2s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-4px);
+        }
+
+        /* --- Project Hero --- */
+        .project-hero {
+            padding: 5rem 0 3rem;
+            text-align: left;
+        }
+
+        .hero-script-tag {
+            font-family: var(--font-script);
+            font-size: 1.8rem;
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .project-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.25rem;
+            letter-spacing: -1.5px;
+            color: #111;
+            max-width: 1000px;
+        }
+
+        .project-subtitle {
+            font-size: 1.2rem;
+            color: #444;
+            max-width: 820px;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .project-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1.5rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.12);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+            padding: 1.5rem 0;
+            margin-bottom: 4rem;
+        }
+
+        .meta-item h4 {
+            font-family: var(--font-script);
+            font-size: 1.2rem;
+            color: var(--accent-blue);
+            margin-bottom: 0.2rem;
+        }
+
+        .meta-item p {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #111;
+        }
+
+        /* --- Storytelling Body --- */
+        .storytelling-body {
+            margin-bottom: 6rem;
+        }
+
+        .story-section {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+            margin-bottom: 5rem;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            align-items: start;
+        }
+
+        .story-section:last-child {
+            border-bottom: none;
+        }
+
+        .story-left {
+            position: sticky;
+            top: 6rem;
+        }
+
+        .script-header {
+            font-family: var(--font-script);
+            font-size: 1.75rem;
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+            display: block;
+            line-height: 1.2;
+        }
+
+        .section-headline {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.15;
+            color: #111;
+            letter-spacing: -0.5px;
+        }
+
+        .story-right p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+            color: #333;
+            max-width: 68ch;
+        }
+
+        /* --- Evidence / Tension Cards --- */
+        .evidence-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin: 2rem 0;
+        }
+
+        .evidence-card {
+            background: #FFFFFF;
+            border: var(--border-dark);
+            border-radius: 14px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-solid);
+        }
+
+        .evidence-card-tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .evidence-card-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #111;
+            margin-bottom: 0.5rem;
+        }
+
+        .evidence-card-desc {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* --- Program Color Chips --- */
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .program-chip {
+            border: var(--border-dark);
+            border-radius: 14px;
+            padding: 1.25rem 1rem;
+            box-shadow: var(--shadow-solid);
+            text-align: center;
+        }
+
+        .program-chip-name {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #111;
+            margin-bottom: 0.2rem;
+        }
+
+        .program-chip-tag {
+            font-size: 0.75rem;
+            color: #555;
+        }
+
+        /* --- Stat Hook Box --- */
+        .stat-hook-box {
+            background: #FFFFFF;
+            border: var(--border-dark);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--shadow-solid);
+            margin-bottom: 2rem;
+        }
+
+        .stat-hook-number {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -1.5px;
+        }
+
+        /* --- Design Principles List --- */
+        .principle-item {
+            background: #FFFFFF;
+            border: var(--border-dark);
+            border-radius: 14px;
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+            box-shadow: var(--shadow-solid);
+        }
+
+        .principle-num {
+            font-family: var(--font-script);
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+        }
+
+        .principle-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #111;
+            margin-bottom: 0.35rem;
+        }
+
+        /* --- Scope Card --- */
+        .scope-box {
+            background: #FFFFFF;
+            border: var(--border-dark);
+            border-radius: 14px;
+            padding: 1.5rem 1.75rem;
+            box-shadow: var(--shadow-solid);
+            margin-top: 1.5rem;
+        }
+
+        .scope-label {
+            font-family: var(--font-script);
+            font-size: 1.3rem;
+            color: var(--accent-blue);
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+
+        .scope-val {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #111;
+        }
+
+        /* --- Dark Contrast Band --- */
+        .dark-contrast-band {
+            background: var(--dark-bg);
+            color: var(--text-light);
+            padding: 5rem 0;
+            margin: 5rem 0;
+            border-top: var(--border-dark);
+            border-bottom: var(--border-dark);
+        }
+
+        .dark-contrast-grid {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .dark-contrast-title {
+            font-family: var(--font-serif);
+            font-size: 2.75rem;
+            font-weight: 700;
+            line-height: 1.05;
+            color: #FFFFFF;
+            letter-spacing: -1px;
+        }
+
+        .dark-contrast-text p {
+            color: #E2E8F0;
+            font-size: 1.15rem;
+            line-height: 1.75;
+        }
+
+        /* --- CTA / Footer --- */
+        .dark-section {
+            background-color: var(--footer-bg);
+            color: var(--text-light);
+            border-top: var(--border-dark);
+            padding: 6rem 0;
+        }
+
+        .contact-cta {
+            font-family: var(--font-serif);
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .pill-outline-light {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 0.85rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 1rem;
+            background: transparent;
+            border: 1.5px solid rgba(255, 255, 255, 0.25);
+            color: var(--text-light);
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .pill-outline-light:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: var(--footer-bg);
+            color: #888;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* --- Reveal Animation --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 860px) {
+            .story-section {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .story-left {
+                position: static;
+            }
+
+            .evidence-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .program-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .dark-contrast-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./04_Assets/cursor.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div id="custom-cursor">
+        <span>VIEW</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="javascript:history.back()" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back
+        </a>
+    </nav>
+
+    <!-- Hero -->
+    <main class="container">
+        <section class="project-hero">
+            <span class="hero-script-tag reveal">22 tango creative school · branding & identity</span>
+            <h1 class="project-title reveal">From a label that managed artists<br>to a school that nurtures them.</h1>
+            <p class="project-subtitle reveal">Building a complete digital identity system and production-ready web platform for Cebu's first process-driven creative school, shipped in 5 weeks.</p>
+
+            <div class="reveal" style="margin-bottom: 2rem;">
+                <a href="https://22tangocreativeschool.com/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.4rem; font-size: 0.95rem; font-weight: 700; background: var(--accent-blue); color: #ffffff; border-radius: 9999px; border: var(--border-dark); box-shadow: var(--shadow-solid); transition: transform 0.2s ease;">
+                    Visit Live Website
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="project-meta-grid reveal">
+                <div class="meta-item">
+                    <h4>Role</h4>
+                    <p>Lead Visual & Web Designer</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Timeline</h4>
+                    <p>5 Weeks</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Deliverables</h4>
+                    <p>Figma Style Guide, 6 Landing Pages, Web App, Assets</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Conversion Impact</h4>
+                    <p>100% Cohort Enrollment Achieved</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Storytelling Sections -->
+        <article class="storytelling-body">
+
+            <!-- Desktop & Mobile Ultra Mockup Feature Banner -->
+            <div class="reveal" style="margin-bottom: 4rem; border-radius: 20px; overflow: hidden; border: var(--border-dark); box-shadow: var(--shadow-solid); background: #FAF9F6;">
+                <img src="./04_Assets/Images/22 Tango Ultra Mockup.jpg" alt="22 Tango Desktop & Mobile Ultra Mockup" style="width: 100%; height: auto; display: block;">
+            </div>
+
+            <!-- Section 1: The Pivot -->
+            <section class="story-section reveal">
+                <div class="story-left">
+                    <span class="script-header">The pivot</span>
+                    <h2 class="section-headline">From managing artists to growing them.</h2>
+                </div>
+                <div class="story-right">
+                    <p>22 Tango began as an artist management and promotions label in Cebu. Founder and producer <strong>Cattski Espina</strong> recognized that traditional music promotion prioritized fast visibility and commercial metrics over artistic craft.</p>
+                    <p>22 Tango shifted focus to education, establishing a structured, process-first creative school for beginners and emerging artists across songwriting, vocal mastery, audio production, DJing, and hosting.</p>
+                    <p>The existing digital presence reflected a music label rather than an educational institution. The brand system, website, and visual language needed to be built to support all five programs.</p>
+
+                    <div class="scope-box">
+                        <span class="scope-label">What needed to be built from zero</span>
+                        <p class="scope-val">Brand identity system, responsive website, CMS blog pipeline, program collaterals, promotional video reels, mini-documentaries, motion graphics, and event photography.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: The Tension -->
+            <section class="story-section reveal">
+                <div class="story-left">
+                    <span class="script-header">The design tension</span>
+                    <h2 class="section-headline">Bold enough to attract. Safe enough to stay.</h2>
+                </div>
+                <div class="story-right">
+                    <p>22 Tango operates between rigid classical conservatories prioritizing exam scores and commercial music platforms focusing on quick metrics.</p>
+                    <p>The student base includes beginners dealing with performance anxiety. The visual direction needed to convey credibility and structure without feeling intimidating.</p>
+                    <p>The primary design challenge:</p>
+
+                    <div class="evidence-grid">
+                        <div class="evidence-card">
+                            <div class="evidence-card-tag">TOO DARK / EDGY</div>
+                            <div class="evidence-card-title">"This looks like a record label."</div>
+                            <p class="evidence-card-desc">Dark aesthetics signal commercial music culture, alienating beginner students.</p>
+                        </div>
+                        <div class="evidence-card">
+                            <div class="evidence-card-tag">TOO SOFT / GENERIC</div>
+                            <div class="evidence-card-title">"This looks like every other music school."</div>
+                            <p class="evidence-card-desc">Generic pastel branding loses the distinct visual identity of 22 Tango.</p>
+                        </div>
+                    </div>
+
+                    <p>The resulting visual direction was <strong>Editorial Neobrutalism</strong>: high-contrast borders, structured typography, and clear card layouts positioned around a studio sanctuary concept.</p>
+                </div>
+            </section>
+
+            <!-- Section 3: The Identity System & Figma Style Guide -->
+            <section class="story-section reveal">
+                <div class="story-left">
+                    <span class="script-header">Figma style guide & identity</span>
+                    <h2 class="section-headline">One brand family. Six color systems. Responsive scale.</h2>
+                </div>
+                <div class="story-right">
+                    <p>Color structure served as the primary organizational tool in Figma. With six distinct program tracks running simultaneously, each cohort received a dedicated visual palette and landing page template while adhering to the core design system.</p>
+
+                    <!-- Program Color & Brand Logos Showcase -->
+                    <div style="background: #111111; border: var(--border-dark); border-radius: 16px; padding: 2rem; box-shadow: var(--shadow-solid); margin: 2rem 0;">
+                        <div style="font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent-blue); margin-bottom: 1.25rem;">BRAND IDENTITY & PROGRAM LOGOS (6 TRACKS)</div>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.25rem;">
+                            <!-- Song Studio -->
+                            <div style="background: #1A1A1E; border: 1px solid rgba(255,255,255,0.1); border-top: 4px solid #FFD60A; border-radius: 12px; padding: 1.25rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;">
+                                <img src="./04_Assets/SONG STUDIO logo.svg" alt="Song Studio Logo" style="max-width: 120px; height: 38px; object-fit: contain;">
+                                <span style="font-size: 0.75rem; color: #FFD60A; font-weight: 600;">Songwriting · #FFD60A</span>
+                            </div>
+
+                            <!-- VoiceLab -->
+                            <div style="background: #1A1A1E; border: 1px solid rgba(255,255,255,0.1); border-top: 4px solid #C4B5FD; border-radius: 12px; padding: 1.25rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;">
+                                <img src="./04_Assets/Voicelab logo.svg" alt="VoiceLab Logo" style="max-width: 120px; height: 38px; object-fit: contain;">
+                                <span style="font-size: 0.75rem; color: #C4B5FD; font-weight: 600;">Voice Acting & VO · #C4B5FD</span>
+                            </div>
+
+                            <!-- StudioWork -->
+                            <div style="background: #1A1A1E; border: 1px solid rgba(255,255,255,0.1); border-top: 4px solid #FF8C69; border-radius: 12px; padding: 1.25rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;">
+                                <img src="./04_Assets/Studio Work logo.svg" alt="StudioWork Logo" style="max-width: 120px; height: 38px; object-fit: contain;">
+                                <span style="font-size: 0.75rem; color: #FF8C69; font-weight: 600;">Audio Production · #FF8C69</span>
+                            </div>
+
+                            <!-- Mixroom -->
+                            <div style="background: #1A1A1E; border: 1px solid rgba(255,255,255,0.1); border-top: 4px solid #7DD3FC; border-radius: 12px; padding: 1.25rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;">
+                                <img src="./04_Assets/MIXROOM LOGO.svg" alt="Mixroom Logo" style="max-width: 120px; height: 38px; object-fit: contain;">
+                                <span style="font-size: 0.75rem; color: #7DD3FC; font-weight: 600;">DJing & Sound Arts · #7DD3FC</span>
+                            </div>
+
+                            <!-- U-Host -->
+                            <div style="background: #1A1A1E; border: 1px solid rgba(255,255,255,0.1); border-top: 4px solid #FF9EC3; border-radius: 12px; padding: 1.25rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;">
+                                <img src="./04_Assets/U-HOST LOGO.svg" alt="U-Host Logo" style="max-width: 120px; height: 38px; object-fit: contain;">
+                                <span style="font-size: 0.75rem; color: #FF9EC3; font-weight: 600;">Hosting & Emceeing · #FF9EC3</span>
+                            </div>
+
+                            <!-- PML -->
+                            <div style="background: #1A1A1E; border: 1px solid rgba(255,255,255,0.1); border-top: 4px solid #FDE68A; border-radius: 12px; padding: 1.25rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;">
+                                <img src="./04_Assets/PML LOGO.svg" alt="PML Logo" style="max-width: 120px; height: 38px; object-fit: contain;">
+                                <span style="font-size: 0.75rem; color: #FDE68A; font-weight: 600;">Process Music Learning · #FDE68A</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual Figma Style Guide Preview Card -->
+                    <div style="background: #FFFFFF; border: var(--border-dark); border-radius: 16px; padding: 2rem; box-shadow: var(--shadow-solid); margin: 2rem 0;">
+                        <div style="font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent-blue); margin-bottom: 0.75rem;">FIGMA COMPONENT SYSTEM & TYPOGRAPHY</div>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; border-top: 1px dashed rgba(0,0,0,0.15); padding-top: 1.25rem;">
+                            <div>
+                                <div style="font-family: 'Newsreader', serif; font-size: 1.6rem; font-weight: 700; line-height: 1.1;">Unbounded</div>
+                                <div style="font-size: 0.85rem; color: #666; margin-top: 0.2rem;">Display Headers & Hero Titles</div>
+                            </div>
+                            <div>
+                                <div style="font-family: 'Figtree', sans-serif; font-size: 1.2rem; font-weight: 600;">Inter / Figtree</div>
+                                <div style="font-size: 0.85rem; color: #666; margin-top: 0.2rem;">Body Copy & UI Components</div>
+                            </div>
+                            <div>
+                                <div style="font-family: monospace; font-size: 1rem; font-weight: 700; color: var(--accent-blue);">IBM Plex Mono</div>
+                                <div style="font-size: 0.85rem; color: #666; margin-top: 0.2rem;">Meta Labels, Dates & Badges</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 1.5rem;">The responsive system scaled across desktop, tablet, and mobile touchpoints, maintaining brand consistency across all campaign assets and social channels.</p>
+                </div>
+            </section>
+
+            <!-- Section 4: The Three Design Decisions -->
+            <section class="story-section reveal">
+                <div class="story-left">
+                    <span class="script-header">Design decisions</span>
+                    <h2 class="section-headline">Three calls that shaped everything.</h2>
+                </div>
+                <div class="story-right">
+                    <div class="principle-item">
+                        <span class="principle-num">1.</span>
+                        <div class="principle-title">Color-coded program identity.</div>
+                        <p>Assigning specific color palettes to each program gave students and instructors a dedicated visual anchor for their track.</p>
+                    </div>
+
+                    <div class="principle-item">
+                        <span class="principle-num">2.</span>
+                        <div class="principle-title">Process-driven content hierarchy.</div>
+                        <p>The site architecture prioritizes the <em>Learning Pledge</em> and mentorship model over standard instructor bios, highlighting the process-first philosophy.</p>
+                    </div>
+
+                    <div class="principle-item">
+                        <span class="principle-num">3.</span>
+                        <div class="principle-title">CMS pipeline for non-technical instructors.</div>
+                        <p>Integrating Decap/Netlify CMS allows instructors to publish articles and program updates directly without code changes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: The Hard Call -->
+            <section class="story-section reveal">
+                <div class="story-left">
+                    <span class="script-header">The hard call</span>
+                    <h2 class="section-headline">Resisting the aesthetic they were used to.</h2>
+                </div>
+                <div class="story-right">
+                    <div class="stat-hook-box">
+                        <div class="stat-hook-number" style="color: var(--accent-blue);">The brief pulled dark.</div>
+                        <div class="stat-hook-number" style="color: #111;">The students needed light.</div>
+                    </div>
+                    <p>Early concepts leaned toward dark, high-contrast layouts typical of music labels and event posters.</p>
+                    <p>Visual audits of competing programs indicated that dark schemes signaled exclusivity to beginners. Shifting to a bright, structured layout balanced professional credibility with an approachable tone.</p>
+                    <p>The resulting design established a clear, accessible entry point for new students.</p>
+
+                    <div class="scope-box">
+                        <span class="scope-label">The principle behind the call</span>
+                        <p class="scope-val">"Good design is not just about what I can create. It is about how effectively I can contribute to the problem." - Chaz Borromeo</p>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- Dark Contrast Band -->
+    <div class="dark-contrast-band">
+        <div class="container">
+            <div class="dark-contrast-grid">
+                <div class="dark-contrast-title">From event photos<br>to a production-ready platform.</div>
+                <div class="dark-contrast-text">
+                    <p>The project expanded from event media into a complete web application with five program pages, a CMS pipeline, and a unified brand identity within 5 weeks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <article class="storytelling-body">
+
+            <!-- Section 6: The Delivered Work -->
+            <section class="story-section reveal">
+                <div class="story-left">
+                    <span class="script-header">What was shipped</span>
+                    <h2 class="section-headline">Five programs. One platform.</h2>
+                </div>
+                <div class="story-right">
+                    <p>All deliverables were designed, built, and deployed within the 5-week window:</p>
+
+                    <div class="evidence-grid">
+                        <div class="evidence-card">
+                            <div class="evidence-card-tag">WEBSITE</div>
+                            <div class="evidence-card-title">Full Responsive Site Architecture</div>
+                            <p class="evidence-card-desc">Homepage, 6 program pages (Song Studio, VoiceLab, StudioWork, Mixroom, U-Host, PML), and CMS blog engine.</p>
+                        </div>
+                        <div class="evidence-card">
+                            <div class="evidence-card-tag">CREATIVE MEDIA</div>
+                            <div class="evidence-card-title">Video & Motion Graphics</div>
+                            <p class="evidence-card-desc">Promotional reels, mini-documentaries, album motion graphics, and event photography.</p>
+                        </div>
+                        <div class="evidence-card">
+                            <div class="evidence-card-tag">COLLATERALS</div>
+                            <div class="evidence-card-title">Program Brand Collaterals</div>
+                            <p class="evidence-card-desc">Visual identity assets and templates for all six cohorts.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 7: The Impact -->
+            <section class="story-section reveal">
+                <div class="story-left">
+                    <span class="script-header">The impact</span>
+                    <h2 class="section-headline">A new identity. An active school.</h2>
+                </div>
+                <div class="story-right">
+                    <div class="principle-item">
+                        <div class="principle-title">22 Tango transitioned from a label to a school.</div>
+                        <p style="font-style: italic;">The new identity supported enrollment campaigns across all five program cohorts upon launch.</p>
+                    </div>
+
+                    <div class="principle-item">
+                        <div class="principle-title">CMS independence for instructors.</div>
+                        <p style="font-style: italic;">Instructors publish editorial posts and student stories directly, starting with the initial announcement post.</p>
+                    </div>
+
+                    <div class="principle-item">
+                        <div class="principle-title">Deployed across 5 enrollment campaigns.</div>
+                        <p style="font-style: italic;">The platform handled active student enrollment across Song Studio, Voice Lab, StudioWork, MIXROOM, and U-Host.</p>
+                    </div>
+
+                    <div class="scope-box">
+                        <span class="scope-label">What I'd do differently</span>
+                        <p class="scope-val">Establish modular component libraries earlier in Figma before coding to accelerate multi-page deployment.</p>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- Contact & Footer -->
+    <section id="contact" class="dark-section">
+        <div class="container">
+            <div style="text-align: center;">
+                <div class="contact-cta">Let's work<br>together.</div>
+            </div>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.15rem; color: #E2E8F0;">Open to full-time roles and freelance projects. If you think there's a fit, I'd love to hear from you.</p>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer" class="pill-outline-light">
+                    <img src="./04_Assets/Icons/LinkedIn.svg" width="20" height="20" alt="LinkedIn"> LinkedIn
+                </a>
+                <button onclick="copyEmail()" class="pill-outline-light">
+                    <img src="./04_Assets/Icons/gmail.svg" width="20" height="20" alt="Email"> Email Me
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>© Chaz Grant, 2026</div>
+            <div style="display: flex; gap: 2rem;">
+                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer" style="color: #fff;">LinkedIn</a>
+                <button onclick="copyEmail()" style="background: none; border: none; color: #fff; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer;">Email</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const revealElements = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+            revealElements.forEach(el => observer.observe(el));
+        });
+
+        function copyEmail() {
+            navigator.clipboard.writeText('chazgrantborromeo@gmail.com').then(() => {
+                alert('Email copied!');
+            });
+        }
+    </script>
+    <script src="./04_Assets/cursor.js"></script>
+</body>
+
+</html>

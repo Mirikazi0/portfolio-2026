@@ -4,28 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson Planner PH — Case Study | Chaz Borromeo</title>
+    <title>Lesson Planner PH | Case Study | Chaz Borromeo</title>
     <meta name="description"
         content="How I redesigned Lesson Planner PH's landing page to clarify value, support B2B conversations, and position the product for global reach.">
     <link rel="icon" type="image/jpeg" href="./04_Assets/Images/profile.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&display=swap"
         rel="stylesheet">
     <style>
         :root {
-            --bg-color: #FAFAFA;
-            --dark-bg: #111111;
-            --text-main: #000000;
+            --bg-color: #F7F5F0;
+            --dark-bg: #0B132B;
+            --footer-bg: #0A0E1A;
+            --text-main: #111111;
+            --text-muted: #555555;
             --text-light: #FFFFFF;
-            --accent-blue: #4F46E5;
-            --accent-orange: #FF6B6B;
-            --accent-yellow: #FbbF24;
-            --font-main: 'Figtree', sans-serif;
-            --border-dark: 2px solid #000000;
-            --border-light: 2px solid rgba(255, 255, 255, 0.15);
+            --accent-blue: #2563EB;
+            --accent-coral: #FF6B6B;
+            --accent-yellow: #F59E0B;
+            --font-serif: 'Newsreader', Georgia, serif;
+            --font-sans: 'Figtree', sans-serif;
+            --font-script: 'Caveat', cursive;
+            --border-dark: 1.5px solid #111111;
+            --border-subtle: 1px solid rgba(0, 0, 0, 0.08);
             --shadow-solid: 4px 4px 0px 0px rgba(0, 0, 0, 1);
-            --shadow-dark-solid: 4px 4px 0px 0px rgba(255, 255, 255, 1);
         }
 
         * {
@@ -39,8 +42,10 @@
         }
 
         body {
-            font-family: var(--font-main);
+            font-family: var(--font-sans);
             background-color: var(--bg-color);
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+            background-size: 140px 100%;
             color: var(--text-main);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
@@ -52,12 +57,13 @@
         }
 
         p {
-            font-size: 1.125rem;
+            font-size: 1.05rem;
             color: #333333;
+            line-height: 1.7;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 2rem;
         }
@@ -71,9 +77,10 @@
             align-items: center;
             width: fit-content;
             margin: 0 auto;
-            padding: 0.75rem 2rem;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(12px);
+            padding: 0.6rem 1.75rem;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(247, 245, 240, 0.8) 100%);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border: var(--border-dark);
             border-radius: 9999px;
             box-shadow: var(--shadow-solid);
@@ -85,7 +92,7 @@
             align-items: center;
             gap: 0.5rem;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.95rem;
             transition: transform 0.2s ease;
         }
 
@@ -93,318 +100,312 @@
             transform: translateX(-4px);
         }
 
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 700;
-            font-size: 1.25rem;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-
-        .logo-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            background-color: var(--accent-blue);
-            color: #fff;
-            border-radius: 8px;
-            font-weight: 800;
-            border: 2px solid #000;
-        }
-
-        .nav-right-placeholder {
-            width: 80px;
-        }
-
-        /* --- Project Hero --- */
+        /* --- Project Hero Header --- */
         .project-hero {
-            padding: 8rem 0 4rem;
-            text-align: center;
+            padding: 5rem 0 3rem;
+            text-align: left;
         }
 
-        .project-eyebrow {
-            display: inline-block;
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--text-light);
-            background: var(--accent-blue);
-            padding: 0.3rem 1rem;
-            border-radius: 9999px;
-            margin-bottom: 1.5rem;
+        .hero-script-tag {
+            font-family: var(--font-script);
+            font-size: 1.8rem;
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+            display: block;
         }
 
         .project-title {
-            font-size: clamp(3rem, 7vw, 5.5rem);
-            font-weight: 800;
+            font-family: var(--font-serif);
+            font-size: clamp(3rem, 6vw, 4.75rem);
+            font-weight: 700;
             line-height: 1.05;
-            margin-bottom: 1.5rem;
-            letter-spacing: -3px;
+            margin-bottom: 1.25rem;
+            letter-spacing: -1.5px;
+            color: #111;
         }
 
         .project-subtitle {
-            font-size: 1.4rem;
-            color: #111;
-            max-width: 750px;
-            margin: 0 auto 4rem;
+            font-size: 1.2rem;
+            color: #444;
+            max-width: 820px;
+            margin-bottom: 2.5rem;
             line-height: 1.6;
             font-weight: 500;
         }
 
         .project-meta-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 2rem;
-            max-width: 960px;
-            margin: 0 auto 5rem;
-            text-align: left;
-            border-top: 2px solid #ddd;
-            padding-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1.5rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.12);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+            padding: 1.5rem 0;
+            margin-bottom: 4rem;
         }
 
         .meta-item h4 {
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #999;
-            margin-bottom: 0.4rem;
+            font-family: var(--font-script);
+            font-size: 1.2rem;
+            color: var(--accent-blue);
+            margin-bottom: 0.2rem;
         }
 
         .meta-item p {
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             font-weight: 700;
             color: #111;
         }
 
-        .hero-image-container {
-            width: 100%;
-            height: 65vh;
-            min-height: 480px;
-            border: var(--border-dark);
-            box-shadow: var(--shadow-solid);
-            border-radius: 20px;
-            overflow: hidden;
-            background-color: var(--accent-blue);
-            margin: 0 auto 7rem;
-        }
-
-        .hero-image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* --- Storytelling Body --- */
+        /* --- Storytelling Body & Asymmetric Sections --- */
         .storytelling-body {
-            max-width: 820px;
-            margin: 0 auto 8rem;
+            margin-bottom: 6rem;
         }
 
         .story-section {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
             margin-bottom: 5rem;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            align-items: start;
         }
 
-        .story-section h2 {
-            font-size: 2.25rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            letter-spacing: -1px;
-            border-bottom: 3px solid #000;
-            display: inline-block;
-            padding-bottom: 0.5rem;
+        .story-section:last-child {
+            border-bottom: none;
         }
 
-        .story-section p {
-            font-size: 1.2rem;
-            line-height: 1.85;
-            margin-bottom: 1.5rem;
-            color: #333;
+        .story-left {
+            position: sticky;
+            top: 6rem;
         }
 
-        .story-image {
-            width: 100%;
-            border: var(--border-dark);
-            border-radius: 12px;
-            box-shadow: var(--shadow-solid);
-            margin: 3rem 0;
+        .script-header {
+            font-family: var(--font-script);
+            font-size: 1.75rem;
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
             display: block;
-            background-color: #f0f0f0;
+            line-height: 1.2;
         }
 
+        .section-headline {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.15;
+            color: #111;
+            letter-spacing: -0.5px;
+        }
+
+        .story-right p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+            color: #333;
+            max-width: 68ch;
+        }
+
+        /* --- Labeled Before / After Image Cards --- */
         .side-by-side {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
-            margin: 3rem 0;
+            margin: 1.5rem 0;
         }
 
-        .side-by-side img {
+        .labeled-image {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .labeled-image img {
             width: 100%;
             border: var(--border-dark);
-            border-radius: 12px;
+            border-radius: 0 0 12px 12px;
             box-shadow: var(--shadow-solid);
-            aspect-ratio: 4/3;
+            display: block;
             object-fit: cover;
         }
 
-        /* Image placeholder */
-        .img-placeholder {
-            width: 100%;
-            background: #f4f4f4;
-            border: var(--border-dark);
-            border-radius: 12px;
-            box-shadow: var(--shadow-solid);
-            display: flex;
-            flex-direction: column;
+        .image-label {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            font-size: 0.85rem;
-            color: #999;
-            font-weight: 500;
+            gap: 0.4rem;
+            padding: 0.45rem 1rem;
+            font-size: 0.72rem;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            aspect-ratio: 16/9;
-            margin: 3rem 0;
-        }
-
-        .img-placeholder strong {
-            font-size: 1rem;
-            color: #555;
-            text-transform: none;
-            letter-spacing: 0;
-        }
-
-        /* Takeaway callout */
-        .takeaway-block {
-            margin: 3rem 0 0;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .takeaway-item {
-            padding: 1.5rem 2rem;
+            letter-spacing: 1.5px;
             border: var(--border-dark);
-            border-radius: 12px;
-            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.8);
-            background: #fafafa;
+            border-bottom: none;
+            border-radius: 10px 10px 0 0;
+            width: fit-content;
         }
 
-        .takeaway-item p {
-            font-size: 1.1rem;
-            line-height: 1.75;
-            color: #333;
+        .image-label.before {
+            background: #FFEBEB;
+            color: #D93838;
+        }
+
+        .image-label.after {
+            background: #EFF6FF;
+            color: #1D4ED8;
+        }
+
+        /* --- Big Typographic Metric Hook --- */
+        .stat-hook-box {
+            background: #FFFFFF;
+            border: var(--border-dark);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--shadow-solid);
+            margin-bottom: 2rem;
+        }
+
+        .stat-hook-number {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -1.5px;
+        }
+
+        /* --- Evidence / Tension Cards Grid --- */
+        .evidence-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin: 2rem 0;
+        }
+
+        .evidence-card {
+            background: #FFFFFF;
+            border: var(--border-dark);
+            border-radius: 14px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-solid);
+        }
+
+        .evidence-card-tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .evidence-card-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #111;
+            margin-bottom: 0.5rem;
+        }
+
+        .evidence-card-desc {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.6;
             margin: 0;
         }
 
-        /* Stat callout block */
-        .stat-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0;
-            margin: 3rem 0;
+        /* --- Design Principles List --- */
+        .principle-item {
+            background: #FFFFFF;
             border: var(--border-dark);
-            border-radius: 16px;
-            overflow: hidden;
+            border-radius: 14px;
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+            box-shadow: var(--shadow-solid);
         }
 
-        .stat-block {
-            padding: 2.5rem 2rem;
-            text-align: center;
-            background: #fff;
-            border-right: var(--border-dark);
-        }
-
-        .stat-block:last-child {
-            border-right: none;
-        }
-
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 800;
-            letter-spacing: -2px;
-            line-height: 1;
-            margin-bottom: 0.5rem;
+        .principle-num {
+            font-family: var(--font-script);
+            font-size: 1.5rem;
             color: var(--accent-blue);
+            font-weight: 700;
         }
 
-        .stat-label {
-            font-size: 0.9rem;
-            color: #777;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+        .principle-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #111;
+            margin-bottom: 0.35rem;
         }
 
-        /* --- Dark Section & CTA --- */
-        .dark-section {
-            background-color: var(--dark-bg);
+        /* --- High Contrast Dark Band Section --- */
+        .dark-contrast-band {
+            background: var(--dark-bg);
             color: var(--text-light);
+            padding: 5rem 0;
+            margin: 5rem 0;
             border-top: var(--border-dark);
             border-bottom: var(--border-dark);
         }
 
-        /* --- Email Copy Toast --- */
-        .copy-toast {
-            position: fixed;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%) translateY(20px);
-            background: #fff;
-            color: #111;
-            padding: 0.85rem 1.75rem;
-            border-radius: 9999px;
-            font-size: 1rem;
-            font-weight: 600;
-            border: 2px solid #000;
-            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
-            opacity: 0;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            pointer-events: none;
-            z-index: 9999;
-            display: flex;
+        .dark-contrast-grid {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            gap: 4rem;
             align-items: center;
-            gap: 0.6rem;
-            white-space: nowrap;
         }
 
-        .copy-toast.visible {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
+        .dark-contrast-title {
+            font-family: var(--font-serif);
+            font-size: 2.75rem;
+            font-weight: 700;
+            line-height: 1.05;
+            color: #FFFFFF;
+            letter-spacing: -1px;
         }
 
-        button.pill-outline-light {
-            font-family: var(--font-main);
-            cursor: pointer;
+        .dark-contrast-text p {
+            color: #E2E8F0;
+            font-size: 1.15rem;
+            line-height: 1.75;
         }
 
-        .dark-section p {
-            color: #fff;
+        /* --- Scope Card --- */
+        .scope-box {
+            background: #FFFFFF;
+            border: var(--border-dark);
+            border-radius: 14px;
+            padding: 1.5rem 1.75rem;
+            box-shadow: var(--shadow-solid);
+            margin-top: 1.5rem;
         }
 
-        section {
-            padding: 8rem 0;
+        .scope-label {
+            font-family: var(--font-script);
+            font-size: 1.3rem;
+            color: var(--accent-blue);
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+
+        .scope-val {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #111;
+        }
+
+        /* --- Dark Section & Footer --- */
+        .dark-section {
+            background-color: var(--footer-bg);
+            color: var(--text-light);
+            border-top: var(--border-dark);
+            padding: 6rem 0;
         }
 
         .contact-cta {
-            font-size: clamp(3rem, 6vw, 6rem);
+            font-family: var(--font-serif);
+            font-size: clamp(3rem, 6vw, 5rem);
             font-weight: 700;
             line-height: 1;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             text-transform: uppercase;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 3rem;
         }
 
         .pill-outline-light {
@@ -412,12 +413,12 @@
             align-items: center;
             justify-content: center;
             gap: 0.75rem;
-            padding: 1rem 2.5rem;
+            padding: 0.85rem 2rem;
             border-radius: 9999px;
             font-weight: 600;
-            font-size: 1.125rem;
+            font-size: 1rem;
             background: transparent;
-            border: var(--border-light);
+            border: 1.5px solid rgba(255, 255, 255, 0.25);
             color: var(--text-light);
             transition: all 0.2s ease;
         }
@@ -427,12 +428,19 @@
             transform: translateY(-2px);
         }
 
+        footer {
+            background-color: var(--footer-bg);
+            color: #888;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
         /* Reveal Animation */
         .reveal {
             opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-            will-change: opacity, transform;
+            transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .reveal.active {
@@ -440,50 +448,31 @@
             transform: translateY(0);
         }
 
-        @media (max-width: 768px) {
-            .contact-cta {
-                font-size: 3rem;
+        @media (max-width: 860px) {
+            .story-section {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
 
-            .project-title {
-                font-size: 2.75rem;
-                letter-spacing: -1px;
+            .story-left {
+                position: static;
             }
 
             .side-by-side {
                 grid-template-columns: 1fr;
             }
 
-            .stat-grid {
-                grid-template-columns: 1fr !important;
+            .evidence-grid {
+                grid-template-columns: 1fr;
             }
 
-            .stat-number {
-                font-size: 2.5rem;
-            }
-
-            .stat-block {
-                border-right: none;
-                border-bottom: var(--border-dark);
-            }
-
-            .hero-image-container {
-                height: 40vh;
-                min-height: 280px;
-            }
-
-            .contact-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .contact-links .pill-outline-light {
-                width: 100%;
+            .dark-contrast-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
         }
     </style>
     <link rel="stylesheet" href="./04_Assets/cursor.css">
-    <link rel="stylesheet" href="./04_Assets/cta.css">
 </head>
 
 <body>
@@ -507,148 +496,255 @@
     <!-- Hero -->
     <main class="container">
         <section class="project-hero">
-            <div class="project-eyebrow reveal">Ed Tech · Product Design · B2B</div>
-            <h1 class="project-title reveal">Lesson Planner PH</h1>
-            <p class="project-subtitle reveal">Designing a landing experience from the ground up — to help teachers
-                understand the product immediately and support B2B conversations.</p>
+            <span class="hero-script-tag reveal">symph studio · edtech & zero-to-one</span>
+            <h1 class="project-title reveal">From unexplainable to opening doors.</h1>
+            <p class="project-subtitle reveal">Designing the first landing experience for Lesson Planner PH, zero-to-one, from wireframe structure to shipped web experience.</p>
 
             <div class="project-meta-grid reveal">
                 <div class="meta-item">
-                    <h4>Role</h4>
-                    <p>UI/UX Design Intern</p>
+                    <h4>Role & Studio</h4>
+                    <p>UI/UX Design Intern (Symph, Cebu)</p>
                 </div>
                 <div class="meta-item">
                     <h4>Timeline</h4>
-                    <p>4 Months</p>
+                    <p>6 Months (Feb – Aug 2024)</p>
                 </div>
                 <div class="meta-item">
-                    <h4>Platform</h4>
-                    <p>Web</p>
+                    <h4>Status</h4>
+                    <p>Shipped (B2B & Global Reach)</p>
                 </div>
-                <div class="meta-item">
-                    <h4>Tools</h4>
-                    <p>Figma, FigJam, Notion</p>
-                </div>
-            </div>
-
-            <div class="hero-image-container reveal">
-                <img src="./04_Assets/Images/Lesson Planner PH - new thumbnail.png" alt="Lesson Planner PH Hero">
             </div>
         </section>
 
-        <!-- Storytelling -->
+        <!-- Storytelling Sections -->
         <article class="storytelling-body">
 
-            <!-- Overview -->
-            <div class="story-section reveal">
-                <p>Lesson Planner PH helps teachers build structured lesson plans faster. I was brought in to design the
-                    landing experience from scratch — no existing design, no reference to build from.</p>
-                <p>The goal: make the product immediately understandable to teachers, and credible enough to support
-                    institutional B2B conversations.</p>
-            </div>
-
-            <!-- The Problem -->
-            <div class="story-section reveal">
-                <h2>Too much time on admin</h2>
-                <p>Teachers spend too much time formatting lesson plans — time that should go toward teaching. No
-                    existing tool solved this cleanly for the Philippine curriculum.</p>
-                <p>The landing page had to speak to two very different audiences at once:</p>
-                <ul style="margin: 1rem 0 0 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                    <li style="font-size: 1.2rem; line-height: 1.6; color: #333;"><strong>Teachers</strong> — who need
-                        to feel the tool saves them real time</li>
-                    <li style="font-size: 1.2rem; line-height: 1.6; color: #333;"><strong>Institutions</strong> — who
-                        need to trust it before they can recommend or adopt it</li>
-                </ul>
-            </div>
-
-            <!-- Defining the Experience -->
-            <div class="story-section reveal">
-                <h2>Structure before screens</h2>
-                <p>I started with structure, not visuals. The page needed to earn trust in a specific sequence — problem
-                    → solution → proof → contact.</p>
-                <p>Lo-fi and mid-fidelity wireframes validated the content hierarchy before any visual direction was
-                    decided.</p>
-
-                <img src="./04_Assets/Images/Lesson Planner - wireframe.png"
-                    alt="Lesson Planner PH lo-fi and mid-fidelity wireframes" class="story-image">
-            </div>
-
-            <!-- The Design -->
-            <div class="story-section reveal">
-                <h2>Teacher-first, institution-ready</h2>
-                <p>The high-fidelity design led with a clear outcome statement, then built the case section by section —
-                    use cases, feature value, and a B2B entry point.</p>
-
-                <img src="./04_Assets/Images/final high-fidelity screen of the full landing page.png"
-                    alt="Lesson Planner PH high-fidelity landing page" class="story-image">
-
-                <img src="./04_Assets/Images/secondary HiFi screen (features section, CTA block, or mobile view).png"
-                    alt="Lesson Planner PH high-fidelity section detail" class="story-image">
-            </div>
-
-            <!-- The Impact -->
-            <div class="story-section reveal">
-                <h2>A credible first impression</h2>
-                <p>The design gave the product its first credible presence — and became the foundation for early B2B and
-                    institutional conversations.</p>
-                <p>Framing outcomes over features made the page work for both audiences without compromising either.</p>
-            </div>
-
-            <!-- Takeaway -->
-            <div class="story-section reveal">
-                <h2>What I learned</h2>
-                <div class="takeaway-block">
-                    <div class="takeaway-item">
-                        <p>💡 <strong>Design the narrative before the visuals.</strong> Structure and hierarchy carry
-                            the most weight at the start.</p>
-                    </div>
-                    <div class="takeaway-item">
-                        <p>🎯 <strong>Landing pages serve multiple audiences.</strong> In EdTech, individual appeal and
-                            institutional credibility have to coexist.</p>
+            <!-- Section 1: Before & After -->
+            <section class="story-section reveal">
+                <div class="story-left">
+                    <span class="script-header">Before & After</span>
+                    <h2 class="section-headline">The visual comparison.</h2>
+                </div>
+                <div class="story-right">
+                    <p>From zero architecture to stakeholder-aligned wireframes and shipped high-fidelity screens:</p>
+                    <div class="side-by-side">
+                        <div class="labeled-image">
+                            <div class="image-label before">BEFORE · Structural Wireframes</div>
+                            <img src="./04_Assets/Images/Lesson Planner - wireframe.png" alt="Lesson Planner PH structural wireframes">
+                        </div>
+                        <div class="labeled-image">
+                            <div class="image-label after">AFTER · Shipped Hi-Fi Page</div>
+                            <img src="./04_Assets/Images/final high-fidelity screen of the full landing page.png" alt="Lesson Planner PH final landing page">
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- Section 2: What this project was and wasn't -->
+            <section class="story-section reveal">
+                <div class="story-left">
+                    <span class="script-header">What this project was and wasn't</span>
+                    <h2 class="section-headline">Architecture before aesthetics.</h2>
+                </div>
+                <div class="story-right">
+                    <p>The brief I received had three words of direction: <em>highlight the value.</em> No wireframes, existing website, or reference UI existed. I had to build a landing page for a product that helped Filipino teachers generate lesson plans in minutes, making its value clear to the team and users.</p>
+                    <p>In practice, I structured the architecture before defining aesthetics. I determined the story sequence for two audiences, individual teachers and school administrators, ensuring clear communication for both.</p>
+                    <p>I started with structure: wireframed the narrative, presented it to the PM and engineers, iterated on copy through feedback, and then moved into high-fidelity design. Figma came in after locking the story.</p>
+
+                    <div class="scope-box">
+                        <span class="scope-label">Owned by me</span>
+                        <p class="scope-val">Full narrative architecture, wireframing, stakeholder presentation, Figma UI design, responsive layout, copy</p>
+                        <span class="scope-label" style="margin-top: 1rem;">Constraint given</span>
+                        <p class="scope-val">"Highlight the value", with design execution owned by me.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: The Problem -->
+            <section class="story-section reveal">
+                <div class="story-left">
+                    <span class="script-header">The problem</span>
+                    <h2 class="section-headline">A product that worked. A page that didn't exist.</h2>
+                </div>
+                <div class="story-right">
+                    <div class="stat-hook-box">
+                        <div class="stat-hook-number" style="color: var(--accent-blue);">A product that worked.</div>
+                        <div class="stat-hook-number" style="color: #111;">A page that didn't exist.</div>
+                    </div>
+
+                    <p>Lesson Planner PH helped teachers generate structured lesson plans faster. The product worked, but without a landing page, administrators, buyers, and international visitors could not evaluate what it was, why it mattered, or whether to trust it.</p>
+                    <p>The landing page needed to give individual teachers a clear reason to try it while providing institutions a rational reason to recommend it.</p>
+                </div>
+            </section>
+
+            <!-- Section 4: The Audience Tension -->
+            <section class="story-section reveal">
+                <div class="story-left">
+                    <span class="script-header">Audience tension</span>
+                    <h2 class="section-headline">Two audiences. One page.</h2>
+                </div>
+                <div class="story-right">
+                    <p>Different stakeholders needed completely different signals to commit:</p>
+
+                    <div class="evidence-grid">
+                        <div class="evidence-card">
+                            <div class="evidence-card-tag">FILIPINO TEACHERS</div>
+                            <div class="evidence-card-title">"Will this save me time?"</div>
+                            <p class="evidence-card-desc">Generic pages lose them. Tech jargon and missing emotional hooks signal a tool that wasn't built for their actual reality.</p>
+                        </div>
+                        <div class="evidence-card">
+                            <div class="evidence-card-title">"Can we trust this institutionally?"</div>
+                            <p class="evidence-card-desc">Informal tone and missing compliance signals cause school leaders to bounce before a B2B conversation starts.</p>
+                        </div>
+                    </div>
+
+                    <p>The structural decision: build a 4-stage narrative covering problem acknowledgment, workflow, evidence, and dual CTA. Teacher trust first, institutional credibility second.</p>
+                </div>
+            </section>
+
+            <!-- Section 5: Process -->
+            <section class="story-section reveal">
+                <div class="story-left">
+                    <span class="script-header">The process</span>
+                    <h2 class="section-headline">Wireframing narrative first.</h2>
+                </div>
+                <div class="story-right">
+                    <p>Before any visual design, I wireframed the narrative sequence to lock story flow and align stakeholders:</p>
+
+                    <div class="labeled-image" style="margin-bottom: 2rem;">
+                        <div class="image-label before">PROCESS · Structural Wireframes</div>
+                        <img src="./04_Assets/Images/Lesson Planner - wireframe.png" alt="Lesson Planner PH structural wireframes">
+                    </div>
+
+                    <div style="padding: 2rem; border: 2px dashed #CBD5E1; border-radius: 14px; background: #FFFFFF; text-align: center;">
+                        <span class="scope-label" style="color: #94A3B8;">PROCESS SKETCHES PLACEHOLDER</span>
+                        <p style="font-size: 0.95rem; color: #64748B; margin: 0;">Rough sketches & iteration screenshots — add when available</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 6: Three Design Implications -->
+            <section class="story-section reveal">
+                <div class="story-left">
+                    <span class="script-header">Research synthesis</span>
+                    <h2 class="section-headline">Three structural decisions.</h2>
+                </div>
+                <div class="story-right">
+                    <div class="principle-item">
+                        <span class="principle-num">1.</span>
+                        <div class="principle-title">Lead with the problem, not the product.</div>
+                        <p>"Your Sunday nights back" lands harder than "AI-powered lesson planning." Teachers buy time savings and relief rather than software specs.</p>
+                    </div>
+
+                    <div class="principle-item">
+                        <span class="principle-num">2.</span>
+                        <div class="principle-title">Structure before aesthetics.</div>
+                        <p>Every wireframe review meeting focused on information flow rather than visual style. The copy and sequence were locked before selecting colors.</p>
+                    </div>
+
+                    <div class="principle-item">
+                        <span class="principle-num">3.</span>
+                        <div class="principle-title">Framing outcomes serves both audiences.</div>
+                        <p>"Compliant with DepEd standards" serves the institution. "Done in minutes" serves the teacher. The same design does both without compromising either.</p>
+                    </div>
+                </div>
+            </section>
 
         </article>
     </main>
 
-
-
-    <!-- 7. Contact Section (Black) -->
-    <section id="contact" class="dark-section" style="border-bottom: none;">
+    <!-- Dark Contrast Band Section -->
+    <div class="dark-contrast-band">
         <div class="container">
+            <div class="dark-contrast-grid">
+                <div class="dark-contrast-title">One landing page.<br>Endless doors opened.</div>
+                <div class="dark-contrast-text">
+                    <p>Before launch, the product had no face for non-teaching users. Shipping the landing page created a shared narrative for school administrators, B2B partners, and international visitors.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <main class="container">
+        <article class="storytelling-body">
 
+            <!-- Section 7: The After -->
+            <section class="story-section reveal">
+                <div class="story-left">
+                    <span class="script-header">The after</span>
+                    <h2 class="section-headline">The shipped experience.</h2>
+                </div>
+                <div class="story-right">
+                    <p>The final design gave Lesson Planner PH its first polished, credible face on the web:</p>
+
+                    <div class="labeled-image" style="margin-bottom: 2rem;">
+                        <div class="image-label after">AFTER · Shipped Landing Page</div>
+                        <img src="./04_Assets/Images/final high-fidelity screen of the full landing page.png" alt="Lesson Planner PH full landing page">
+                    </div>
+
+                    <div class="labeled-image">
+                        <div class="image-label after">AFTER · Product UI & Mockup</div>
+                        <img src="./04_Assets/Images/Lesson Planner PH - Mockup.png" alt="Lesson Planner PH Mockup">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 8: The Impact -->
+            <section class="story-section reveal">
+                <div class="story-left">
+                    <span class="script-header">The impact</span>
+                    <h2 class="section-headline">Team feedback & reach.</h2>
+                </div>
+                <div class="story-right">
+                    <div class="principle-item">
+                        <div class="principle-title">Engineering Team Feedback</div>
+                        <p style="font-style: italic;">"It makes it tremendously easier for non-teaching users to know what the product is about and see the relevant impact in metrics, testimonials, and events that we've been to."</p>
+                    </div>
+
+                    <div class="principle-item">
+                        <div class="principle-title">Stakeholder & B2B Facilitation</div>
+                        <p style="font-style: italic;">"This makes it easier for facilitating discussions for B2B and other stakeholders."</p>
+                    </div>
+
+                    <div class="principle-item">
+                        <div class="principle-title">Global Discovery</div>
+                        <p style="font-style: italic;">"So helpful to cater to folks that discover this platform, including international users."</p>
+                    </div>
+
+                    <div class="scope-box">
+                        <span class="scope-label">Shipped Project</span>
+                        <p class="scope-val">UI/UX Design Intern at Symph, Cebu City. Zero-to-one design from initial concept to shipped landing page.</p>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- Contact & Footer -->
+    <section id="contact" class="dark-section">
+        <div class="container">
             <div style="text-align: center;">
                 <div class="contact-cta">Let's work<br>together.</div>
             </div>
-
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.25rem;">Open to full-time
-                roles and freelance projects. If you think there's a fit, I'd love to hear from you.</p>
-
-            <div class="contact-links">
-                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
-                    class="pill-outline-light">
-                    <img src="./04_Assets/Icons/LinkedIn.svg" width="24" height="24" alt="LinkedIn">
-                    LinkedIn
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.15rem; color: #E2E8F0;">Open to full-time roles and freelance projects. If you think there's a fit, I'd love to hear from you.</p>
+            <div style="display: flex; justify-content: center; gap: 2rem;">
+                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer" class="pill-outline-light">
+                    <img src="./04_Assets/Icons/LinkedIn.svg" width="20" height="20" alt="LinkedIn"> LinkedIn
                 </a>
-                <button onclick="copyEmail()" class="pill-outline-light">
-                    <img src="./04_Assets/Icons/gmail.svg" width="24" height="24" alt="Email">
-                    Email Me
+                <button onclick="copyEmail()" class="pill-outline-light" style="cursor: pointer;">
+                    <img src="./04_Assets/Icons/gmail.svg" width="20" height="20" alt="Email"> Email Me
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- 8. Footer (Black) -->
     <footer>
         <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
             <div>© Chaz Grant, 2026</div>
             <div style="display: flex; gap: 2rem;">
-                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
-                    style="color: #fff; transition: color 0.2s;">LinkedIn</a>
-                <button onclick="copyEmail()"
-                    style="background: none; border: none; color: #fff; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer; transition: color 0.2s;">Email</button>
+                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer" style="color: #fff;">LinkedIn</a>
+                <button onclick="copyEmail()" style="background: none; border: none; color: #fff; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer;">Email</button>
             </div>
         </div>
     </footer>
@@ -666,17 +762,7 @@
             }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
             revealElements.forEach(el => observer.observe(el));
         });
-    </script>
 
-    <div class="copy-toast" id="copy-toast">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-            stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="20 6 9 17 4 12"></polyline>
-        </svg>
-        Email copied to clipboard!
-    </div>
-
-    <script>
         function copyEmail() {
             navigator.clipboard.writeText('chazgrantborromeo@gmail.com').then(() => {
                 const toast = document.getElementById('copy-toast');
