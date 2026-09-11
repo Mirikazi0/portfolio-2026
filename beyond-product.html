@@ -535,14 +535,29 @@
     </section>
 
     <!-- 8. Footer (Black) -->
-    <footer>
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <div>© Chaz Grant, 2026</div>
-            <div style="display: flex; gap: 2rem;">
-                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
-                    style="color: #fff; transition: color 0.2s;">LinkedIn</a>
-                <button onclick="copyEmail()"
-                    style="background: none; border: none; color: #fff; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer; transition: color 0.2s;">Email</button>
+    <footer style="background-color: #0A0E1A !important; color: #9CA3AF !important; padding: 2.5rem 0; border-top: 1px solid rgba(255, 255, 255, 0.1); position: relative; z-index: 200;" role="contentinfo">
+        <div class="container" style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <div style="color: #FFFFFF !important; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.25rem;">Chaz Grant Borromeo</div>
+                    <div style="color: #9CA3AF !important; font-size: 0.875rem;">Design Engineer & Full-Stack UI/UX Designer</div>
+                </div>
+                <div style="display: flex; gap: 1.5rem; align-items: center;">
+                    <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
+                        style="color: #ffffff !important; transition: opacity 0.2s;" aria-label="LinkedIn profile">LinkedIn</a>
+                    <button onclick="copyEmail()"
+                        style="background: none; border: none; color: #ffffff !important; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer;" aria-label="Copy email address">Email</button>
+                </div>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 1.25rem; border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 0.85rem;">
+                <div>© 2026 Chaz Borromeo. All design work & trademarks © respective owners.</div>
+                <div style="display: flex; gap: 1.25rem; flex-wrap: wrap;">
+                    <a href="./privacy-policy.html" style="color: #9CA3AF !important;">Privacy Policy</a>
+                    <a href="./terms.html" style="color: #9CA3AF !important;">Terms & Conditions</a>
+                    <a href="./refund-policy.html" style="color: #9CA3AF !important;">Refund Policy</a>
+                    <a href="./cookie-policy.html" style="color: #9CA3AF !important;">Cookie Policy</a>
+                </div>
             </div>
         </div>
     </footer>

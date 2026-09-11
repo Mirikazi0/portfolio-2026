@@ -15,7 +15,7 @@
             --dark-bg: #F7F5F0;
             --text-main: #111111;
             --text-light: #111111;
-            --text-muted: #555555;
+            --text-muted: #374151;
             --accent-blue: #2563EB;
             --font-main: 'Figtree', sans-serif;
             --font-display: 'Newsreader', Georgia, serif;
@@ -51,6 +51,92 @@
         a {
             text-decoration: none;
             color: inherit;
+        }
+
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid var(--accent-blue) !important;
+            outline-offset: 3px !important;
+            border-radius: 4px;
+        }
+
+        .skip-to-content {
+            position: absolute;
+            top: -60px;
+            left: 1rem;
+            background: #111111;
+            color: #ffffff;
+            padding: 0.6rem 1.25rem;
+            font-weight: 600;
+            z-index: 9999;
+            transition: top 0.2s ease;
+            border-radius: 9999px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .skip-to-content:focus {
+            top: 1rem;
+        }
+
+        .cookie-banner {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            max-width: 440px;
+            background: #0A0E1A;
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 16px;
+            padding: 1.25rem 1.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+            z-index: 9999;
+            display: none;
+            font-size: 0.95rem;
+        }
+
+        .cookie-banner.visible {
+            display: block;
+        }
+
+        .cookie-banner-actions {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            align-items: center;
+        }
+
+        .cookie-btn-primary {
+            background: #2563EB;
+            color: #FFFFFF;
+            border: none;
+            padding: 0.55rem 1.2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: background 0.2s ease;
+        }
+
+        .cookie-btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .cookie-btn-secondary {
+            background: transparent;
+            color: #D1D5DB;
+            border: 1px solid rgba(255,255,255,0.25);
+            padding: 0.55rem 1.2rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .cookie-btn-secondary:hover {
+            border-color: #FFFFFF;
+            color: #FFFFFF;
         }
 
         p {
@@ -1311,26 +1397,29 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
     <!-- Custom Cursor -->
-    <div id="custom-cursor">
+    <div id="custom-cursor" aria-hidden="true">
         <span>VIEW</span>
     </div>
 
-
-
-    <nav>
-        <div class="nav-inner">
-            <a href="./index.html" class="nav-logo">Chaz Borromeo</a>
-            <div class="nav-links">
-                <a href="./index.html#projects">Case Studies</a>
-                <a href="https://drive.google.com/file/d/1FpuwFWPljKB5AJVd669N6s1bO_8wdF8C/view" target="_blank"
-                    rel="noopener noreferrer">Resume</a>
+    <header>
+        <nav aria-label="Main Navigation">
+            <div class="nav-inner">
+                <a href="./index.html" class="nav-logo" aria-label="Chaz Borromeo Home">Chaz Borromeo</a>
+                <div class="nav-links">
+                    <a href="./index.html#projects">Case Studies</a>
+                    <a href="https://drive.google.com/file/d/1FpuwFWPljKB5AJVd669N6s1bO_8wdF8C/view" target="_blank"
+                        rel="noopener noreferrer" aria-label="Open Resume PDF in new tab">Resume</a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Split Scroll Wrapper Container -->
-    <div class="split-scroll-container">
+    <main id="main-content">
+        <!-- Split Scroll Wrapper Container -->
+        <div class="split-scroll-container">
         
         <!-- Left Sticky Pane (Hero content) -->
         <div class="sticky-left-pane">
@@ -1634,12 +1723,10 @@
     </section>
 
     <!-- 7. Contact Section (Black) -->
-    <section id="contact" style="background-color: #0A0E1A !important; color: #FFFFFF !important; border-bottom: none; padding: 6rem 0; position: relative; z-index: 200;">
+    <section id="contact" style="background-color: #0A0E1A !important; color: #FFFFFF !important; border-bottom: none; padding: 6rem 0; position: relative; z-index: 200;" aria-labelledby="contact-heading">
         <div class="container">
-
-
             <div style="text-align: center;">
-                <h2 class="contact-cta" style="color: #FFFFFF !important;">Let's work together.</h2>
+                <h2 id="contact-heading" class="contact-cta" style="color: #FFFFFF !important;">Let's work together.</h2>
             </div>
 
             <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.25rem; color: #E2E8F0 !important;">Open to full-time
@@ -1647,27 +1734,53 @@
 
             <div class="contact-links">
                 <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
-                    class="pill-outline-light">
-                    <img src="./04_Assets/Icons/LinkedIn.svg" width="24" height="24" alt="LinkedIn">
+                    class="pill-outline-light" aria-label="Connect with Chaz Borromeo on LinkedIn">
+                    <img src="./04_Assets/Icons/LinkedIn.svg" width="24" height="24" alt="LinkedIn logo">
                     LinkedIn
                 </a>
-                <button onclick="copyEmail()" class="pill-outline-light">
-                    <img src="./04_Assets/Icons/gmail.svg" width="24" height="24" alt="Email">
+                <button onclick="copyEmail()" class="pill-outline-light" aria-label="Copy email address to clipboard" title="Copy email address">
+                    <img src="./04_Assets/Icons/gmail.svg" width="24" height="24" alt="Email icon">
                     Email Me
                 </button>
+            </div>
+
+            <div style="text-align: center; margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); max-width: 650px; margin-left: auto; margin-right: auto;">
+                <p style="font-size: 0.9rem; color: #9CA3AF !important; margin-bottom: 0.5rem;">
+                    📍 Based in Cebu City, Philippines · Available Worldwide Remote
+                </p>
+                <p style="font-size: 0.825rem; color: #6B7280 !important; line-height: 1.5; margin: 0;">
+                    🔒 <strong>Privacy & Consent:</strong> Direct email inquiry is used solely for responding to your inquiry. Zero spam, zero 3rd-party tracking, and zero data selling.
+                </p>
             </div>
         </div>
     </section>
 
+    </main>
+
     <!-- 8. Footer (Black) -->
-    <footer style="background-color: #0A0E1A !important; color: #888888 !important; padding: 2rem 0; border-top: 1px solid rgba(255, 255, 255, 0.1); position: relative; z-index: 200;">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="color: #888888 !important;">© Chaz Grant, 2026</div>
-            <div style="display: flex; gap: 2rem;">
-                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
-                    style="color: #ffffff !important; transition: opacity 0.2s;">LinkedIn</a>
-                <button onclick="copyEmail()"
-                    style="background: none; border: none; color: #ffffff !important; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer; transition: opacity 0.2s;">Email</button>
+    <footer style="background-color: #0A0E1A !important; color: #9CA3AF !important; padding: 2.5rem 0; border-top: 1px solid rgba(255, 255, 255, 0.1); position: relative; z-index: 200;" role="contentinfo">
+        <div class="container" style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <div style="color: #FFFFFF !important; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.25rem;">Chaz Grant Borromeo</div>
+                    <div style="color: #9CA3AF !important; font-size: 0.875rem;">Design Engineer & Full-Stack UI/UX Designer</div>
+                </div>
+                <div style="display: flex; gap: 1.5rem; align-items: center;">
+                    <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
+                        style="color: #ffffff !important; transition: opacity 0.2s;" aria-label="LinkedIn profile">LinkedIn</a>
+                    <button onclick="copyEmail()"
+                        style="background: none; border: none; color: #ffffff !important; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer;" aria-label="Copy email address">Email</button>
+                </div>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 1.25rem; border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 0.85rem;">
+                <div>© 2026 Chaz Borromeo. All design work & trademarks © respective owners.</div>
+                <div style="display: flex; gap: 1.25rem; flex-wrap: wrap;">
+                    <a href="./privacy-policy.html" style="color: #9CA3AF !important;">Privacy Policy</a>
+                    <a href="./terms.html" style="color: #9CA3AF !important;">Terms & Conditions</a>
+                    <a href="./refund-policy.html" style="color: #9CA3AF !important;">Refund Policy</a>
+                    <a href="./cookie-policy.html" style="color: #9CA3AF !important;">Cookie Policy</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -1888,7 +2001,32 @@
     </script>
     <script src="./04_Assets/cursor.js"></script>
 
+    <!-- Cookie & Privacy Consent Banner -->
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Privacy & Cookie Preferences">
+        <div style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.35rem; color: #FFF;">Privacy & Preference Settings</div>
+        <p style="font-size: 0.875rem; color: #9CA3AF !important; line-height: 1.4; margin: 0;">
+            This site uses essential local storage to remember your settings and strictly zero 3rd-party tracking cookies.
+        </p>
+        <div class="cookie-banner-actions">
+            <button class="cookie-btn-primary" onclick="acceptCookies()">Accept Preferences</button>
+            <a href="./cookie-policy.html" class="cookie-btn-secondary">View Policy</a>
+        </div>
+    </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (!localStorage.getItem("cookie_consent_accepted")) {
+                const banner = document.getElementById("cookie-banner");
+                if (banner) setTimeout(() => banner.classList.add("visible"), 800);
+            }
+        });
+
+        function acceptCookies() {
+            localStorage.setItem("cookie_consent_accepted", "true");
+            const banner = document.getElementById("cookie-banner");
+            if (banner) banner.classList.remove("visible");
+        }
+    </script>
 </body>
 
 

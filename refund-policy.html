@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service & Refund Policy | Chaz Borromeo</title>
+    <link rel="icon" type="image/jpeg" href="./04_Assets/Images/profile.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F7F5F0;
+            --text-main: #111111;
+            --text-muted: #374151;
+            --accent-blue: #2563EB;
+            --font-main: 'Figtree', sans-serif;
+            --font-display: 'Newsreader', Georgia, serif;
+            --border-dark: 1px solid #111111;
+            --border-light: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: underline;
+        }
+
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid var(--accent-blue);
+            outline-offset: 2px;
+        }
+
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 1rem;
+            background: #111;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            z-index: 9999;
+            transition: top 0.2s;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .skip-to-content:focus {
+            top: 1rem;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(247, 245, 240, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: var(--border-light);
+            padding: 1.25rem 2rem;
+        }
+
+        .nav-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 1.125rem;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .last-updated {
+            font-size: 0.95rem;
+            color: #6B7280;
+            margin-bottom: 2.5rem;
+        }
+
+        .policy-section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        p, li {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #0A0E1A;
+            color: #9CA3AF;
+            padding: 2.5rem 0;
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <header>
+        <nav aria-label="Main Navigation">
+            <div class="nav-inner">
+                <a href="./index.html" class="nav-logo">← Back to Portfolio</a>
+                <span style="font-weight: 600; font-size: 0.95rem; color: #666;">Legal & Compliance</span>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="container">
+        <h1>Service & Refund Policy</h1>
+        <p class="last-updated">Effective Date: September 11, 2026</p>
+
+        <section class="policy-section" aria-labelledby="section-nature">
+            <h2 id="section-nature">1. Nature of Services</h2>
+            <p><strong>Chaz Grant Borromeo</strong> provides custom design engineering, UI/UX design, design system creation, and full-stack web development services on a project contract, milestone, or retainer basis.</p>
+        </section>
+
+        <section class="policy-section" aria-labelledby="section-retainers">
+            <h2 id="section-retainers">2. Deposit & Milestone Payments</h2>
+            <p>Unless explicitly specified otherwise in a signed client statement of work (SOW) or master services agreement (MSA):</p>
+            <ul>
+                <li><strong>Project Upfront Deposits:</strong> Initial deposits/retainers required to secure project schedule and commence discovery work are non-refundable once work has officially begun.</li>
+                <li><strong>Milestone Deliverables:</strong> Payment for completed and accepted project milestones (e.g. design systems, approved UI mockups, deployed web builds) is non-refundable upon client review sign-off.</li>
+            </ul>
+        </section>
+
+        <section class="policy-section" aria-labelledby="section-cancellation">
+            <h2 id="section-cancellation">3. Project Cancellation & Terminations</h2>
+            <p>If a project is paused or terminated by the client prior to completion, the client will only be billed for hours logged or milestone phases completed up to the date of written cancellation notice. Any unearned portion of prepaid retainers beyond active work logged will be refunded within 14 business days.</p>
+        </section>
+
+        <section class="policy-section" aria-labelledby="section-revisions">
+            <h2 id="section-revisions">4. Revision & Satisfaction Guarantee</h2>
+            <p>Every freelance design engineering project includes dedicated revision rounds as stipulated in the project contract to ensure deliverables meet high technical and visual standards prior to final sign-off.</p>
+        </section>
+
+        <section class="policy-section" aria-labelledby="section-contact">
+            <h2 id="section-contact">5. Billing Inquiries</h2>
+            <p>For questions regarding contract terms, retainer billing, or milestone sign-offs, please email <a href="mailto:chazgrantborromeo@gmail.com">chazgrantborromeo@gmail.com</a>.</p>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1000px; padding: 0 2rem;">
+            <div>© Chaz Grant, 2026. All rights reserved.</div>
+            <div style="display: flex; gap: 1.5rem;">
+                <a href="./index.html">Portfolio</a>
+                <a href="./privacy-policy.html">Privacy Policy</a>
+                <a href="./terms.html">Terms & Conditions</a>
+                <a href="./cookie-policy.html">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
