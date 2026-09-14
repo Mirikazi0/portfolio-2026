@@ -9,6 +9,7 @@
 | **Outsourced.ph** | Marketing & Product Designer | Remote (PH / Melbourne AEST) | PHP 110,000 / mo | 🟢 Submitted | Sept 7, 2026 | Jobstreet Philippines |
 | **Thrive Digital** | Designer | Remote (PH / 6 AM PHT) | ₱766k / yr + 13th Mo | 🟢 Submitted | Sept 14, 2026 | Greenhouse (via Indeed) |
 | **ChartRequest** | UI/UX Designer – B2B SaaS | Remote | PHP 60k – 70k / mo | 🟢 Submitted | Sept 14, 2026 | Indeed SmartApply |
+| **SourceAsia Business** | UX Designer II | Remote | PHP 60k – 75k / mo | 🟢 Submitted | Sept 14, 2026 | Indeed |
 
 ---
 
@@ -71,6 +72,14 @@
 * **Next Action:** Await recruiter screening response on Indeed.
 * **Detailed File:** [`01_Brief/Job_Tracker/ChartRequest_UIUX_Designer.md`](01_Brief/Job_Tracker/ChartRequest_UIUX_Designer.md)
 
+### 8. **SourceAsia Business**
+* **Role:** UX Designer II
+* **Company Type:** Enterprise SaaS & Workflow Solutions (GCM Ecosystem)
+* **Date Applied:** Sept 14, 2026
+* **Status:** 🟢 Submitted
+* **Next Action:** Await recruiter response on Indeed.
+* **Detailed File:** [`01_Brief/Job_Tracker/SourceAsia_UX_Designer.md`](01_Brief/Job_Tracker/SourceAsia_UX_Designer.md)
+
 ---
 
 ## 🌐 Job Search Platforms & Channels
@@ -78,7 +87,7 @@
 ### 🇵🇭 Philippines & Remote Focus
 - [x] Onlinejob.ph (Applied: House of Nannies)
 - [x] Jobstreet Philippines (Applied: Outsourced.ph)
-- [x] Indeed Philippines (Applied: Thrive Digital, ChartRequest)
+- [x] Indeed Philippines (Applied: Thrive Digital, ChartRequest, SourceAsia)
 - [ ] VirtualStaff.ph
 - [ ] Remote Staff
 - [ ] Bossjob Philippines
