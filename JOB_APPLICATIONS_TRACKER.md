@@ -10,6 +10,7 @@
 | **Thrive Digital** | Designer | Remote (PH / 6 AM PHT) | ₱766k / yr + 13th Mo | 🟢 Submitted | Sept 14, 2026 | Greenhouse (via Indeed) |
 | **ChartRequest** | UI/UX Designer – B2B SaaS | Remote | PHP 60k – 70k / mo | 🟢 Submitted | Sept 14, 2026 | Indeed SmartApply |
 | **SourceAsia Business** | UX Designer II | Remote | PHP 60k – 75k / mo | 🟢 Submitted | Sept 14, 2026 | Indeed |
+| **Chicken Dinner Studios** | Multimedia Designer | Remote (PH / 3-11 PM PHT) | Up to PHP 900 / hr | 🟢 Submitted | Sept 14, 2026 | Indeed |
 
 ---
 
@@ -80,6 +81,14 @@
 * **Next Action:** Await recruiter response on Indeed.
 * **Detailed File:** [`01_Brief/Job_Tracker/SourceAsia_UX_Designer.md`](01_Brief/Job_Tracker/SourceAsia_UX_Designer.md)
 
+### 9. **Chicken Dinner Studios**
+* **Role:** Multimedia Designer
+* **Company Type:** Digital Creative & Multimedia Agency
+* **Date Applied:** Sept 14, 2026
+* **Status:** 🟢 Submitted
+* **Next Action:** Await response on Indeed.
+* **Detailed File:** [`01_Brief/Job_Tracker/Chicken_Dinner_Studios_Multimedia_Designer.md`](01_Brief/Job_Tracker/Chicken_Dinner_Studios_Multimedia_Designer.md)
+
 ---
 
 ## 🌐 Job Search Platforms & Channels
@@ -87,7 +96,7 @@
 ### 🇵🇭 Philippines & Remote Focus
 - [x] Onlinejob.ph (Applied: House of Nannies)
 - [x] Jobstreet Philippines (Applied: Outsourced.ph)
-- [x] Indeed Philippines (Applied: Thrive Digital, ChartRequest, SourceAsia)
+- [x] Indeed Philippines (Applied: Thrive Digital, ChartRequest, SourceAsia, Chicken Dinner Studios)
 - [ ] VirtualStaff.ph
 - [ ] Remote Staff
 - [ ] Bossjob Philippines
