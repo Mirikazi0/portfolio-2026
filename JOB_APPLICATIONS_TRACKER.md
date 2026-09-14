@@ -7,6 +7,7 @@
 | **HireDigital** | Senior Creative Designer / Design Strategist | Remote (PH) | PHP 120k – 140k / mo | 🟢 Submitted | Sept 7, 2026 | LinkedIn Apply |
 | **House of Nannies** | Senior UI/UX Product Designer | Remote (US EST / PH) | PHP 125,000 / mo | 🟢 Submitted | Sept 7, 2026 | Onlinejobs.ph |
 | **Outsourced.ph** | Marketing & Product Designer | Remote (PH / Melbourne AEST) | PHP 110,000 / mo | 🟢 Submitted | Sept 7, 2026 | Jobstreet Philippines |
+| **Thrive Digital** | Designer | Remote (PH / 6 AM PHT) | ₱766k / yr + 13th Mo | 🟢 Submitted | Sept 14, 2026 | Greenhouse (via Indeed) |
 
 ---
 
@@ -53,6 +54,14 @@
 * **Next Action:** Await Jobstreet / recruiter screening update.
 * **Detailed File:** [`01_Brief/Job_Tracker/Outsourced_Marketing_Product_Designer.md`](01_Brief/Job_Tracker/Outsourced_Marketing_Product_Designer.md)
 
+### 6. **Thrive Digital**
+* **Role:** Designer
+* **Company Type:** Growth & Performance Marketing Agency (Clients: Slack, Asana, Uber, Zoom)
+* **Date Applied:** Sept 14, 2026
+* **Status:** 🟢 Submitted
+* **Next Action:** Await anonymized review response from Talent Acquisition.
+* **Detailed File:** [`01_Brief/Job_Tracker/Thrive_Digital_Designer.md`](01_Brief/Job_Tracker/Thrive_Digital_Designer.md)
+
 ---
 
 ## 🌐 Job Search Platforms & Channels
@@ -60,7 +69,7 @@
 ### 🇵🇭 Philippines & Remote Focus
 - [x] Onlinejob.ph (Applied: House of Nannies)
 - [x] Jobstreet Philippines (Applied: Outsourced.ph)
-- [ ] Indeed Philippines
+- [x] Indeed Philippines (Applied: Thrive Digital)
 - [ ] VirtualStaff.ph
 - [ ] Remote Staff
 - [ ] Bossjob Philippines
