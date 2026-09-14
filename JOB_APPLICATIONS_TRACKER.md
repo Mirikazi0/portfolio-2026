@@ -8,6 +8,7 @@
 | **House of Nannies** | Senior UI/UX Product Designer | Remote (US EST / PH) | PHP 125,000 / mo | 🟢 Submitted | Sept 7, 2026 | Onlinejobs.ph |
 | **Outsourced.ph** | Marketing & Product Designer | Remote (PH / Melbourne AEST) | PHP 110,000 / mo | 🟢 Submitted | Sept 7, 2026 | Jobstreet Philippines |
 | **Thrive Digital** | Designer | Remote (PH / 6 AM PHT) | ₱766k / yr + 13th Mo | 🟢 Submitted | Sept 14, 2026 | Greenhouse (via Indeed) |
+| **ChartRequest** | UI/UX Designer – B2B SaaS | Remote | PHP 60k – 70k / mo | 🟢 Submitted | Sept 14, 2026 | Indeed SmartApply |
 
 ---
 
@@ -62,6 +63,14 @@
 * **Next Action:** Await anonymized review response from Talent Acquisition.
 * **Detailed File:** [`01_Brief/Job_Tracker/Thrive_Digital_Designer.md`](01_Brief/Job_Tracker/Thrive_Digital_Designer.md)
 
+### 7. **ChartRequest**
+* **Role:** UI/UX Designer – B2B SaaS
+* **Company Type:** B2B Healthcare & Medical Records SaaS Platform
+* **Date Applied:** Sept 14, 2026
+* **Status:** 🟢 Submitted
+* **Next Action:** Await recruiter screening response on Indeed.
+* **Detailed File:** [`01_Brief/Job_Tracker/ChartRequest_UIUX_Designer.md`](01_Brief/Job_Tracker/ChartRequest_UIUX_Designer.md)
+
 ---
 
 ## 🌐 Job Search Platforms & Channels
@@ -69,7 +78,7 @@
 ### 🇵🇭 Philippines & Remote Focus
 - [x] Onlinejob.ph (Applied: House of Nannies)
 - [x] Jobstreet Philippines (Applied: Outsourced.ph)
-- [x] Indeed Philippines (Applied: Thrive Digital)
+- [x] Indeed Philippines (Applied: Thrive Digital, ChartRequest)
 - [ ] VirtualStaff.ph
 - [ ] Remote Staff
 - [ ] Bossjob Philippines
