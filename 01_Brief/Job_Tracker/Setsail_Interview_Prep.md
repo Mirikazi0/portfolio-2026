@@ -94,9 +94,9 @@ SetSail Marketing is a Vancouver-based, B-Corp certified digital agency that ser
 > Once the structure is in place, I check in with the development team to confirm their preferred handoff format—whether that's component spec sheets, Loom walkthroughs, or direct Figma tokens. Adapting to their workflow ensures zero friction during implementation."
 
 ### 5. "How do you manage high-volume client deliverables and tight turnarounds without sacrificing design quality?"
-> "High velocity comes from strong design infrastructure. Rather than designing every campaign or ad-hoc request from scratch, I rely on modular Figma component libraries, style guide tokens, and pre-formatted layout grids. 
+> "It comes down to clear prioritization and task structure. When handling a high volume of deliverables across time zones, my first step is evaluating task urgency versus complexity—identifying which deliverables require deep conceptual focus and which can be accelerated using modular Figma components.
 > 
-> Having those systems in place allows me to iterate on web visuals, ad creative, and social assets rapidly while maintaining strict visual consistency and QA standards across every client touchpoint."
+> Tackling the highest-friction or highest-priority items first builds momentum, making the remaining iterations straightforward. Paired with clear async communication on Slack or Loom, this keeps project timelines moving smoothly without compromising design quality."
 
 ---
 
