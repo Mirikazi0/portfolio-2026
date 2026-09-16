@@ -1,8 +1,8 @@
-# 🎙️ SetSail Marketing — Interview Prep Guide
+# 🎙️ SetSail Marketing — Interview Prep Master Guide
 
 ## 📌 Meeting Overview
-* **Interviewer:** Jason Atakhanov (Founder at SetSail Marketing)
-* **Date & Time:** Tomorrow @ 6:00 AM PHT
+* **Interviewer:** Jason Atakhanov (Founder & Managing Director at SetSail Marketing)
+* **Date & Time:** Today @ 6:00 AM PHT
 * **Format:** 60-Minute Video Interview
 * **Role:** Visual Designer (Figma)
 * **Company:** SetSail Marketing (Vancouver, BC, Canada — B-Corp Certified Full-Service Marketing Agency)
@@ -16,28 +16,50 @@
 
 ---
 
-## 📋 Job Description Core Competencies & Match Keywords
-* **Core Output:** Website visuals, landing pages, Figma style guides (typography, color systems, component layouts), marketing creative (ads, emails, social).
-* **Approach:** Light UI/UX thinking paired with Conversion Rate Optimization (CRO) and performance-driven design.
-* **Collaboration:** Partnering with developers on responsive web constraints, working with marketers on ad-hoc requests and CRO tests.
-* **Key Strengths to Highlight:**
-  1. *Figma Systemic Design:* Style guides, component libraries, typography scale, color tokens.
-  2. *Conversion-Driven Layouts:* Designing landing pages structured for mobile responsiveness and clear CTAs.
-  3. *Agency Velocity:* Moving fast, iterating cleanly, self-QA before handoff.
+## 📋 Job Description Core Competencies
+1. **Figma Systemic Design & Style Guides:** Building typography scale, color tokens, and layout systems from scratch or sparse client briefs.
+2. **Conversion Rate Optimization (CRO) & Web Visuals:** Designing landing pages with clear visual hierarchy, scannability, and mobile responsiveness to drive conversions.
+3. **Agency Velocity & High Volume:** Producing multi-channel campaign assets (ads, email, social) under tight deadlines using modular component libraries.
+4. **Developer Collaboration:** Providing clean Auto-Layout specs aligned with CSS flexbox/grid constraints.
 
 ---
 
-## 🎯 Key Case Studies & Portfolio Talking Points
-1. **22 Tango Creatives (2026):**
-   * *Talking Point:* Full brand evolution from record label to creative school, expanding design tokens into digital platforms and visual systems.
-2. **Interview Query (2024–2025):**
-   * *Talking Point:* Scaled SaaS UI/UX, growth design assets, and marketing landing pages, working directly with design systems and dev handoffs.
-3. **Symph / Lesson Planner PH (2024):**
-   * *Talking Point:* AI-driven product design, user journeys, and rapid prototyping.
+## ⭐️ STAR Story Bank
+
+### Story 1: 22 Tango Digital Brand Evolution (Brand Systems & Web Platform)
+* **Competencies:** Style Guides, Brand Strategy, Responsive Web Design
+* **Situation:** 22 Tango was a music label transitioning into a full creative school, but lacked a unified web platform and visual hierarchy across its 6 distinct program sub-brands.
+* **Task:** As Lead Designer and Design Engineer, I was tasked with leading the complete digital brand evolution, creating Figma style guides, vector assets, and responsive landing pages.
+* **Action:** 
+  - Conducted a systemic audit of existing brand elements.
+  - Built six sub-brand style guides in Figma (color tokens, typography scale, vector logos).
+  - Designed responsive landing page components using Figma Auto-Layout.
+  - Handed off clean specs and vector assets for production.
+* **Result:** Delivered the complete digital ecosystem on schedule, resulting in 100% student cohort enrollment across all six programs.
+
+### Story 2: Interview Query Conversion Lift (+19% Sign-up Lift)
+* **Competencies:** Conversion Rate Optimization (CRO), Landing Pages, Performance Design
+* **Situation:** Interview Query was scaling user acquisition, but onboarding and pricing landing pages had visual friction that capped conversion rates.
+* **Task:** Responsible for redesigning key marketing pages and onboarding UI to improve scannability and boost user conversions.
+* **Action:**
+  - Analyzed user drop-off points and streamlined messaging hierarchy.
+  - Redesigned visual layout with high-contrast CTAs and mobile-first spacing.
+  - Created reusable Figma design tokens and component specs for dev handoff.
+* **Result:** Achieved a +19% conversion lift in user sign-ups and established a scalable marketing asset library.
+
+### Story 3: High-Velocity Asset Production & Dev Handoff
+* **Competencies:** Agency Velocity, Component Libraries, Engineering Collaboration
+* **Situation:** Required rapid turnaround of concurrent ad creative and web deliverables under tight project timelines.
+* **Task:** Produce high-volume multi-channel campaign assets without sacrificing brand precision or developer clarity.
+* **Action:**
+  - Built modular Figma component templates structured around CSS grid and flexbox constraints.
+  - Standardized rem/pixel typography and spacing tokens.
+  - Created Loom walkthroughs and clean specs for developer handoffs.
+* **Result:** Reduced production turnaround time by 50% while maintaining 100% brand spec compliance across channels.
 
 ---
 
-## 📝 Practice Questions & Answers
+## 📝 Scripted Responses to High-Probability Questions
 
 ### 1. "Tell me about yourself and your background." (90-Second Elevator Pitch)
 > "I am a Product Designer and Design Engineer specializing in visual systems, high-converting landing pages, and Figma design tokens. Over the past 3+ years, my work has focused on bridging brand identity with measurable growth metrics.
@@ -80,11 +102,3 @@
 
 3. **On B-Corp Values & Agency Culture:**
    > *"SetSail is B-Corp certified—how does that focus on sustainability and impact shape day-to-day client projects and creative direction?"*
-
-
-
-
-
-
-
-
