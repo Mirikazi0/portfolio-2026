@@ -9,6 +9,14 @@
 
 ---
 
+## 🏢 What SetSail Does (In Simple Terms)
+SetSail Marketing is a Vancouver-based, B-Corp certified digital agency that serves as a full-service growth and creative partner for client businesses. They specialize in three core areas:
+1. **Brand & Web Design**: Building custom websites, responsive landing pages, and Figma style guides for client brands across tech, SaaS, and commercial sectors.
+2. **Performance Marketing**: Designing multi-channel ad campaigns, email templates, and social creative built to acquire leads and sales.
+3. **Conversion Rate Optimization (CRO)**: Running visual and messaging tests on client landing pages to increase conversion rates.
+
+---
+
 ## 👨‍💼 Interviewer Profile: Jason Atakhanov
 * **Role:** Founder & Managing Director at SetSail Marketing
 * **Background & Focus:** Entrepreneurial agency leader focused on sustainable business growth, performance marketing, high-end digital design, and B-Corp values.
