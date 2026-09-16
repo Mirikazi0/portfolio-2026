@@ -62,13 +62,13 @@
 ## 📝 Scripted Responses to High-Probability Questions
 
 ### 1. "Tell me about yourself and your background." (90-Second Elevator Pitch)
-> "I am a Product Designer and Design Engineer specializing in visual systems, high-converting landing pages, and Figma design tokens. Over the past 3+ years, my work has focused on bridging brand identity with measurable growth metrics.
+> "Hi Jason, thanks for having me. I’m Chaz, a Product Designer and Design Engineer with 5 years of total design experience, including 3 years focused on UI/UX, B2B, and EdTech SaaS products. 
 > 
-> Most recently, I led the digital brand evolution for **22 Tango Creatives**, expanding an established music label into a full creative school platform. I designed six program sub-brand style guides, custom vector assets, and responsive landing pages that filled their 100% student enrollment target. 
+> I started my career in visual and graphic design, but quickly transitioned into UI/UX and frontend engineering because I wanted to bridge the gap between creative storytelling and real technical execution.
 > 
-> Prior to that at **Interview Query**, I designed performance marketing assets, onboarding flows, and SaaS landing pages that drove a +19% conversion lift in user sign-ups while maintaining Figma design systems for engineering handoffs.
+> Most recently, I led the digital brand evolution for **22 Tango Creatives**, taking an established music label and expanding it into a full creative school platform with six sub-brand style guides in Figma and responsive web pages that hit 100% student enrollment. Before that at **Interview Query**, I designed performance marketing assets and SaaS onboarding flows that generated a +19% lift in sign-up conversions.
 > 
-> What excites me about SetSail is your focus on full-funnel digital marketing and brand storytelling. I thrive in agency environments where I can take client brand guidelines and turn them into scalable visual assets and high-converting web experiences."
+> What brought me to SetSail is your focus on combining brand strategy, web design, and performance. I thrive in environments where I can take client brand guidelines and build scalable Figma systems and high-converting digital assets."
 
 ### 2. "How do you handle client projects when you inherit brand guidelines that are incomplete or messy?"
 > "My first step is a systemic audit. I review whatever assets exist, extract core color hexes, typography hierarchy, and logo rules, and structure them into a clean Figma style guide. 
