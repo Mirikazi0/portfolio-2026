@@ -81,9 +81,9 @@ SetSail Marketing is a Vancouver-based, B-Corp certified digital agency that ser
 > What brought me to SetSail is your focus on combining brand strategy, performance marketing, and web design at the same time."
 
 ### 2. "How do you handle client projects when you inherit brand guidelines that are incomplete or messy?"
-> "My first step is a systemic audit. I review whatever assets exist, extract core color hexes, typography hierarchy, and logo rules, and structure them into a clean Figma style guide. 
+> "When handling client projects with sparse or messy assets, I start with a systemic audit. I pull together all their existing assets and categorize them: typography, color palettes, logo rules, and other core brand elements.
 > 
-> If guidelines are missing key states or secondary colors, I fill those gaps based on visual balance and accessibility principles. Establishing that foundation in Figma upfront prevents rework later and ensures every subsequent deliverable—from landing pages to social ads—maintains brand consistency."
+> Once I have that complete inventory, I evaluate each category to identify what works, what doesn't, and where the gaps are. If certain elements need refinement—like missing secondary colors or accessibility contrast for web pages—I prepare proactive recommendations for the client. Establishing that updated Figma style guide upfront ensures every subsequent landing page, ad, or campaign asset stays consistent and fast to produce."
 
 ### 3. "How do you balance high aesthetic quality with conversion-focused design (CRO)?"
 > "Visual design and conversion performance are complementary. Great design creates trust, while clear layout hierarchy guides the user toward action.
