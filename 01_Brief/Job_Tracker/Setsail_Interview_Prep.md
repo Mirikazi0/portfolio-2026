@@ -89,9 +89,9 @@ SetSail Marketing is a Vancouver-based, B-Corp certified digital agency that ser
 > When designing a landing page, I start with message hierarchy: clear headlines, scannable body copy, and high-contrast call-to-action buttons designed for mobile responsiveness. I avoid decorative noise that distracts from the core goal. At Interview Query, applying this approach to onboarding and pricing pages resulted in a +19% lift in conversion rates."
 
 ### 4. "How do you hand off designs to developers to ensure responsive layouts translate cleanly to code?"
-> "Because I have a background in frontend development (HTML, CSS, JS), I design with CSS grid and flexbox principles from the start. 
+> "Every engineering team has different preferences for handoffs, so my approach starts with alignment. In Figma, I ensure every frame uses Auto-Layout, standardized rem/pixel typography tokens, and explicit breakpoint specs so the layout mirrors CSS flexbox and grid rules. 
 > 
-> In Figma, I build every asset using Auto-Layout, standardized rem/pixel typography tokens, and explicit mobile/tablet/desktop breakpoint specs. I provide clean component libraries and asset exports so developers don't have to guess spacing or layout behavior. Having that technical context eliminates back-and-forth and speeds up production."
+> Once the structure is in place, I check in with the development team to confirm their preferred handoff format—whether that's component spec sheets, Loom walkthroughs, or direct Figma tokens. Adapting to their workflow ensures zero friction during implementation."
 
 ### 5. "How do you manage high-volume client deliverables and tight turnarounds without sacrificing design quality?"
 > "High velocity comes from strong design infrastructure. Rather than designing every campaign or ad-hoc request from scratch, I rely on modular Figma component libraries, style guide tokens, and pre-formatted layout grids. 
