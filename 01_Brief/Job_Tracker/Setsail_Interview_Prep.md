@@ -70,13 +70,15 @@ SetSail Marketing is a Vancouver-based, B-Corp certified digital agency that ser
 ## 📝 Scripted Responses to High-Probability Questions
 
 ### 1. "Tell me about yourself and your background." (90-Second Elevator Pitch)
-> "Hi Jason, thanks for having me. I’m Chaz, a Product Designer and Design Engineer with 5 years of total design experience, including 3 years focused on UI/UX, B2B, and EdTech SaaS products. 
+> "Thanks for having me, I'm excited for this interview. You can call me Chaz. I'm a Product Designer and Design Engineer with 5 years of total design experience, including 3 years focused on UI/UX, B2B, and EdTech SaaS products. 
 > 
-> I started my career in visual and graphic design, but quickly transitioned into UI/UX and frontend engineering because I wanted to bridge the gap between creative storytelling and real technical execution.
+> I started my career in graphic design back in 2021, but shifted to UI/UX design to bridge the gap between creativity and technology. 
 > 
-> Most recently, I led the digital brand evolution for **22 Tango Creatives**, taking an established music label and expanding it into a full creative school platform with six sub-brand style guides in Figma and responsive web pages that hit 100% student enrollment. Before that at **Interview Query**, I designed performance marketing assets and SaaS onboarding flows that generated a +19% lift in sign-up conversions.
+> In my most recent work at **22 Tango Creative School**, I led the digital brand evolution for a 6-month project as they transitioned from a music label into a creative school platform covering 6 to 7 programs. 
 > 
-> What brought me to SetSail is your focus on combining brand strategy, web design, and performance. I thrive in environments where I can take client brand guidelines and build scalable Figma systems and high-converting digital assets."
+> Before that at **Interview Query**, a US-based data science prep platform, I worked for almost 2 years designing performance marketing assets and core UI/UX in Figma—specifically onboarding and pricing pages—where I helped drive a **+19% boost in conversion rates and a +12% increase in user lifetime value (LTV)**. 
+> 
+> What brought me to SetSail is your focus on combining brand strategy, performance marketing, and web design at the same time."
 
 ### 2. "How do you handle client projects when you inherit brand guidelines that are incomplete or messy?"
 > "My first step is a systemic audit. I review whatever assets exist, extract core color hexes, typography hierarchy, and logo rules, and structure them into a clean Figma style guide. 
