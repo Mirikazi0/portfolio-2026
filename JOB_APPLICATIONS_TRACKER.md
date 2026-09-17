@@ -14,6 +14,7 @@
 | **Waw Group Global** | Graphic & Multimedia Designer | Remote | From PHP 40k / mo | 🟢 Submitted | Sept 14, 2026 | Indeed / Email |
 | **Top Tutors For Us** | UI/UX Designer | Remote (PH / WFH) | PHP 900 – PHP 1,800 / hr (~8 hrs/wk) | 🟢 Submitted | Sept 17, 2026 | Indeed SmartApply |
 | **InfoAlanya** | Senior Product Designer (Vendor Panels) | Remote | $25 / hr (~$1,800–$2,000 project) | 🟢 Submitted | Sept 18, 2026 | Onlinejobs.ph |
+| **Tellos** | Product Design Engineer | Remote (US Team) | Competitive / Unspecified | 🟢 Submitted | Sept 18, 2026 | Ashby (via LinkedIn) |
 
 ---
 
@@ -116,6 +117,14 @@
 * **Next Action:** Await message / interview response on Onlinejobs.ph.
 * **Detailed File:** [`01_Brief/Job_Tracker/InfoAlanya_Senior_Product_Designer.md`](01_Brief/Job_Tracker/InfoAlanya_Senior_Product_Designer.md)
 
+### 13. **Tellos**
+* **Role:** Product Design Engineer
+* **Company Type:** Healthcare SaaS & Autism Practice Management Platform
+* **Date Applied:** Sept 18, 2026
+* **Status:** 🟢 Submitted
+* **Next Action:** Await review response on Ashby.
+* **Detailed File:** [`01_Brief/Job_Tracker/Tellos_Product_Design_Engineer.md`](01_Brief/Job_Tracker/Tellos_Product_Design_Engineer.md)
+
 ---
 
 ## 🌐 Job Search Platforms & Channels
@@ -129,7 +138,7 @@
 - [ ] Bossjob Philippines
 
 ### 🌍 Global Tech & Remote Boards
-- [ ] LinkedIn Jobs
+- [x] LinkedIn Jobs (Applied: Tempo Labs, HireDigital, Tellos)
 - [ ] Wellfound (formerly AngelList)
 - [ ] We Work Remotely
 - [ ] Remotive
