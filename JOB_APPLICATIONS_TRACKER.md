@@ -15,6 +15,7 @@
 | **Top Tutors For Us** | UI/UX Designer | Remote (PH / WFH) | PHP 900 – PHP 1,800 / hr (~8 hrs/wk) | 🟢 Submitted | Sept 17, 2026 | Indeed SmartApply |
 | **InfoAlanya** | Senior Product Designer (Vendor Panels) | Remote | $25 / hr (~$1,800–$2,000 project) | 🟢 Submitted | Sept 18, 2026 | Onlinejobs.ph |
 | **Tellos** | Product Design Engineer | Remote (US Team) | Competitive / Unspecified | 🟢 Submitted | Sept 18, 2026 | Ashby (via LinkedIn) |
+| **Fireflies.ai** | Product Designer (Mobile & Web) | Remote (Global) | Competitive Unicorn Equity & Pay | 🟢 Submitted | Sept 18, 2026 | Gem (via LinkedIn) |
 
 ---
 
@@ -125,6 +126,14 @@
 * **Next Action:** Await review response on Ashby.
 * **Detailed File:** [`01_Brief/Job_Tracker/Tellos_Product_Design_Engineer.md`](01_Brief/Job_Tracker/Tellos_Product_Design_Engineer.md)
 
+### 14. **Fireflies.ai**
+* **Role:** Product Designer (Mobile & Web)
+* **Company Type:** AI Meeting Teammate & Unicorn Platform ($1B+ Valuation)
+* **Date Applied:** Sept 18, 2026
+* **Status:** 🟢 Submitted
+* **Next Action:** Await portfolio/screening response on Gem portal.
+* **Detailed File:** [`01_Brief/Job_Tracker/Fireflies_AI_Product_Designer.md`](01_Brief/Job_Tracker/Fireflies_AI_Product_Designer.md)
+
 ---
 
 ## 🌐 Job Search Platforms & Channels
@@ -138,7 +147,7 @@
 - [ ] Bossjob Philippines
 
 ### 🌍 Global Tech & Remote Boards
-- [x] LinkedIn Jobs (Applied: Tempo Labs, HireDigital, Tellos)
+- [x] LinkedIn Jobs (Applied: Tempo Labs, HireDigital, Tellos, Fireflies.ai)
 - [ ] Wellfound (formerly AngelList)
 - [ ] We Work Remotely
 - [ ] Remotive
