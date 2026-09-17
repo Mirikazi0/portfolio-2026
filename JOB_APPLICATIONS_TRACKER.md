@@ -2,7 +2,7 @@
 
 | Company | Position | Location / Model | Salary / Comp | Status | Date Contacted | Contact Person |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Setsail** | Visual Designer (Figma) | Remote (PH / Vancouver, CA) | USD $2,000 – $2,500 / mo | 🎉 Interview Scheduled | Sept 7, 2026 | Lizclay Barot (LinkedIn) |
+| **Setsail** | Visual Designer (Figma) | Remote (PH / Vancouver, CA) | USD $2,000 – $2,500 / mo | 🟡 1st Round Done (In Review) | Sept 7, 2026 | Lizclay Barot (LinkedIn) |
 | **Tempo Labs** | Product Designer - Agent+ | Remote (Cebu City, PH) | USD $24,000 / year | 🟢 Submitted | Sept 7, 2026 | LinkedIn Application Form |
 | **HireDigital** | Senior Creative Designer / Design Strategist | Remote (PH) | PHP 120k – 140k / mo | 🟢 Submitted | Sept 7, 2026 | LinkedIn Apply |
 | **House of Nannies** | Senior UI/UX Product Designer | Remote (US EST / PH) | PHP 125,000 / mo | 🟢 Submitted | Sept 7, 2026 | Onlinejobs.ph |
@@ -20,10 +20,10 @@
 ### 1. **Setsail**
 * **Role:** Visual Designer (Figma)
 * **Company Type:** B-Corp Certified Full-Service Marketing Agency (Vancouver, Canada)
-* **Recruiter:** Lizclay Barot
+* **Recruiter:** Lizclay Barot | **Interviewer:** Jason Atakhanov (Founder & CEO)
 * **Date Reached Out:** Sept 7, 2026 @ 4:20 PM
-* **Status:** 🎉 Selected for Interview — Screening call scheduled for Sept 17, 2026
-* **Next Action:** Prepare interview talking points and send notice/salary response on LinkedIn.
+* **Status:** 🟡 1st Round Completed (Sept 17, 2026) — CEO live Figma audit conducted (Interview Query, Lesson Planner, 22 Tango). CEO finalizing candidate shortlist next week.
+* **Next Action:** Send thank-you note; await shortlist update / follow up by Sept 24, 2026.
 * **Detailed File:** [`01_Brief/Job_Tracker/Setsail_Visual_Designer.md`](01_Brief/Job_Tracker/Setsail_Visual_Designer.md)
 
 ### 2. **Tempo Labs**

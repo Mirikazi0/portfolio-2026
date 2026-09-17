@@ -69,3 +69,6 @@
 * **Sept 7, 2026:** Finalized portfolio case study ([22tango.html](22tango.html)) with 6 program SVG logos, dual device mockup, and live URL.
 * **Sept 7, 2026:** Tailored resume for Setsail Visual Designer requirements and installed ATS optimizer skill.
 * **Sept 7, 2026:** Created job application tracker files (`JOB_APPLICATIONS_TRACKER.md` & `Setsail_Visual_Designer.md`).
+* **Sept 16, 2026:** Invited to 1st round interview by Lizclay Barot; shared notice period (1–2 weeks), current contract rate (PHP 56k/mo at 22 Tango, previous full-time rate $2,000 USD/mo at Interview Query), and expected salary ($2,000–$2,500 USD / mo).
+* **Sept 17, 2026:** 1st Round Interview with Jason Atakhanov (Founder & CEO). Live Figma file walkthrough conducted across Interview Query, Lesson Planner/Symph, and 22 Tango files to verify design authenticity, auto-layout, and layers. Jason will finalize candidate shortlists over the next week and follow up.
+
