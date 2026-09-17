@@ -7,7 +7,7 @@
 | **HireDigital** | Senior Creative Designer / Design Strategist | Remote (PH) | PHP 120k – 140k / mo | 🟢 Submitted | Sept 7, 2026 | LinkedIn Apply |
 | **House of Nannies** | Senior UI/UX Product Designer | Remote (US EST / PH) | PHP 125,000 / mo | 🟢 Submitted | Sept 7, 2026 | Onlinejobs.ph |
 | **Outsourced.ph** | Marketing & Product Designer | Remote (PH / Melbourne AEST) | PHP 110,000 / mo | 🟢 Submitted | Sept 7, 2026 | Jobstreet Philippines |
-| **Thrive Digital** | Designer | Remote (PH / 6 AM PHT) | ₱766k / yr + 13th Mo | 🟢 Submitted | Sept 14, 2026 | Greenhouse (via Indeed) |
+| **Thrive Digital** | Designer | Remote (PH / 6 AM PHT) | ₱766k / yr + 13th Mo | 🔴 Rejected (Sept 18) | Sept 14, 2026 | Michelle Nowacki (Talent Acq) |
 | **ChartRequest** | UI/UX Designer – B2B SaaS | Remote | PHP 60k – 70k / mo | 🟢 Submitted | Sept 14, 2026 | Indeed SmartApply |
 | **SourceAsia Business** | UX Designer II | Remote | PHP 60k – 75k / mo | 🟢 Submitted | Sept 14, 2026 | Indeed |
 | **Chicken Dinner Studios** | Multimedia Designer | Remote (PH / 3-11 PM PHT) | Up to PHP 900 / hr | 🟢 Submitted | Sept 14, 2026 | Indeed |
@@ -63,8 +63,8 @@
 * **Role:** Designer
 * **Company Type:** Growth & Performance Marketing Agency (Clients: Slack, Asana, Uber, Zoom)
 * **Date Applied:** Sept 14, 2026
-* **Status:** 🟢 Submitted
-* **Next Action:** Await anonymized review response from Talent Acquisition.
+* **Status:** 🔴 Rejected (Sept 18, 2026) — Received email from Michelle Nowacki (Associate Director, Talent Acquisition). Prioritized agency backgrounds with high-volume digital ad campaigns and motion design.
+* **Next Action:** Closed / archived.
 * **Detailed File:** [`01_Brief/Job_Tracker/Thrive_Digital_Designer.md`](01_Brief/Job_Tracker/Thrive_Digital_Designer.md)
 
 ### 7. **ChartRequest**

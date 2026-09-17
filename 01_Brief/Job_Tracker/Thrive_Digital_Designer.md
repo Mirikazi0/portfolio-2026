@@ -29,3 +29,10 @@ Full-funnel digital marketing design supporting major enterprise clients (Slack,
 * Remote experience stated: 3 years
 * Portfolio link submitted: https://chazgrant.me
 * Review process: Anonymous initial review by Talent Acquisition team
+
+---
+
+## Status Update (Sept 18, 2026)
+* Status: 🔴 Rejected
+* Notification: Email from Michelle Nowacki (Associate Director, Talent Acquisition)
+* Feedback / Context: Company prioritized candidates with direct creative/marketing agency experience handling multi-brand ad campaigns, heavy motion design, and specific responses on volume handling. No reflection on quality of background or craft. File archived.
