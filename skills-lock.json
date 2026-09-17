@@ -8,6 +8,12 @@
       "skillPath": "skills/frontend-design/SKILL.md",
       "computedHash": "89496d5dd00f4810205f351759594fc2742bf8eea85a2f2b2d1de59f4bd91576"
     },
+    "interview-prep-generator": {
+      "source": "paramchoudhary/resumeskills",
+      "sourceType": "github",
+      "skillPath": "skills/interview-prep-generator/SKILL.md",
+      "computedHash": "6079ff8377d21ec5bb660a9505ae77d4f33a9cdeb418f886c18e9668ff0b2852"
+    },
     "resume-ats-optimizer": {
       "source": "paramchoudhary/resumeskills",
       "sourceType": "github",

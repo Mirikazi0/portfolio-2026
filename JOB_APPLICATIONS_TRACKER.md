@@ -12,6 +12,7 @@
 | **SourceAsia Business** | UX Designer II | Remote | PHP 60k – 75k / mo | 🟢 Submitted | Sept 14, 2026 | Indeed |
 | **Chicken Dinner Studios** | Multimedia Designer | Remote (PH / 3-11 PM PHT) | Up to PHP 900 / hr | 🟢 Submitted | Sept 14, 2026 | Indeed |
 | **Waw Group Global** | Graphic & Multimedia Designer | Remote | From PHP 40k / mo | 🟢 Submitted | Sept 14, 2026 | Indeed / Email |
+| **Top Tutors For Us** | UI/UX Designer | Remote (PH / WFH) | PHP 900 – PHP 1,800 / hr (~8 hrs/wk) | 🟢 Submitted | Sept 17, 2026 | Indeed SmartApply |
 
 ---
 
@@ -98,6 +99,14 @@
 * **Next Action:** Await response on Indeed / Email.
 * **Detailed File:** [`01_Brief/Job_Tracker/Waw_Group_Global_Multimedia_Designer.md`](01_Brief/Job_Tracker/Waw_Group_Global_Multimedia_Designer.md)
 
+### 11. **Top Tutors For Us**
+* **Role:** UI/UX Designer
+* **Company Type:** EdTech & Test Prep Tutoring Services
+* **Date Applied:** Sept 17, 2026
+* **Status:** 🟢 Submitted
+* **Next Action:** Await response on Indeed.
+* **Detailed File:** [`01_Brief/Job_Tracker/Top_Tutors_For_Us_UIUX_Designer.md`](01_Brief/Job_Tracker/Top_Tutors_For_Us_UIUX_Designer.md)
+
 ---
 
 ## 🌐 Job Search Platforms & Channels
@@ -105,7 +114,7 @@
 ### 🇵🇭 Philippines & Remote Focus
 - [x] Onlinejob.ph (Applied: House of Nannies)
 - [x] Jobstreet Philippines (Applied: Outsourced.ph)
-- [x] Indeed Philippines (Applied: Thrive Digital, ChartRequest, SourceAsia, Chicken Dinner Studios, Waw Group Global)
+- [x] Indeed Philippines (Applied: Thrive Digital, ChartRequest, SourceAsia, Chicken Dinner Studios, Waw Group Global, Top Tutors For Us)
 - [ ] VirtualStaff.ph
 - [ ] Remote Staff
 - [ ] Bossjob Philippines
