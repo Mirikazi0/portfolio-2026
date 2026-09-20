@@ -16,6 +16,7 @@
 | **InfoAlanya** | Senior Product Designer (Vendor Panels) | Remote | $25 / hr (~$1,800–$2,000 project) | 🟢 Submitted | Sept 18, 2026 | Onlinejobs.ph |
 | **Tellos** | Product Design Engineer | Remote (US Team) | Competitive / Unspecified | 🟢 Submitted | Sept 18, 2026 | Ashby (via LinkedIn) |
 | **Fireflies.ai** | Product Designer (Mobile & Web) | Remote (Global) | Competitive Unicorn Equity & Pay | 🟢 Submitted | Sept 18, 2026 | Gem (via LinkedIn) |
+| **BJAK** | Product Designer (UI/UX) | Remote (PH) | Competitive FinTech Full-time | 🟢 Submitted | Sept 20, 2026 | Ashby (via LinkedIn) |
 
 ---
 
@@ -134,6 +135,14 @@
 * **Next Action:** Await portfolio/screening response on Gem portal.
 * **Detailed File:** [`01_Brief/Job_Tracker/Fireflies_AI_Product_Designer.md`](01_Brief/Job_Tracker/Fireflies_AI_Product_Designer.md)
 
+### 15. **BJAK**
+* **Role:** Product Designer (UI/UX)
+* **Company Type:** FinTech / InsurTech Platform (Southeast Asia)
+* **Date Applied:** Sept 20, 2026
+* **Status:** 🟢 Submitted
+* **Next Action:** Await portfolio review / screening response on Ashby.
+* **Detailed File:** [`01_Brief/Job_Tracker/BJAK_Product_Designer.md`](01_Brief/Job_Tracker/BJAK_Product_Designer.md)
+
 ---
 
 ## 🌐 Job Search Platforms & Channels
@@ -147,7 +156,7 @@
 - [ ] Bossjob Philippines
 
 ### 🌍 Global Tech & Remote Boards
-- [x] LinkedIn Jobs (Applied: Tempo Labs, HireDigital, Tellos, Fireflies.ai)
+- [x] LinkedIn Jobs (Applied: Tempo Labs, HireDigital, Tellos, Fireflies.ai, BJAK)
 - [ ] Wellfound (formerly AngelList)
 - [ ] We Work Remotely
 - [ ] Remotive
