@@ -1,22 +1,22 @@
 # 🎯 Job Applications Tracker — 2026
 
-| Company | Position | Location / Model | Salary / Comp | Status | Date Contacted | Contact Person |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Setsail** | Visual Designer (Figma) | Remote (PH / Vancouver, CA) | USD $2,000 – $2,500 / mo | 🟡 1st Round Done (In Review) | Sept 7, 2026 | Lizclay Barot (LinkedIn) |
-| **Tempo Labs** | Product Designer - Agent+ | Remote (Cebu City, PH) | USD $24,000 / year | 🟢 Submitted | Sept 7, 2026 | LinkedIn Application Form |
-| **HireDigital** | Senior Creative Designer / Design Strategist | Remote (PH) | PHP 120k – 140k / mo | 🟢 Submitted | Sept 7, 2026 | LinkedIn Apply |
-| **House of Nannies** | Senior UI/UX Product Designer | Remote (US EST / PH) | PHP 125,000 / mo | 🟢 Submitted | Sept 7, 2026 | Onlinejobs.ph |
-| **Outsourced.ph** | Marketing & Product Designer | Remote (PH / Melbourne AEST) | PHP 110,000 / mo | 🟢 Submitted | Sept 7, 2026 | Jobstreet Philippines |
-| **Thrive Digital** | Designer | Remote (PH / 6 AM PHT) | ₱766k / yr + 13th Mo | 🔴 Rejected (Sept 18) | Sept 14, 2026 | Michelle Nowacki (Talent Acq) |
-| **ChartRequest** | UI/UX Designer – B2B SaaS | Remote | PHP 60k – 70k / mo | 🟢 Submitted | Sept 14, 2026 | Indeed SmartApply |
-| **SourceAsia Business** | UX Designer II | Remote | PHP 60k – 75k / mo | 🟢 Submitted | Sept 14, 2026 | Indeed |
-| **Chicken Dinner Studios** | Multimedia Designer | Remote (PH / 3-11 PM PHT) | Up to PHP 900 / hr | 🟢 Submitted | Sept 14, 2026 | Indeed |
-| **Waw Group Global** | Graphic & Multimedia Designer | Remote | From PHP 40k / mo | 🟢 Submitted | Sept 14, 2026 | Indeed / Email |
-| **Top Tutors For Us** | UI/UX Designer | Remote (PH / WFH) | PHP 900 – PHP 1,800 / hr (~8 hrs/wk) | 🟢 Submitted | Sept 17, 2026 | Indeed SmartApply |
-| **InfoAlanya** | Senior Product Designer (Vendor Panels) | Remote | $25 / hr (~$1,800–$2,000 project) | 🟢 Submitted | Sept 18, 2026 | Onlinejobs.ph |
-| **Tellos** | Product Design Engineer | Remote (US Team) | Competitive / Unspecified | 🟢 Submitted | Sept 18, 2026 | Ashby (via LinkedIn) |
-| **Fireflies.ai** | Product Designer (Mobile & Web) | Remote (Global) | Competitive Unicorn Equity & Pay | 🟢 Submitted | Sept 18, 2026 | Gem (via LinkedIn) |
-| **BJAK** | Product Designer (UI/UX) | Remote (PH) | Competitive FinTech Full-time | 🟢 Submitted | Sept 20, 2026 | Ashby (via LinkedIn) |
+| Company | Position | Location / Model | Salary / Comp | Status | Date Contacted | Contact / Channel | Follow-up Target |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Setsail** | Visual Designer (Figma) | Remote (PH / Vancouver, CA) | USD $2,000 – $2,500 / mo | 🟡 1st Round Done (In Review) | Sept 7, 2026 | Lizclay Barot (LinkedIn) | Sept 24, 2026 (CEO Shortlist) |
+| **Tempo Labs** | Product Designer - Agent+ | Remote (Cebu City, PH) | USD $24,000 / year | 🟢 Submitted | Sept 7, 2026 | LinkedIn Application Form | Sept 21, 2026 |
+| **HireDigital** | Senior Creative Designer / Design Strategist | Remote (PH) | PHP 120k – 140k / mo | 🟢 Submitted | Sept 7, 2026 | LinkedIn Apply | Sept 21, 2026 |
+| **House of Nannies** | Senior UI/UX Product Designer | Remote (US EST / PH) | PHP 125,000 / mo | 🟢 Submitted | Sept 7, 2026 | Onlinejobs.ph | Sept 21, 2026 |
+| **Outsourced.ph** | Marketing & Product Designer | Remote (PH / Melbourne AEST) | PHP 110,000 / mo | 🟢 Submitted | Sept 7, 2026 | Jobstreet Philippines | Sept 21, 2026 |
+| **Thrive Digital** | Designer | Remote (PH / 6 AM PHT) | ₱766k / yr + 13th Mo | 🔴 Rejected (Sept 18) | Sept 14, 2026 | Michelle Nowacki (Talent Acq) | — (Closed) |
+| **ChartRequest** | UI/UX Designer – B2B SaaS | Remote | PHP 60k – 70k / mo | 🟢 Submitted | Sept 14, 2026 | Indeed SmartApply | Sept 21, 2026 |
+| **SourceAsia Business** | UX Designer II | Remote | PHP 60k – 75k / mo | 🟢 Submitted | Sept 14, 2026 | Indeed | Sept 21, 2026 |
+| **Chicken Dinner Studios** | Multimedia Designer | Remote (PH / 3-11 PM PHT) | Up to PHP 900 / hr | 🟢 Submitted | Sept 14, 2026 | Indeed | Sept 21, 2026 |
+| **Waw Group Global** | Graphic & Multimedia Designer | Remote | From PHP 40k / mo | 🟢 Submitted | Sept 14, 2026 | Indeed / Email | Sept 21, 2026 |
+| **Top Tutors For Us** | UI/UX Designer | Remote (PH / WFH) | PHP 900 – PHP 1,800 / hr (~8 hrs/wk) | 🟢 Submitted | Sept 17, 2026 | Indeed SmartApply | Sept 24, 2026 |
+| **InfoAlanya** | Senior Product Designer (Vendor Panels) | Remote | $25 / hr (~$1,800–$2,000 project) | 🟢 Submitted | Sept 18, 2026 | Onlinejobs.ph | Sept 25, 2026 |
+| **Tellos** | Product Design Engineer | Remote (US Team) | Competitive / Unspecified | 🟢 Submitted | Sept 18, 2026 | Ashby (via LinkedIn) | Sept 25, 2026 |
+| **Fireflies.ai** | Product Designer (Mobile & Web) | Remote (Global) | Competitive Unicorn Equity & Pay | 🟢 Submitted | Sept 18, 2026 | Gem (via LinkedIn) | Sept 25, 2026 |
+| **BJAK** | Product Designer (UI/UX) | Remote (PH) | Competitive FinTech Full-time | 🟢 Submitted | Sept 20, 2026 | Ashby (via LinkedIn) | Sept 27, 2026 |
 
 ---
 
