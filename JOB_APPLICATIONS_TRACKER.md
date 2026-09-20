@@ -26,6 +26,7 @@
 | **Fireflies.ai** | Product Designer (Mobile & Web) | Remote (Global) | Competitive Unicorn Equity & Pay | 🟢 Submitted | Sept 18, 2026 | Gem (via LinkedIn) | Sept 25, 2026 |
 | **BJAK** | Product Designer (UI/UX) | Remote (PH) | Competitive FinTech Full-time | 🟢 Submitted | Sept 20, 2026 | Ashby (via LinkedIn) | Sept 27, 2026 |
 | **PSC Biotech** | UI/UX Designer | Remote (PH / US PST) | Competitive Full-time | 🟢 Submitted | Sept 20, 2026 | Zoho Recruit (via LinkedIn) | Sept 27, 2026 |
+| **Aurify** | UI/UX Design Engineer | Remote (Everywhere / JST) | $50,000 – $70,000 / yr | 🟢 Submitted | Sept 20, 2026 | Email (careers@aurify.com) | Sept 27, 2026 |
 
 ---
 
@@ -166,6 +167,14 @@
 * **Next Action:** Await screening response on Zoho Recruit.
 * **Detailed File:** [`01_Brief/Job_Tracker/PSC_Biotech_UIUX_Designer.md`](01_Brief/Job_Tracker/PSC_Biotech_UIUX_Designer.md)
 
+### 17. **Aurify**
+* **Role:** UI/UX Design Engineer
+* **Company Type:** Consumer AI Video & Avatar Platform (Tokyo / Seoul)
+* **Date Applied:** Sept 20, 2026
+* **Status:** 🟢 Submitted
+* **Next Action:** Await email response from `careers@aurify.com`.
+* **Detailed File:** [`01_Brief/Job_Tracker/Aurify_UIUX_Design_Engineer.md`](01_Brief/Job_Tracker/Aurify_UIUX_Design_Engineer.md)
+
 ---
 
 ## 🌐 Job Search Platforms & Channels
@@ -180,7 +189,7 @@
 
 ### 🌍 Global Tech & Remote Boards
 - [x] LinkedIn Jobs (Applied: Tempo Labs, HireDigital, Tellos, Fireflies.ai, BJAK, PSC Biotech)
-- [ ] Wellfound (formerly AngelList)
+- [x] Wellfound (formerly AngelList) (Applied: Aurify)
 - [ ] We Work Remotely
 - [ ] Remotive
 - [ ] Remote.co
