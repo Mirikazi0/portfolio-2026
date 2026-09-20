@@ -1,5 +1,18 @@
 # 🎯 Job Applications Tracker — 2026
 
+## 📊 Pipeline Dashboard
+
+| Metric | Count | Details |
+| :--- | :---: | :--- |
+| **Total Tracked Applications** | **15** | Across LinkedIn, Wellfound, Indeed, OnlineJobs.ph, Jobstreet |
+| **🟡 In Progress / Interviewing** | **1** | **Setsail** (Figma audit completed; awaiting CEO shortlist Sept 24) |
+| **🟢 Awaiting Response** | **13** | 6 Global/US SaaS & AI, 7 PH/Direct Remote |
+| **🔴 Closed / Archived** | **1** | Thrive Digital |
+| **🎯 Immediate Follow-Up Target** | **Sept 21** | 8 applications hitting 7–14 day review milestone tomorrow |
+| **💼 Top Comp Range** | **$50k–$70k/yr** | Aurify (Wellfound), Setsail ($2k–$2.5k/mo), HireDigital (₱140k/mo) |
+
+---
+
 ## 🟡 In Progress / Interviewing
 
 | Company | Position | Location / Model | Salary / Comp | Status | Date Contacted | Contact / Channel | Follow-up Target |
