@@ -25,6 +25,7 @@
 | **Tellos** | Product Design Engineer | Remote (US Team) | Competitive / Unspecified | 🟢 Submitted | Sept 18, 2026 | Ashby (via LinkedIn) | Sept 25, 2026 |
 | **Fireflies.ai** | Product Designer (Mobile & Web) | Remote (Global) | Competitive Unicorn Equity & Pay | 🟢 Submitted | Sept 18, 2026 | Gem (via LinkedIn) | Sept 25, 2026 |
 | **BJAK** | Product Designer (UI/UX) | Remote (PH) | Competitive FinTech Full-time | 🟢 Submitted | Sept 20, 2026 | Ashby (via LinkedIn) | Sept 27, 2026 |
+| **PSC Biotech** | UI/UX Designer | Remote (PH / US PST) | Competitive Full-time | 🟢 Submitted | Sept 20, 2026 | Zoho Recruit (via LinkedIn) | Sept 27, 2026 |
 
 ---
 
@@ -157,6 +158,14 @@
 * **Next Action:** Await portfolio review / screening response on Ashby.
 * **Detailed File:** [`01_Brief/Job_Tracker/BJAK_Product_Designer.md`](01_Brief/Job_Tracker/BJAK_Product_Designer.md)
 
+### 16. **PSC Biotech**
+* **Role:** UI/UX Designer
+* **Company Type:** Life Sciences & Quality Management Cloud SaaS (PSC Software)
+* **Date Applied:** Sept 20, 2026
+* **Status:** 🟢 Submitted
+* **Next Action:** Await screening response on Zoho Recruit.
+* **Detailed File:** [`01_Brief/Job_Tracker/PSC_Biotech_UIUX_Designer.md`](01_Brief/Job_Tracker/PSC_Biotech_UIUX_Designer.md)
+
 ---
 
 ## 🌐 Job Search Platforms & Channels
@@ -170,7 +179,7 @@
 - [ ] Bossjob Philippines
 
 ### 🌍 Global Tech & Remote Boards
-- [x] LinkedIn Jobs (Applied: Tempo Labs, HireDigital, Tellos, Fireflies.ai, BJAK)
+- [x] LinkedIn Jobs (Applied: Tempo Labs, HireDigital, Tellos, Fireflies.ai, BJAK, PSC Biotech)
 - [ ] Wellfound (formerly AngelList)
 - [ ] We Work Remotely
 - [ ] Remotive
