@@ -1,13 +1,21 @@
 # 🎯 Job Applications Tracker — 2026
 
+## 🟡 In Progress / Interviewing
+
 | Company | Position | Location / Model | Salary / Comp | Status | Date Contacted | Contact / Channel | Follow-up Target |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Setsail** | Visual Designer (Figma) | Remote (PH / Vancouver, CA) | USD $2,000 – $2,500 / mo | 🟡 1st Round Done (In Review) | Sept 7, 2026 | Lizclay Barot (LinkedIn) | Sept 24, 2026 (CEO Shortlist) |
+| **Setsail** | Visual Designer (Figma) | Remote (PH / Vancouver, CA) | USD $2,000 – $2,500 / mo | 🟡 1st Round Done (In Review) | Sept 7, 2026 | Jason Atakhanov / Lizclay Barot | Sept 24, 2026 (CEO Shortlist) |
+
+---
+
+## 🟢 Submitted / Awaiting Response
+
+| Company | Position | Location / Model | Salary / Comp | Status | Date Applied | Contact / Channel | Follow-up Target |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Tempo Labs** | Product Designer - Agent+ | Remote (Cebu City, PH) | USD $24,000 / year | 🟢 Submitted | Sept 7, 2026 | LinkedIn Application Form | Sept 21, 2026 |
 | **HireDigital** | Senior Creative Designer / Design Strategist | Remote (PH) | PHP 120k – 140k / mo | 🟢 Submitted | Sept 7, 2026 | LinkedIn Apply | Sept 21, 2026 |
 | **House of Nannies** | Senior UI/UX Product Designer | Remote (US EST / PH) | PHP 125,000 / mo | 🟢 Submitted | Sept 7, 2026 | Onlinejobs.ph | Sept 21, 2026 |
 | **Outsourced.ph** | Marketing & Product Designer | Remote (PH / Melbourne AEST) | PHP 110,000 / mo | 🟢 Submitted | Sept 7, 2026 | Jobstreet Philippines | Sept 21, 2026 |
-| **Thrive Digital** | Designer | Remote (PH / 6 AM PHT) | ₱766k / yr + 13th Mo | 🔴 Rejected (Sept 18) | Sept 14, 2026 | Michelle Nowacki (Talent Acq) | — (Closed) |
 | **ChartRequest** | UI/UX Designer – B2B SaaS | Remote | PHP 60k – 70k / mo | 🟢 Submitted | Sept 14, 2026 | Indeed SmartApply | Sept 21, 2026 |
 | **SourceAsia Business** | UX Designer II | Remote | PHP 60k – 75k / mo | 🟢 Submitted | Sept 14, 2026 | Indeed | Sept 21, 2026 |
 | **Chicken Dinner Studios** | Multimedia Designer | Remote (PH / 3-11 PM PHT) | Up to PHP 900 / hr | 🟢 Submitted | Sept 14, 2026 | Indeed | Sept 21, 2026 |
@@ -19,6 +27,12 @@
 | **BJAK** | Product Designer (UI/UX) | Remote (PH) | Competitive FinTech Full-time | 🟢 Submitted | Sept 20, 2026 | Ashby (via LinkedIn) | Sept 27, 2026 |
 
 ---
+
+## 🔴 Closed / Archived
+
+| Company | Position | Location / Model | Salary / Comp | Status | Date Applied | Outcome Date | Reason / Context |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Thrive Digital** | Designer | Remote (PH / 6 AM PHT) | ₱766k / yr + 13th Mo | 🔴 Rejected | Sept 14, 2026 | Sept 18, 2026 | Prioritized agency digital ad campaign / motion backgrounds |
 
 ## 📌 Active Applications Summary
 
