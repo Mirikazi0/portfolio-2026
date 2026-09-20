@@ -175,8 +175,8 @@
 - [x] Jobstreet Philippines (Applied: Outsourced.ph)
 - [x] Indeed Philippines (Applied: Thrive Digital, ChartRequest, SourceAsia, Chicken Dinner Studios, Waw Group Global, Top Tutors For Us)
 - [ ] VirtualStaff.ph
-- [ ] Remote Staff
-- [ ] Bossjob Philippines
+- [ ] ~~Remote Staff~~ (Scratched - low quality / no relevant UI/UX openings)
+- [ ] ~~Bossjob Philippines~~ (Scratched - low quality / no relevant UI/UX openings)
 
 ### 🌍 Global Tech & Remote Boards
 - [x] LinkedIn Jobs (Applied: Tempo Labs, HireDigital, Tellos, Fireflies.ai, BJAK, PSC Biotech)
