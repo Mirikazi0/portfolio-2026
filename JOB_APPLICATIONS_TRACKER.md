@@ -4,11 +4,11 @@
 
 | Metric | Count | Details |
 | :--- | :---: | :--- |
-| **Total Tracked Applications** | **15** | Across LinkedIn, Wellfound, Indeed, OnlineJobs.ph, Jobstreet |
+| **Total Tracked Applications** | **16** | Across LinkedIn, Wellfound, Indeed, OnlineJobs.ph, Jobstreet |
 | **🟡 In Progress / Interviewing** | **1** | **Setsail** (Figma audit completed; awaiting CEO shortlist Sept 24) |
-| **🟢 Awaiting Response** | **13** | 6 Global/US SaaS & AI, 7 PH/Direct Remote |
+| **🟢 Awaiting Response** | **14** | 7 Global/US SaaS & AI, 7 PH/Direct Remote |
 | **🔴 Closed / Archived** | **1** | Thrive Digital |
-| **🎯 Immediate Follow-Up Target** | **Sept 21** | 8 applications hitting 7–14 day review milestone tomorrow |
+| **🎯 Immediate Follow-Up Target** | **Sept 21** | 8 applications hitting 7–14 day review milestone |
 | **💼 Top Comp Range** | **$50k–$70k/yr** | Aurify (Wellfound), Setsail ($2k–$2.5k/mo), HireDigital (₱140k/mo) |
 
 ---
@@ -40,6 +40,7 @@
 | **BJAK** | Product Designer (UI/UX) | Remote (PH) | Competitive FinTech Full-time | 🟢 Submitted | Sept 20, 2026 | Ashby (via LinkedIn) | Sept 27, 2026 |
 | **PSC Biotech** | UI/UX Designer | Remote (PH / US PST) | Competitive Full-time | 🟢 Submitted | Sept 20, 2026 | Zoho Recruit (via LinkedIn) | Sept 27, 2026 |
 | **Aurify** | UI/UX Design Engineer | Remote (Everywhere / JST) | $50,000 – $70,000 / yr | 🟢 Submitted | Sept 20, 2026 | Email (careers@aurify.com) | Sept 27, 2026 |
+| **Fireflies.ai** | Brand & Web Designer | Remote (Everywhere) | Competitive Unicorn Equity & Pay | 🟢 Submitted | Sept 21, 2026 | Wellfound (Manish Shekhawat) | Sept 28, 2026 |
 
 ---
 
@@ -188,6 +189,14 @@
 * **Next Action:** Await email response from `careers@aurify.com`.
 * **Detailed File:** [`01_Brief/Job_Tracker/Aurify_UIUX_Design_Engineer.md`](01_Brief/Job_Tracker/Aurify_UIUX_Design_Engineer.md)
 
+### 18. **Fireflies.ai** (Brand & Web)
+* **Role:** Brand & Web Designer
+* **Company Type:** AI Meeting Teammate & Unicorn Platform ($1B+ Valuation)
+* **Date Applied:** Sept 21, 2026
+* **Status:** 🟢 Submitted
+* **Next Action:** Await recruiter review on Wellfound (Manish Shekhawat).
+* **Detailed File:** [`01_Brief/Job_Tracker/Fireflies_AI_Brand_Web_Designer.md`](01_Brief/Job_Tracker/Fireflies_AI_Brand_Web_Designer.md)
+
 ---
 
 ## 🌐 Job Search Platforms & Channels
@@ -202,7 +211,7 @@
 
 ### 🌍 Global Tech & Remote Boards
 - [x] LinkedIn Jobs (Applied: Tempo Labs, HireDigital, Tellos, Fireflies.ai, BJAK, PSC Biotech)
-- [x] Wellfound (formerly AngelList) (Applied: Aurify)
+- [x] Wellfound (formerly AngelList) (Applied: Aurify, Fireflies.ai)
 - [ ] We Work Remotely
 - [ ] Remotive
 - [ ] Remote.co
