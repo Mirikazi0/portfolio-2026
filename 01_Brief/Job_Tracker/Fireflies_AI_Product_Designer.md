@@ -7,7 +7,7 @@
 * Job Link: https://jobs.gem.com/fireflies/am9icG9zdDpbjKpnmgYy_Uzpsi4aSuWg
 * Work arrangement: Remote (Global team across 20+ countries)
 * Date applied: Sept 18, 2026
-* Status: 🟢 Submitted
+* Status: 🔴 Rejected (Sept 22, 2026 via Gem)
 
 ---
 
@@ -32,3 +32,10 @@
 3. Design assignment
 4. Culture round (HR & Recruiting Lead)
 5. Final round (CEO)
+
+---
+
+## Status Update (Sept 22, 2026)
+* Status: 🔴 Rejected
+* Notification: Automated email via Gem (`no-reply@appreview.gem.com`)
+* Context: Decided to move forward with other candidates whose profiles more closely matched the specific mobile/web product scope. Note: Separate application for **Brand & Web Designer** via Wellfound remains active.

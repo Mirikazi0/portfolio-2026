@@ -2,13 +2,13 @@
 
 ## 📊 Pipeline Dashboard
 
-| Metric | Count | Details |
+| **Metric** | **Count** | **Details** |
 | :--- | :---: | :--- |
 | **Total Tracked Applications** | **16** | Across LinkedIn, Wellfound, Indeed, OnlineJobs.ph, Jobstreet |
 | **🟡 In Progress / Interviewing** | **1** | **Setsail** (Figma audit completed; awaiting CEO shortlist Sept 24) |
-| **🟢 Awaiting Response** | **14** | 7 Global/US SaaS & AI, 7 PH/Direct Remote |
-| **🔴 Closed / Archived** | **1** | Thrive Digital |
-| **🎯 Immediate Follow-Up Target** | **Sept 21** | 8 applications hitting 7–14 day review milestone |
+| **🟢 Awaiting Response** | **13** | 6 Global/US SaaS & AI, 7 PH/Direct Remote |
+| **🔴 Closed / Archived** | **2** | Thrive Digital, Fireflies.ai (Product Designer) |
+| **🎯 Immediate Follow-Up Target** | **Sept 24** | Setsail CEO shortlist decision + Top Tutors For Us |
 | **💼 Top Comp Range** | **$50k–$70k/yr** | Aurify (Wellfound), Setsail ($2k–$2.5k/mo), HireDigital (₱140k/mo) |
 
 ---
@@ -36,7 +36,6 @@
 | **Top Tutors For Us** | UI/UX Designer | Remote (PH / WFH) | PHP 900 – PHP 1,800 / hr (~8 hrs/wk) | 🟢 Submitted | Sept 17, 2026 | Indeed SmartApply | Sept 24, 2026 |
 | **InfoAlanya** | Senior Product Designer (Vendor Panels) | Remote | $25 / hr (~$1,800–$2,000 project) | 🟢 Submitted | Sept 18, 2026 | Onlinejobs.ph | Sept 25, 2026 |
 | **Tellos** | Product Design Engineer | Remote (US Team) | Competitive / Unspecified | 🟢 Submitted | Sept 18, 2026 | Ashby (via LinkedIn) | Sept 25, 2026 |
-| **Fireflies.ai** | Product Designer (Mobile & Web) | Remote (Global) | Competitive Unicorn Equity & Pay | 🟢 Submitted | Sept 18, 2026 | Gem (via LinkedIn) | Sept 25, 2026 |
 | **BJAK** | Product Designer (UI/UX) | Remote (PH) | Competitive FinTech Full-time | 🟢 Submitted | Sept 20, 2026 | Ashby (via LinkedIn) | Sept 27, 2026 |
 | **PSC Biotech** | UI/UX Designer | Remote (PH / US PST) | Competitive Full-time | 🟢 Submitted | Sept 20, 2026 | Zoho Recruit (via LinkedIn) | Sept 27, 2026 |
 | **Aurify** | UI/UX Design Engineer | Remote (Everywhere / JST) | $50,000 – $70,000 / yr | 🟢 Submitted | Sept 20, 2026 | Email (careers@aurify.com) | Sept 27, 2026 |
@@ -49,6 +48,7 @@
 | Company | Position | Location / Model | Salary / Comp | Status | Date Applied | Outcome Date | Reason / Context |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Thrive Digital** | Designer | Remote (PH / 6 AM PHT) | ₱766k / yr + 13th Mo | 🔴 Rejected | Sept 14, 2026 | Sept 18, 2026 | Prioritized agency digital ad campaign / motion backgrounds |
+| **Fireflies.ai** | Product Designer (Mobile & Web) | Remote (Global) | Competitive Unicorn Equity & Pay | 🔴 Rejected | Sept 18, 2026 | Sept 22, 2026 | Automated screening rejection via Gem |
 
 ## 📌 Active Applications Summary
 
@@ -157,12 +157,12 @@
 * **Next Action:** Await review response on Ashby.
 * **Detailed File:** [`01_Brief/Job_Tracker/Tellos_Product_Design_Engineer.md`](01_Brief/Job_Tracker/Tellos_Product_Design_Engineer.md)
 
-### 14. **Fireflies.ai**
+### 14. **Fireflies.ai** (Product Designer - Mobile & Web)
 * **Role:** Product Designer (Mobile & Web)
 * **Company Type:** AI Meeting Teammate & Unicorn Platform ($1B+ Valuation)
 * **Date Applied:** Sept 18, 2026
-* **Status:** 🟢 Submitted
-* **Next Action:** Await portfolio/screening response on Gem portal.
+* **Status:** 🔴 Rejected (Sept 22, 2026 via Gem)
+* **Next Action:** Closed / archived. (Note: Brand & Web application via Wellfound remains active under #18).
 * **Detailed File:** [`01_Brief/Job_Tracker/Fireflies_AI_Product_Designer.md`](01_Brief/Job_Tracker/Fireflies_AI_Product_Designer.md)
 
 ### 15. **BJAK**
