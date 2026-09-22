@@ -4,9 +4,9 @@
 
 | **Metric** | **Count** | **Details** |
 | :--- | :---: | :--- |
-| **Total Tracked Applications** | **16** | Across LinkedIn, Wellfound, Indeed, OnlineJobs.ph, Jobstreet |
+| **Total Tracked Applications** | **17** | Across LinkedIn, Wellfound, Indeed, OnlineJobs.ph, Jobstreet |
 | **🟡 In Progress / Interviewing** | **1** | **Setsail** (Figma audit completed; awaiting CEO shortlist Sept 24) |
-| **🟢 Awaiting Response** | **13** | 6 Global/US SaaS & AI, 7 PH/Direct Remote |
+| **🟢 Awaiting Response** | **14** | 7 Global/US SaaS & AI, 7 PH/Direct Remote |
 | **🔴 Closed / Archived** | **2** | Thrive Digital, Fireflies.ai (Product Designer) |
 | **🎯 Immediate Follow-Up Target** | **Sept 24** | Setsail CEO shortlist decision + Top Tutors For Us |
 | **💼 Top Comp Range** | **$50k–$70k/yr** | Aurify (Wellfound), Setsail ($2k–$2.5k/mo), HireDigital (₱140k/mo) |
@@ -40,6 +40,7 @@
 | **PSC Biotech** | UI/UX Designer | Remote (PH / US PST) | Competitive Full-time | 🟢 Submitted | Sept 20, 2026 | Zoho Recruit (via LinkedIn) | Sept 27, 2026 |
 | **Aurify** | UI/UX Design Engineer | Remote (Everywhere / JST) | $50,000 – $70,000 / yr | 🟢 Submitted | Sept 20, 2026 | Email (careers@aurify.com) | Sept 27, 2026 |
 | **Fireflies.ai** | Brand & Web Designer | Remote (Everywhere) | Competitive Unicorn Equity & Pay | 🟢 Submitted | Sept 21, 2026 | Wellfound (Manish Shekhawat) | Sept 28, 2026 |
+| **Who Gives A Crap** | Digital Designer | Remote (PH) | Competitive Scale-up Full-time | 🟢 Submitted | Sept 22, 2026 | Greenhouse (via LinkedIn) | Sept 29, 2026 |
 
 ---
 
@@ -197,6 +198,14 @@
 * **Next Action:** Await recruiter review on Wellfound (Manish Shekhawat).
 * **Detailed File:** [`01_Brief/Job_Tracker/Fireflies_AI_Brand_Web_Designer.md`](01_Brief/Job_Tracker/Fireflies_AI_Brand_Web_Designer.md)
 
+### 19. **Who Gives A Crap**
+* **Role:** Digital Designer (Digital Product Team)
+* **Company Type:** Certified B Corp Eco-friendly Scale-up (Global Sanitation Impact)
+* **Date Applied:** Sept 22, 2026
+* **Status:** 🟢 Submitted
+* **Next Action:** Await review response on Greenhouse.
+* **Detailed File:** [`01_Brief/Job_Tracker/Who_Gives_A_Crap_Digital_Designer.md`](01_Brief/Job_Tracker/Who_Gives_A_Crap_Digital_Designer.md)
+
 ---
 
 ## 🌐 Job Search Platforms & Channels
@@ -210,7 +219,7 @@
 - [ ] ~~Bossjob Philippines~~ (Scratched - low quality / no relevant UI/UX openings)
 
 ### 🌍 Global Tech & Remote Boards
-- [x] LinkedIn Jobs (Applied: Tempo Labs, HireDigital, Tellos, Fireflies.ai, BJAK, PSC Biotech)
+- [x] LinkedIn Jobs (Applied: Tempo Labs, HireDigital, Tellos, Fireflies.ai, BJAK, PSC Biotech, Who Gives A Crap)
 - [x] Wellfound (formerly AngelList) (Applied: Aurify, Fireflies.ai)
 - [ ] We Work Remotely
 - [ ] Remotive
