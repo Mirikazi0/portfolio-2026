@@ -8,7 +8,7 @@
 * Work arrangement: Remote (Everywhere)
 * Hiring Contact: Manish Shekhawat
 * Date applied: Sept 21, 2026
-* Status: 🟢 Submitted
+* Status: 🔴 Rejected (Sept 22, 2026 via Wellfound)
 
 ---
 
@@ -26,3 +26,10 @@
 * Brand identity leadership: 22 Tango Creative School digital brand overhaul.
 * Conversion-driven web design: Interview Query (+19% conversion lift, +12% LTV).
 * High-craft product imagery: Translating complex SaaS workflows into clean, approachable visual stories.
+
+---
+
+## Status Update (Sept 22, 2026)
+* Status: 🔴 Rejected
+* Notification: Automated rejection notification via Wellfound
+* Context: Closed out candidacy on Wellfound within 24 hours. Both Fireflies.ai roles (Product Designer and Brand & Web Designer) are now archived.
