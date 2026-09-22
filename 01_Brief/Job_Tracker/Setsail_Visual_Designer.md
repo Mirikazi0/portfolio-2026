@@ -7,8 +7,8 @@
 | **Company** | Setsail (B-Corp Certified Full-Service Marketing Agency) |
 | **Position** | Visual Designer (Figma) |
 | **Location** | Remote (Philippines / Vancouver, Canada) |
-| **Salary / Comp** | TBD / Negotiable (Contract / Remote Full-time) |
-| **Status** | 🟡 Materials Ready (Ready to send response to recruiter) |
+| **Salary / Comp** | USD $2,000 – $2,500 / mo |
+| **Status** | 🔴 Closed / Position Filled (Sept 22, 2026) |
 | **Date Contacted** | Sept 7, 2026 @ 4:20 PM |
 | **Contact Person** | Lizclay Barot (Recruiter on LinkedIn) |
 | **Portfolio Link** | `https://chazgrant.me` |
@@ -71,4 +71,5 @@
 * **Sept 7, 2026:** Created job application tracker files (`JOB_APPLICATIONS_TRACKER.md` & `Setsail_Visual_Designer.md`).
 * **Sept 16, 2026:** Invited to 1st round interview by Lizclay Barot; shared notice period (1–2 weeks), current contract rate (PHP 56k/mo at 22 Tango, previous full-time rate $2,000 USD/mo at Interview Query), and expected salary ($2,000–$2,500 USD / mo).
 * **Sept 17, 2026:** 1st Round Interview with Jason Atakhanov (Founder & CEO). Live Figma file walkthrough conducted across Interview Query, Lesson Planner/Symph, and 22 Tango files to verify design authenticity, auto-layout, and layers. Jason will finalize candidate shortlists over the next week and follow up.
+* **Sept 22, 2026:** Received email from recruiter Lizclay Barot notifying that the position has been filled. Stated they appreciated the effort and will gladly reach out if the role reopens or an aligned opportunity emerges. Pipeline archived.
 

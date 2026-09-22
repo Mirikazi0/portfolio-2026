@@ -5,19 +5,17 @@
 | **Metric** | **Count** | **Details** |
 | :--- | :---: | :--- |
 | **Total Tracked Applications** | **17** | Across LinkedIn, Wellfound, Indeed, OnlineJobs.ph, Jobstreet |
-| **🟡 In Progress / Interviewing** | **1** | **Setsail** (Figma audit completed; awaiting CEO shortlist Sept 24) |
+| **🟡 In Progress / Interviewing** | **0** | All pipelines currently in submission review |
 | **🟢 Awaiting Response** | **14** | 7 Global/US SaaS & AI, 7 PH/Direct Remote |
-| **🔴 Closed / Archived** | **2** | Thrive Digital, Fireflies.ai (Product Designer) |
-| **🎯 Immediate Follow-Up Target** | **Sept 24** | Setsail CEO shortlist decision + Top Tutors For Us |
-| **💼 Top Comp Range** | **$50k–$70k/yr** | Aurify (Wellfound), Setsail ($2k–$2.5k/mo), HireDigital (₱140k/mo) |
+| **🔴 Closed / Archived** | **3** | Thrive Digital, Fireflies.ai (Product), Setsail |
+| **🎯 Immediate Follow-Up Target** | **Sept 24** | Top Tutors For Us (Indeed 7-day review) |
+| **💼 Top Comp Range** | **$50k–$70k/yr** | Aurify (Wellfound), Tellos, HireDigital (₱140k/mo) |
 
 ---
 
 ## 🟡 In Progress / Interviewing
 
-| Company | Position | Location / Model | Salary / Comp | Status | Date Contacted | Contact / Channel | Follow-up Target |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Setsail** | Visual Designer (Figma) | Remote (PH / Vancouver, CA) | USD $2,000 – $2,500 / mo | 🟡 1st Round Done (In Review) | Sept 7, 2026 | Jason Atakhanov / Lizclay Barot | Sept 24, 2026 (CEO Shortlist) |
+*(No active interviews right now — focus on submissions and pipeline generation)*
 
 ---
 
@@ -48,6 +46,7 @@
 
 | Company | Position | Location / Model | Salary / Comp | Status | Date Applied | Outcome Date | Reason / Context |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Setsail** | Visual Designer (Figma) | Remote (PH / Vancouver, CA) | USD $2,000 – $2,500 / mo | 🔴 Position Filled | Sept 7, 2026 | Sept 22, 2026 | Completed 1st round CEO Figma audit; role filled by team |
 | **Thrive Digital** | Designer | Remote (PH / 6 AM PHT) | ₱766k / yr + 13th Mo | 🔴 Rejected | Sept 14, 2026 | Sept 18, 2026 | Prioritized agency digital ad campaign / motion backgrounds |
 | **Fireflies.ai** | Product Designer (Mobile & Web) | Remote (Global) | Competitive Unicorn Equity & Pay | 🔴 Rejected | Sept 18, 2026 | Sept 22, 2026 | Automated screening rejection via Gem |
 
@@ -58,8 +57,8 @@
 * **Company Type:** B-Corp Certified Full-Service Marketing Agency (Vancouver, Canada)
 * **Recruiter:** Lizclay Barot | **Interviewer:** Jason Atakhanov (Founder & CEO)
 * **Date Reached Out:** Sept 7, 2026 @ 4:20 PM
-* **Status:** 🟡 1st Round Completed (Sept 17, 2026) — CEO live Figma audit conducted (Interview Query, Lesson Planner, 22 Tango). CEO finalizing candidate shortlist next week.
-* **Next Action:** Send thank-you note; await shortlist update / follow up by Sept 24, 2026.
+* **Status:** 🔴 Closed / Position Filled (Sept 22, 2026) — Received email from Lizclay Barot that the position has been filled. Recruiter noted they will keep profile on file for future openings.
+* **Next Action:** Closed / archived.
 * **Detailed File:** [`01_Brief/Job_Tracker/Setsail_Visual_Designer.md`](01_Brief/Job_Tracker/Setsail_Visual_Designer.md)
 
 ### 2. **Tempo Labs**
