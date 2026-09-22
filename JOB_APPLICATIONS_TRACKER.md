@@ -4,12 +4,12 @@
 
 | **Metric** | **Count** | **Details** |
 | :--- | :---: | :--- |
-| **Total Tracked Applications** | **17** | Across LinkedIn, Wellfound, Indeed, OnlineJobs.ph, Jobstreet |
+| **Total Tracked Applications** | **18** | Across LinkedIn, Wellfound, Indeed, OnlineJobs.ph, Jobstreet, Reddit |
 | **🟡 In Progress / Interviewing** | **0** | All pipelines currently in submission review |
-| **🟢 Awaiting Response** | **14** | 7 Global/US SaaS & AI, 7 PH/Direct Remote |
+| **🟢 Awaiting Response** | **15** | 8 Global/US SaaS & AI, 7 PH/Direct Remote |
 | **🔴 Closed / Archived** | **3** | Thrive Digital, Fireflies.ai (Product), Setsail |
 | **🎯 Immediate Follow-Up Target** | **Sept 24** | Top Tutors For Us (Indeed 7-day review) |
-| **💼 Top Comp Range** | **$50k–$70k/yr** | Aurify (Wellfound), Tellos, HireDigital (₱140k/mo) |
+| **💼 Top Comp Range** | **$50k–$70k/yr** | Aurify (Wellfound), Tellos, Kristoph ($2.5k/mo), HireDigital (₱140k/mo) |
 
 ---
 
@@ -39,6 +39,7 @@
 | **Aurify** | UI/UX Design Engineer | Remote (Everywhere / JST) | $50,000 – $70,000 / yr | 🟢 Submitted | Sept 20, 2026 | Email (careers@aurify.com) | Sept 27, 2026 |
 | **Fireflies.ai** | Brand & Web Designer | Remote (Everywhere) | Competitive Unicorn Equity & Pay | 🟢 Submitted | Sept 21, 2026 | Wellfound (Manish Shekhawat) | Sept 28, 2026 |
 | **Who Gives A Crap** | Digital Designer | Remote (PH) | Competitive Scale-up Full-time | 🟢 Submitted | Sept 22, 2026 | Greenhouse (via LinkedIn) | Sept 29, 2026 |
+| **DesignTeam.co (Kristoph)** | Senior Graphic & Web Designer | Remote (US PT / 6am-3pm PT) | USD $2,500 / mo | 🟢 Submitted | Sept 22, 2026 | Direct Email (kristoph@designteam.co) | Sept 29, 2026 |
 
 ---
 
@@ -205,6 +206,14 @@
 * **Next Action:** Await review response on Greenhouse.
 * **Detailed File:** [`01_Brief/Job_Tracker/Who_Gives_A_Crap_Digital_Designer.md`](01_Brief/Job_Tracker/Who_Gives_A_Crap_Digital_Designer.md)
 
+### 20. **DesignTeam.co (Kristoph)**
+* **Role:** Senior Graphic & Web Designer
+* **Company Type:** B2B Marketing Services for Manufacturing, Industrial & Logistics (Los Angeles)
+* **Date Applied:** Sept 22, 2026
+* **Status:** 🟢 Submitted
+* **Next Action:** Await email response from `kristoph@designteam.co`.
+* **Detailed File:** [`01_Brief/Job_Tracker/DesignTeam_Kristoph_Senior_Designer.md`](01_Brief/Job_Tracker/DesignTeam_Kristoph_Senior_Designer.md)
+
 ---
 
 ## 🌐 Job Search Platforms & Channels
@@ -213,6 +222,7 @@
 - [x] Onlinejob.ph (Applied: House of Nannies, InfoAlanya)
 - [x] Jobstreet Philippines (Applied: Outsourced.ph)
 - [x] Indeed Philippines (Applied: Thrive Digital, ChartRequest, SourceAsia, Chicken Dinner Studios, Waw Group Global, Top Tutors For Us)
+- [x] Direct Outreach / Community Boards (Applied: DesignTeam.co via Reddit)
 - [ ] VirtualStaff.ph
 - [ ] ~~Remote Staff~~ (Scratched - low quality / no relevant UI/UX openings)
 - [ ] ~~Bossjob Philippines~~ (Scratched - low quality / no relevant UI/UX openings)
