@@ -4,31 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaz Borromeo</title>
+    <title>Chaz Borromeo | Graphic & Multimedia Designer</title>
     <meta name="description"
-        content="Chaz Borromeo is a Graphic Designer specialising in brand identity, marketing visuals, ad creatives, and packaging design.">
+        content="Chaz Borromeo is a Graphic & Multimedia Designer with 5+ years of experience specialising in brand identity, packaging design, print collateral, and visual systems.">
     <link rel="icon" type="image/jpeg" href="./04_Assets/Images/profile.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Caveat:wght@600&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&display=swap"
         rel="stylesheet">
     <style>
         :root {
-            --bg-color: #FAFAFA;
-            --dark-bg: #111111;
-            --text-main: #000000;
-            --text-light: #FFFFFF;
-            --accent-blue: #4F46E5;
-            --accent-orange: #FF6B6B;
-            --accent-yellow: #FbbF24;
+            --bg-color: #F7F5F0;
+            --dark-bg: #F7F5F0;
+            --text-main: #111111;
+            --text-light: #111111;
+            --text-muted: #374151;
+            --accent-blue: #2563EB;
+            --accent-purple: #7C3AED;
             --font-main: 'Figtree', sans-serif;
-            --border-dark: 2px solid #000000;
-            --border-light: 2px solid rgba(255, 255, 255, 0.15);
-            --shadow-solid: 4px 4px 0px 0px rgba(0, 0, 0, 1);
-            --shadow-hover: 6px 6px 0px 0px rgba(0, 0, 0, 1);
-            --shadow-dark-solid: 4px 4px 0px 0px rgba(255, 255, 255, 1);
-            --shadow-dark-hover: 6px 6px 0px 0px rgba(255, 255, 255, 1);
+            --font-display: 'Newsreader', Georgia, serif;
+            --font-script: 'Caveat', cursive;
+            --border-dark: 1px solid #111111;
+            --border-light: 1px solid rgba(0, 0, 0, 0.1);
+            --shadow-solid: 4px 4px 0px 0px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 6px 6px 0px 0px rgba(0, 0, 0, 0.12);
+            --shadow-dark-solid: 4px 4px 0px 0px rgba(9, 9, 9, 0.08);
+            --shadow-dark-hover: 6px 6px 0px 0px rgba(9, 9, 9, 0.12);
         }
 
         * {
@@ -44,8 +46,10 @@
         body {
             font-family: var(--font-main);
             background-color: var(--bg-color);
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+            background-size: 140px 100%;
             color: var(--text-main);
-            line-height: 1.6;
+            line-height: 1.5;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -54,9 +58,96 @@
             color: inherit;
         }
 
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--accent-blue) !important;
+            outline-offset: 3px !important;
+            border-radius: 4px;
+        }
+
+        .skip-to-content {
+            position: absolute;
+            top: -60px;
+            left: 1rem;
+            background: #111111;
+            color: #ffffff;
+            padding: 0.6rem 1.25rem;
+            font-weight: 600;
+            z-index: 9999;
+            transition: top 0.2s ease;
+            border-radius: 9999px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .skip-to-content:focus {
+            top: 1rem;
+        }
+
+        .cookie-banner {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            max-width: 440px;
+            background: #0A0E1A;
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 16px;
+            padding: 1.25rem 1.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+            z-index: 9999;
+            display: none;
+            font-size: 0.95rem;
+        }
+
+        .cookie-banner.visible {
+            display: block;
+        }
+
+        .cookie-banner-actions {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            align-items: center;
+        }
+
+        .cookie-btn-primary {
+            background: #2563EB;
+            color: #FFFFFF;
+            border: none;
+            padding: 0.55rem 1.2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: background 0.2s ease;
+        }
+
+        .cookie-btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .cookie-btn-secondary {
+            background: transparent;
+            color: #D1D5DB;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 0.55rem 1.2rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .cookie-btn-secondary:hover {
+            border-color: #FFFFFF;
+            color: #FFFFFF;
+        }
+
         p {
             font-size: 1.125rem;
-            color: #333333;
+            color: var(--text-muted);
         }
 
         .container {
@@ -68,36 +159,54 @@
         /* --- Navigation --- */
         nav {
             position: sticky;
-            top: 1.5rem;
-            z-index: 100;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: fit-content;
-            margin: 0 auto;
-            padding: 0.75rem 2.5rem;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(12px);
-            border: var(--border-dark);
-            border-radius: 9999px;
-            box-shadow: var(--shadow-solid);
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            background: linear-gradient(to bottom, rgba(247, 245, 240, 0.96) 0%, rgba(247, 245, 240, 0.65) 60%, rgba(247, 245, 240, 0) 100%);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: none;
             transition: all 0.3s ease;
+        }
+
+        .nav-inner {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.125rem;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+            transition: opacity 0.2s ease;
+        }
+
+        .nav-logo:hover {
+            opacity: 0.7;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            align-items: center;
+            gap: 2.5rem;
             font-weight: 500;
             font-size: 1rem;
-            letter-spacing: 0.5px;
         }
 
         .nav-links a {
-            transition: color 0.2s;
+            color: #666666;
+            transition: color 0.2s ease;
         }
 
         .nav-links a:hover {
-            color: var(--accent-blue);
+            color: var(--text-main);
         }
 
         .pill-button {
@@ -110,7 +219,7 @@
             border-radius: 9999px;
             border: var(--border-dark);
             background-color: var(--text-main);
-            color: var(--text-light);
+            color: #ffffff;
             cursor: pointer;
             transition: all 0.2s ease;
             box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
@@ -121,268 +230,300 @@
             box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
         }
 
+        .pill-button.primary {
+            background-color: var(--accent-blue);
+        }
+
+        /* --- Sections Core --- */
         section {
             padding: 8rem 0;
         }
 
         .section-header {
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
             border-bottom: var(--border-dark);
-            padding-bottom: 1rem;
+            padding-bottom: 0.75rem;
         }
 
         .section-title {
-            font-size: 3rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            font-family: var(--font-display);
+            font-size: 2.25rem;
+            font-weight: 500;
+            letter-spacing: -0.03em;
+            text-transform: none;
+            line-height: 1.1;
+            color: var(--text-main);
         }
 
-        .dark-section {
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-            border-top: var(--border-dark);
-            border-bottom: var(--border-dark);
-        }
-
-        .dark-section .section-title {
-            color: var(--text-light);
-        }
-
-        .dark-section .section-header {
-            border-bottom: var(--border-light);
-        }
-
-        .dark-section p {
-            color: #bbbbbb;
-        }
-
-        /* --- Hero --- */
-        .hero {
-            padding: 5rem 0 1.5rem;
-            min-height: 85vh;
-            justify-content: center;
-            text-align: center;
+        /* --- Split Scroll Layout --- */
+        .split-scroll-container {
+            display: flex;
             position: relative;
+            width: 100%;
+            align-items: flex-start;
             background-color: var(--bg-color);
-            background-size: 60px 60px;
-            background-image:
-                linear-gradient(to right, rgba(220, 210, 200, 0.4) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(220, 210, 200, 0.4) 1px, transparent 1px);
         }
 
-        .hero-content {
-            position: relative;
+        .sticky-left-pane {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            flex: 0 0 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
             z-index: 10;
+        }
+
+        .scrollable-right-pane {
+            flex: 0 0 60%;
+            padding-top: 100vh; /* Spacer so projects scroll into view */
+            background-color: transparent;
+            position: relative;
+            z-index: 11;
+        }
+
+        .scrollable-right-pane #projects {
+            border-top: none;
+            padding: 4rem 2.5rem 4rem 1rem;
+        }
+
+        .scrollable-right-pane .container {
+            max-width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .hero-text-block {
+            width: 90%;
+            max-width: 480px;
+            text-align: center;
+            z-index: 100;
+            will-change: transform, left, top, opacity;
+            transition: opacity 0.3s ease, text-align 0.35s ease, align-items 0.35s ease;
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-
-        .hero-profile {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-bottom: 1.5rem;
-            border: 2px solid rgba(0, 0, 0, 0.1);
-            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
-            background-color: var(--accent-yellow);
-        }
-
-        .hero-profile img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .hero-intro {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #555;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
+            justify-content: center;
+            margin: 0 auto;
         }
 
         .hero-heading {
-            font-size: 3.2rem;
-            font-weight: 600;
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 4vw, 3.45rem);
+            font-weight: 700;
             line-height: 1.15;
-            letter-spacing: -1px;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            color: #111;
+            letter-spacing: -1.2px;
+            max-width: 480px;
+            margin: 0 auto 1.5rem;
+            text-transform: none;
+            color: var(--text-main);
+            text-align: inherit;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .heading-line {
-            display: inline-block;
+            display: block;
+            width: 100%;
             margin-bottom: 0.5rem;
+            text-align: inherit;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        #type-3 {
+            display: block;
+            width: 100%;
+            text-align: inherit;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .highlight-pill.blue-pill {
             position: relative;
             display: inline-block;
             background-color: var(--accent-blue);
-            padding: 0.5rem 1.5rem;
-            border-radius: 16px;
+            padding: 0.35rem 1.25rem;
+            border-radius: 14px;
             border: none;
             transform: rotate(-3deg);
             color: #fff;
-            margin-right: 0.5rem;
+            margin-right: 0.25rem;
             vertical-align: middle;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), margin 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .floating-cursor {
             position: absolute;
-            bottom: -20px;
-            right: -25px;
+            bottom: -15px;
+            right: -20px;
+            width: 28px;
+            height: 28px;
             filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
             z-index: 5;
         }
 
         .hero-copy {
-            font-size: 1.25rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            max-width: 480px;
+            margin: 0 auto 1.25rem;
             color: #555;
             font-weight: 400;
             line-height: 1.5;
+            text-align: inherit;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .hero-cta-group {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .text-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
+        .hero-tags {
+            font-size: 0.875rem;
             font-weight: 600;
-            font-size: 1.1rem;
-            color: var(--text-main);
-            transition: opacity 0.2s;
-        }
-
-        .text-button:hover {
-            opacity: 0.7;
-        }
-
-        .circle-arrow {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            border: 1px solid #000;
-            font-size: 1rem;
-        }
-
-        .scroll-indicator {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 1rem;
-            animation: bounce 2s infinite ease-in-out;
             color: #888;
-            cursor: pointer;
-            transition: color 0.2s;
+            letter-spacing: 0.02em;
+            margin: 0 auto;
+            text-align: inherit;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .scroll-indicator:hover {
-            color: var(--accent-blue);
+        .hero-text-block.docked-left {
+            text-align: left;
+            align-items: flex-start;
         }
 
-        @keyframes bounce {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(10px);
-            }
+        .hero-text-block.docked-left .hero-heading,
+        .hero-text-block.docked-left .heading-line,
+        .hero-text-block.docked-left #type-3,
+        .hero-text-block.docked-left .hero-copy,
+        .hero-text-block.docked-left .hero-tags {
+            text-align: left;
+            margin-left: 0;
+            margin-right: 0;
         }
 
-        /* --- Case Studies --- */
+        /* --- Case Studies Layout (Horizontal Editorial Cards) --- */
         .case-study-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.75rem;
+            padding: 1rem 0 2rem;
         }
 
         .case-study-card {
+            width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 0.75rem;
             cursor: pointer;
             text-decoration: none;
             color: inherit;
         }
 
-        .case-study-image {
+        .case-study-card-inner {
             width: 100%;
-            aspect-ratio: 16/10;
-            border: var(--border-light);
+            min-height: 480px;
+            height: auto;
+            background: #FFFFFF;
             border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
             overflow: hidden;
-            box-shadow: var(--shadow-dark-solid);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: grid;
+            grid-template-columns: 1fr 1.35fr;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .case-study-image:hover {
-            transform: translate(-3px, -3px);
-            box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 1);
+        .case-study-card:hover .case-study-card-inner {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
         }
 
-        .case-study-image img {
+        .case-study-card-left {
+            padding: 3rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1.5rem;
+            color: #111;
+            background: #FFFFFF;
+            box-sizing: border-box;
+        }
+
+        .cs-eyebrow {
+            font-family: var(--font-script);
+            font-size: 1.35rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        .cs-headline {
+            font-family: var(--font-display);
+            font-size: clamp(1.45rem, 1.85vw, 1.8rem);
+            font-weight: 700;
+            line-height: 1.25;
+            letter-spacing: -0.5px;
+            color: #111;
+            margin: 0.25rem 0 0.65rem 0;
+        }
+
+        .cs-headline span {
+            color: var(--accent-blue);
+            font-style: italic;
+        }
+
+        .cs-description {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .cs-metric {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #111;
+            margin-top: 1.25rem;
+            border-left: 3px solid var(--accent-blue);
+            padding-left: 0.85rem;
+            line-height: 1.45;
+            font-family: var(--font-main);
+        }
+
+        .cs-footer {
+            font-size: 0.78rem;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        .case-study-card-right {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #FAF9F6;
+        }
+
+        .case-study-card-right img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center center;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .case-study-info h3 {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: #fff;
+        .case-study-card:hover .case-study-card-right img {
+            transform: scale(1.04);
         }
 
-        .case-study-info p {
-            font-size: 1.15rem;
-            color: #bbb;
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
-
-        .case-study-tags {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-top: 0.5rem;
-        }
-
-        .tag {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(4px);
-            padding: 0.25rem 0.85rem;
-            border-radius: 9999px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            color: #ddd;
-        }
-
-        /* --- Marquee --- */
+        /* --- Tech Stack Carousel (White) --- */
         .marquee-section {
             padding: 4rem 0;
             background-color: var(--bg-color);
@@ -427,7 +568,58 @@
             }
         }
 
-        /* --- Experience --- */
+        /* --- About Section (3-Column Polaroid + Center Sticky Text) --- */
+        .about-grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.6fr 1fr;
+            gap: 3rem;
+            align-items: flex-start;
+            position: relative;
+            padding: 6rem 2rem 8rem;
+        }
+
+        .scroll-image-col {
+            display: flex;
+            flex-direction: column;
+            gap: 6rem;
+            z-index: 1;
+        }
+
+        .polaroid-placeholder {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: #fff;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .polaroid-placeholder:hover {
+            transform: scale(1.02) !important;
+        }
+
+        .sticky-text-wrapper {
+            position: sticky;
+            top: 25vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .scroll-highlight-text {
+            color: #111;
+            font-family: var(--font-main);
+        }
+
+        .scroll-highlight-text p {
+            color: #222;
+        }
+
+
+        /* --- Experience Section --- */
         .experience-list {
             display: flex;
             flex-direction: column;
@@ -437,136 +629,92 @@
             display: grid;
             grid-template-columns: 1fr 2fr 1fr;
             align-items: center;
-            padding: 1.15rem 0;
-            border-top: 1px solid #ebebeb;
+            padding: 1.8rem 0;
+            border-top: 1px solid #e5e5e5;
             gap: 1.5rem;
             transition: background 0.2s ease;
         }
 
         .experience-row:hover {
-            background: #f9f9f9;
+            background: rgba(0, 0, 0, 0.02);
             padding-left: 0.75rem;
             padding-right: 0.75rem;
             margin-left: -0.75rem;
-            margin-right: -0.75rem;
-            border-radius: 6px;
         }
 
         .exp-date {
-            font-size: 0.85rem;
-            color: #999;
+            font-size: 0.95rem;
+            color: #666;
             font-weight: 500;
-            letter-spacing: 0.3px;
         }
 
         .exp-role {
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: #111;
-            letter-spacing: -0.3px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-main);
         }
 
         .exp-company {
-            font-size: 0.9rem;
-            color: #777;
-            font-weight: 600;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #555;
             text-align: right;
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
-        font-weight: 500;
-        text-align: right;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+        /* --- Contact (Dark) --- */
+        .dark-section {
+            background-color: #0A0E1A;
+            color: #FFFFFF;
+            padding: 6rem 0;
         }
 
-        @media (max-width: 768px) {
-            .experience-row {
-                grid-template-columns: 1fr;
-                gap: 0.4rem;
-            }
-
-            .exp-company {
-                text-align: left;
-            }
+        .dark-section p {
+            color: #E2E8F0;
         }
 
-        /* --- About Scroll Layout --- */
-        .about-grid-layout {
-            display: grid;
-            grid-template-columns: minmax(120px, 1fr) minmax(300px, 2.5fr) minmax(120px, 1fr);
-            gap: 3rem;
-            align-items: start;
-            position: relative;
+        .contact-cta {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 2rem;
+            text-transform: none;
+            color: #FFFFFF;
         }
 
-        .sticky-text-wrapper {
-            position: sticky;
-            top: 15vh;
-            padding: 4rem 1rem;
-            z-index: 10;
-        }
-
-        .scroll-highlight-text {
-            background: linear-gradient(to bottom, #111 var(--scroll-p, 0%), #ccc var(--scroll-p, 0%));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .scroll-image-col {
+        .contact-links {
             display: flex;
-            flex-direction: column;
-            gap: 25vh;
-            padding-bottom: 25vh;
-            padding-top: 10vh;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
-        .scroll-image-col.right-col {
-            margin-top: 20vh;
-        }
-
-        .polaroid-placeholder {
-            width: 100%;
-            aspect-ratio: 1/1;
-            background-color: #222;
-            border: 8px solid #fff;
-            border-bottom: 30px solid #fff;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-            border-radius: 2px;
-            display: flex;
+        .pill-outline-light {
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            color: #fff;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            font-weight: 500;
-            transition: transform 0.3s ease;
+            gap: 0.75rem;
+            padding: 0.85rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 1rem;
+            background: transparent;
+            border: 1.5px solid rgba(255, 255, 255, 0.25);
+            color: #FFFFFF;
+            transition: all 0.2s ease;
+            text-transform: none;
+            cursor: pointer;
+            font-family: var(--font-main);
         }
 
-        .polaroid-placeholder:hover {
-            transform: scale(1.05) rotate(0) !important;
-            z-index: 20;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        .pill-outline-light:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            box-shadow: none;
+            color: #FFFFFF;
         }
 
-        @media(max-width: 900px) {
-            .about-grid-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .scroll-image-col {
-                display: none;
-            }
-
-            .sticky-text-wrapper {
-                position: static;
-                padding: 0;
-            }
-        }
-
-        /* --- Copy Toast --- */
+        /* --- Email Copy Toast --- */
         .copy-toast {
             position: fixed;
             bottom: 2rem;
@@ -595,99 +743,12 @@
             transform: translateX(-50%) translateY(0);
         }
 
-        button.pill-outline-light {
-            font-family: var(--font-main);
-            cursor: pointer;
-        }
-
-        .contact-cta {
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: -1px;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .pill-outline-light {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.6rem;
-            padding: 0.75rem 2rem;
-            font-weight: 600;
-            font-size: 1rem;
-            border-radius: 9999px;
-            border: 2px solid #fff;
-            color: #fff;
-            background: transparent;
-            transition: all 0.2s ease;
-            text-transform: uppercase;
-        }
-
-        .pill-outline-light:hover {
-            background: #fff;
-            color: #000;
-            transform: translate(-2px, -2px);
-            box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 1);
-        }
-
         footer {
-            background: var(--dark-bg);
-            color: #888;
-            padding: 2rem 0;
-            text-align: center;
+            background-color: #0A0E1A;
+            color: #888888;
+            padding: 2.5rem 0;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-
-        @media(max-width: 900px) {
-            .nav-links {
-                gap: 1rem;
-                font-size: 0.95rem;
-            }
-
-            nav {
-                padding: 0.75rem 1.5rem;
-            }
-
-            .hero-heading {
-                font-size: 1.7rem;
-                line-height: 1.25;
-                letter-spacing: 0;
-            }
-
-            .case-study-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .contact-cta {
-                font-size: 4rem;
-            }
-
-            .contact-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .contact-links .pill-outline-light {
-                width: 100%;
-            }
+            font-size: 0.875rem;
         }
 
         /* --- Scroll Animations --- */
@@ -703,68 +764,87 @@
             transform: translateY(0);
         }
 
-        /* --- Graphic Design / Creative Work --- */
-        .creative-work-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
+        /* Responsive rules */
+        @media(max-width: 900px) {
+            .nav-inner {
+                padding: 1.25rem 1.5rem;
+            }
 
-        .creative-work-card {
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-        }
+            .nav-links {
+                gap: 1.25rem;
+                font-size: 0.95rem;
+            }
 
-        .creative-work-image {
-            width: 100%;
-            aspect-ratio: 16/10;
-            border: var(--border-light);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow-dark-solid);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
+            .split-scroll-container {
+                display: block;
+            }
 
-        .creative-work-image:hover {
-            transform: translate(-3px, -3px);
-            box-shadow: var(--shadow-dark-hover);
-        }
+            .sticky-left-pane {
+                position: relative;
+                height: auto;
+                width: 100%;
+                padding: 6rem 1.5rem 3rem;
+                display: block;
+            }
 
-        .creative-work-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+            .hero-text-block {
+                position: relative !important;
+                left: 0 !important;
+                top: 0 !important;
+                transform: none !important;
+                width: 100% !important;
+                text-align: center !important;
+                margin: 0 auto;
+            }
 
-        .creative-work-info h3 {
-            font-size: 1.35rem;
-            font-weight: 600;
-            color: #fff;
-        }
+            .scrollable-right-pane {
+                width: 100%;
+                padding-top: 0;
+            }
 
-        .creative-work-tags {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
+            .scrollable-right-pane #projects {
+                padding: 3rem 1.5rem;
+            }
 
-        .creative-work-tag {
-            padding: 0.2rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            background: rgba(255, 255, 255, 0.06);
-            color: #ccc;
-        }
-
-        @media (max-width: 900px) {
-            .creative-work-grid {
+            .case-study-card-inner {
                 grid-template-columns: 1fr;
+                height: auto;
+            }
+
+            .case-study-card-left {
+                padding: 2.25rem 1.75rem;
+            }
+
+            .case-study-card-right {
+                height: 260px;
+                order: -1;
+            }
+
+            .about-grid-layout {
+                grid-template-columns: 1fr;
+                padding: 4rem 1.5rem;
+            }
+
+            .scroll-image-col {
+                display: none;
+            }
+
+            .sticky-text-wrapper {
+                position: relative;
+                top: 0;
+            }
+
+            .contact-cta {
+                font-size: 3.5rem;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .contact-links .pill-outline-light {
+                width: 100%;
             }
         }
     </style>
@@ -773,415 +853,497 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
     <!-- Custom Cursor -->
-    <div id="custom-cursor">
+    <div id="custom-cursor" aria-hidden="true">
         <span>VIEW</span>
     </div>
 
-    <nav>
-        <div class="nav-links">
-            <a href="./graphicdesigner.html">Home</a>
-            <a href="./graphicdesigner.html#graphic-design">Case Studies</a>
-            <a href="https://drive.google.com/file/d/1FpuwFWPljKB5AJVd669N6s1bO_8wdF8C/view" target="_blank"
-                rel="noopener noreferrer">Resume</a>
-        </div>
-    </nav>
-
-    <!-- Hero (White w/ Grid) -->
-    <header class="hero">
-        <div class="container hero-content">
-            <div class="hero-profile">
-                <img src="./04_Assets/Images/profile.jpeg" alt="Chaz Grant">
-            </div>
-            <h2 class="hero-intro">Hello there 👋, I'm Chaz.</h2>
-            <h1 class="hero-heading">
-                <div class="heading-line">
-                    <span class="highlight-pill blue-pill" id="pill-box" style="visibility: hidden;">
-                        <svg class="floating-cursor" id="cursor-svg" style="opacity: 0; transition: opacity 0.3s;"
-                            width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.5 3.5L19.5 10.5L12.5 13.5L9.5 20.5L5.5 3.5Z" fill="#111" stroke="#fff"
-                                stroke-width="2" stroke-linejoin="round" />
-                        </svg>
-                        <span id="type-1">Graphic Designer</span>
-                    </span>
-                    <span id="type-2"> crafting visuals</span>
+    <!-- Header Navigation -->
+    <header>
+        <nav aria-label="Main Navigation">
+            <div class="nav-inner">
+                <a href="./graphicdesigner.html" class="nav-logo" aria-label="Chaz Borromeo Home">Chaz Borromeo</a>
+                <div class="nav-links">
+                    <a href="./graphicdesigner.html#projects">Work</a>
+                    <a href="./graphicdesigner.html#about">About</a>
+                    <a href="./graphicdesigner.html#experience">Experience</a>
+                    <a href="https://drive.google.com/file/d/1FpuwFWPljKB5AJVd669N6s1bO_8wdF8C/view" target="_blank"
+                        rel="noopener noreferrer" aria-label="Open Resume PDF in new tab">Resume</a>
                 </div>
-                <div id="type-3" style="display: inline-block;">that move people.</div>
-            </h1>
-
-            <p class="hero-copy">Designing visuals that build brands and drive real results.</p>
-
-            <div class="hero-cta-group">
-                <a href="./graphicdesigner.html#contact" class="pill-button"
-                    style="padding: 1rem 2.5rem; font-size: 1.1rem; border: none; background: #111;">Get in touch</a>
             </div>
-
-            <a href="./graphicdesigner.html#projects" class="scroll-indicator" aria-label="Scroll down to projects">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 5v14M19 12l-7 7-7-7" />
-                </svg>
-            </a>
-        </div>
+        </nav>
     </header>
 
-    <!-- Graphic Design Work (White) -->
-    <section id="graphic-design" class="dark-section"
-        style="background-image: radial-gradient(rgba(255, 255, 255, 0.07) 2px, transparent 2px); background-size: 28px 28px;">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2 class="section-title">SELECTED PROJECTS</h2>
-                <a href="./beyond-product.html" class="text-button" style="white-space: nowrap;">
-                    View all work
-                    <span class="circle-arrow">→</span>
-                </a>
+    <main id="main-content">
+        <!-- Split Scroll Wrapper Container -->
+        <div class="split-scroll-container">
+
+            <!-- Left Sticky Pane (Hero content) -->
+            <div class="sticky-left-pane">
+                <div class="hero-text-block" id="hero-text-block">
+                    <h1 class="hero-heading">
+                        <div class="heading-line">
+                            Crafting visuals
+                            <span class="highlight-pill blue-pill" id="pill-box">
+                                <svg class="floating-cursor" id="cursor-svg" style="opacity: 0; transition: opacity 0.3s;"
+                                    width="36" height="36" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.5 3.5L19.5 10.5L12.5 13.5L9.5 20.5L5.5 3.5Z" fill="#111" stroke="#fff"
+                                        stroke-width="2" stroke-linejoin="round" />
+                                </svg>
+                                <span id="type-1">that move</span>
+                            </span>
+                        </div>
+                        <div id="type-3">people.</div>
+                    </h1>
+
+                    <p class="hero-copy">I'm Chaz, a <strong>Graphic & Multimedia Designer</strong> creating bold visual identities, custom packaging, and print collateral that make brands unforgettable.</p>
+
+                    <p class="hero-tags">5+ years&nbsp;·&nbsp;Brand Identity&nbsp;·&nbsp;Packaging&nbsp;·&nbsp;Print & Collateral&nbsp;·&nbsp;Visual Direction</p>
+                </div>
             </div>
-            <div class="creative-work-grid">
-                <a href="./krispy-kombi.html" class="creative-work-card reveal">
-                    <div class="creative-work-image">
-                        <img src="./04_Assets/Images/Krispy Kombi.png" alt="Krispy Kombi Brand Identity and Packaging">
-                    </div>
-                    <div class="creative-work-info">
-                        <h3>Krispy Kombi</h3>
-                        <div class="creative-work-tags">
-                            <span class="creative-work-tag">Brand Identity</span>
-                            <span class="creative-work-tag">Package Design</span>
+
+            <!-- Right Scrollable Pane (Graphic Design Case Studies) -->
+            <div class="scrollable-right-pane">
+                <section id="projects">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2 class="section-title">Selected Projects</h2>
+                        </div>
+                        <div class="case-study-grid">
+
+                            <!-- 1. Krispy Kombi -->
+                            <a href="./krispy-kombi.html" class="case-study-card">
+                                <div class="case-study-card-inner">
+                                    <div class="case-study-card-left">
+                                        <div>
+                                            <div class="cs-eyebrow">Brand Identity · Custom Packaging</div>
+                                            <h3 class="cs-headline">Krispy Kombi. Retro vibe, vibrant packaging.</h3>
+                                            <p class="cs-description">Designed a nostalgic yet modern visual identity system, character illustrations, and production-ready packaging for an artisan snack brand.</p>
+                                        </div>
+                                        <div>
+                                            <div class="cs-metric">
+                                                Custom character mascot · Print-ready packaging rollout · Merch
+                                            </div>
+                                            <div class="cs-footer">krispy kombi · 2024</div>
+                                        </div>
+                                    </div>
+                                    <div class="case-study-card-right" style="background-color: #FAF5F0;">
+                                        <img src="./04_Assets/Images/Krispy Kombi.png" alt="Krispy Kombi Brand Identity and Packaging">
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- 2. Chewi Kiwi -->
+                            <a href="./chewi-kiwi.html" class="case-study-card">
+                                <div class="case-study-card-inner">
+                                    <div class="case-study-card-left">
+                                        <div>
+                                            <div class="cs-eyebrow">Packaging Design · Character Art</div>
+                                            <h3 class="cs-headline">Chewi Kiwi. Playful cereal with shelf presence.</h3>
+                                            <p class="cs-description">Developed an energetic cereal packaging system featuring bespoke mascot artwork, custom typography, and high-impact retail shelf appeal.</p>
+                                        </div>
+                                        <div>
+                                            <div class="cs-metric">
+                                                Eye-catching shelf presence · Vector art & dieline prepress
+                                            </div>
+                                            <div class="cs-footer">chewi kiwi · 2024</div>
+                                        </div>
+                                    </div>
+                                    <div class="case-study-card-right" style="background-color: #F1FBF2;">
+                                        <img src="./04_Assets/Images/Chewi Kiwi Cereal Packaging.png" alt="Chewi Kiwi Cereal Packaging">
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- 3. 22 Tango -->
+                            <a href="./22tango.html" class="case-study-card">
+                                <div class="case-study-card-inner">
+                                    <div class="case-study-card-left">
+                                        <div>
+                                            <div class="cs-eyebrow">Brand Identity · Print & Visual Systems</div>
+                                            <h3 class="cs-headline">From a record label to an iconic school.</h3>
+                                            <p class="cs-description">Crafted the comprehensive visual identity, brand guidelines, and promotional print collateral for Cebu's premier creative institution.</p>
+                                        </div>
+                                        <div>
+                                            <div class="cs-metric">
+                                                Full identity system · 5 program visual suites · Print & Digital
+                                            </div>
+                                            <div class="cs-footer">22 tango · 2026</div>
+                                        </div>
+                                    </div>
+                                    <div class="case-study-card-right" style="background-color: #FAF9F6;">
+                                        <img src="./04_Assets/Images/22 Tango Ultra Mockup.jpg" alt="22 Tango Creative School Brand Mockup">
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- 4. HI-Q Retrofitting -->
+                            <a href="./hiq.html" class="case-study-card">
+                                <div class="case-study-card-inner">
+                                    <div class="case-study-card-left">
+                                        <div>
+                                            <div class="cs-eyebrow">Corporate Identity · Fleet & Collateral</div>
+                                            <h3 class="cs-headline">HI-Q Prime. Industrial trust and collateral.</h3>
+                                            <p class="cs-description">Built a cohesive corporate identity system spanning business collateral, structural documentation, and vehicle fleet branding.</p>
+                                        </div>
+                                        <div>
+                                            <div class="cs-metric">
+                                                Brand guidelines · Corporate print stationery · Signage specs
+                                            </div>
+                                            <div class="cs-footer">hi-q retrofitting · 2023-24</div>
+                                        </div>
+                                    </div>
+                                    <div class="case-study-card-right" style="background-color: #F3F4F6;">
+                                        <img src="./04_Assets/Images/hi-q-thumbnail.png" alt="HI-Q Retrofitting Brand Identity">
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- 5. Idang's Tostado -->
+                            <a href="./idangs-tostado.html" class="case-study-card">
+                                <div class="case-study-card-inner">
+                                    <div class="case-study-card-left">
+                                        <div>
+                                            <div class="cs-eyebrow">Heritage Branding · Packaging Design</div>
+                                            <h3 class="cs-headline">Modernizing heritage snack packaging.</h3>
+                                            <p class="cs-description">Reimagined classic Filipino delicacy packaging to attract contemporary consumers while preserving authentic culinary tradition.</p>
+                                        </div>
+                                        <div>
+                                            <div class="cs-metric">
+                                                Pouch & box packaging · CMYK prepress production
+                                            </div>
+                                            <div class="cs-footer">idang's tostado · 2023</div>
+                                        </div>
+                                    </div>
+                                    <div class="case-study-card-right" style="background-color: #FFF8E7;">
+                                        <img src="./04_Assets/Images/Idangs Tostados - new thumbnail.png" alt="Idang's Tostado Packaging">
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- 6. Buyax Kitchen -->
+                            <a href="./buyax-kitchen.html" class="case-study-card">
+                                <div class="case-study-card-inner">
+                                    <div class="case-study-card-left">
+                                        <div>
+                                            <div class="cs-eyebrow">Culinary Branding · Menu & Collateral</div>
+                                            <h3 class="cs-headline">Bold fast-casual branding & packaging.</h3>
+                                            <p class="cs-description">Engineered a punchy, appetite-inducing brand refresh with takeout packaging, stickers, print menus, and digital social kits.</p>
+                                        </div>
+                                        <div>
+                                            <div class="cs-metric">
+                                                Takeout packaging · Print menu system · Social templates
+                                            </div>
+                                            <div class="cs-footer">buyax kitchen · 2023</div>
+                                        </div>
+                                    </div>
+                                    <div class="case-study-card-right" style="background-color: #FFF2F0;">
+                                        <img src="./04_Assets/Images/Buyax%20Thumbnail.png" alt="Buyax Kitchen Rebranding & Packaging">
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- 7. Make It Happen Studio -->
+                            <a href="./make-it-happen-studio.html" class="case-study-card">
+                                <div class="case-study-card-inner">
+                                    <div class="case-study-card-left">
+                                        <div>
+                                            <div class="cs-eyebrow">Brand Identity · Creative Direction</div>
+                                            <h3 class="cs-headline">Bold identity for a creative studio.</h3>
+                                            <p class="cs-description">Designed a flexible brand system and social media marketing suite for a modern multimedia production studio.</p>
+                                        </div>
+                                        <div>
+                                            <div class="cs-metric">
+                                                Logo system · Social design templates · Brand guidelines
+                                            </div>
+                                            <div class="cs-footer">make it happen · 2023</div>
+                                        </div>
+                                    </div>
+                                    <div class="case-study-card-right" style="background-color: #F8F9FA;">
+                                        <img src="./04_Assets/Images/Make%20It%20Happen%20Studio%20thumbnail.png" alt="Make It Happen Studio Brand Identity">
+                                    </div>
+                                </div>
+                            </a>
+
                         </div>
                     </div>
-                </a>
-                <a href="./chewi-kiwi.html" class="creative-work-card reveal">
-                    <div class="creative-work-image">
-                        <img src="./04_Assets/Images/Chewi Kiwi Cereal Packaging.png" alt="Chewi Kiwi Cereal Packaging">
-                    </div>
-                    <div class="creative-work-info">
-                        <h3>Chewi Kiwi</h3>
-                        <div class="creative-work-tags">
-                            <span class="creative-work-tag">Brand Identity</span>
-                            <span class="creative-work-tag">Package Design</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="./idangs-tostado.html" class="creative-work-card reveal">
-                    <div class="creative-work-image">
-                        <img src="./04_Assets/Images/Idangs Tostados - new thumbnail.png"
-                            alt="Idang's Tostado Packaging">
-                    </div>
-                    <div class="creative-work-info">
-                        <h3>Idang's Tostado</h3>
-                        <div class="creative-work-tags">
-                            <span class="creative-work-tag">Brand Identity</span>
-                            <span class="creative-work-tag">Package Design</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="./hiq.html" class="creative-work-card reveal">
-                    <div class="creative-work-image">
-                        <img src="./04_Assets/Images/hi-q-thumbnail.png" alt="HI-Q Retrofitting Brand Identity">
-                    </div>
-                    <div class="creative-work-info">
-                        <h3>HI-Q Retrofitting Prime Specialist</h3>
-                        <div class="creative-work-tags">
-                            <span class="creative-work-tag">Brand Identity</span>
-                            <span class="creative-work-tag">Corporate Collateral</span>
-                            <span class="creative-work-tag">Logo Design</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="./buyax-kitchen.html" class="creative-work-card reveal">
-                    <div class="creative-work-image">
-                        <img src="./04_Assets/Images/Buyax%20Thumbnail.png" alt="Buyax Kitchen Rebranding & Packaging">
-                    </div>
-                    <div class="creative-work-info">
-                        <h3>Buyax Kitchen</h3>
-                        <div class="creative-work-tags">
-                            <span class="creative-work-tag">Brand Identity</span>
-                            <span class="creative-work-tag">Packaging</span>
-                            <span class="creative-work-tag">Logo Redesign</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="./make-it-happen-studio.html" class="creative-work-card reveal">
-                    <div class="creative-work-image">
-                        <img src="./04_Assets/Images/Make%20It%20Happen%20Studio%20thumbnail.png"
-                            alt="Make It Happen Studio Brand Identity">
-                    </div>
-                    <div class="creative-work-info">
-                        <h3>Make It Happen Studio</h3>
-                        <div class="creative-work-tags">
-                            <span class="creative-work-tag">Brand Identity</span>
-                            <span class="creative-work-tag">Social Media Design</span>
-                            <span class="creative-work-tag">Logo Design</span>
-                        </div>
-                    </div>
-                </a>
+                </section>
             </div>
         </div>
-    </section>
 
-    <!-- Tools Carousel (White) -->
-    <section id="tools" class="marquee-section">
-        <div class="marquee-wrapper">
-            <div class="marquee-content">
-                <div class="marquee-item"><img src="./04_Assets/Icons/Canva.png" height="48" alt="Canva"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/ChatGPT.png" height="48" alt="ChatGPT"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Claude.png" height="48" alt="Claude"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/ClickUp.png" height="48" alt="ClickUp"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Figma.png" height="48" alt="Figma"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Gemini.png" height="48" alt="Gemini"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Illustrator.png" height="48" alt="Illustrator">
+        <!-- 4. Tools Marquee Carousel -->
+        <section id="tools" class="marquee-section">
+            <div class="marquee-wrapper">
+                <div class="marquee-content">
+                    <div class="marquee-item"><img src="./04_Assets/Icons/Photoshop.png" height="48" alt="Photoshop"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/Illustrator.png" height="48" alt="Illustrator"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/Figma.png" height="48" alt="Figma"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/Canva.png" height="48" alt="Canva"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/Claude.png" height="48" alt="Claude"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/ChatGPT.png" height="48" alt="ChatGPT"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/ClickUp.png" height="48" alt="ClickUp"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/Gemini.png" height="48" alt="Gemini"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/Notion.png" height="48" alt="Notion"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/Slack.png" height="48" alt="Slack"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/Vercel.png" height="48" alt="Vercel"></div>
                 </div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Notion.png" height="48" alt="Notion"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Photoshop.png" height="48" alt="Photoshop"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Slack.png" height="48" alt="Slack"></div>
-            </div>
-            <div class="marquee-content">
-                <div class="marquee-item"><img src="./04_Assets/Icons/Canva.png" height="48" alt="Canva"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/ChatGPT.png" height="48" alt="ChatGPT"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Claude.png" height="48" alt="Claude"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/ClickUp.png" height="48" alt="ClickUp"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Figma.png" height="48" alt="Figma"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Gemini.png" height="48" alt="Gemini"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Illustrator.png" height="48" alt="Illustrator">
-                </div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Notion.png" height="48" alt="Notion"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Photoshop.png" height="48" alt="Photoshop"></div>
-                <div class="marquee-item"><img src="./04_Assets/Icons/Slack.png" height="48" alt="Slack"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About (White) -->
-    <section id="about" style="background-color: #fff; padding: 0; position: relative; z-index: 5;">
-        <div class="container about-grid-layout">
-
-            <!-- Left Side Images -->
-            <div class="scroll-image-col left-col">
-                <div class="polaroid-placeholder" style="transform: rotate(-6deg); padding: 0;">
-                    <img src="./04_Assets/Images/Image%201.jpg" alt="Gallery Image 1"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="polaroid-placeholder" style="transform: rotate(4deg); padding: 0;">
-                    <img src="./04_Assets/Images/Image%202.jpg" alt="Gallery Image 2"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="polaroid-placeholder" style="transform: rotate(-3deg); padding: 0;">
-                    <img src="./04_Assets/Images/Image%203.jpg" alt="Gallery Image 3"
-                        style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="marquee-content">
+                    <div class="marquee-item"><img src="./04_Assets/Icons/Photoshop.png" height="48" alt="Photoshop"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/Illustrator.png" height="48" alt="Illustrator"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/Figma.png" height="48" alt="Figma"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/Canva.png" height="48" alt="Canva"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/Claude.png" height="48" alt="Claude"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/ChatGPT.png" height="48" alt="ChatGPT"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/ClickUp.png" height="48" alt="ClickUp"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/Gemini.png" height="48" alt="Gemini"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/Notion.png" height="48" alt="Notion"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/Slack.png" height="48" alt="Slack"></div>
+                    <div class="marquee-item"><img src="./04_Assets/Icons/Vercel.png" height="48" alt="Vercel"></div>
                 </div>
             </div>
+        </section>
 
-            <!-- Sticky Center Text -->
-            <div class="sticky-text-wrapper">
-                <div class="scroll-highlight-text">
-                    <p style="font-size: 1.4rem; line-height: 1.6; margin-bottom: 2rem; font-weight: 500;">
-                        Hi, I'm Chaz — a <strong>Graphic Designer</strong> with a background in brand identity,
-                        visual storytelling, and marketing design. I create assets that strengthen brand presence
-                        and drive real engagement across every touchpoint.
-                    </p>
-                    <p style="font-size: 1.4rem; line-height: 1.6; margin-bottom: 2rem; font-weight: 500;">
-                        I've worked across ad creatives, packaging, social media graphics, and web visuals —
-                        translating briefs into compelling, on-brand work that connects with people.
-                    </p>
-                    <p style="font-size: 1.4rem; line-height: 1.6; font-weight: 500;">
-                        My product design background gives me an edge: I understand user behaviour, conversion,
-                        and how visual decisions impact business outcomes. But at my core,
-                        I'm a visual thinker who cares deeply about craft and execution.
-                    </p>
-                </div>
-            </div>
+        <!-- 5. About (Polaroids + Sticky Highlight Text) -->
+        <section id="about" style="background-color: var(--bg-color); padding: 0; position: relative; z-index: 200;">
+            <div class="container about-grid-layout">
 
-            <!-- Right Side Images -->
-            <div class="scroll-image-col right-col">
-                <div class="polaroid-placeholder" style="transform: rotate(5deg); padding: 0;">
-                    <img src="./04_Assets/Images/Image%204.jpg" alt="Gallery Image 4"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="polaroid-placeholder" style="transform: rotate(-5deg); padding: 0;">
-                    <img src="./04_Assets/Images/Image%205.jpg" alt="Gallery Image 5"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="polaroid-placeholder" style="transform: rotate(2deg); padding: 0;">
-                    <img src="./04_Assets/Images/Image%206.jpg" alt="Gallery Image 6"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Product Work (Compact) -->
-    <section id="projects" style="background: #fff; padding: 4rem 0;">
-        <div class="container">
-            <div class="section-header reveal" style="border-bottom: 1px solid #e5e5e5; margin-bottom: 0;">
-                <h2
-                    style="font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; color: #aaa; text-transform: uppercase; margin: 0;">
-                    Also — Product Work</h2>
-            </div>
-            <div>
-                <a href="./interviewquery.html" class="reveal"
-                    style="display: grid; grid-template-columns: 80px 1fr 24px; align-items: center; gap: 1.5rem; padding: 1.5rem 0.5rem; border-bottom: 1px solid #f0f0f0; text-decoration: none; color: inherit; transition: background 0.15s; border-radius: 6px;">
-                    <div
-                        style="width: 80px; height: 56px; border-radius: 8px; overflow: hidden; background: #2D3748; flex-shrink: 0;">
-                        <img src="./04_Assets/Images/Interview Query new thumbnail.png" alt="Interview Query"
+                <!-- Left Side Images -->
+                <div class="scroll-image-col left-col">
+                    <div class="polaroid-placeholder" style="transform: rotate(-6deg); padding: 0;">
+                        <img src="./04_Assets/Images/Image%201.jpg" alt="Gallery Image 1"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <div>
-                        <div
-                            style="font-size: 1.05rem; font-weight: 700; color: #111; margin-bottom: 0.4rem; letter-spacing: -0.3px;">
-                            Interview Query</div>
-                        <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
-                            <span
-                                style="font-size: 0.72rem; font-weight: 600; padding: 0.1rem 0.55rem; border-radius: 9999px; border: 1.5px solid #e8e8e8; color: #777;">UX
-                                Strategy</span>
-                            <span
-                                style="font-size: 0.72rem; font-weight: 600; padding: 0.1rem 0.55rem; border-radius: 9999px; border: 1.5px solid #e8e8e8; color: #777;">Conversion
-                                Optimization</span>
-                            <span
-                                style="font-size: 0.72rem; font-weight: 600; padding: 0.1rem 0.55rem; border-radius: 9999px; border: 1.5px solid #e8e8e8; color: #777;">Ed
-                                Tech</span>
-                        </div>
-                    </div>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </a>
-                <a href="./symph.html" class="reveal"
-                    style="display: grid; grid-template-columns: 80px 1fr 24px; align-items: center; gap: 1.5rem; padding: 1.5rem 0.5rem; border-bottom: 1px solid #f0f0f0; text-decoration: none; color: inherit; transition: background 0.15s; border-radius: 6px;">
-                    <div
-                        style="width: 80px; height: 56px; border-radius: 8px; overflow: hidden; background: #4F46E5; flex-shrink: 0;">
-                        <img src="./04_Assets/Images/Lesson Planner PH - new thumbnail.png" alt="Lesson Planner PH"
+                    <div class="polaroid-placeholder" style="transform: rotate(4deg); padding: 0;">
+                        <img src="./04_Assets/Images/Image%202.jpg" alt="Gallery Image 2"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <div>
-                        <div
-                            style="font-size: 1.05rem; font-weight: 700; color: #111; margin-bottom: 0.4rem; letter-spacing: -0.3px;">
-                            Lesson Planner PH</div>
-                        <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
-                            <span
-                                style="font-size: 0.72rem; font-weight: 600; padding: 0.1rem 0.55rem; border-radius: 9999px; border: 1.5px solid #e8e8e8; color: #777;">B2B
-                                Product Design</span>
-                            <span
-                                style="font-size: 0.72rem; font-weight: 600; padding: 0.1rem 0.55rem; border-radius: 9999px; border: 1.5px solid #e8e8e8; color: #777;">UX
-                                Audit</span>
-                            <span
-                                style="font-size: 0.72rem; font-weight: 600; padding: 0.1rem 0.55rem; border-radius: 9999px; border: 1.5px solid #e8e8e8; color: #777;">Ed
-                                Tech</span>
-                        </div>
+                    <div class="polaroid-placeholder" style="transform: rotate(-3deg); padding: 0;">
+                        <img src="./04_Assets/Images/Image%203.jpg" alt="Gallery Image 3"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
+                </div>
 
-    <!-- Experience (White) -->
-    <section id="experience" style="background: #fff; padding: 3rem 0;">
-        <div class="container">
-            <div class="section-header reveal" style="border-bottom: 1px solid #e5e5e5; margin-bottom: 0.5rem;">
-                <h2
-                    style="font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; color: #aaa; text-transform: uppercase; margin: 0;">
-                    Experience</h2>
-            </div>
-            <div class="experience-list">
-                <div class="experience-row reveal">
-                    <div class="exp-date">Mar 2026 – Present</div>
-                    <div class="exp-role">Multimedia UI/UX Designer (Contract)</div>
-                    <div class="exp-company">22 Tango</div>
+                <!-- Sticky Center Text -->
+                <div class="sticky-text-wrapper">
+                    <div class="scroll-highlight-text">
+                        <p style="font-size: 1.4rem; line-height: 1.6; margin-bottom: 2rem; font-weight: 500;">
+                            Hi, I'm Chaz — a <strong>Graphic & Multimedia Designer</strong> with over five years of experience building brand identities, packaging, print production, and marketing visuals.
+                        </p>
+                        <p style="font-size: 1.4rem; line-height: 1.6; margin-bottom: 2rem; font-weight: 500;">
+                            I translate concepts into cohesive visual systems: from large-format signs, banners, and retail flags, to packaging dielines, fillable PDF forms, and high-converting marketing collateral.
+                        </p>
+                        <p style="font-size: 1.4rem; line-height: 1.6; font-weight: 500;">
+                            My background collaborating with US teams gives me a sharp edge: I understand how visual assets drive conversion, communicate clearly across cultures, and deliver dependable turnarounds under tight deadlines.
+                        </p>
+                    </div>
                 </div>
-                <div class="experience-row reveal">
-                    <div class="exp-date">Sep 2024 – Mar 2026</div>
-                    <div class="exp-role">Product Designer (Full-Time)</div>
-                    <div class="exp-company">Interview Query</div>
-                </div>
-                <div class="experience-row reveal">
-                    <div class="exp-date">Feb 2024 – Aug 2024</div>
-                    <div class="exp-role">UI/UX Designer (Internship)</div>
-                    <div class="exp-company">Symph</div>
-                </div>
-            </div>
 
-            <!-- Leadership & Community Subsection -->
-            <div style="margin-top: 2rem;">
-                <div
-                    style="font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: #bbb; text-transform: uppercase; margin-bottom: 0.5rem;">
-                    Leadership & Community</div>
+                <!-- Right Side Images -->
+                <div class="scroll-image-col right-col">
+                    <div class="polaroid-placeholder" style="transform: rotate(5deg); padding: 0;">
+                        <img src="./04_Assets/Images/Image%204.jpg" alt="Gallery Image 4"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="polaroid-placeholder" style="transform: rotate(-5deg); padding: 0;">
+                        <img src="./04_Assets/Images/Image%205.jpg" alt="Gallery Image 5"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="polaroid-placeholder" style="transform: rotate(2deg); padding: 0;">
+                        <img src="./04_Assets/Images/Image%206.jpg" alt="Gallery Image 6"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 6. Also — Product & Digital Design Work (Compact) -->
+        <section id="product-work" style="background: var(--bg-color); padding: 4rem 0;">
+            <div class="container">
+                <div class="section-header reveal" style="border-bottom: 1px solid rgba(0,0,0,0.1); margin-bottom: 1rem;">
+                    <h2 style="font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; color: #888; text-transform: uppercase; margin: 0;">
+                        Also — Product & Web Systems
+                    </h2>
+                </div>
+                <div>
+                    <a href="./interviewquery.html" class="reveal"
+                        style="display: grid; grid-template-columns: 80px 1fr 24px; align-items: center; gap: 1.5rem; padding: 1.5rem 0.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; color: inherit; transition: background 0.15s; border-radius: 8px;">
+                        <div style="width: 80px; height: 56px; border-radius: 8px; overflow: hidden; background: #2D3748; flex-shrink: 0;">
+                            <img src="./04_Assets/Images/Interview Query new thumbnail.png" alt="Interview Query"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div>
+                            <div style="font-size: 1.05rem; font-weight: 700; color: #111; margin-bottom: 0.35rem; letter-spacing: -0.3px;">
+                                Interview Query
+                            </div>
+                            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+                                <span style="font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(0,0,0,0.1); color: #555;">UX Strategy</span>
+                                <span style="font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(0,0,0,0.1); color: #555;">Conversion Optimization</span>
+                                <span style="font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(0,0,0,0.1); color: #555;">EdTech</span>
+                            </div>
+                        </div>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="./symph.html" class="reveal"
+                        style="display: grid; grid-template-columns: 80px 1fr 24px; align-items: center; gap: 1.5rem; padding: 1.5rem 0.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration: none; color: inherit; transition: background 0.15s; border-radius: 8px;">
+                        <div style="width: 80px; height: 56px; border-radius: 8px; overflow: hidden; background: #2563EB; flex-shrink: 0;">
+                            <img src="./04_Assets/Images/Lesson Planner PH - new thumbnail.png" alt="Lesson Planner PH"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div>
+                            <div style="font-size: 1.05rem; font-weight: 700; color: #111; margin-bottom: 0.35rem; letter-spacing: -0.3px;">
+                                Lesson Planner PH
+                            </div>
+                            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+                                <span style="font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(0,0,0,0.1); color: #555;">B2B Product Design</span>
+                                <span style="font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(0,0,0,0.1); color: #555;">Design Systems</span>
+                                <span style="font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(0,0,0,0.1); color: #555;">EdTech</span>
+                            </div>
+                        </div>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Experience Timeline -->
+        <section id="experience" style="background: var(--bg-color); padding: 4rem 0;">
+            <div class="container">
+                <div class="section-header reveal" style="border-bottom: 1px solid #111; margin-bottom: 1rem;">
+                    <h2 class="section-title">Experience</h2>
+                </div>
                 <div class="experience-list">
                     <div class="experience-row reveal">
-                        <div class="exp-date">Jun 2024 – Present</div>
-                        <div class="exp-role">Community Co-Founder</div>
-                        <div class="exp-company">The Frame</div>
+                        <div class="exp-date">Mar 2026 – Present</div>
+                        <div class="exp-role">Multimedia UI/UX Designer (Contract)</div>
+                        <div class="exp-company">22 Tango</div>
                     </div>
                     <div class="experience-row reveal">
-                        <div class="exp-date">Jul 2023 – Jul 2024</div>
-                        <div class="exp-role">Creatives and Branding Lead</div>
-                        <div class="exp-company">GDG on Campus: CIT-U</div>
+                        <div class="exp-date">Sep 2024 – Mar 2026</div>
+                        <div class="exp-role">Product Designer (Full-Time)</div>
+                        <div class="exp-company">Interview Query</div>
                     </div>
                     <div class="experience-row reveal">
-                        <div class="exp-date">Aug 2022 – Aug 2023</div>
-                        <div class="exp-role">Creative Director</div>
-                        <div class="exp-company">The Technologian</div>
+                        <div class="exp-date">Feb 2024 – Aug 2024</div>
+                        <div class="exp-role">UI/UX Designer (Internship)</div>
+                        <div class="exp-company">Symph</div>
                     </div>
-                    <div class="experience-row reveal">
-                        <div class="exp-date">Oct 2021 – Aug 2022</div>
-                        <div class="exp-role">Layout and Design Editor</div>
-                        <div class="exp-company">The Technologian</div>
+                </div>
+
+                <!-- Leadership & Community -->
+                <div style="margin-top: 3rem;">
+                    <div style="font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; color: #888; text-transform: uppercase; margin-bottom: 1rem;">
+                        Leadership & Visual Direction
+                    </div>
+                    <div class="experience-list">
+                        <div class="experience-row reveal">
+                            <div class="exp-date">Jun 2024 – Present</div>
+                            <div class="exp-role">Community Co-Founder</div>
+                            <div class="exp-company">The Frame</div>
+                        </div>
+                        <div class="experience-row reveal">
+                            <div class="exp-date">Jul 2023 – Jul 2024</div>
+                            <div class="exp-role">Creatives and Branding Lead</div>
+                            <div class="exp-company">GDG on Campus: CIT-U</div>
+                        </div>
+                        <div class="experience-row reveal">
+                            <div class="exp-date">Aug 2022 – Aug 2023</div>
+                            <div class="exp-role">Creative Director</div>
+                            <div class="exp-company">The Technologian</div>
+                        </div>
+                        <div class="experience-row reveal">
+                            <div class="exp-date">Oct 2021 – Aug 2022</div>
+                            <div class="exp-role">Layout and Design Editor</div>
+                            <div class="exp-company">The Technologian</div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact (Black) -->
-    <section id="contact" class="dark-section" style="border-bottom: none; padding: 4rem 0 3rem;">
-        <div class="container">
-            <div style="text-align: center;">
-                <div class="contact-cta">Let's work<br>together.</div>
+        <!-- 9. Contact (Dark #0A0E1A) -->
+        <section id="contact" class="dark-section" style="border-bottom: none; padding: 6rem 0;">
+            <div class="container">
+                <div style="text-align: center;">
+                    <div class="contact-cta">Let's build visuals<br>that resonate.</div>
+                </div>
+                <p style="text-align: center; max-width: 540px; margin: 0 auto 1.5rem; font-size: 1.1rem; color: #D1D5DB;">
+                    Open to full-time roles, contracts, and graphic design projects. If you have an exciting challenge, let's talk.
+                </p>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
+                        class="pill-outline-light">
+                        <img src="./04_Assets/Icons/LinkedIn.svg" width="22" height="22" alt="LinkedIn">
+                        LinkedIn
+                    </a>
+                    <button onclick="copyEmail()" class="pill-outline-light">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                        Copy Email
+                    </button>
+                </div>
             </div>
-            <p style="text-align: center; max-width: 540px; margin: 0 auto 1.5rem; font-size: 1.05rem;">Open to
-                full-time
-                roles and freelance projects. If you think there's a fit, I'd love to hear from you.</p>
-            <div class="contact-links">
-                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
-                    class="pill-outline-light">
-                    <img src="./04_Assets/Icons/LinkedIn.svg" width="24" height="24" alt="LinkedIn">
-                    LinkedIn
-                </a>
-                <button onclick="copyEmail()" class="pill-outline-light">
-                    <img src="./04_Assets/Icons/gmail.svg" width="24" height="24" alt="Email">
-                    Email Me
-                </button>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer (Black) -->
-    <footer>
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <div>© Chaz Grant, 2026</div>
-            <div style="display: flex; gap: 2rem;">
-                <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
-                    style="color: #fff; transition: color 0.2s;">LinkedIn</a>
-                <button onclick="copyEmail()"
-                    style="background: none; border: none; color: #fff; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer; transition: color 0.2s;">Email</button>
+    <!-- 10. Footer -->
+    <footer role="contentinfo">
+        <div class="container" style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <div style="color: #FFFFFF !important; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.25rem;">Chaz Grant Borromeo</div>
+                    <div style="color: #9CA3AF !important; font-size: 0.875rem;">Graphic & Multimedia Designer · Design Engineer</div>
+                </div>
+                <div style="display: flex; gap: 1.5rem; align-items: center;">
+                    <a href="https://www.linkedin.com/in/chazgrant/" target="_blank" rel="noopener noreferrer"
+                        style="color: #ffffff !important; transition: opacity 0.2s;" aria-label="LinkedIn profile">LinkedIn</a>
+                    <button onclick="copyEmail()"
+                        style="background: none; border: none; color: #ffffff !important; font-size: inherit; font-family: inherit; font-weight: 600; cursor: pointer;" aria-label="Copy email address">Email</button>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 1.25rem; border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 0.85rem;">
+                <div>© 2026 Chaz Borromeo. All design work & trademarks © respective owners.</div>
+                <div style="display: flex; gap: 1.25rem; flex-wrap: wrap;">
+                    <a href="./privacy-policy.html" style="color: #9CA3AF !important;">Privacy Policy</a>
+                    <a href="./terms.html" style="color: #9CA3AF !important;">Terms & Conditions</a>
+                    <a href="./refund-policy.html" style="color: #9CA3AF !important;">Refund Policy</a>
+                    <a href="./cookie-policy.html" style="color: #9CA3AF !important;">Cookie Policy</a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Email copy toast -->
+    <div class="copy-toast" id="copy-toast">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        Email copied to clipboard!
+    </div>
+
+    <!-- Scripts -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            // Typing Animation
             const type1 = document.getElementById('type-1');
-            const type2 = document.getElementById('type-2');
             const type3 = document.getElementById('type-3');
             const pillBox = document.getElementById('pill-box');
             const cursorSvg = document.getElementById('cursor-svg');
 
-            if (type1 && type2 && type3) {
+            if (type1 && type3) {
                 function prepareTypewriter(element) {
                     const text = element.textContent;
                     element.innerHTML = '';
@@ -1197,7 +1359,6 @@
                 }
 
                 const spans1 = prepareTypewriter(type1);
-                const spans2 = prepareTypewriter(type2);
                 const spans3 = prepareTypewriter(type3);
                 let speed = 40;
 
@@ -1219,19 +1380,18 @@
                     pillBox.style.visibility = "visible";
                     typeSpans(spans1, () => {
                         cursorSvg.style.opacity = "1";
-                        typeSpans(spans2, () => {
-                            typeSpans(spans3, null);
-                        });
+                        typeSpans(spans3, null);
                     });
                 }, 500);
             }
 
-            const revealElements = document.querySelectorAll('.hero-intro, .hero-copy, .hero-cta-group, .scroll-indicator, .section-header, .case-study-card, .experience-row, .contact-cta, .contact-links, .reveal');
+            // Reveal Animation Observer
+            const revealElements = document.querySelectorAll('.hero-copy, .hero-tags, .section-header, .case-study-card, .experience-row, .contact-cta, .contact-links, #product-work .reveal');
 
             revealElements.forEach((el, index) => {
                 el.classList.add('reveal');
                 if (el.classList.contains('case-study-card')) {
-                    el.style.transitionDelay = `${(index % 2) * 0.15}s`;
+                    el.style.transitionDelay = `${(index % 2) * 0.12}s`;
                 }
             });
 
@@ -1242,58 +1402,80 @@
                         observer.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
 
             revealElements.forEach(el => observer.observe(el));
 
-            const aboutSection = document.getElementById('about');
-            const highlightTexts = document.querySelectorAll('.scroll-highlight-text');
+            // Split scroll interaction script
+            const splitContainer = document.querySelector('.split-scroll-container');
+            const heroText = document.getElementById('hero-text-block');
 
-            if (aboutSection && highlightTexts.length > 0) {
-                window.addEventListener('scroll', () => {
-                    const rect = aboutSection.getBoundingClientRect();
-                    const windowHeight = window.innerHeight;
-                    const startPoint = windowHeight * 0.75;
-                    let scrolled = startPoint - rect.top;
-                    let totalScroll = rect.height - (windowHeight * 0.5);
-                    let progress = scrolled / totalScroll;
-                    progress = Math.max(0, Math.min(1, progress));
-                    highlightTexts.forEach(txt => {
-                        txt.style.setProperty('--scroll-p', `${progress * 100}%`);
-                    });
-                });
-                window.dispatchEvent(new Event('scroll'));
+            function updateSplitScroll() {
+                if (!splitContainer || !heroText) return;
+
+                if (window.innerWidth <= 900) {
+                    heroText.style.position = '';
+                    heroText.style.left = '';
+                    heroText.style.top = '';
+                    heroText.style.transform = '';
+                    heroText.style.width = '';
+                    heroText.classList.remove('docked-left');
+                    return;
+                }
+
+                const scrollY = window.scrollY;
+                const containerRect = splitContainer.getBoundingClientRect();
+                const transitionRange = 500;
+                const progress = Math.min(Math.max(scrollY / transitionRange, 0), 1);
+
+                if (progress > 0.15) {
+                    heroText.classList.add('docked-left');
+                } else {
+                    heroText.classList.remove('docked-left');
+                }
+
+                if (containerRect.bottom <= window.innerHeight) {
+                    heroText.style.opacity = '0';
+                    heroText.style.pointerEvents = 'none';
+                } else {
+                    heroText.style.opacity = '1';
+                    heroText.style.pointerEvents = 'auto';
+                    const dockedLeft = 19;
+                    const leftValue = 50 - (50 - dockedLeft) * progress;
+                    const scaleValue = 1 - (1 - 0.92) * progress;
+
+                    heroText.style.position = 'fixed';
+                    heroText.style.left = `${leftValue}vw`;
+                    heroText.style.top = '50vh';
+                    heroText.style.transform = `translate(-50%, -50%) scale(${scaleValue})`;
+                    heroText.style.width = '29vw';
+                    heroText.style.maxWidth = '420px';
+                }
             }
-        });
-    </script>
 
-    <div class="copy-toast" id="copy-toast">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-            stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="20 6 9 17 4 12"></polyline>
-        </svg>
-        Email copied to clipboard!
-    </div>
+            window.addEventListener('scroll', () => {
+                requestAnimationFrame(updateSplitScroll);
+            }, { passive: true });
+            window.addEventListener('resize', updateSplitScroll);
+            setTimeout(updateSplitScroll, 50);
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
+            // Custom Cursor
             if (window.matchMedia('(pointer: fine)').matches) {
                 const cursor = document.getElementById('custom-cursor');
-
                 document.addEventListener('mousemove', (e) => {
                     cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
                 });
 
-                const cards = document.querySelectorAll('.case-study-card, .creative-work-card');
-                cards.forEach(card => {
+                document.querySelectorAll('.case-study-card').forEach(card => {
                     card.addEventListener('mouseenter', () => cursor.classList.add('view-mode'));
                     card.addEventListener('mouseleave', () => cursor.classList.remove('view-mode'));
                 });
             }
         });
-    </script>
 
-    <script>
         function copyEmail() {
             navigator.clipboard.writeText('chazgrantborromeo@gmail.com').then(() => {
                 const toast = document.getElementById('copy-toast');
@@ -1303,6 +1485,33 @@
         }
     </script>
     <script src="./04_Assets/cursor.js"></script>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Privacy & Cookie Preferences">
+        <div style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.35rem; color: #FFF;">Privacy & Preference Settings</div>
+        <p style="font-size: 0.875rem; color: #9CA3AF !important; line-height: 1.4; margin: 0;">
+            This site uses essential local storage to remember your settings and strictly zero 3rd-party tracking cookies.
+        </p>
+        <div class="cookie-banner-actions">
+            <button class="cookie-btn-primary" onclick="acceptCookies()">Accept Preferences</button>
+            <a href="./cookie-policy.html" class="cookie-btn-secondary">View Policy</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (!localStorage.getItem("cookie_consent_accepted")) {
+                const banner = document.getElementById("cookie-banner");
+                if (banner) setTimeout(() => banner.classList.add("visible"), 800);
+            }
+        });
+
+        function acceptCookies() {
+            localStorage.setItem("cookie_consent_accepted", "true");
+            const banner = document.getElementById("cookie-banner");
+            if (banner) banner.classList.remove("visible");
+        }
+    </script>
 </body>
 
 </html>

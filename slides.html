@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chaz Borromeo — ScaleMe Presentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+
+    body {
+      background-color: #07080f;
+      color: #ffffff;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* 16:9 Presentation Deck Canvas */
+    .deck-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      max-width: 177.78vh; /* 16:9 ratio locked */
+      max-height: 56.25vw;
+      background: #090a16;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+    }
+
+    /* Single Slide Base */
+    .slide {
+      position: absolute;
+      inset: 0;
+      padding: 7vh 8vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+      transform: translateY(12px);
+    }
+
+    .slide.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    /* Minimal Corner Decors */
+    .top-badge {
+      position: absolute;
+      top: 6vh;
+      right: 7vw;
+      width: 28px;
+      height: 28px;
+      color: rgba(255, 255, 255, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bottom-meta {
+      position: absolute;
+      bottom: 5.5vh;
+      left: 7vw;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.4);
+      letter-spacing: 0.02em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .bottom-meta span.accent {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Content Area (Left-Weighted so Webcam Bubble fits on the right!) */
+    .content {
+      max-width: 68%;
+    }
+
+    .eyebrow {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #9d85ff;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 2vh;
+    }
+
+    h1.display-title {
+      font-size: clamp(2.8rem, 5.2vw, 5.6rem);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+      color: #ffffff;
+    }
+
+    h1.display-title .purple {
+      color: #7b61ff;
+    }
+
+    h1.display-title .light-purple {
+      color: #b8a6ff;
+    }
+
+    h1.display-title .gray {
+      color: rgba(255, 255, 255, 0.45);
+    }
+
+    /* Stacked Words Style (Image 4 reference) */
+    .stack-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8vh;
+    }
+
+    .stack-list .item {
+      font-size: clamp(2.6rem, 5vw, 5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: #a48eff;
+      transition: color 0.2s ease;
+    }
+
+    .stack-list .item.white {
+      color: #ffffff;
+    }
+
+    .stack-list .item.muted {
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    /* Key Metrics / Highlights */
+    .highlight-group {
+      display: flex;
+      flex-direction: column;
+      gap: 2.8vh;
+      margin-top: 1vh;
+    }
+
+    .highlight-block h2 {
+      font-size: clamp(2.4rem, 4vw, 4.2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: #ffffff;
+    }
+
+    .highlight-block p {
+      font-size: clamp(1.1rem, 1.6vw, 1.8rem);
+      font-weight: 500;
+      color: #b5a4ff;
+      margin-top: 0.6vh;
+    }
+
+    /* Bottom Navigation / Progress Controls */
+    .nav-hint {
+      position: absolute;
+      bottom: 5.5vh;
+      right: 7vw;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.3);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .dot.active {
+      background: #7b61ff;
+      width: 22px;
+      border-radius: 4px;
+    }
+
+    /* Slide Theme Variants */
+    .slide[data-theme="light"] {
+      background: #ffffff;
+      color: #0b0c16;
+    }
+    .slide[data-theme="light"] .top-badge {
+      color: #0b0c16;
+    }
+    .slide[data-theme="light"] .bottom-meta {
+      color: rgba(0, 0, 0, 0.4);
+    }
+    .slide[data-theme="light"] .bottom-meta span.accent {
+      color: rgba(0, 0, 0, 0.8);
+    }
+    .slide[data-theme="light"] h1.display-title {
+      color: #0b0c16;
+    }
+    .slide[data-theme="light"] h1.display-title .purple {
+      color: #4f46e5;
+    }
+    .slide[data-theme="light"] h1.display-title .gray {
+      color: rgba(0, 0, 0, 0.3);
+    }
+    .slide[data-theme="light"] .nav-hint {
+      color: rgba(0, 0, 0, 0.3);
+    }
+    .slide[data-theme="light"] .dot {
+      background: rgba(0, 0, 0, 0.15);
+    }
+    .slide[data-theme="light"] .dot.active {
+      background: #4f46e5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="deck-container" id="deck">
+
+    <!-- SLIDE 1: INTRO (Clean, minimal purple + white) -->
+    <section class="slide active" data-slide="1">
+      <div class="top-badge">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M12 2v3m0 14v3M2 12h3m14 0h3M4.9 4.9l2.1 2.1m10 10l2.1 2.1M4.9 19.1l2.1-2.1m10-10l2.1-2.1"></path>
+        </svg>
+      </div>
+
+      <div class="content">
+        <div class="eyebrow">Introduction</div>
+        <h1 class="display-title">
+          <span class="purple">Hello!</span><br>
+          I am Chaz.
+        </h1>
+      </div>
+
+      <div class="bottom-meta">
+        <span>Chaz Borromeo</span>
+        <span>•</span>
+        <span class="accent">Multimedia & Visual Designer</span>
+      </div>
+      <div class="nav-hint">
+        <div class="dots" id="dots"></div>
+        <span>[ ← / → ] to navigate</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: 5 YEARS EXPERIENCE + MULTIMEDIA / FLEXIBILITY -->
+    <section class="slide" data-slide="2">
+      <div class="top-badge">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M12 2v3m0 14v3M2 12h3m14 0h3M4.9 4.9l2.1 2.1m10 10l2.1 2.1M4.9 19.1l2.1-2.1m10-10l2.1-2.1"></path>
+        </svg>
+      </div>
+
+      <div class="content">
+        <div class="eyebrow">Track Record</div>
+        <h1 class="display-title" style="font-size: clamp(2.6rem, 4.4vw, 4.8rem); line-height: 1.14; margin-bottom: 3.5vh;">
+          <span class="purple">5+ Years</span> as a Multimedia Designer.
+        </h1>
+        <div class="stack-list">
+          <div class="item white" style="font-size: clamp(1.8rem, 3.2vw, 3.2rem);">Digital, Print & Collateral.</div>
+          <div class="item muted" style="font-size: clamp(1.8rem, 3.2vw, 3.2rem);">Flexible across any format.</div>
+        </div>
+      </div>
+
+      <div class="bottom-meta">
+        <span>5+ Years Experience</span>
+        <span>•</span>
+        <span class="accent">Digital, Print & Production</span>
+      </div>
+      <div class="nav-hint">
+        <div class="dots"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: EXPERIENCE & US HOURS -->
+    <section class="slide" data-slide="3">
+      <div class="top-badge">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M12 2v3m0 14v3M2 12h3m14 0h3M4.9 4.9l2.1 2.1m10 10l2.1 2.1M4.9 19.1l2.1-2.1m10-10l2.1-2.1"></path>
+        </svg>
+      </div>
+
+      <div class="content">
+        <div class="eyebrow">Experience</div>
+        <div class="highlight-group">
+          <div class="highlight-block">
+            <h2>2 Years Remote.</h2>
+            <p>Interview Query & US tech clients.</p>
+          </div>
+          <div class="highlight-block">
+            <h2>US Work Hours.</h2>
+            <p>Fast replies, quick turnarounds.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-meta">
+        <span>Reliable Remote Track Record</span>
+        <span>•</span>
+        <span class="accent">Pacific / US Compatible</span>
+      </div>
+      <div class="nav-hint">
+        <div class="dots"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: CALL TO ACTION / READY TO START -->
+    <section class="slide" data-slide="4">
+      <div class="top-badge">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M12 2v3m0 14v3M2 12h3m14 0h3M4.9 4.9l2.1 2.1m10 10l2.1 2.1M4.9 19.1l2.1-2.1m10-10l2.1-2.1"></path>
+        </svg>
+      </div>
+
+      <div class="content">
+        <div class="eyebrow">Ready to Help</div>
+        <h1 class="display-title">
+          <span class="purple">Ready to deliver</span><br>
+          from day one.
+        </h1>
+      </div>
+
+      <div class="bottom-meta">
+        <span>Portfolio: <strong style="color: #fff;">chazgrant.me</strong></span>
+        <span>•</span>
+        <span class="accent">Resume Attached</span>
+      </div>
+      <div class="nav-hint">
+        <div class="dots"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    // Render dot indicators on all slides
+    document.querySelectorAll('.dots').forEach(dotsContainer => {
+      dotsContainer.innerHTML = '';
+      slides.forEach((_, idx) => {
+        const dot = document.createElement('div');
+        dot.className = `dot ${idx === 0 ? 'active' : ''}`;
+        dot.addEventListener('click', (e) => {
+          e.stopPropagation();
+          goToSlide(idx);
+        });
+        dotsContainer.appendChild(dot);
+      });
+    });
+
+    function updateSlide() {
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === currentIndex);
+      });
+
+      document.querySelectorAll('.dots').forEach(dotsContainer => {
+        const dots = dotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentIndex);
+        });
+      });
+    }
+
+    function nextSlide() {
+      if (currentIndex < slides.length - 1) {
+        currentIndex++;
+        updateSlide();
+      }
+    }
+
+    function prevSlide() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSlide();
+      }
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      updateSlide();
+    }
+
+    // Keyboard controls
+    window.addEventListener('keydown', (e) => {
+      if (['ArrowRight', 'Space', 'Enter', 'PageDown', 'l', 'j'].includes(e.code)) {
+        e.preventDefault();
+        nextSlide();
+      } else if (['ArrowLeft', 'PageUp', 'h', 'k'].includes(e.code)) {
+        e.preventDefault();
+        prevSlide();
+      } else if (e.code === 'KeyF') {
+        // Toggle fullscreen with 'F' key
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen().catch(() => {});
+        } else {
+          document.exitFullscreen().catch(() => {});
+        }
+      }
+    });
+
+    // Click on slide to advance
+    document.getElementById('deck').addEventListener('click', (e) => {
+      // Don't advance if clicked on a dot
+      if (e.target.classList.contains('dot')) return;
+      nextSlide();
+    });
+  </script>
+</body>
+</html>
